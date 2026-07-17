@@ -16,6 +16,7 @@ export function Navbar() {
           <img src="/wordmark.svg" alt="BetterAlaminosCity.org" height={32} />
         </Link>
         <Link to="/">{t("nav.home")}</Link>
+        <Link to="/services">{t("nav.services")}</Link>
         <Link to="/about">{t("nav.about")}</Link>
         <LanguageSwitcher />
       </nav>

@@ -5,7 +5,8 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "mainLabel": "Main navigation"
+    "mainLabel": "Main navigation",
+    "services": "Services"
   },
   "language": {
     "label": "Language",

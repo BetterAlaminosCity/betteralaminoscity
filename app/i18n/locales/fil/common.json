@@ -5,7 +5,8 @@
   "nav": {
     "home": "Bahay",
     "about": "Tungkol Sa",
-    "mainLabel": "Pangunahing Nabigasyon"
+    "mainLabel": "Pangunahing Nabigasyon",
+    "services": "Serbisyo"
   },
   "language": {
     "label": "Wika",
