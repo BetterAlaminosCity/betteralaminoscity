@@ -1,6 +1,6 @@
 {
   "home": {
-    "title": "Better Alaminos City"
+    "title": "BetterAlaminosCity.org"
   },
   "nav": {
     "home": "Home",
@@ -10,5 +10,8 @@
     "label": "Language",
     "en": "English",
     "fil": "Filipino"
+  },
+  "disclaimer": {
+    "text": "BetterAlaminosCity.org is a volunteer-run civic project. It is not an official website of the Alaminos City government."
   }
 }

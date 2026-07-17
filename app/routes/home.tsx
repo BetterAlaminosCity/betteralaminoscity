@@ -2,15 +2,15 @@ import type { Route } from "./+types/home";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Better Alaminos City" },
+    { title: "BetterAlaminosCity.org" },
     {
       name: "description",
       content:
-        "Better Alaminos City is a community-run guide to Alaminos City government services.",
+        "BetterAlaminosCity.org is a community-run guide to Alaminos City government services.",
     },
   ];
 }
 
 export default function Home() {
-  return <h1>Better Alaminos City</h1>;
+  return <h1>BetterAlaminosCity.org</h1>;
 }

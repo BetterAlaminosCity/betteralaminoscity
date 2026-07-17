@@ -16,6 +16,6 @@ describe("I18nProvider", () => {
         <Probe />
       </I18nProvider>,
     );
-    expect(screen.getByText("Better Alaminos City")).toBeInTheDocument();
+    expect(screen.getByText("BetterAlaminosCity.org")).toBeInTheDocument();
   });
 });
