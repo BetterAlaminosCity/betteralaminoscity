@@ -40,6 +40,18 @@ export default function GovernmentIndex() {
           </li>
         ))}
       </ul>
+      <h2>Civic Transparency</h2>
+      <ul>
+        <li>
+          <Link to="/government/transparency">Budget & Fiscal Transparency</Link>
+        </li>
+        <li>
+          <Link to="/government/ordinances-resolutions">Ordinances & Resolutions</Link>
+        </li>
+        <li>
+          <Link to="/government/statistics">Statistics & Demographics</Link>
+        </li>
+      </ul>
     </section>
   );
 }
