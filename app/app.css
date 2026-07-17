@@ -1,3 +1,11 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@source '../node_modules/@bettergov/kapwa';
+@import '@bettergov/kapwa/kapwa.css';
+
+@import './fonts.css';
+
 :root {
   color-scheme: light;
 }
