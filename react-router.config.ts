@@ -1,8 +1,8 @@
 import type { Config } from "@react-router/dev/config";
 
-import { listArticles, listCategories } from "./app/lib/content.server";
+import { listArticles, listCategories, type ContentDomain } from "./app/lib/content.server";
 
-function contentPaths(domain: "services" | "government"): string[] {
+function contentPaths(domain: ContentDomain): string[] {
   return listCategories(domain).flatMap((category) => [
     `/${domain}/${category.slug}`,
     ...listArticles(domain, category.slug).map(
