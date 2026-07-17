@@ -17,6 +17,7 @@ export function Navbar() {
         </Link>
         <Link to="/">{t("nav.home")}</Link>
         <Link to="/services">{t("nav.services")}</Link>
+        <Link to="/government">{t("nav.government")}</Link>
         <Link to="/about">{t("nav.about")}</Link>
         <LanguageSwitcher />
       </nav>

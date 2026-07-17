@@ -6,4 +6,7 @@ export default [
   route("services", "routes/services/index.tsx"),
   route("services/:category", "routes/services/category.tsx"),
   route("services/:category/:article", "routes/services/article.tsx"),
+  route("government", "routes/government/index.tsx"),
+  route("government/:office", "routes/government/office.tsx"),
+  route("government/:office/:article", "routes/government/article.tsx"),
 ] satisfies RouteConfig;

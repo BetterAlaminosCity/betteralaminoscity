@@ -14,6 +14,6 @@ function contentPaths(domain: "services" | "government"): string[] {
 export default {
   ssr: false,
   async prerender({ getStaticPaths }) {
-    return [...getStaticPaths(), ...contentPaths("services")];
+    return [...getStaticPaths(), ...contentPaths("services"), ...contentPaths("government")];
   },
 } satisfies Config;
