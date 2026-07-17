@@ -49,7 +49,7 @@ function readCategorySummary(
   const indexPath = path.join(contentRoot, domain, categorySlug, "index.yaml");
   if (!fs.existsSync(indexPath)) return null;
   const raw = load(fs.readFileSync(indexPath, "utf-8")) as Omit<CategorySummary, "slug">;
-  return { slug: categorySlug, ...raw };
+  return { ...raw, slug: categorySlug };
 }
 
 export function listCategories(
@@ -96,11 +96,11 @@ export function getArticle(
   const { data, content } = matter(fs.readFileSync(articlePath, "utf-8"));
   const frontmatter = data as Omit<Article, "slug" | "categorySlug" | "domain" | "body">;
   return {
+    ...frontmatter,
     slug: articleSlug,
     categorySlug,
     domain,
     body: content.trim(),
-    ...frontmatter,
   };
 }
 
