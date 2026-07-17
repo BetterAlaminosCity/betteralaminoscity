@@ -10,7 +10,6 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import "./fonts.css";
-import "@bettergov/kapwa/kapwa.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
