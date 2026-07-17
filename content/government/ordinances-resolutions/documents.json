@@ -1,15 +1,60 @@
 {
   "lastUpdated": "2026-01-15",
-  "source": "Sample data for testing (placeholder).",
+  "source": "Sample data for demonstration purposes. Replace with the Sangguniang Panlungsod Secretariat's official legislative records.",
   "documents": [
     {
-      "id": "sample-ordinance-1",
+      "id": "ord-2025-01",
       "type": "ordinance",
       "number": "2025-01",
-      "title": "Sample Ordinance",
-      "date": "2025-01-10",
+      "title": "Sample Ordinance Establishing a City Environmental Protection Code",
+      "date": "2025-02-10",
       "status": "Enacted",
-      "link": "https://example.com/ordinances/2025-01.pdf"
+      "link": "https://example.com/legislative/ord-2025-01.pdf"
+    },
+    {
+      "id": "res-2025-04",
+      "type": "resolution",
+      "number": "2025-04",
+      "title": "Sample Resolution Requesting National Support for Coastal Road Rehabilitation",
+      "date": "2025-03-18",
+      "status": "Adopted",
+      "link": "https://example.com/legislative/res-2025-04.pdf"
+    },
+    {
+      "id": "ord-2024-12",
+      "type": "ordinance",
+      "number": "2024-12",
+      "title": "Sample Ordinance Regulating Single-Use Plastics",
+      "date": "2024-11-05",
+      "status": "Enacted",
+      "link": "https://example.com/legislative/ord-2024-12.pdf"
+    },
+    {
+      "id": "res-2024-09",
+      "type": "resolution",
+      "number": "2024-09",
+      "title": "Sample Resolution Approving the Annual Investment Program",
+      "date": "2024-08-22",
+      "status": "Adopted",
+      "link": "https://example.com/legislative/res-2024-09.pdf"
+    },
+    {
+      "id": "ord-2023-07",
+      "type": "ordinance",
+      "number": "2023-07",
+      "title": "Sample Ordinance Creating a City Disaster Risk Reduction Fund",
+      "date": "2023-06-14",
+      "status": "Enacted",
+      "link": "https://example.com/legislative/ord-2023-07.pdf"
+    },
+    {
+      "id": "res-2025-11",
+      "type": "resolution",
+      "number": "2025-11",
+      "title": "Sample Resolution on a Proposed Public Market Modernization Study",
+      "date": "2025-06-30",
+      "status": "Pending",
+      "link": "https://example.com/legislative/res-2025-11.pdf"
     }
   ]
 }

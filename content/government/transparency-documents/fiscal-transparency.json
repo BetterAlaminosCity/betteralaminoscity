@@ -1,14 +1,42 @@
 {
   "lastUpdated": "2026-01-15",
-  "source": "Sample data for testing (placeholder).",
-  "fiscalYear": "2025",
-  "income": [{ "label": "Local Taxes", "amount": 1000000 }],
-  "expenditure": [{ "label": "Personnel Services", "amount": 600000 }],
+  "source": "Sample data for demonstration purposes. Replace with the City Accountant's Office's published annual budget report.",
+  "fiscalYear": "2025 (Sample Data)",
+  "income": [
+    { "label": "Real Property Tax", "amount": 45000000 },
+    { "label": "Business Tax & Permits", "amount": 38000000 },
+    { "label": "Internal Revenue Allotment (IRA)", "amount": 210000000 },
+    { "label": "Other Local Sources", "amount": 12000000 }
+  ],
+  "expenditure": [
+    { "label": "Personnel Services", "amount": 140000000 },
+    { "label": "Maintenance & Other Operating Expenses", "amount": 85000000 },
+    { "label": "Capital Outlay", "amount": 60000000 },
+    { "label": "Debt Service", "amount": 10000000 }
+  ],
   "infrastructureProjects": [
     {
-      "name": "Sample Road Widening",
+      "name": "Barangay Road Concreting (Sample)",
       "location": "Sample Barangay 1",
-      "budget": 500000,
+      "budget": 15000000,
+      "status": "Ongoing"
+    },
+    {
+      "name": "Public Market Rehabilitation (Sample)",
+      "location": "Sample Barangay 2",
+      "budget": 22000000,
+      "status": "Completed"
+    },
+    {
+      "name": "Flood Control Drainage System (Sample)",
+      "location": "Sample Barangay 3",
+      "budget": 18000000,
+      "status": "Planned"
+    },
+    {
+      "name": "Rural Health Unit Construction (Sample)",
+      "location": "Sample Barangay 4",
+      "budget": 9500000,
       "status": "Ongoing"
     }
   ]

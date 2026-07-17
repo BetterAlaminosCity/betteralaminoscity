@@ -1,7 +1,19 @@
 {
   "lastUpdated": "2026-01-15",
-  "source": "Sample data for testing (placeholder).",
+  "source": "Sample data for demonstration purposes. Replace with the Philippine Statistics Authority's published city profile.",
   "totalPopulation": 100000,
-  "barangays": [{ "name": "Sample Barangay 1", "population": 5000 }],
-  "economicIndicators": [{ "label": "Poverty Incidence", "value": "10% (Sample)" }]
+  "barangays": [
+    { "name": "Sample Barangay 1", "population": 18000 },
+    { "name": "Sample Barangay 2", "population": 15500 },
+    { "name": "Sample Barangay 3", "population": 12500 },
+    { "name": "Sample Barangay 4", "population": 11000 },
+    { "name": "Sample Barangay 5", "population": 9800 },
+    { "name": "Other Barangays (Combined, Sample)", "population": 33200 }
+  ],
+  "economicIndicators": [
+    { "label": "Poverty Incidence", "value": "12.5% (Sample)" },
+    { "label": "Employment Rate", "value": "94.0% (Sample)" },
+    { "label": "Number of Registered Businesses", "value": "1,850 (Sample)" },
+    { "label": "Average Household Income (Annual)", "value": "₱180,000 (Sample)" }
+  ]
 }
