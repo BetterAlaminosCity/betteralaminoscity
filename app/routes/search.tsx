@@ -23,7 +23,10 @@ export default function Search() {
   useEffect(() => {
     fetch("/search-index.json")
       .then((response) => response.json())
-      .then((data: SearchIndexEntry[]) => setEntries(data));
+      .then((data: SearchIndexEntry[]) => setEntries(data))
+      .catch((error) => {
+        console.error("Failed to load search index:", error);
+      });
   }, []);
 
   const fuse = useMemo(
