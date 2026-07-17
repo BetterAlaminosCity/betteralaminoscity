@@ -11,4 +11,8 @@ describe("real content tree", () => {
   it("has all 10 seeded service categories", () => {
     expect(listCategories("services")).toHaveLength(10);
   });
+
+  it("has all 6 seeded government categories", () => {
+    expect(listCategories("government")).toHaveLength(6);
+  });
 });
