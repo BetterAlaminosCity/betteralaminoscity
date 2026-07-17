@@ -4,12 +4,16 @@ import { describe, expect, it } from "vitest";
 import {
   getArticle,
   getCategory,
+  getCityStatistics,
+  getFiscalTransparency,
+  getLegislativeDocuments,
   getOfficial,
   listArticles,
   listCategories,
 } from "../../app/lib/content.server";
 
 const FIXTURE_ROOT = path.join(import.meta.dirname, "../fixtures/content-valid");
+const EMPTY_FIXTURE_ROOT = path.join(import.meta.dirname, "../fixtures/content-invalid");
 
 describe("listCategories", () => {
   it("lists categories for the services domain from the content tree", () => {
@@ -80,5 +84,49 @@ describe("getOfficial", () => {
 
   it("returns null when no official.json exists for the category", () => {
     expect(getOfficial("does-not-exist", FIXTURE_ROOT)).toBeNull();
+  });
+});
+
+describe("getFiscalTransparency", () => {
+  it("returns the fiscal transparency data", () => {
+    const data = getFiscalTransparency(FIXTURE_ROOT);
+    expect(data?.fiscalYear).toBe("2025");
+    expect(data?.income).toEqual([{ label: "Local Taxes", amount: 1000000 }]);
+  });
+
+  it("returns null when no fiscal-transparency.json exists", () => {
+    expect(getFiscalTransparency(EMPTY_FIXTURE_ROOT)).toBeNull();
+  });
+});
+
+describe("getLegislativeDocuments", () => {
+  it("returns the legislative documents data", () => {
+    const data = getLegislativeDocuments(FIXTURE_ROOT);
+    expect(data?.documents).toHaveLength(1);
+    expect(data?.documents[0].type).toBe("ordinance");
+  });
+
+  it("returns null when no documents.json exists", () => {
+    expect(getLegislativeDocuments(EMPTY_FIXTURE_ROOT)).toBeNull();
+  });
+});
+
+describe("getCityStatistics", () => {
+  it("returns the city statistics data", () => {
+    const data = getCityStatistics(FIXTURE_ROOT);
+    expect(data?.totalPopulation).toBe(100000);
+  });
+
+  it("returns null when no demographics.json exists", () => {
+    expect(getCityStatistics(EMPTY_FIXTURE_ROOT)).toBeNull();
+  });
+});
+
+describe("listCategories excludes civic data folders", () => {
+  it("does not include transparency-documents, ordinances-resolutions, or statistics as government categories", () => {
+    const slugs = listCategories("government", FIXTURE_ROOT).map((category) => category.slug);
+    expect(slugs).not.toContain("transparency-documents");
+    expect(slugs).not.toContain("ordinances-resolutions");
+    expect(slugs).not.toContain("statistics");
   });
 });
