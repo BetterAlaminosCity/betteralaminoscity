@@ -12,8 +12,11 @@
   "dependencies": {
     "@bettergov/kapwa": "^1.4.1",
     "@react-router/node": "^8.2.0",
+    "ajv": "^8.20.0",
+    "gray-matter": "^4.0.3",
     "i18next": "^26.3.6",
     "isbot": "^5",
+    "js-yaml": "^5.2.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-i18next": "^17.0.10",
