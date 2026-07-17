@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "fiscal-transparency.schema.json",
+  "type": "object",
+  "required": [
+    "lastUpdated",
+    "source",
+    "fiscalYear",
+    "income",
+    "expenditure",
+    "infrastructureProjects"
+  ],
+  "properties": {
+    "lastUpdated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "source": { "type": "string", "minLength": 1 },
+    "fiscalYear": { "type": "string", "minLength": 1 },
+    "income": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "amount"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "amount": { "type": "number", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "expenditure": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "amount"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "amount": { "type": "number", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "infrastructureProjects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "location", "budget", "status"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "location": { "type": "string", "minLength": 1 },
+          "budget": { "type": "number", "minimum": 0 },
+          "status": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

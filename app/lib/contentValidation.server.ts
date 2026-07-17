@@ -7,12 +7,18 @@ import { load } from "js-yaml";
 
 import articleFrontmatterSchema from "../../content/schemas/article-frontmatter.schema.json";
 import categorySchema from "../../content/schemas/category.schema.json";
+import cityStatisticsSchema from "../../content/schemas/city-statistics.schema.json";
+import fiscalTransparencySchema from "../../content/schemas/fiscal-transparency.schema.json";
+import legislativeDocumentsSchema from "../../content/schemas/legislative-documents.schema.json";
 import officialSchema from "../../content/schemas/official.schema.json";
 
 const ajv = new Ajv({ allErrors: true });
 const validateCategorySchema = ajv.compile(categorySchema);
 const validateArticleFrontmatterSchema = ajv.compile(articleFrontmatterSchema);
 const validateOfficialSchema = ajv.compile(officialSchema);
+const validateFiscalTransparencySchema = ajv.compile(fiscalTransparencySchema);
+const validateLegislativeDocumentsSchema = ajv.compile(legislativeDocumentsSchema);
+const validateCityStatisticsSchema = ajv.compile(cityStatisticsSchema);
 
 function formatErrors(errors: ErrorObject[] | null | undefined): string[] {
   return (errors ?? []).map((error) => `${error.instancePath || "/"} ${error.message}`);
@@ -33,12 +39,50 @@ export function validateOfficial(data: unknown): string[] {
   return formatErrors(validateOfficialSchema.errors);
 }
 
+export function validateFiscalTransparency(data: unknown): string[] {
+  validateFiscalTransparencySchema(data);
+  return formatErrors(validateFiscalTransparencySchema.errors);
+}
+
+export function validateLegislativeDocuments(data: unknown): string[] {
+  validateLegislativeDocumentsSchema(data);
+  return formatErrors(validateLegislativeDocumentsSchema.errors);
+}
+
+export function validateCityStatistics(data: unknown): string[] {
+  validateCityStatisticsSchema(data);
+  return formatErrors(validateCityStatisticsSchema.errors);
+}
+
 export interface ContentValidationIssue {
   file: string;
   errors: string[];
 }
 
 const DOMAINS = ["services", "government"] as const;
+
+// Folder names under content/government/ that hold a single fixed JSON data
+// file rather than an index.yaml + articles category — kept in sync with the
+// identically-named set in content.server.ts (see Global Constraints).
+const CIVIC_DATA_SLUGS = new Set(["transparency-documents", "ordinances-resolutions", "statistics"]);
+
+const FIXED_JSON_DATA_FILES: Array<{
+  relativePath: string;
+  validate: (data: unknown) => string[];
+}> = [
+  {
+    relativePath: path.join("government", "transparency-documents", "fiscal-transparency.json"),
+    validate: validateFiscalTransparency,
+  },
+  {
+    relativePath: path.join("government", "ordinances-resolutions", "documents.json"),
+    validate: validateLegislativeDocuments,
+  },
+  {
+    relativePath: path.join("government", "statistics", "demographics.json"),
+    validate: validateCityStatistics,
+  },
+];
 
 export function validateContentTree(contentRoot: string): ContentValidationIssue[] {
   const issues: ContentValidationIssue[] = [];
@@ -50,7 +94,8 @@ export function validateContentTree(contentRoot: string): ContentValidationIssue
     const categorySlugs = fs
       .readdirSync(domainDir, { withFileTypes: true })
       .filter((entry) => entry.isDirectory())
-      .map((entry) => entry.name);
+      .map((entry) => entry.name)
+      .filter((slug) => !(domain === "government" && CIVIC_DATA_SLUGS.has(slug)));
 
     for (const categorySlug of categorySlugs) {
       const categoryDir = path.join(domainDir, categorySlug);
@@ -78,6 +123,20 @@ export function validateContentTree(contentRoot: string): ContentValidationIssue
         const errors = validateArticleFrontmatter(data);
         if (errors.length > 0) issues.push({ file: articlePath, errors });
       }
+    }
+  }
+
+  const governmentDir = path.join(contentRoot, "government");
+  if (fs.existsSync(governmentDir)) {
+    for (const { relativePath, validate } of FIXED_JSON_DATA_FILES) {
+      const filePath = path.join(contentRoot, relativePath);
+      if (!fs.existsSync(filePath)) {
+        issues.push({ file: filePath, errors: [`missing ${relativePath}`] });
+        continue;
+      }
+      const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      const errors = validate(data);
+      if (errors.length > 0) issues.push({ file: filePath, errors });
     }
   }
 

@@ -1,0 +1,7 @@
+{
+  "lastUpdated": "2026-01-15",
+  "source": "Sample data for testing (placeholder).",
+  "totalPopulation": 100000,
+  "barangays": [{ "name": "Sample Barangay 1", "population": 5000 }],
+  "economicIndicators": [{ "label": "Poverty Incidence", "value": "10% (Sample)" }]
+}

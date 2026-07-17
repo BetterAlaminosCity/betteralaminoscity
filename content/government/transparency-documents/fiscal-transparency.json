@@ -1,0 +1,15 @@
+{
+  "lastUpdated": "2026-01-15",
+  "source": "Sample data for testing (placeholder).",
+  "fiscalYear": "2025",
+  "income": [{ "label": "Local Taxes", "amount": 1000000 }],
+  "expenditure": [{ "label": "Personnel Services", "amount": 600000 }],
+  "infrastructureProjects": [
+    {
+      "name": "Sample Road Widening",
+      "location": "Sample Barangay 1",
+      "budget": 500000,
+      "status": "Ongoing"
+    }
+  ]
+}

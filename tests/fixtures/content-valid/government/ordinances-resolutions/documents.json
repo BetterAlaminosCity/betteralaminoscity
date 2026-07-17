@@ -1,0 +1,15 @@
+{
+  "lastUpdated": "2026-01-15",
+  "source": "Sample data for testing (placeholder).",
+  "documents": [
+    {
+      "id": "sample-ordinance-1",
+      "type": "ordinance",
+      "number": "2025-01",
+      "title": "Sample Ordinance",
+      "date": "2025-01-10",
+      "status": "Enacted",
+      "link": "https://example.com/ordinances/2025-01.pdf"
+    }
+  ]
+}
