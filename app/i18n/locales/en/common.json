@@ -4,7 +4,8 @@
   },
   "nav": {
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "mainLabel": "Main navigation"
   },
   "language": {
     "label": "Language",

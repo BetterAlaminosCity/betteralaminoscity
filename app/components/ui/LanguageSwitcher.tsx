@@ -1,15 +1,17 @@
 import { useTranslation } from "react-i18next";
 
-import { SUPPORTED_LANGUAGES, type SupportedLanguage } from "../../i18n";
-
-const STORAGE_KEY = "betteralaminoscity-language";
+import {
+  LANGUAGE_STORAGE_KEY,
+  SUPPORTED_LANGUAGES,
+  type SupportedLanguage,
+} from "../../i18n";
 
 export function LanguageSwitcher() {
   const { t, i18n } = useTranslation();
 
   function selectLanguage(lang: SupportedLanguage) {
     void i18n.changeLanguage(lang);
-    window.localStorage.setItem(STORAGE_KEY, lang);
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
   }
 
   return (

@@ -1,32 +1,23 @@
-# React + TypeScript + Vite
+# BetterAlaminosCity.org
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A volunteer-run civic-tech guide to Alaminos City, Pangasinan government services. Not an official website of the Alaminos City government — see the in-app About page for details.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React 19 + TypeScript, React Router v8 (Framework Mode, static prerendering), Tailwind CSS v4 + [@bettergov/kapwa](https://github.com/bettergovph/kapwa), i18next (English/Filipino), Vitest + Testing Library.
 
-## React Compiler
+## Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev        # start the dev server
+npm test           # run the test suite
+npm run typecheck  # react-router typegen + tsc
+npm run build      # static production build (build/client/)
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+This project's `.npmrc` sets `legacy-peer-deps=true` — required because `typescript@^7` is ahead of some dependencies' declared peer ranges.
+
+## Deployment
+
+Deploys to Vercel as a static site (`vercel.json` points at `build/client/`) — no Node server at runtime.

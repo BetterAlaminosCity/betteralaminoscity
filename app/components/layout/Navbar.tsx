@@ -9,7 +9,7 @@ export function Navbar() {
   return (
     <header>
       <nav
-        aria-label={t("nav.home")}
+        aria-label={t("nav.mainLabel")}
         style={{ display: "flex", alignItems: "center", gap: "1rem" }}
       >
         <Link to="/">

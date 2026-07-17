@@ -7,6 +7,8 @@ import fil from "./locales/fil/common.json";
 export const SUPPORTED_LANGUAGES = ["en", "fil"] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
 
+export const LANGUAGE_STORAGE_KEY = "betteralaminoscity-language";
+
 i18next.use(initReactI18next).init({
   lng: "en",
   fallbackLng: "en",
