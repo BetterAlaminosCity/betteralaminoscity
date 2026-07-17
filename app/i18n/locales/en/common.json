@@ -7,7 +7,8 @@
     "about": "About",
     "mainLabel": "Main navigation",
     "services": "Services",
-    "government": "Government"
+    "government": "Government",
+    "search": "Search"
   },
   "language": {
     "label": "Language",
@@ -16,5 +17,11 @@
   },
   "disclaimer": {
     "text": "BetterAlaminosCity.org is a volunteer-run civic project. It is not an official website of the Alaminos City government."
+  },
+  "search": {
+    "title": "Search",
+    "inputLabel": "Search the site",
+    "placeholder": "Search services, offices, ordinances…",
+    "noResults": "No results found."
   }
 }

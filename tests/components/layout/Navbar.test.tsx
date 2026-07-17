@@ -23,4 +23,15 @@ describe("Navbar", () => {
       "/about",
     );
   });
+
+  it("renders a Search nav link", () => {
+    const router = createMemoryRouter([{ path: "/", Component: Navbar }]);
+    render(
+      <I18nProvider>
+        <RouterProvider router={router} />
+      </I18nProvider>,
+    );
+
+    expect(screen.getByRole("link", { name: "Search" })).toHaveAttribute("href", "/search");
+  });
 });

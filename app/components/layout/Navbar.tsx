@@ -19,6 +19,7 @@ export function Navbar() {
         <Link to="/services">{t("nav.services")}</Link>
         <Link to="/government">{t("nav.government")}</Link>
         <Link to="/about">{t("nav.about")}</Link>
+        <Link to="/search">{t("nav.search")}</Link>
         <LanguageSwitcher />
       </nav>
     </header>
