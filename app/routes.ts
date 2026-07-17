@@ -10,4 +10,5 @@ export default [
   route("government/:office", "routes/government/office.tsx"),
   route("government/:office/:article", "routes/government/article.tsx"),
   route("government/transparency", "routes/government/transparency.tsx"),
+  route("government/ordinances-resolutions", "routes/government/ordinances-resolutions.tsx"),
 ] satisfies RouteConfig;
