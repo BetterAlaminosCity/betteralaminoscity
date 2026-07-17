@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Better Alaminos City"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "fil": "Filipino"
+  }
+}

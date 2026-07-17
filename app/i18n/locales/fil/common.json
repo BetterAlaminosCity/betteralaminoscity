@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Mas Mahusay na Alaminos"
+  },
+  "nav": {
+    "home": "Bahay",
+    "about": "Tungkol Sa"
+  },
+  "language": {
+    "label": "Wika",
+    "en": "Ingles",
+    "fil": "Filipino"
+  }
+}
