@@ -7,7 +7,7 @@ import { getLegislativeDocuments, type LegislativeDocument } from "../../lib/con
 import { buildMeta } from "../../lib/seo";
 import type { Route } from "./+types/ordinances-resolutions";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
   return buildMeta({
     title: "Ordinances & Resolutions",
     description: "Searchable list of Alaminos City ordinances and resolutions.",
@@ -31,8 +31,7 @@ export default function OrdinancesResolutions() {
   const [year, setYear] = useState("");
 
   const years = useMemo(
-    () =>
-      Array.from(new Set(documents.map(documentYear))).sort((a, b) => b.localeCompare(a)),
+    () => Array.from(new Set(documents.map(documentYear))).sort((a, b) => b.localeCompare(a)),
     [documents],
   );
 
@@ -84,8 +83,8 @@ export default function OrdinancesResolutions() {
         {results.map((document) => (
           <li key={document.id}>
             <a href={document.link}>
-              {document.type === "ordinance" ? "Ordinance" : "Resolution"} No.{" "}
-              {document.number}: {document.title}
+              {document.type === "ordinance" ? "Ordinance" : "Resolution"} No. {document.number}:{" "}
+              {document.title}
             </a>
             <p>
               {document.date} — {document.status}

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { buildMeta } from "../lib/seo";
 import type { Route } from "./+types/about";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
   return buildMeta({
     title: "About",
     description:
@@ -19,10 +19,9 @@ export default function About() {
     <section>
       <h1>{t("nav.about")}</h1>
       <p>
-        BetterAlaminosCity.org is a volunteer-run civic project. It is not an
-        official website of the Alaminos City government — it aggregates
-        publicly available information to make government services easier to
-        find.
+        BetterAlaminosCity.org is a volunteer-run civic project. It is not an official website of
+        the Alaminos City government — it aggregates publicly available information to make
+        government services easier to find.
       </p>
     </section>
   );

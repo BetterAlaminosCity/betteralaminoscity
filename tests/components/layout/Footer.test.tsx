@@ -11,8 +11,6 @@ describe("Footer", () => {
         <Footer />
       </I18nProvider>,
     );
-    expect(
-      screen.getByText(new RegExp(String(new Date().getFullYear()))),
-    ).toBeInTheDocument();
+    expect(screen.getByText(new RegExp(String(new Date().getFullYear())))).toBeInTheDocument();
   });
 });

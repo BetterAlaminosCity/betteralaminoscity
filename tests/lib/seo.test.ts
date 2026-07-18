@@ -41,8 +41,7 @@ describe("buildMeta", () => {
     });
 
     expect(meta).toContainEqual({
-      title:
-        "BetterAlaminosCity.org — Community Guide to Alaminos City Government Services",
+      title: "BetterAlaminosCity.org — Community Guide to Alaminos City Government Services",
     });
     expect(meta).toContainEqual({
       property: "og:url",

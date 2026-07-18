@@ -14,9 +14,10 @@ describe("GovernmentIndex", () => {
 
     expect(await screen.findByRole("heading", { name: "Executive" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Legislative" })).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", { name: "Sangguniang Panlungsod" }),
-    ).toHaveAttribute("href", "/government/sangguniang-panlungsod");
+    expect(screen.getByRole("link", { name: "Sangguniang Panlungsod" })).toHaveAttribute(
+      "href",
+      "/government/sangguniang-panlungsod",
+    );
   });
 
   it("links to the three civic transparency pages", async () => {
@@ -27,14 +28,17 @@ describe("GovernmentIndex", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByRole("heading", { name: "Civic Transparency" })).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", { name: "Budget & Fiscal Transparency" }),
-    ).toHaveAttribute("href", "/government/transparency");
-    expect(
-      screen.getByRole("link", { name: "Ordinances & Resolutions" }),
-    ).toHaveAttribute("href", "/government/ordinances-resolutions");
-    expect(
-      screen.getByRole("link", { name: "Statistics & Demographics" }),
-    ).toHaveAttribute("href", "/government/statistics");
+    expect(screen.getByRole("link", { name: "Budget & Fiscal Transparency" })).toHaveAttribute(
+      "href",
+      "/government/transparency",
+    );
+    expect(screen.getByRole("link", { name: "Ordinances & Resolutions" })).toHaveAttribute(
+      "href",
+      "/government/ordinances-resolutions",
+    );
+    expect(screen.getByRole("link", { name: "Statistics & Demographics" })).toHaveAttribute(
+      "href",
+      "/government/statistics",
+    );
   });
 });

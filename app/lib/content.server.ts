@@ -193,12 +193,7 @@ export function getFiscalTransparency(
 export function getLegislativeDocuments(
   contentRoot: string = DEFAULT_CONTENT_ROOT,
 ): LegislativeDocuments | null {
-  const filePath = path.join(
-    contentRoot,
-    "government",
-    "ordinances-resolutions",
-    "documents.json",
-  );
+  const filePath = path.join(contentRoot, "government", "ordinances-resolutions", "documents.json");
   if (!fs.existsSync(filePath)) return null;
   return JSON.parse(fs.readFileSync(filePath, "utf-8")) as LegislativeDocuments;
 }

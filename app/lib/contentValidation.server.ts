@@ -64,7 +64,11 @@ const DOMAINS = ["services", "government"] as const;
 // Folder names under content/government/ that hold a single fixed JSON data
 // file rather than an index.yaml + articles category — kept in sync with the
 // identically-named set in content.server.ts (see Global Constraints).
-const CIVIC_DATA_SLUGS = new Set(["transparency-documents", "ordinances-resolutions", "statistics"]);
+const CIVIC_DATA_SLUGS = new Set([
+  "transparency-documents",
+  "ordinances-resolutions",
+  "statistics",
+]);
 
 const FIXED_JSON_DATA_FILES: Array<{
   relativePath: string;

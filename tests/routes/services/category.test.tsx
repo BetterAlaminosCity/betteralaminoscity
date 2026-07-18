@@ -18,9 +18,7 @@ describe("ServicesCategory", () => {
     );
     render(<RouterProvider router={router} />);
 
-    expect(
-      await screen.findByRole("heading", { name: "Health Services" }),
-    ).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Health Services" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Overview" })).toHaveAttribute(
       "href",
       "/services/health-services/overview",

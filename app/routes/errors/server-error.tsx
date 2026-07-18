@@ -2,7 +2,7 @@ import { ErrorPage } from "../../components/ui/ErrorPage";
 import { buildMeta } from "../../lib/seo";
 import type { Route } from "./+types/server-error";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
   return buildMeta({
     title: "Something Went Wrong",
     description: "An unexpected error occurred.",

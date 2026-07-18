@@ -25,9 +25,9 @@ describe("validateCategory", () => {
 
 describe("validateArticleFrontmatter", () => {
   it("accepts frontmatter with title and description", () => {
-    expect(
-      validateArticleFrontmatter({ title: "Overview", description: "An overview." }),
-    ).toEqual([]);
+    expect(validateArticleFrontmatter({ title: "Overview", description: "An overview." })).toEqual(
+      [],
+    );
   });
 
   it("rejects frontmatter missing title", () => {

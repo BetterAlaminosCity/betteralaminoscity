@@ -16,8 +16,6 @@ describe("LanguageSwitcher", () => {
 
     await user.click(screen.getByRole("button", { name: "Filipino" }));
 
-    expect(
-      screen.getByRole("button", { name: "Filipino", pressed: true }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Filipino", pressed: true })).toBeInTheDocument();
   });
 });

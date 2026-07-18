@@ -1,0 +1,10 @@
+build
+.react-router
+node_modules
+package-lock.json
+public/search-index.json
+public/sitemap.xml
+public/robots.txt
+playwright-report
+test-results
+.lighthouseci

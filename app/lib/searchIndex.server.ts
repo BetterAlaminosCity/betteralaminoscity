@@ -45,16 +45,14 @@ function buildDomainEntries(domain: ContentDomain, contentRoot: string): SearchI
 function buildLegislativeEntries(contentRoot: string): SearchIndexEntry[] {
   const legislativeDocuments = getLegislativeDocuments(contentRoot);
   if (!legislativeDocuments) return [];
-  return legislativeDocuments.documents.map(
-    (document): SearchIndexEntry => ({
-      id: `legislative-${document.id}`,
-      title: `${document.type === "ordinance" ? "Ordinance" : "Resolution"} No. ${document.number}: ${document.title}`,
-      description: `Status: ${document.status} · Dated ${document.date}`,
-      url: document.link,
-      domain: "legislative",
-      categoryTitle: "Ordinances & Resolutions",
-    }),
-  );
+  return legislativeDocuments.documents.map((document): SearchIndexEntry => ({
+    id: `legislative-${document.id}`,
+    title: `${document.type === "ordinance" ? "Ordinance" : "Resolution"} No. ${document.number}: ${document.title}`,
+    description: `Status: ${document.status} · Dated ${document.date}`,
+    url: document.link,
+    domain: "legislative",
+    categoryTitle: "Ordinances & Resolutions",
+  }));
 }
 
 export function buildSearchIndex(contentRoot: string = DEFAULT_CONTENT_ROOT): SearchIndexEntry[] {

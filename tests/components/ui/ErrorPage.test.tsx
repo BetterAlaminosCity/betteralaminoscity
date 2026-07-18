@@ -21,9 +21,7 @@ describe("ErrorPage", () => {
     render(<RouterProvider router={router} />);
 
     expect(screen.getByRole("heading", { name: /404 — Page Not Found/ })).toBeInTheDocument();
-    expect(
-      screen.getByText("The page you're looking for doesn't exist."),
-    ).toBeInTheDocument();
+    expect(screen.getByText("The page you're looking for doesn't exist.")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Return to homepage" })).toHaveAttribute("href", "/");
   });
 });

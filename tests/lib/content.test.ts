@@ -22,8 +22,7 @@ describe("listCategories", () => {
       {
         slug: "sample-category",
         title: "Sample Category",
-        description:
-          "A sample category used for testing the content loader and schema validation.",
+        description: "A sample category used for testing the content loader and schema validation.",
       },
     ]);
   });
@@ -68,9 +67,7 @@ describe("listArticles / getArticle", () => {
   });
 
   it("returns null for an unknown article slug", () => {
-    expect(
-      getArticle("services", "sample-category", "does-not-exist", FIXTURE_ROOT),
-    ).toBeNull();
+    expect(getArticle("services", "sample-category", "does-not-exist", FIXTURE_ROOT)).toBeNull();
   });
 });
 

@@ -11,8 +11,6 @@ describe("About", () => {
         <About />
       </I18nProvider>,
     );
-    expect(
-      screen.getByText(/volunteer-run civic project/i),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/volunteer-run civic project/i)).toBeInTheDocument();
   });
 });

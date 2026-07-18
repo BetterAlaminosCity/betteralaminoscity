@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@import '@bettergov/kapwa/kapwa.css';
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@bettergov/kapwa/kapwa.css";
 
 @source '../node_modules/@bettergov/kapwa';
 

@@ -11,8 +11,6 @@ describe("Disclaimer", () => {
         <Disclaimer />
       </I18nProvider>,
     );
-    expect(
-      screen.getByText(/not an official (website|page) of/i),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/not an official (website|page) of/i)).toBeInTheDocument();
   });
 });

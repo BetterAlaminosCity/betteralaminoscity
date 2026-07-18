@@ -11,9 +11,7 @@ describe("Home", () => {
         <Home />
       </I18nProvider>,
     );
-    expect(
-      screen.getByRole("heading", { name: /BetterAlaminosCity.org/i }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /BetterAlaminosCity.org/i })).toBeInTheDocument();
     expect(screen.getByText(/Hundred Islands/i)).toBeInTheDocument();
   });
 });

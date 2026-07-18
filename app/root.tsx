@@ -73,9 +73,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   const details =
-    import.meta.env.DEV && error instanceof Error
-      ? error.message
-      : "An unexpected error occurred.";
+    import.meta.env.DEV && error instanceof Error ? error.message : "An unexpected error occurred.";
   const stack = import.meta.env.DEV && error instanceof Error ? error.stack : undefined;
 
   return (

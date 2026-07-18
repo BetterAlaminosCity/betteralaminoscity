@@ -4,7 +4,7 @@ import { listCategories } from "../../lib/content.server";
 import { buildMeta } from "../../lib/seo";
 import type { Route } from "./+types/index";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
   return buildMeta({
     title: "Government",
     description: "Directory of Alaminos City government offices and officials.",

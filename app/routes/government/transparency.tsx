@@ -1,12 +1,4 @@
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { useLoaderData } from "react-router";
 
 import { DataSourceNote } from "../../components/ui/DataSourceNote";
@@ -14,7 +6,7 @@ import { getFiscalTransparency } from "../../lib/content.server";
 import { buildMeta } from "../../lib/seo";
 import type { Route } from "./+types/transparency";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
   return buildMeta({
     title: "Budget & Fiscal Transparency",
     description: "Income, expenditure, and infrastructure project breakdown for Alaminos City.",

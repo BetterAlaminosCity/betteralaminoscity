@@ -6,7 +6,7 @@ import { getCityStatistics } from "../../lib/content.server";
 import { buildMeta } from "../../lib/seo";
 import type { Route } from "./+types/statistics";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
   return buildMeta({
     title: "Statistics & Demographics",
     description: "Population, barangay breakdown, and economic indicators for Alaminos City.",

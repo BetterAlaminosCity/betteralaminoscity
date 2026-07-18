@@ -6,7 +6,7 @@ import { buildMeta } from "../lib/seo";
 import type { SearchIndexEntry } from "../lib/searchIndex.server";
 import type { Route } from "./+types/search";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
   return buildMeta({
     title: "Search",
     description:
