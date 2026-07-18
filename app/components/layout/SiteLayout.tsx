@@ -1,4 +1,3 @@
-import { Disclaimer } from "./Disclaimer";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 
@@ -7,7 +6,6 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
     <>
       <Navbar />
       <main>{children}</main>
-      <Disclaimer />
       <Footer />
     </>
   );

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it } from "vitest";
 
@@ -23,9 +23,11 @@ describe("SiteLayout", () => {
       </I18nProvider>,
     );
 
-    expect(screen.getByRole("link", { name: "Home" })).toBeInTheDocument();
+    expect(
+      within(screen.getByRole("banner")).getByRole("link", { name: "Home" }),
+    ).toBeInTheDocument();
     expect(screen.getByText("Page content")).toBeInTheDocument();
     expect(screen.getByRole("note")).toBeInTheDocument();
-    expect(screen.getByText(/BetterAlaminosCity\.org\. MIT Licensed/)).toBeInTheDocument();
+    expect(screen.getByText(/MIT Licensed/)).toBeInTheDocument();
   });
 });
