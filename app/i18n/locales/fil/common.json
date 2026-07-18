@@ -1,8 +1,8 @@
 {
   "home": {
     "hero": {
-      "eyebrow": "Gabay na pinapatakbo ng komunidad",
-      "title": "Ang iyong gabay sa mga serbisyo ng pamahalaan ng Lungsod ng Alaminos",
+      "eyebrow": "Maligayang pagdating sa",
+      "title": "BetterAlaminosCity.org",
       "titleHighlight": "Lungsod ng Alaminos",
       "description": "Hanapin ang mga permit, tanggapan, ordinansa, at serbisyo ng lungsod — kasama na ang lahat tungkol sa Hundred Islands National Park.",
       "primaryCta": "Tingnan ang mga Serbisyo",
@@ -11,9 +11,9 @@
   },
   "nav": {
     "home": "Bahay",
-    "about": "Tungkol Sa",
+    "about": "Patungkol",
     "mainLabel": "Pangunahing Nabigasyon",
-    "services": "Serbisyo",
+    "services": "Mga Serbisyo",
     "government": "Pamahalaan",
     "search": "Maghanap",
     "menuToggle": "I-toggle ang menu ng nabigasyon"
