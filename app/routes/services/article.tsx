@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 
 import { getArticle, getCategory } from "../../lib/content.server";
 import { buildMeta } from "../../lib/seo";
+import { buildGovernmentServiceJsonLd, jsonLdScriptHtml } from "../../lib/structuredData";
 import type { Route } from "./+types/article";
 
 export function meta({ loaderData, params }: Route.MetaArgs) {
@@ -29,9 +30,16 @@ export function loader({ params }: Route.LoaderArgs) {
 
 export default function ServicesArticle() {
   const { category, article } = useLoaderData<typeof loader>();
+  const jsonLd = buildGovernmentServiceJsonLd({
+    name: article.title,
+    description: article.description,
+    path: `/services/${category.slug}/${article.slug}`,
+    serviceType: category.title,
+  });
 
   return (
     <section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScriptHtml(jsonLd)} />
       <p>
         <Link to={`/services/${category.slug}`}>{category.title}</Link>
       </p>
