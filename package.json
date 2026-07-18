@@ -8,7 +8,7 @@
     "dev": "react-router dev",
     "build:search-index": "tsx scripts/build-search-index.ts",
     "build:sitemap": "tsx scripts/build-sitemap.ts",
-    "build": "npm run build:search-index && npm run build:sitemap && react-router build",
+    "build": "npm run build:search-index && npm run build:sitemap && react-router build && cp build/client/404/index.html build/client/404.html",
     "typecheck": "react-router typegen && tsc",
     "test": "vitest run"
   },

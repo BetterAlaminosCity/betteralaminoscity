@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import "./fonts.css";
+import { ErrorPage } from "./components/ui/ErrorPage";
 import { I18nProvider } from "./i18n/I18nProvider";
 import { SiteLayout } from "./components/layout/SiteLayout";
 
@@ -43,30 +44,48 @@ export default function App() {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
-
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
-  } else if (import.meta.env.DEV && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
+    if (error.status === 404) {
+      return (
+        <ErrorPage
+          code="404"
+          title="Page Not Found"
+          message="The page you're looking for doesn't exist or may have been moved."
+        />
+      );
+    }
+    if (error.status === 403) {
+      return (
+        <ErrorPage
+          code="403"
+          title="Forbidden"
+          message="You don't have permission to view this page."
+        />
+      );
+    }
+    return (
+      <ErrorPage
+        code={String(error.status)}
+        title="Error"
+        message={error.statusText || "An unexpected error occurred."}
+      />
+    );
   }
 
+  const details =
+    import.meta.env.DEV && error instanceof Error
+      ? error.message
+      : "An unexpected error occurred.";
+  const stack = import.meta.env.DEV && error instanceof Error ? error.stack : undefined;
+
   return (
-    <main style={{ padding: "2rem", maxWidth: 640, margin: "0 auto" }}>
-      <h1>{message}</h1>
-      <p>{details}</p>
+    <>
+      <ErrorPage code="500" title="Something Went Wrong" message={details} />
       {stack && (
-        <pre style={{ overflowX: "auto" }}>
+        <pre style={{ overflowX: "auto", padding: "0 2rem" }}>
           <code>{stack}</code>
         </pre>
       )}
-    </main>
+    </>
   );
 }
