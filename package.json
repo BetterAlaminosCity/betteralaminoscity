@@ -9,12 +9,14 @@
     "build:search-index": "tsx scripts/build-search-index.ts",
     "build:sitemap": "tsx scripts/build-sitemap.ts",
     "build": "npm run build:search-index && npm run build:sitemap && react-router build && cp build/client/404/index.html build/client/404.html",
+    "preview": "vite preview --port 4173",
     "typecheck": "react-router typegen && tsc",
     "test": "vitest run",
     "lint": "oxlint .",
     "lint:fix": "oxlint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "e2e": "playwright test",
     "prepare": "husky"
   },
   "dependencies": {
@@ -34,6 +36,7 @@
     "recharts": "^3.9.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@react-router/dev": "^8.2.0",
     "@tailwindcss/vite": "^4.3.3",
     "@testing-library/dom": "^10.4.1",
