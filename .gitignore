@@ -15,6 +15,7 @@ build
 /public/robots.txt
 /playwright-report
 /test-results
+.lighthouseci
 *.local
 
 # Editor directories and files
