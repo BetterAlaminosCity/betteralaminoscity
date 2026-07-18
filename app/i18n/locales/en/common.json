@@ -8,7 +8,8 @@
     "mainLabel": "Main navigation",
     "services": "Services",
     "government": "Government",
-    "search": "Search"
+    "search": "Search",
+    "menuToggle": "Toggle navigation menu"
   },
   "language": {
     "label": "Language",
