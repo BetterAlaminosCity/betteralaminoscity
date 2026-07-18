@@ -2,14 +2,11 @@ import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it } from "vitest";
 
-import { I18nProvider } from "../../app/i18n/I18nProvider";
-import Home from "../../app/routes/home";
+import { I18nProvider } from "../../../app/i18n/I18nProvider";
+import { Hero } from "../../../app/components/home/Hero";
 
-// Home renders <Hero>, which uses <Link> for its CTAs, so it must be
-// rendered inside a Router context — same pattern as
-// tests/components/layout/Navbar.test.tsx and tests/components/home/Hero.test.tsx.
-function renderHome() {
-  const router = createMemoryRouter([{ path: "/", Component: Home }]);
+function renderHero() {
+  const router = createMemoryRouter([{ path: "/", Component: Hero }]);
   return render(
     <I18nProvider>
       <RouterProvider router={router} />
@@ -17,9 +14,10 @@ function renderHome() {
   );
 }
 
-describe("Home", () => {
-  it("renders the hero heading", () => {
-    renderHome();
+describe("Hero", () => {
+  it("renders the hero heading with the highlighted city name", () => {
+    renderHero();
+
     expect(
       screen.getByRole("heading", {
         name: "Your guide to Alaminos City government services",
@@ -28,12 +26,14 @@ describe("Home", () => {
   });
 
   it("mentions the Hundred Islands National Park", () => {
-    renderHome();
-    expect(screen.getByText(/Hundred Islands/i)).toBeInTheDocument();
+    renderHero();
+
+    expect(screen.getByText(/Hundred Islands National Park/i)).toBeInTheDocument();
   });
 
-  it("renders primary and secondary hero CTAs", () => {
-    renderHome();
+  it("links the primary CTA to /services and the secondary CTA to /about", () => {
+    renderHero();
+
     expect(screen.getByRole("link", { name: "Browse Services" })).toHaveAttribute(
       "href",
       "/services",

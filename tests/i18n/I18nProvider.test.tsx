@@ -6,7 +6,7 @@ import { I18nProvider } from "../../app/i18n/I18nProvider";
 
 function Probe() {
   const { t } = useTranslation();
-  return <p>{t("home.title")}</p>;
+  return <p>{t("nav.mainLabel")}</p>;
 }
 
 describe("I18nProvider", () => {
@@ -16,6 +16,6 @@ describe("I18nProvider", () => {
         <Probe />
       </I18nProvider>,
     );
-    expect(screen.getByText("BetterAlaminosCity.org")).toBeInTheDocument();
+    expect(screen.getByText("Main navigation")).toBeInTheDocument();
   });
 });

@@ -1,6 +1,13 @@
 {
   "home": {
-    "title": "BetterAlaminosCity.org"
+    "hero": {
+      "eyebrow": "Community-run city guide",
+      "title": "Your guide to Alaminos City government services",
+      "titleHighlight": "Alaminos City",
+      "description": "Find permits, offices, ordinances, and city services — plus everything about the Hundred Islands National Park.",
+      "primaryCta": "Browse Services",
+      "secondaryCta": "Learn About This Project"
+    }
   },
   "nav": {
     "home": "Home",
