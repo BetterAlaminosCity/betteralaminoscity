@@ -15,12 +15,12 @@ function renderHero() {
 }
 
 describe("Hero", () => {
-  it("renders the hero heading with the highlighted city name", () => {
+  it("renders the website name", () => {
     renderHero();
 
     expect(
       screen.getByRole("heading", {
-        name: "Your guide to Alaminos City government services",
+        name: "BetterAlaminosCity.org",
       }),
     ).toBeInTheDocument();
   });

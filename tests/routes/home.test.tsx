@@ -22,7 +22,7 @@ describe("Home", () => {
     renderHome();
     expect(
       screen.getByRole("heading", {
-        name: "Your guide to Alaminos City government services",
+        name: "BetterAlaminosCity.org",
       }),
     ).toBeInTheDocument();
   });
