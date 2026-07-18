@@ -1,5 +1,5 @@
 const SITE_NAME = "BetterAlaminosCity.org";
-const SITE_URL = "https://betteralaminoscity.org";
+export const SITE_URL = "https://betteralaminoscity.org";
 const DEFAULT_TITLE = `${SITE_NAME} — Community Guide to Alaminos City Government Services`;
 
 export interface SeoOptions {
