@@ -12,8 +12,8 @@ describe("LocationMap", () => {
       </I18nProvider>,
     );
 
-    expect(screen.getByRole("heading", { name: "Where to Find Us" })).toBeInTheDocument();
-    const iframe = screen.getByTitle("Where to Find Us");
+    expect(screen.getByRole("heading", { name: "Where to Find" })).toBeInTheDocument();
+    const iframe = screen.getByTitle("Where to Find");
     expect(iframe.tagName).toBe("IFRAME");
     expect(iframe).toHaveAttribute("src", expect.stringContaining("openstreetmap.org"));
   });

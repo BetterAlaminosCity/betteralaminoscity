@@ -69,6 +69,6 @@ describe("Home", () => {
     expect(
       await screen.findByRole("heading", { name: "Emergency Hotlines & Contact" }),
     ).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "Where to Find Us" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Where to Find" })).toBeInTheDocument();
   });
 });
