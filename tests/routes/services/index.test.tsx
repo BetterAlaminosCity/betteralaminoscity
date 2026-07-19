@@ -21,7 +21,7 @@ describe("ServicesIndex", () => {
     renderServicesIndex();
 
     expect(
-      await screen.findByRole("heading", { name: "Municipal Services Directory" }),
+      await screen.findByRole("heading", { name: "City Services Directory" }),
     ).toBeInTheDocument();
   });
 

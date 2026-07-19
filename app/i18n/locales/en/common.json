@@ -74,7 +74,7 @@
   "services": {
     "pageHeader": {
       "badge": "Services",
-      "title": "Municipal Services Directory",
+      "title": "City Services Directory",
       "subtitle": "Find permits, applications, and assistance programs offered by Alaminos City."
     },
     "viewService": "View services"
