@@ -89,5 +89,15 @@
     "departmentOffices": "Mga Tanggapan",
     "legislative": "Lehislatura",
     "viewOffice": "Tingnan ang tanggapan"
+  },
+  "about": {
+    "missionHeading": "Ang Aming Misyon",
+    "missionBody": "Ang BetterAlaminosCity.org ay isang boluntaryong proyektong sibiko. Hindi ito opisyal na website ng pamahalaan ng Lungsod ng Alaminos — pinagsasama-sama nito ang mga pampublikong impormasyon tungkol sa mga serbisyo, tanggapan, at ordinansa ng lungsod upang mas madaling mahanap ang mga ito. Ang nilalaman ay hango sa opisyal na pinagmumulan ng pamahalaan kung available, at malinaw na minarkahan bilang placeholder kung hindi pa ito naberipika.",
+    "contributeHeading": "Mag-ambag",
+    "contributeBody": "Ang proyektong ito ay open source at tumatanggap ng ambag mula sa mga developer, tagapagsalin, at residente na nais tumulong sa pag-verify ng nilalaman. Basahin ang gabay sa pag-ambag at code of conduct bago magbukas ng pull request.",
+    "contributingLink": "Basahin ang Gabay sa Pag-ambag",
+    "codeOfConductLink": "Basahin ang Code of Conduct",
+    "techStackHeading": "Tech Stack at Transparency",
+    "techStackBody": "Ginawa gamit ang React Router, ang Kapwa civic design system, at i18next para sa pagsasalin sa Ingles/Filipino, ang site na ito ay ganap na open source sa ilalim ng MIT license at pinapanatili ng mga boluntaryo — hindi ng pamahalaan ng Lungsod ng Alaminos."
   }
 }

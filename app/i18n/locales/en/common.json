@@ -89,5 +89,15 @@
     "departmentOffices": "Department Offices",
     "legislative": "Legislative",
     "viewOffice": "View office"
+  },
+  "about": {
+    "missionHeading": "Our Mission",
+    "missionBody": "BetterAlaminosCity.org is a volunteer-run civic project. It is not an official website of the Alaminos City government — it aggregates publicly available information about city services, offices, and ordinances to make them easier to find. Content is drawn from official government sources where available and clearly marked as a placeholder where it isn't yet verified.",
+    "contributeHeading": "Contribute",
+    "contributeBody": "This project is open source and welcomes contributions from developers, translators, and residents who want to help verify content. Read the contributing guide and code of conduct before opening a pull request.",
+    "contributingLink": "Read the Contributing Guide",
+    "codeOfConductLink": "Read the Code of Conduct",
+    "techStackHeading": "Tech Stack & Transparency",
+    "techStackBody": "Built with React Router, the Kapwa civic design system, and i18next for English/Filipino translation, this site is fully open source under the MIT license and maintained by volunteers — not the Alaminos City government."
   }
 }
