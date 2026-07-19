@@ -70,5 +70,13 @@
     "exploreHeading": "Explore",
     "githubLink": "View source on GitHub",
     "copyright": "© {{year}} BetterAlaminosCity.org · MIT Licensed"
+  },
+  "services": {
+    "pageHeader": {
+      "badge": "Services",
+      "title": "Municipal Services Directory",
+      "subtitle": "Find permits, applications, and assistance programs offered by Alaminos City."
+    },
+    "viewService": "View services"
   }
 }

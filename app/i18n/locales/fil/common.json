@@ -70,5 +70,13 @@
     "exploreHeading": "Galugarin",
     "githubLink": "Tingnan ang source code sa GitHub",
     "copyright": "© {{year}} BetterAlaminosCity.org · Lisensyadong MIT"
+  },
+  "services": {
+    "pageHeader": {
+      "badge": "Mga Serbisyo",
+      "title": "Direktoryo ng mga Serbisyo ng Lungsod",
+      "subtitle": "Hanapin ang mga permit, aplikasyon, at mga programa ng tulong na inaalok ng Lungsod ng Alaminos."
+    },
+    "viewService": "Tingnan ang mga serbisyo"
   }
 }
