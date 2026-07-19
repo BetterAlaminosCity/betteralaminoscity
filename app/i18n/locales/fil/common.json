@@ -12,6 +12,11 @@
       "heading": "Mga Popular na Serbisyo",
       "viewService": "Tingnan ang mga serbisyo",
       "viewAll": "Tingnan lahat ng serbisyo"
+    },
+    "cityAtAGlance": {
+      "heading": "Ang Lungsod sa Isang Sulyap",
+      "population": "Kabuuang Populasyon",
+      "barangays": "Mga Barangay"
     }
   },
   "nav": {

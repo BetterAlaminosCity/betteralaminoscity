@@ -12,6 +12,11 @@
       "heading": "Popular Services",
       "viewService": "View services",
       "viewAll": "View all services"
+    },
+    "cityAtAGlance": {
+      "heading": "City at a Glance",
+      "population": "Total Population",
+      "barangays": "Barangays"
     }
   },
   "nav": {
