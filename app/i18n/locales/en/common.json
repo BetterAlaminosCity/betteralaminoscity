@@ -7,6 +7,11 @@
       "description": "Find permits, offices, ordinances, and city services — plus everything about the Hundred Islands National Park.",
       "primaryCta": "Browse Services",
       "secondaryCta": "Learn About This Project"
+    },
+    "popularServices": {
+      "heading": "Popular Services",
+      "viewService": "View services",
+      "viewAll": "View all services"
     }
   },
   "nav": {
