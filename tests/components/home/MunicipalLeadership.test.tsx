@@ -30,7 +30,7 @@ describe("MunicipalLeadership", () => {
   it("renders a card for the mayor linking to their office page", () => {
     renderLeadership(MAYOR, null);
 
-    expect(screen.getByRole("heading", { name: "Municipal Leadership" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "City Leadership" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /City Mayor/i })).toHaveAttribute(
       "href",
       "/government/office-of-the-mayor",

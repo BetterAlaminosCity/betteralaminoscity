@@ -58,11 +58,9 @@ describe("Home", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders Municipal Leadership cards for the mayor and legislative head", async () => {
+  it("renders City Leadership cards for the mayor and legislative head", async () => {
     renderHome();
-    expect(
-      await screen.findByRole("heading", { name: "Municipal Leadership" }),
-    ).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "City Leadership" })).toBeInTheDocument();
     expect(screen.getByText("City Mayor")).toBeInTheDocument();
   });
 
