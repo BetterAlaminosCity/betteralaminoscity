@@ -78,5 +78,16 @@
       "subtitle": "Find permits, applications, and assistance programs offered by Alaminos City."
     },
     "viewService": "View services"
+  },
+  "government": {
+    "pageHeader": {
+      "badge": "Government",
+      "title": "Government Directory",
+      "subtitle": "Meet the officials and offices serving Alaminos City."
+    },
+    "executiveLeadership": "Executive Leadership",
+    "departmentOffices": "Department Offices",
+    "legislative": "Legislative",
+    "viewOffice": "View office"
   }
 }

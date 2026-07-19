@@ -78,5 +78,16 @@
       "subtitle": "Hanapin ang mga permit, aplikasyon, at mga programa ng tulong na inaalok ng Lungsod ng Alaminos."
     },
     "viewService": "Tingnan ang mga serbisyo"
+  },
+  "government": {
+    "pageHeader": {
+      "badge": "Pamahalaan",
+      "title": "Direktoryo ng Pamahalaan",
+      "subtitle": "Makilala ang mga opisyal at tanggapan na naglilingkod sa Lungsod ng Alaminos."
+    },
+    "executiveLeadership": "Pamunuang Tagapagpaganap",
+    "departmentOffices": "Mga Tanggapan",
+    "legislative": "Lehislatura",
+    "viewOffice": "Tingnan ang tanggapan"
   }
 }
