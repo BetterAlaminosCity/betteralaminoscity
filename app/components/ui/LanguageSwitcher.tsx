@@ -14,7 +14,7 @@ export function LanguageSwitcher() {
     <div
       role="group"
       aria-label={t("language.label")}
-      className="inline-flex items-center gap-1 rounded-md border border-[var(--color-kapwa-border-weak)] p-1"
+      className="inline-flex items-center gap-1 rounded-md border border-[var(--color-kapwa-border-weak)] p-0.5"
     >
       {SUPPORTED_LANGUAGES.map((lang) => {
         const isActive = i18n.resolvedLanguage === lang;
@@ -24,7 +24,7 @@ export function LanguageSwitcher() {
             type="button"
             aria-pressed={isActive}
             onClick={() => selectLanguage(lang)}
-            className={`rounded px-2 py-1 text-sm font-medium transition-colors ${
+            className={`rounded px-2 py-1 text-xs font-semibold uppercase tracking-wide transition-colors ${
               isActive
                 ? "bg-[var(--color-kapwa-bg-brand-default)] text-[var(--color-kapwa-text-inverse)]"
                 : "text-[var(--color-kapwa-text-support)] hover:bg-[var(--color-kapwa-bg-gray-default)]"
