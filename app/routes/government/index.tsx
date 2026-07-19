@@ -6,6 +6,7 @@ import { buildMeta } from "../../lib/seo";
 import { getCategoryIcon } from "../../lib/categoryIcons";
 import { PageHeader } from "../../components/ui/PageHeader";
 import { CategoryCard } from "../../components/ui/CategoryCard";
+import { OfficialCard } from "../../components/ui/OfficialCard";
 import type { Route } from "./+types/index";
 
 export function meta(_: Route.MetaArgs) {
@@ -45,15 +46,11 @@ export default function GovernmentIndex() {
           {t("government.executiveLeadership")}
         </h2>
         {mayor && (
-          <Link
-            to="/government/office-of-the-mayor"
-            className="mt-6 inline-block rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-6 hover:border-[var(--color-kapwa-border-brand)]"
-          >
-            <p className="text-sm text-[var(--color-kapwa-text-support)]">{mayor.title}</p>
-            <p className="mt-1 text-lg font-semibold text-[var(--color-kapwa-text-strong)]">
-              {mayor.name}
-            </p>
-          </Link>
+          <OfficialCard
+            official={mayor}
+            href="/government/office-of-the-mayor"
+            className="mt-6 inline-block"
+          />
         )}
       </section>
 
@@ -96,17 +93,23 @@ export default function GovernmentIndex() {
 
       <section className="mx-auto max-w-7xl px-4 py-16">
         <h2 className="text-2xl font-bold text-[var(--color-kapwa-text-strong)]">
-          Civic Transparency
+          {t("government.civicTransparency.heading")}
         </h2>
         <ul>
           <li>
-            <Link to="/government/transparency">Budget & Fiscal Transparency</Link>
+            <Link to="/government/transparency">
+              {t("government.civicTransparency.budgetFiscalTransparency")}
+            </Link>
           </li>
           <li>
-            <Link to="/government/ordinances-resolutions">Ordinances & Resolutions</Link>
+            <Link to="/government/ordinances-resolutions">
+              {t("government.civicTransparency.ordinancesResolutions")}
+            </Link>
           </li>
           <li>
-            <Link to="/government/statistics">Statistics & Demographics</Link>
+            <Link to="/government/statistics">
+              {t("government.civicTransparency.statisticsDemographics")}
+            </Link>
           </li>
         </ul>
       </section>

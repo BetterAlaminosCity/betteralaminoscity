@@ -51,4 +51,18 @@ describe("MunicipalLeadership", () => {
 
     expect(container).toBeEmptyDOMElement();
   });
+
+  it("renders both cards when both mayor and legislative head are present", () => {
+    renderLeadership(MAYOR, LEGISLATIVE_HEAD);
+
+    expect(screen.getByRole("link", { name: /City Mayor/i })).toHaveAttribute(
+      "href",
+      "/government/office-of-the-mayor",
+    );
+    expect(screen.getByRole("link", { name: /Presiding Officer/i })).toHaveAttribute(
+      "href",
+      "/government/sangguniang-panlungsod",
+    );
+    expect(screen.getAllByRole("link")).toHaveLength(2);
+  });
 });

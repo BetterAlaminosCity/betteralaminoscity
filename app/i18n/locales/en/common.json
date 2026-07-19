@@ -88,7 +88,13 @@
     "executiveLeadership": "Executive Leadership",
     "departmentOffices": "Department Offices",
     "legislative": "Legislative",
-    "viewOffice": "View office"
+    "viewOffice": "View office",
+    "civicTransparency": {
+      "heading": "Civic Transparency",
+      "budgetFiscalTransparency": "Budget & Fiscal Transparency",
+      "ordinancesResolutions": "Ordinances & Resolutions",
+      "statisticsDemographics": "Statistics & Demographics"
+    }
   },
   "about": {
     "missionHeading": "Our Mission",

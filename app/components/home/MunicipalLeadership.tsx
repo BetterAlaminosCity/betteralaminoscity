@@ -1,7 +1,7 @@
-import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 
 import type { Official } from "../../lib/content.server";
+import { OfficialCard } from "../ui/OfficialCard";
 
 interface LeadershipEntry {
   official: Official;
@@ -34,18 +34,7 @@ export function MunicipalLeadership({
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           {entries.map((entry) => (
-            <Link
-              key={entry.href}
-              to={entry.href}
-              className="rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-6 transition-colors hover:border-[var(--color-kapwa-border-brand)]"
-            >
-              <p className="text-sm text-[var(--color-kapwa-text-support)]">
-                {entry.official.title}
-              </p>
-              <p className="mt-1 text-lg font-semibold text-[var(--color-kapwa-text-strong)]">
-                {entry.official.name}
-              </p>
-            </Link>
+            <OfficialCard key={entry.href} official={entry.official} href={entry.href} />
           ))}
         </div>
       </div>

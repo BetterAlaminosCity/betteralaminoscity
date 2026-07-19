@@ -88,7 +88,13 @@
     "executiveLeadership": "Pamunuang Tagapagpaganap",
     "departmentOffices": "Mga Tanggapan",
     "legislative": "Lehislatura",
-    "viewOffice": "Tingnan ang tanggapan"
+    "viewOffice": "Tingnan ang tanggapan",
+    "civicTransparency": {
+      "heading": "Pampublikong Transparency",
+      "budgetFiscalTransparency": "Badyet at Transparency Piskal",
+      "ordinancesResolutions": "Mga Ordinansa at Resolusyon",
+      "statisticsDemographics": "Estadistika at Demograpiya"
+    }
   },
   "about": {
     "missionHeading": "Ang Aming Misyon",

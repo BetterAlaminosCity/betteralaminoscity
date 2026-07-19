@@ -8,15 +8,13 @@ describe("PageHeader", () => {
     render(
       <PageHeader
         badge="Services"
-        title="Municipal Services Directory"
+        title="City Services Directory"
         subtitle="Find permits and programs."
       />,
     );
 
     expect(screen.getByText("Services")).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", { name: "Municipal Services Directory" }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "City Services Directory" })).toBeInTheDocument();
     expect(screen.getByText("Find permits and programs.")).toBeInTheDocument();
   });
 });
