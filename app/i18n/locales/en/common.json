@@ -29,6 +29,14 @@
     },
     "leadership": {
       "heading": "Municipal Leadership"
+    },
+    "contact": {
+      "heading": "Emergency Hotlines & Contact",
+      "police": "Police",
+      "fire": "Fire Department",
+      "mdrrmo": "Disaster Risk Reduction (MDRRMO)",
+      "health": "City Health Office",
+      "cityHall": "City Hall: {PLACEHOLDER ADDRESS}, Alaminos City, Pangasinan · Mon–Fri, 8:00 AM–5:00 PM"
     }
   },
   "nav": {

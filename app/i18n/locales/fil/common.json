@@ -29,6 +29,14 @@
     },
     "leadership": {
       "heading": "Pamunuan ng Lungsod"
+    },
+    "contact": {
+      "heading": "Mga Hotline Pang-emergency at Contact",
+      "police": "Pulisya",
+      "fire": "Bumbero",
+      "mdrrmo": "Pagbabawas ng Panganib sa Sakuna (MDRRMO)",
+      "health": "Tanggapan ng Kalusugan ng Lungsod",
+      "cityHall": "Bahay-Pamahalaan: {PLACEHOLDER ADDRESS}, Lungsod ng Alaminos, Pangasinan · Lun–Biy, 8:00 AM–5:00 PM"
     }
   },
   "nav": {
