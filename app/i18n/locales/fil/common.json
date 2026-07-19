@@ -34,9 +34,9 @@
       "heading": "Mga Hotline Pang-emergency at Contact",
       "police": "Pulisya",
       "fire": "Bumbero",
-      "mdrrmo": "Pagbabawas ng Panganib sa Sakuna (MDRRMO)",
+      "cdrrmo": "City Disaster Risk Reduction and Management Office (CDRRMO)",
       "health": "Tanggapan ng Kalusugan ng Lungsod",
-      "cityHall": "Bahay-Pamahalaan: {PLACEHOLDER ADDRESS}, Lungsod ng Alaminos, Pangasinan · Lun–Biy, 8:00 AM–5:00 PM"
+      "cityHall": "Bulwagan ng Lungsod: {PLACEHOLDER ADDRESS}, Lungsod ng Alaminos, Pangasinan · Lun–Biy, 8:00 AM–5:00 PM"
     }
   },
   "nav": {

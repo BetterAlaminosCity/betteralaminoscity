@@ -4,7 +4,7 @@ import { AlertTriangle, Flame, HeartPulse, ShieldAlert } from "lucide-react";
 const HOTLINES = [
   { key: "police", icon: ShieldAlert, number: "(075) 000-0000" },
   { key: "fire", icon: Flame, number: "(075) 000-0001" },
-  { key: "mdrrmo", icon: AlertTriangle, number: "(075) 000-0002" },
+  { key: "cdrrmo", icon: AlertTriangle, number: "(075) 000-0002" },
   { key: "health", icon: HeartPulse, number: "(075) 000-0003" },
 ] as const;
 
