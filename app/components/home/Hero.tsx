@@ -34,7 +34,7 @@ export function Hero() {
         <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-kapwa-text-brand)]">
           {t("home.hero.eyebrow")}
         </p>
-        <h1 className="mt-3 max-w-3xl text-4xl font-extrabold leading-tight text-kapwa-brand-950 sm:text-5xl">
+        <h1 className="mt-3 max-w-3xl text-4xl font-extrabold leading-tight break-words text-kapwa-brand-950 sm:text-5xl">
           {titleContent}
         </h1>
         <p className="mt-4 max-w-xl text-lg text-[var(--color-kapwa-text-support)]">
