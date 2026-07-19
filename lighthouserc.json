@@ -1,12 +1,13 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./build/client",
+      "startServerCommand": "npx tsx scripts/lhci-server.ts",
+      "startServerReadyPattern": "lhci static server listening",
       "url": [
-        "http://localhost/index.html",
-        "http://localhost/services/index.html",
-        "http://localhost/government/index.html",
-        "http://localhost/search/index.html"
+        "http://localhost:4173/index.html",
+        "http://localhost:4173/services/index.html",
+        "http://localhost:4173/government/index.html",
+        "http://localhost:4173/search/index.html"
       ]
     },
     "assert": {

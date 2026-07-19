@@ -3,19 +3,23 @@ import { expect, test } from "@playwright/test";
 test("homepage loads with the site title", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveTitle(/BetterAlaminosCity\.org/);
-  await expect(page.getByRole("link", { name: "Home" })).toBeVisible();
+  const mainNav = page.getByRole("navigation", { name: "Main navigation" });
+  await expect(mainNav.getByRole("link", { name: "Home" })).toBeVisible();
 });
 
 test("nav links navigate to Services and Government", async ({ page }) => {
   await page.goto("/");
+  const mainNav = page.getByRole("navigation", { name: "Main navigation" });
 
-  await page.getByRole("link", { name: "Services" }).click();
+  await mainNav.getByRole("link", { name: "Services" }).click();
   await expect(page).toHaveURL(/\/services$/);
-  await expect(page.getByRole("heading", { name: "Services" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { level: 1, name: "City Services Directory" }),
+  ).toBeVisible();
 
-  await page.getByRole("link", { name: "Government" }).click();
+  await mainNav.getByRole("link", { name: "Government" }).click();
   await expect(page).toHaveURL(/\/government$/);
-  await expect(page.getByRole("heading", { name: "Government" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Government Directory" })).toBeVisible();
 });
 
 test("a service page renders its content", async ({ page }) => {
