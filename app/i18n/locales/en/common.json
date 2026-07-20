@@ -6,7 +6,10 @@
       "titleHighlight": "Alaminos City",
       "description": "Find permits, offices, ordinances, and city services — plus everything about the Hundred Islands National Park.",
       "primaryCta": "Browse Services",
-      "secondaryCta": "Learn About This Project"
+      "secondaryCta": "Learn About This Project",
+      "searchHeading": "Find a Service",
+      "searchSubmit": "Search",
+      "popularLabel": "Popular:"
     },
     "popularServices": {
       "heading": "Popular Services",

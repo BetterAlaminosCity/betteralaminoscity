@@ -6,7 +6,10 @@
       "titleHighlight": "Lungsod ng Alaminos",
       "description": "Hanapin ang mga permit, tanggapan, ordinansa, at serbisyo ng lungsod — kasama na ang lahat tungkol sa Hundred Islands National Park.",
       "primaryCta": "Tingnan ang mga Serbisyo",
-      "secondaryCta": "Alamin ang Tungkol sa Proyektong Ito"
+      "secondaryCta": "Alamin ang Tungkol sa Proyektong Ito",
+      "searchHeading": "Maghanap ng Serbisyo",
+      "searchSubmit": "Maghanap",
+      "popularLabel": "Popular:"
     },
     "popularServices": {
       "heading": "Mga Popular na Serbisyo",
