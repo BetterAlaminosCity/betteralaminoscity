@@ -7,7 +7,7 @@ import { PopularServices } from "../components/home/PopularServices";
 import { CityAtAGlance } from "../components/home/CityAtAGlance";
 import { DiscoverHundredIslands } from "../components/home/DiscoverHundredIslands";
 import { BriefHistory } from "../components/home/BriefHistory";
-import { MunicipalLeadership } from "../components/home/MunicipalLeadership";
+import { CityLeadership } from "../components/home/CityLeadership";
 import { ContactHotlines } from "../components/home/ContactHotlines";
 import { LocationMap } from "../components/home/LocationMap";
 import type { Route } from "./+types/home";
@@ -40,7 +40,7 @@ export default function Home() {
       <CityAtAGlance statistics={statistics} />
       <DiscoverHundredIslands />
       <BriefHistory />
-      <MunicipalLeadership mayor={mayor} legislativeHead={legislativeHead} />
+      <CityLeadership mayor={mayor} legislativeHead={legislativeHead} />
       <ContactHotlines hotlines={hotlines} />
       <LocationMap />
     </>

@@ -3,7 +3,7 @@ import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it } from "vitest";
 
 import { I18nProvider } from "../../../app/i18n/I18nProvider";
-import { MunicipalLeadership } from "../../../app/components/home/MunicipalLeadership";
+import { CityLeadership } from "../../../app/components/home/CityLeadership";
 import type { Official } from "../../../app/lib/content.server";
 
 const MAYOR: Official = { name: "Arth Bryan C. Celeste", title: "City Mayor" };
@@ -16,7 +16,7 @@ function renderLeadership(mayor: Official | null, legislativeHead: Official | nu
   const router = createMemoryRouter([
     {
       path: "/",
-      Component: () => <MunicipalLeadership mayor={mayor} legislativeHead={legislativeHead} />,
+      Component: () => <CityLeadership mayor={mayor} legislativeHead={legislativeHead} />,
     },
   ]);
   return render(
@@ -26,7 +26,7 @@ function renderLeadership(mayor: Official | null, legislativeHead: Official | nu
   );
 }
 
-describe("MunicipalLeadership", () => {
+describe("CityLeadership", () => {
   it("renders a card for the mayor linking to their office page", () => {
     renderLeadership(MAYOR, null);
 

@@ -8,7 +8,7 @@ interface LeadershipEntry {
   href: string;
 }
 
-export function MunicipalLeadership({
+export function CityLeadership({
   mayor,
   legislativeHead,
 }: {
@@ -27,7 +27,7 @@ export function MunicipalLeadership({
   if (entries.length === 0) return null;
 
   return (
-    <section className="bg-[var(--color-kapwa-bg-gray-default)] py-16">
+    <section className="py-16">
       <div className="mx-auto max-w-7xl px-4">
         <h2 className="text-2xl font-bold text-[var(--color-kapwa-text-strong)] sm:text-3xl">
           {t("home.leadership.heading")}
