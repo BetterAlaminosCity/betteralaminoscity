@@ -9,5 +9,4 @@ export const SITE_NAV_LINKS: readonly SiteNavLink[] = [
   { to: "/services", labelKey: "nav.services", end: false },
   { to: "/government", labelKey: "nav.government", end: false },
   { to: "/about", labelKey: "nav.about", end: false },
-  { to: "/search", labelKey: "nav.search", end: false },
 ];

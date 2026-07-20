@@ -23,10 +23,10 @@ describe("Navbar", () => {
     expect(screen.getByRole("link", { name: "About" })).toHaveAttribute("href", "/about");
   });
 
-  it("renders a Search nav link", () => {
+  it("does not render a separate Search nav link (search lives in the hero)", () => {
     renderNavbar();
 
-    expect(screen.getByRole("link", { name: "Search" })).toHaveAttribute("href", "/search");
+    expect(screen.queryByRole("link", { name: "Search" })).not.toBeInTheDocument();
   });
 
   it("keeps the mobile menu collapsed by default", () => {
@@ -47,5 +47,13 @@ describe("Navbar", () => {
     expect(toggle).toHaveAttribute("aria-expanded", "true");
     expect(screen.getAllByRole("link", { name: "Home" })).toHaveLength(2);
     expect(screen.getAllByRole("link", { name: "Government" })).toHaveLength(2);
+  });
+
+  it("centers the nav links between the logo and language switcher on desktop", () => {
+    renderNavbar();
+
+    const homeLink = screen.getAllByRole("link", { name: "Home" })[0];
+    const linksContainer = homeLink.parentElement;
+    expect(linksContainer).toHaveClass("flex-1", "justify-center");
   });
 });

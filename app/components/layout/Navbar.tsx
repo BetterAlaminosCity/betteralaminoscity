@@ -28,7 +28,7 @@ export function Navbar() {
           <img src="/wordmark.svg" alt="BetterAlaminosCity.org" height={32} />
         </Link>
 
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden flex-1 items-center justify-center gap-6 lg:flex">
           {SITE_NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
@@ -41,7 +41,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="ml-auto hidden lg:flex">
+        <div className="hidden lg:flex">
           <LanguageSwitcher />
         </div>
 
