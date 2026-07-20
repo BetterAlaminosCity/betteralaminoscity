@@ -93,4 +93,35 @@ describe("HeroSearch", () => {
     expect(router.state.location.pathname).toBe("/search");
     expect(router.state.location.search).toBe("?q=Business");
   });
+
+  it("positions the results dropdown independently of the popular-chips section", async () => {
+    const user = userEvent.setup();
+    renderHeroSearch();
+
+    await user.type(await screen.findByRole("searchbox"), "Business");
+
+    const resultLink = await screen.findByRole("link", { name: "Business" });
+    const popularChip = await screen.findByRole("link", { name: "Health Services" });
+
+    const dropdown = resultLink.closest("ul");
+    expect(dropdown).not.toBeNull();
+
+    // The popular-chips section is not inside the same relative wrapper as the dropdown.
+    expect(dropdown!.parentElement).not.toBe(popularChip.closest("div")?.parentElement);
+    expect(dropdown!.parentElement?.contains(popularChip)).toBe(false);
+  });
+
+  it("closes the dropdown when Escape is pressed", async () => {
+    const user = userEvent.setup();
+    renderHeroSearch();
+
+    const input = await screen.findByRole("searchbox");
+    await user.type(input, "Business");
+
+    expect(await screen.findByRole("link", { name: "Business" })).toBeInTheDocument();
+
+    await user.keyboard("{Escape}");
+
+    expect(screen.queryByRole("link", { name: "Business" })).not.toBeInTheDocument();
+  });
 });

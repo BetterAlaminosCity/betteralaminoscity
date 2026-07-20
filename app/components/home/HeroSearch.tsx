@@ -50,43 +50,50 @@ export function HeroSearch({ popularCategories }: HeroSearchProps) {
         <SearchIcon className="h-5 w-5 text-[var(--color-kapwa-text-brand)]" aria-hidden="true" />
         {t("home.hero.searchHeading")}
       </h2>
-      <form onSubmit={handleSubmit} className="mt-4 flex gap-2">
-        <input
-          type="search"
-          aria-label={t("search.inputLabel")}
-          placeholder={t("search.placeholder")}
-          value={query}
-          onChange={(event) => {
-            setQuery(event.target.value);
-            setIsOpen(true);
-          }}
-          onFocus={() => setIsOpen(true)}
-          className="w-full rounded-md border border-[var(--color-kapwa-border-weak)] px-4 py-3 text-base text-[var(--color-kapwa-text-strong)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[var(--color-kapwa-border-focus)]"
-        />
-        <button
-          type="submit"
-          aria-label={t("home.hero.searchSubmit")}
-          className="inline-flex shrink-0 items-center justify-center rounded-md bg-[var(--color-kapwa-bg-brand-default)] px-4 text-[var(--color-kapwa-text-inverse)] transition-colors hover:bg-[var(--color-kapwa-bg-brand-hover)]"
-        >
-          <ArrowRight className="h-5 w-5" aria-hidden="true" />
-        </button>
-      </form>
+      <div className="relative mt-4">
+        <form onSubmit={handleSubmit} className="flex gap-2">
+          <input
+            type="search"
+            aria-label={t("search.inputLabel")}
+            placeholder={t("search.placeholder")}
+            value={query}
+            onChange={(event) => {
+              setQuery(event.target.value);
+              setIsOpen(true);
+            }}
+            onFocus={() => setIsOpen(true)}
+            onKeyDown={(event) => {
+              if (event.key === "Escape") {
+                setIsOpen(false);
+              }
+            }}
+            className="w-full rounded-md border border-[var(--color-kapwa-border-weak)] px-4 py-3 text-base text-[var(--color-kapwa-text-strong)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[var(--color-kapwa-border-focus)]"
+          />
+          <button
+            type="submit"
+            aria-label={t("home.hero.searchSubmit")}
+            className="inline-flex shrink-0 items-center justify-center rounded-md bg-[var(--color-kapwa-bg-brand-default)] px-4 text-[var(--color-kapwa-text-inverse)] transition-colors hover:bg-[var(--color-kapwa-bg-brand-hover)]"
+          >
+            <ArrowRight className="h-5 w-5" aria-hidden="true" />
+          </button>
+        </form>
 
-      {isOpen && trimmedQuery && results.length > 0 ? (
-        <ul className="absolute inset-x-6 top-full z-10 mt-1 overflow-hidden rounded-md border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] shadow-lg">
-          {results.map((result) => (
-            <li key={result.id}>
-              <Link
-                to={result.url}
-                className="block px-4 py-2 text-sm text-[var(--color-kapwa-text-strong)] hover:bg-[var(--color-kapwa-bg-gray-hover)]"
-                onClick={() => setIsOpen(false)}
-              >
-                {result.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      ) : null}
+        {isOpen && trimmedQuery && results.length > 0 ? (
+          <ul className="absolute inset-x-0 top-full z-10 mt-1 overflow-hidden rounded-md border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] shadow-lg">
+            {results.map((result) => (
+              <li key={result.id}>
+                <Link
+                  to={result.url}
+                  className="block px-4 py-2 text-sm text-[var(--color-kapwa-text-strong)] hover:bg-[var(--color-kapwa-bg-gray-hover)]"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {result.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
 
       {popularCategories.length > 0 ? (
         <div className="mt-4 flex flex-wrap items-center gap-2">
