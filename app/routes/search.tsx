@@ -1,9 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
-import Fuse from "fuse.js";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { buildMeta } from "../lib/seo";
-import type { SearchIndexEntry } from "../lib/searchIndex.server";
+import { useSearchIndex } from "../lib/useSearchIndex";
 import type { Route } from "./+types/search";
 
 export function meta(_: Route.MetaArgs) {
@@ -17,30 +16,11 @@ export function meta(_: Route.MetaArgs) {
 
 export default function Search() {
   const { t } = useTranslation();
-  const [entries, setEntries] = useState<SearchIndexEntry[]>([]);
+  const { search } = useSearchIndex();
   const [query, setQuery] = useState("");
 
-  useEffect(() => {
-    fetch("/search-index.json")
-      .then((response) => response.json())
-      .then((data: SearchIndexEntry[]) => setEntries(data))
-      .catch((error) => {
-        console.error("Failed to load search index:", error);
-      });
-  }, []);
-
-  const fuse = useMemo(
-    () =>
-      new Fuse(entries, {
-        keys: ["title", "description", "categoryTitle"],
-        threshold: 0.35,
-        ignoreLocation: true,
-      }),
-    [entries],
-  );
-
   const trimmedQuery = query.trim();
-  const results = trimmedQuery ? fuse.search(trimmedQuery).map((result) => result.item) : [];
+  const results = trimmedQuery ? search(query) : [];
 
   return (
     <section>
