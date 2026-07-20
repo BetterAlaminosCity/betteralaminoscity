@@ -83,6 +83,19 @@ export interface CityStatistics extends DataSourceMeta {
   economicIndicators: EconomicIndicator[];
 }
 
+export interface Hotline {
+  key: string;
+  name: string;
+  description?: string;
+  icon?: string;
+  numbers: string[];
+}
+
+export interface Hotlines extends DataSourceMeta {
+  emergencyNumber: string;
+  hotlines: Hotline[];
+}
+
 // Folder names under content/government/ that hold a single fixed JSON data
 // file rather than an index.yaml + articles category — kept in sync with the
 // identically-named set in contentValidation.server.ts (see Global Constraints).
@@ -90,6 +103,7 @@ export const CIVIC_DATA_SLUGS = new Set([
   "transparency-documents",
   "ordinances-resolutions",
   "statistics",
+  "emergency-hotlines",
 ]);
 
 const DEFAULT_CONTENT_ROOT = path.join(process.cwd(), "content");
@@ -204,4 +218,10 @@ export function getCityStatistics(
   const filePath = path.join(contentRoot, "government", "statistics", "demographics.json");
   if (!fs.existsSync(filePath)) return null;
   return JSON.parse(fs.readFileSync(filePath, "utf-8")) as CityStatistics;
+}
+
+export function getHotlines(contentRoot: string = DEFAULT_CONTENT_ROOT): Hotlines | null {
+  const filePath = path.join(contentRoot, "government", "emergency-hotlines", "hotlines.json");
+  if (!fs.existsSync(filePath)) return null;
+  return JSON.parse(fs.readFileSync(filePath, "utf-8")) as Hotlines;
 }

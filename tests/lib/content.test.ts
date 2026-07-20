@@ -6,6 +6,7 @@ import {
   getCategory,
   getCityStatistics,
   getFiscalTransparency,
+  getHotlines,
   getLegislativeDocuments,
   getOfficial,
   listArticles,
@@ -119,11 +120,27 @@ describe("getCityStatistics", () => {
   });
 });
 
+describe("getHotlines", () => {
+  it("returns the hotlines data", () => {
+    const data = getHotlines(FIXTURE_ROOT);
+    expect(data?.emergencyNumber).toBe("911");
+    expect(data?.hotlines.find((hotline) => hotline.key === "cdrrmo")?.numbers).toEqual([
+      "0947-000-0000",
+      "(075) 000-0000",
+    ]);
+  });
+
+  it("returns null when no hotlines.json exists", () => {
+    expect(getHotlines(EMPTY_FIXTURE_ROOT)).toBeNull();
+  });
+});
+
 describe("listCategories excludes civic data folders", () => {
-  it("does not include transparency-documents, ordinances-resolutions, or statistics as government categories", () => {
+  it("does not include transparency-documents, ordinances-resolutions, statistics, or emergency-hotlines as government categories", () => {
     const slugs = listCategories("government", FIXTURE_ROOT).map((category) => category.slug);
     expect(slugs).not.toContain("transparency-documents");
     expect(slugs).not.toContain("ordinances-resolutions");
     expect(slugs).not.toContain("statistics");
+    expect(slugs).not.toContain("emergency-hotlines");
   });
 });
