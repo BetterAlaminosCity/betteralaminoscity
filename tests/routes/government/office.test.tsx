@@ -19,7 +19,7 @@ describe("GovernmentOffice", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByRole("heading", { name: "Office of the Mayor" })).toBeInTheDocument();
-    expect(screen.getByText(/City Mayor: \{PLACEHOLDER\}/)).toBeInTheDocument();
+    expect(screen.getByText(/City Mayor: Arth Bryan C. Celeste/)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Overview" })).toHaveAttribute(
       "href",
       "/government/office-of-the-mayor/overview",

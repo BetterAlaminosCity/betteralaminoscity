@@ -6,10 +6,10 @@ import { I18nProvider } from "../../../app/i18n/I18nProvider";
 import { MunicipalLeadership } from "../../../app/components/home/MunicipalLeadership";
 import type { Official } from "../../../app/lib/content.server";
 
-const MAYOR: Official = { name: "{PLACEHOLDER}", title: "City Mayor" };
+const MAYOR: Official = { name: "Arth Bryan C. Celeste", title: "City Mayor" };
 const LEGISLATIVE_HEAD: Official = {
-  name: "{PLACEHOLDER}",
-  title: "Presiding Officer (City Vice Mayor)",
+  name: "Jose Antonio Miguel Y. Perez",
+  title: "City Vice Mayor",
 };
 
 function renderLeadership(mayor: Official | null, legislativeHead: Official | null) {
@@ -40,7 +40,7 @@ describe("MunicipalLeadership", () => {
   it("renders a card for the legislative head linking to their office page", () => {
     renderLeadership(null, LEGISLATIVE_HEAD);
 
-    expect(screen.getByRole("link", { name: /Presiding Officer/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /City Vice Mayor/i })).toHaveAttribute(
       "href",
       "/government/sangguniang-panlungsod",
     );
@@ -59,7 +59,7 @@ describe("MunicipalLeadership", () => {
       "href",
       "/government/office-of-the-mayor",
     );
-    expect(screen.getByRole("link", { name: /Presiding Officer/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /City Vice Mayor/i })).toHaveAttribute(
       "href",
       "/government/sangguniang-panlungsod",
     );
