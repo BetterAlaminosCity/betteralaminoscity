@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <>
-      <Hero />
+      <Hero popularCategories={popularCategories} />
       <PopularServices categories={popularCategories} />
       <CityAtAGlance statistics={statistics} />
       <DiscoverHundredIslands />

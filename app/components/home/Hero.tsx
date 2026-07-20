@@ -12,7 +12,7 @@ const heroPrimaryCtaClassName =
   "inline-flex items-center justify-center rounded-md px-6 py-3 text-lg font-medium shadow-xs transition-colors bg-[var(--color-kapwa-bg-surface)] text-[var(--color-kapwa-text-brand)] hover:bg-[var(--color-kapwa-bg-gray-hover)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-kapwa-border-focus)]";
 
 const heroSecondaryCtaClassName =
-  "inline-flex items-center justify-center rounded-md border border-[var(--color-kapwa-border-inverse)] px-6 py-3 text-lg font-medium text-[var(--color-kapwa-text-inverse)] transition-colors hover:bg-white/10 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-kapwa-border-focus)]";
+  "inline-flex items-center justify-center rounded-md border border-[var(--color-kapwa-border-inverse)] px-6 py-3 text-lg font-medium text-[var(--color-kapwa-text-inverse)] transition-colors hover:bg-[var(--color-kapwa-bg-brand-hover)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-kapwa-border-focus)]";
 
 export interface HeroProps {
   popularCategories: CategorySummary[];
