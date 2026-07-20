@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { I18nProvider } from "../../app/i18n/I18nProvider";
 import Home, { loader } from "../../app/routes/home";
@@ -15,6 +15,19 @@ function renderHome() {
     </I18nProvider>,
   );
 }
+
+beforeEach(() => {
+  vi.stubGlobal(
+    "fetch",
+    vi.fn().mockResolvedValue({
+      json: () => Promise.resolve([]),
+    }),
+  );
+});
+
+afterEach(() => {
+  vi.unstubAllGlobals();
+});
 
 describe("Home", () => {
   it("renders the hero heading", async () => {
@@ -39,10 +52,17 @@ describe("Home", () => {
   it("renders the Popular Services section with category cards from real content", async () => {
     renderHome();
     expect(await screen.findByRole("heading", { name: "Popular Services" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /Education/i })).toHaveAttribute(
-      "href",
-      "/services/education",
-    );
+    const educationLinks = screen.getAllByRole("link", { name: /Education/i });
+    expect(educationLinks.length).toBeGreaterThanOrEqual(1);
+    expect(educationLinks[0]).toHaveAttribute("href", "/services/education");
+  });
+
+  it("renders the hero search widget with popular category chips", async () => {
+    renderHome();
+    expect(await screen.findByRole("heading", { name: "Find a Service" })).toBeInTheDocument();
+    const educationLinks = screen.getAllByRole("link", { name: "Education" });
+    expect(educationLinks.length).toBeGreaterThanOrEqual(1);
+    expect(educationLinks[0]).toHaveAttribute("href", "/services/education");
   });
 
   it("renders the City at a Glance stats", async () => {

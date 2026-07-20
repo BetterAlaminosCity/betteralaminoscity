@@ -33,9 +33,13 @@ export default function Home() {
   const { popularCategories, statistics, mayor, legislativeHead, hotlines } =
     useLoaderData<typeof loader>();
 
+  const heroPopularCategories = popularCategories.filter(
+    (category) => category.slug !== "disaster-preparedness",
+  );
+
   return (
     <>
-      <Hero popularCategories={popularCategories} />
+      <Hero popularCategories={heroPopularCategories} />
       <PopularServices categories={popularCategories} />
       <CityAtAGlance statistics={statistics} />
       <DiscoverHundredIslands />
