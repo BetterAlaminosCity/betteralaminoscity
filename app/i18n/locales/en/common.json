@@ -32,10 +32,7 @@
     },
     "contact": {
       "heading": "Emergency Hotlines & Contact",
-      "police": "Police",
-      "fire": "Fire Department",
-      "cdrrmo": "Disaster Risk Reduction (CDRRMO)",
-      "health": "City Health Office",
+      "emergencyLabel": "For emergencies, dial",
       "cityHall": "City Hall: {PLACEHOLDER ADDRESS}, Alaminos City, Pangasinan · Mon–Fri, 8:00 AM–5:00 PM"
     },
     "map": {
