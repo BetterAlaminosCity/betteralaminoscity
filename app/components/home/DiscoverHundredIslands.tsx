@@ -4,7 +4,7 @@ export function DiscoverHundredIslands() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-gradient-to-br from-kapwa-brand-50 to-white py-16">
+    <section className="py-16">
       <div className="mx-auto max-w-7xl px-4">
         <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-kapwa-text-brand)]">
           {t("home.hundredIslands.eyebrow")}

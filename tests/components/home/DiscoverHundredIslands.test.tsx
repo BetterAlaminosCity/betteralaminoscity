@@ -17,4 +17,17 @@ describe("DiscoverHundredIslands", () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/Lingayen Gulf/i)).toBeInTheDocument();
   });
+
+  it("uses a white/transparent section background for contrast with adjacent sections", () => {
+    render(
+      <I18nProvider>
+        <DiscoverHundredIslands />
+      </I18nProvider>,
+    );
+
+    const heading = screen.getByRole("heading", {
+      name: "Discover Hundred Islands National Park",
+    });
+    expect(heading.closest("section")).not.toHaveClass("bg-gradient-to-br");
+  });
 });
