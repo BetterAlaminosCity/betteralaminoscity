@@ -1,0 +1,94 @@
+{
+  "lastUpdated": "2026-07-20",
+  "source": "Alaminos City Emergency Hotlines poster, City Government of Alaminos (Anton Perez).",
+  "emergencyNumber": "911",
+  "hotlines": [
+    {
+      "key": "cdrrmo",
+      "name": "CDRRMO",
+      "description": "City Disaster Risk Reduction and Management Office",
+      "icon": "alert-triangle",
+      "numbers": ["0947-551-1420", "0977-707-6881", "(075) 632-1058"]
+    },
+    {
+      "key": "cho",
+      "name": "CHO",
+      "description": "City Health Office",
+      "icon": "heart-pulse",
+      "numbers": ["(075) 654-1142", "0908-817-3162", "0919-841-3137"]
+    },
+    {
+      "key": "tourism-office",
+      "name": "Alaminos City Tourism Office",
+      "icon": "phone",
+      "numbers": ["0917-828-4001", "0917-828-6592"]
+    },
+    {
+      "key": "cswdo",
+      "name": "CSWDO",
+      "description": "City Social Welfare and Development Office",
+      "icon": "building",
+      "numbers": ["(075) 654-0015"]
+    },
+    {
+      "key": "red-cross",
+      "name": "Red Cross (Alaminos City Chapter)",
+      "icon": "heart-pulse",
+      "numbers": ["0998-546-5748", "(075) 551-6356"]
+    },
+    {
+      "key": "poso",
+      "name": "POSO",
+      "description": "Public Order and Safety Office",
+      "icon": "radio",
+      "numbers": ["0929-279-4513"]
+    },
+    {
+      "key": "nbi",
+      "name": "NBI",
+      "description": "National Bureau of Investigation",
+      "icon": "search",
+      "numbers": ["(075) 517-0470"]
+    },
+    {
+      "key": "panelco1",
+      "name": "PANELCO 1",
+      "description": "Pangasinan 1 Electric Cooperative, Inc.",
+      "icon": "zap",
+      "numbers": ["0977-801-5083", "0920-947-1050"]
+    },
+    {
+      "key": "police",
+      "name": "Alaminos City Police Station",
+      "icon": "shield-alert",
+      "numbers": ["0998-598-5094", "0998-598-5095"]
+    },
+    {
+      "key": "bfp",
+      "name": "BFP",
+      "description": "Bureau of Fire Protection - Alaminos City Station",
+      "icon": "flame",
+      "numbers": ["0919-330-4090", "0917-189-9611"]
+    },
+    {
+      "key": "acwd",
+      "name": "ACWD",
+      "description": "Alaminos City Water District",
+      "icon": "droplet",
+      "numbers": ["0947-899-8179", "(0750) 205-8036"]
+    },
+    {
+      "key": "coast-guard",
+      "name": "Philippine Coast Guard",
+      "icon": "anchor",
+      "numbers": ["0975-989-7090"]
+    },
+    {
+      "key": "deped-sdo",
+      "name": "DepEd-SDO",
+      "description": "Department of Education Schools Division Office",
+      "icon": "graduation-cap",
+      "numbers": ["(075) 205-0644"]
+    }
+  ]
+}

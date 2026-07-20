@@ -7,6 +7,7 @@ import {
   validateCityStatistics,
   validateContentTree,
   validateFiscalTransparency,
+  validateHotlines,
   validateLegislativeDocuments,
   validateOfficial,
 } from "../../app/lib/contentValidation.server";
@@ -141,6 +142,53 @@ describe("validateCityStatistics", () => {
   });
 });
 
+describe("validateHotlines", () => {
+  it("accepts a valid hotlines payload", () => {
+    expect(
+      validateHotlines({
+        lastUpdated: "2026-01-15",
+        source: "Sample source",
+        emergencyNumber: "911",
+        hotlines: [
+          {
+            key: "cdrrmo",
+            name: "CDRRMO",
+            description: "City Disaster Risk Reduction and Management Office",
+            icon: "alert-triangle",
+            numbers: ["0947-000-0000", "(075) 000-0000"],
+          },
+          {
+            key: "police",
+            name: "Sample Police Station",
+            numbers: ["0998-000-0000"],
+          },
+        ],
+      }),
+    ).toEqual([]);
+  });
+
+  it("rejects a payload missing emergencyNumber", () => {
+    expect(
+      validateHotlines({
+        lastUpdated: "2026-01-15",
+        source: "Sample source",
+        hotlines: [{ key: "cdrrmo", name: "CDRRMO", numbers: ["0947-000-0000"] }],
+      }),
+    ).not.toEqual([]);
+  });
+
+  it("rejects a hotline entry with no numbers", () => {
+    expect(
+      validateHotlines({
+        lastUpdated: "2026-01-15",
+        source: "Sample source",
+        emergencyNumber: "911",
+        hotlines: [{ key: "cdrrmo", name: "CDRRMO", numbers: [] }],
+      }),
+    ).not.toEqual([]);
+  });
+});
+
 describe("validateContentTree", () => {
   it("reports no issues for a valid content tree", () => {
     const contentRoot = path.join(import.meta.dirname, "../fixtures/content-valid");
@@ -157,8 +205,9 @@ describe("validateContentTree", () => {
   it("reports an issue per missing fixed civic-data JSON file", () => {
     const contentRoot = path.join(import.meta.dirname, "../fixtures/content-invalid-civic-data");
     const issues = validateContentTree(contentRoot);
-    expect(issues).toHaveLength(3);
+    expect(issues).toHaveLength(4);
     expect(issues.map((issue) => issue.errors[0])).toEqual([
+      expect.stringContaining("missing"),
       expect.stringContaining("missing"),
       expect.stringContaining("missing"),
       expect.stringContaining("missing"),
@@ -171,5 +220,6 @@ describe("validateContentTree", () => {
     expect(issues.some((issue) => issue.file.includes("transparency-documents"))).toBe(false);
     expect(issues.some((issue) => issue.file.includes("ordinances-resolutions"))).toBe(false);
     expect(issues.some((issue) => issue.file.includes("statistics"))).toBe(false);
+    expect(issues.some((issue) => issue.file.includes("emergency-hotlines"))).toBe(false);
   });
 });

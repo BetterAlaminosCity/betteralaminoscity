@@ -9,6 +9,7 @@ import articleFrontmatterSchema from "../../content/schemas/article-frontmatter.
 import categorySchema from "../../content/schemas/category.schema.json";
 import cityStatisticsSchema from "../../content/schemas/city-statistics.schema.json";
 import fiscalTransparencySchema from "../../content/schemas/fiscal-transparency.schema.json";
+import hotlinesSchema from "../../content/schemas/hotlines.schema.json";
 import legislativeDocumentsSchema from "../../content/schemas/legislative-documents.schema.json";
 import officialSchema from "../../content/schemas/official.schema.json";
 
@@ -19,6 +20,7 @@ const validateOfficialSchema = ajv.compile(officialSchema);
 const validateFiscalTransparencySchema = ajv.compile(fiscalTransparencySchema);
 const validateLegislativeDocumentsSchema = ajv.compile(legislativeDocumentsSchema);
 const validateCityStatisticsSchema = ajv.compile(cityStatisticsSchema);
+const validateHotlinesSchema = ajv.compile(hotlinesSchema);
 
 function formatErrors(errors: ErrorObject[] | null | undefined): string[] {
   return (errors ?? []).map((error) => `${error.instancePath || "/"} ${error.message}`);
@@ -54,6 +56,11 @@ export function validateCityStatistics(data: unknown): string[] {
   return formatErrors(validateCityStatisticsSchema.errors);
 }
 
+export function validateHotlines(data: unknown): string[] {
+  validateHotlinesSchema(data);
+  return formatErrors(validateHotlinesSchema.errors);
+}
+
 export interface ContentValidationIssue {
   file: string;
   errors: string[];
@@ -68,6 +75,7 @@ const CIVIC_DATA_SLUGS = new Set([
   "transparency-documents",
   "ordinances-resolutions",
   "statistics",
+  "emergency-hotlines",
 ]);
 
 const FIXED_JSON_DATA_FILES: Array<{
@@ -85,6 +93,10 @@ const FIXED_JSON_DATA_FILES: Array<{
   {
     relativePath: path.join("government", "statistics", "demographics.json"),
     validate: validateCityStatistics,
+  },
+  {
+    relativePath: path.join("government", "emergency-hotlines", "hotlines.json"),
+    validate: validateHotlines,
   },
 ];
 

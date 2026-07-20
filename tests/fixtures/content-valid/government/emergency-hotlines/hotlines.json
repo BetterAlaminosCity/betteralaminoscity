@@ -1,0 +1,19 @@
+{
+  "lastUpdated": "2026-01-15",
+  "source": "Sample source",
+  "emergencyNumber": "911",
+  "hotlines": [
+    {
+      "key": "cdrrmo",
+      "name": "CDRRMO",
+      "description": "City Disaster Risk Reduction and Management Office",
+      "icon": "alert-triangle",
+      "numbers": ["0947-000-0000", "(075) 000-0000"]
+    },
+    {
+      "key": "police",
+      "name": "Sample Police Station",
+      "numbers": ["0998-000-0000"]
+    }
+  ]
+}
