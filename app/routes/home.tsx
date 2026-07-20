@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router";
 
-import { getCityStatistics, getOfficial, listCategories } from "../lib/content.server";
+import { getCityStatistics, getHotlines, getOfficial, listCategories } from "../lib/content.server";
 import { buildMeta } from "../lib/seo";
 import { Hero } from "../components/home/Hero";
 import { PopularServices } from "../components/home/PopularServices";
@@ -25,11 +25,13 @@ export function loader() {
     statistics: getCityStatistics(),
     mayor: getOfficial("office-of-the-mayor"),
     legislativeHead: getOfficial("sangguniang-panlungsod"),
+    hotlines: getHotlines(),
   };
 }
 
 export default function Home() {
-  const { popularCategories, statistics, mayor, legislativeHead } = useLoaderData<typeof loader>();
+  const { popularCategories, statistics, mayor, legislativeHead, hotlines } =
+    useLoaderData<typeof loader>();
 
   return (
     <>
@@ -39,7 +41,7 @@ export default function Home() {
       <DiscoverHundredIslands />
       <BriefHistory />
       <MunicipalLeadership mayor={mayor} legislativeHead={legislativeHead} />
-      <ContactHotlines />
+      <ContactHotlines hotlines={hotlines} />
       <LocationMap />
     </>
   );
