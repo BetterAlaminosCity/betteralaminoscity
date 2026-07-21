@@ -26,6 +26,16 @@ export function BriefHistory() {
     returnObjects: true,
   }) as unknown as HistoryFunFact[];
 
+  const timelineRows = eras.flatMap((era) => [
+    { key: era.heading, kind: "heading" as const, heading: era.heading },
+    ...era.entries.map((entry) => ({
+      key: `${era.heading}-${entry.year}`,
+      kind: "entry" as const,
+      year: entry.year,
+      text: entry.text,
+    })),
+  ]);
+
   return (
     <section className="bg-[var(--color-kapwa-bg-gray-default)] py-16">
       <div className="mx-auto max-w-7xl px-4">
@@ -34,39 +44,37 @@ export function BriefHistory() {
         </h2>
         <div className="mt-8 grid gap-10 lg:grid-cols-3">
           <ol className="flex flex-col lg:col-span-2">
-            {eras.map((era, eraIndex) => (
-              <li key={era.heading}>
-                <h3 className="pb-3 pl-9 text-lg font-semibold text-[var(--color-kapwa-text-strong)]">
-                  {era.heading}
-                </h3>
-                <ol className="flex flex-col">
-                  {era.entries.map((entry, entryIndex) => {
-                    const isLastEntry =
-                      eraIndex === eras.length - 1 && entryIndex === era.entries.length - 1;
-                    return (
-                      <li key={`${era.heading}-${entry.year}`} className="flex gap-4">
-                        <div className="flex w-5 shrink-0 flex-col items-center">
-                          <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-kapwa-bg-brand-default)]" />
-                          {isLastEntry ? null : (
-                            <span className="w-px flex-1 bg-[var(--color-kapwa-border-weak)]" />
-                          )}
-                        </div>
-                        <div className="flex-1 pb-6">
-                          <div className="rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-4">
-                            <span className="inline-block rounded-full bg-[var(--color-kapwa-bg-brand-default)] px-2.5 py-0.5 text-xs font-semibold text-[var(--color-kapwa-text-inverse)]">
-                              {entry.year}
-                            </span>
-                            <p className="mt-2 text-sm text-[var(--color-kapwa-text-support)]">
-                              {entry.text}
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ol>
-              </li>
-            ))}
+            {timelineRows.map((row, index) => {
+              const isLastRow = index === timelineRows.length - 1;
+              return (
+                <li key={row.key} className="flex gap-4">
+                  <div className="flex w-5 shrink-0 flex-col items-center">
+                    {row.kind === "entry" ? (
+                      <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-kapwa-bg-brand-default)]" />
+                    ) : null}
+                    {isLastRow ? null : (
+                      <span className="w-px flex-1 bg-[var(--color-kapwa-border-weak)]" />
+                    )}
+                  </div>
+                  {row.kind === "heading" ? (
+                    <h3 className="pb-3 text-lg font-semibold text-[var(--color-kapwa-text-strong)]">
+                      {row.heading}
+                    </h3>
+                  ) : (
+                    <div className="flex-1 pb-6">
+                      <div className="rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-4">
+                        <span className="inline-block rounded-full bg-[var(--color-kapwa-bg-brand-default)] px-2.5 py-0.5 text-xs font-semibold text-[var(--color-kapwa-text-inverse)]">
+                          {row.year}
+                        </span>
+                        <p className="mt-2 text-sm text-[var(--color-kapwa-text-support)]">
+                          {row.text}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </li>
+              );
+            })}
           </ol>
           <div className="flex flex-col gap-4">
             {funFacts.map((fact, index) => {
