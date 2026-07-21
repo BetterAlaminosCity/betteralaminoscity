@@ -25,7 +25,13 @@ export function Navbar() {
         className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3"
       >
         <Link to="/" className="shrink-0">
-          <img src="/wordmark.svg" alt="BetterAlaminosCity.org" height={32} />
+          <img
+            src="/wordmark.svg"
+            alt="BetterAlaminosCity.org"
+            width={250}
+            height={32}
+            className="h-6 w-auto sm:h-8"
+          />
         </Link>
 
         <div className="hidden flex-1 items-center justify-center gap-6 lg:flex">
