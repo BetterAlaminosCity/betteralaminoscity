@@ -56,4 +56,33 @@ describe("ServicesArticle", () => {
     expect(jsonLd.url).toBe("https://betteralaminoscity.org/services/health-services/overview");
     expect(jsonLd).not.toHaveProperty("provider");
   });
+
+  it("renders requirements, steps, and office when present", async () => {
+    const router = createMemoryRouter(
+      [
+        {
+          path: "/services/:category/:article",
+          Component: ServicesArticle,
+          loader: loader as LoaderFunction,
+        },
+      ],
+      {
+        initialEntries: ["/services/agriculture-fisheries/farm-inputs-and-technology-assistance"],
+      },
+    );
+    render(<RouterProvider router={router} />);
+
+    expect(
+      await screen.findByRole("heading", {
+        name: "Farm Inputs and Technology Assistance on Rice and Corn Production Service",
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Endorsement Letter signed by the Association President"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Sign the Visitor's Logbook in the Office Information desk"),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/City Agriculture Office/)).toBeInTheDocument();
+  });
 });
