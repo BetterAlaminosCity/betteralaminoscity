@@ -15,8 +15,8 @@ describe("Statistics", () => {
     expect(
       await screen.findByRole("heading", { name: "Statistics & Demographics" }),
     ).toBeInTheDocument();
-    expect(screen.getByText("100,000")).toBeInTheDocument();
-    expect(screen.getByText("Sample Barangay 1")).toBeInTheDocument();
+    expect(screen.getByText("100,430")).toBeInTheDocument();
+    expect(screen.getByText("Poblacion")).toBeInTheDocument();
     expect(screen.getByText(/Poverty Incidence/)).toBeInTheDocument();
   });
 });

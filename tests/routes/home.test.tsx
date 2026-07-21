@@ -68,7 +68,7 @@ describe("Home", () => {
   it("renders the City at a Glance stats", async () => {
     renderHome();
     expect(await screen.findByRole("heading", { name: "City at a Glance" })).toBeInTheDocument();
-    expect(screen.getByText("100000")).toBeInTheDocument();
+    expect(screen.getByText("100430")).toBeInTheDocument();
   });
 
   it("renders the Discover Hundred Islands section", async () => {
