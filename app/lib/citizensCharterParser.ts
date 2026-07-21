@@ -33,6 +33,12 @@ export function parseCitizensCharterText(text: string): CitizensCharterServiceDr
   let current: CitizensCharterServiceDraft | null = null;
   let bodyLines: string[] = [];
 
+  // Diagnostic-only bookkeeping: every heading-shaped line that failed the
+  // lookahead check (and was therefore treated as ordinary body text, not a
+  // new draft) is recorded here. This does not affect parsing behavior or
+  // the return value — see the console.warn loop after the main pass below.
+  const rejectedHeadingCandidates: Array<{ lineNumber: number; text: string }> = [];
+
   const flush = () => {
     if (current) {
       current.rawBody = bodyLines.join("\n").trim();
@@ -63,19 +69,26 @@ export function parseCitizensCharterText(text: string): CitizensCharterServiceDr
     const rawLine = lines[index];
     const line = rawLine.trimEnd();
     const heading = line.match(SERVICE_HEADING_PATTERN);
-    if (heading && isFollowedByOfficeLine(index)) {
-      flush();
-      current = {
-        number: heading[1],
-        title: heading[2].trim(),
-        officeOrDivision: "",
-        classification: "",
-        typeOfTransaction: "",
-        whoMayAvail: "",
-        rawBody: "",
-      };
-      bodyLines = [];
-      continue;
+    if (heading) {
+      if (isFollowedByOfficeLine(index)) {
+        flush();
+        current = {
+          number: heading[1],
+          title: heading[2].trim(),
+          officeOrDivision: "",
+          classification: "",
+          typeOfTransaction: "",
+          whoMayAvail: "",
+          rawBody: "",
+        };
+        bodyLines = [];
+        continue;
+      }
+      // Heading-shaped but rejected by the lookahead (most commonly a
+      // CLIENT STEPS/AGENCY ACTIONS table sub-step row). Record it so the
+      // diagnostic below can surface it — it still falls through to
+      // ordinary body-line handling, exactly as before.
+      rejectedHeadingCandidates.push({ lineNumber: index + 1, text: line });
     }
     if (!current) continue;
 
@@ -94,6 +107,24 @@ export function parseCitizensCharterText(text: string): CitizensCharterServiceDr
     else bodyLines.push(rawLine);
   }
   flush();
+
+  // Diagnostic only: warn about every heading-shaped line that was never
+  // accepted as a real service heading. Most of these are expected (table
+  // sub-step rows, which never have an Office or Division line nearby — see
+  // the "table sub-step numbers" regression test), but this is exactly the
+  // signal that would have caught the 1.7 (form-feed) and 1.4
+  // (indented-label) drops during development, had it existed then. This is
+  // intentionally a diagnostic-only side effect: it never throws and never
+  // changes `drafts`, so it does not alter this function's contract.
+  for (const candidate of rejectedHeadingCandidates) {
+    console.warn(
+      `parseCitizensCharterText: line ${candidate.lineNumber} looks like a heading ` +
+        `("${candidate.text}") but was not accepted as one — no "Office or Division:" ` +
+        `line found within ${HEADING_LOOKAHEAD_WINDOW} lines. This is expected for ` +
+        `CLIENT STEPS/AGENCY ACTIONS table sub-step rows, but if this is a real ` +
+        `service heading, increase HEADING_LOOKAHEAD_WINDOW or investigate the source text.`,
+    );
+  }
 
   return drafts;
 }
