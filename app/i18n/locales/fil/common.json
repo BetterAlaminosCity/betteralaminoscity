@@ -177,7 +177,23 @@
       "title": "Direktoryo ng mga Serbisyo ng Lungsod",
       "subtitle": "Hanapin ang mga permit, aplikasyon, at mga programa ng tulong na inaalok ng Lungsod ng Alaminos."
     },
-    "viewService": "Tingnan ang mga serbisyo"
+    "viewService": "Tingnan ang mga serbisyo",
+    "viewDetails": "Tingnan ang detalye",
+    "article": {
+      "whoMayAvail": "Sino ang Maaaring Mag-avail",
+      "requirements": "Mga Kinakailangan",
+      "whereToSecure": "Saan Kukunin",
+      "process": "Hakbang-hakbang na Proseso",
+      "clientStep": "Hakbang ng Kliyente",
+      "agencyAction": "Aksyon ng Ahensya",
+      "fee": "Bayad",
+      "processingTime": "Oras ng Pagproseso",
+      "personResponsible": "Responsableng Tauhan",
+      "office": "Opisina",
+      "classification": "Klasipikasyon",
+      "totalProcessingTime": "Kabuuang Oras ng Pagproseso",
+      "officesConcerned": "Mga Kaugnay na Opisina"
+    }
   },
   "government": {
     "pageHeader": {

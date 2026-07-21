@@ -177,7 +177,23 @@
       "title": "City Services Directory",
       "subtitle": "Find permits, applications, and assistance programs offered by Alaminos City."
     },
-    "viewService": "View services"
+    "viewService": "View services",
+    "viewDetails": "View details",
+    "article": {
+      "whoMayAvail": "Who May Avail",
+      "requirements": "Requirements",
+      "whereToSecure": "Where to Secure",
+      "process": "Step-by-Step Process",
+      "clientStep": "Client Step",
+      "agencyAction": "Agency Action",
+      "fee": "Fee",
+      "processingTime": "Processing Time",
+      "personResponsible": "Person Responsible",
+      "office": "Office",
+      "classification": "Classification",
+      "totalProcessingTime": "Total Processing Time",
+      "officesConcerned": "Offices Concerned"
+    }
   },
   "government": {
     "pageHeader": {
