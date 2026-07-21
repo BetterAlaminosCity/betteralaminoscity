@@ -178,7 +178,7 @@ export function listArticles(
   if (!fs.existsSync(categoryDir)) return [];
   return fs
     .readdirSync(categoryDir)
-    .filter((file) => file.endsWith(".md"))
+    .filter((file) => file.endsWith(".md") && !file.endsWith(".fil.md"))
     .map((file) => path.basename(file, ".md"))
     .sort()
     .map((articleSlug) => getArticle(domain, categorySlug, articleSlug, contentRoot))
@@ -202,6 +202,41 @@ export function getArticle(
     domain,
     body: content.trim(),
   };
+}
+
+export function getArticleTranslations(
+  domain: ContentDomain,
+  categorySlug: string,
+  articleSlug: string,
+  contentRoot: string = DEFAULT_CONTENT_ROOT,
+): { en: Article | null; fil: Article | null } {
+  const en = getArticle(domain, categorySlug, articleSlug, contentRoot);
+  if (!en) return { en: null, fil: null };
+
+  const filPath = path.join(contentRoot, domain, categorySlug, `${articleSlug}.fil.md`);
+  if (!fs.existsSync(filPath)) return { en, fil: null };
+
+  const { data, content } = matter(fs.readFileSync(filPath, "utf-8"));
+  const frontmatter = data as Omit<Article, "slug" | "categorySlug" | "domain" | "body">;
+  return {
+    en,
+    fil: { ...frontmatter, slug: articleSlug, categorySlug, domain, body: content.trim() },
+  };
+}
+
+export function getCategoryTranslations(
+  domain: ContentDomain,
+  categorySlug: string,
+  contentRoot: string = DEFAULT_CONTENT_ROOT,
+): { en: CategorySummary; fil: CategorySummary | null } | null {
+  const en = readCategorySummary(domain, categorySlug, contentRoot);
+  if (!en) return null;
+
+  const filIndexPath = path.join(contentRoot, domain, categorySlug, "index.fil.yaml");
+  if (!fs.existsSync(filIndexPath)) return { en, fil: null };
+
+  const raw = load(fs.readFileSync(filIndexPath, "utf-8")) as Omit<CategorySummary, "slug">;
+  return { en, fil: { ...raw, slug: categorySlug } };
 }
 
 export function getOfficial(

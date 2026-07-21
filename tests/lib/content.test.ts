@@ -3,7 +3,9 @@ import { describe, expect, it } from "vitest";
 
 import {
   getArticle,
+  getArticleTranslations,
   getCategory,
+  getCategoryTranslations,
   getCityStatistics,
   getFiscalTransparency,
   getHotlines,
@@ -142,5 +144,48 @@ describe("listCategories excludes civic data folders", () => {
     expect(slugs).not.toContain("ordinances-resolutions");
     expect(slugs).not.toContain("statistics");
     expect(slugs).not.toContain("emergency-hotlines");
+  });
+});
+
+describe("listArticles excludes .fil.md siblings", () => {
+  it("does not list the Filipino translation file as its own article", () => {
+    const articles = listArticles("services", "sample-category", FIXTURE_ROOT);
+    expect(articles.map((article) => article.slug)).toEqual(["overview"]);
+  });
+});
+
+describe("getArticleTranslations", () => {
+  it("returns both languages when a translation exists", () => {
+    const result = getArticleTranslations("services", "sample-category", "overview", FIXTURE_ROOT);
+    expect(result.en?.title).toBe("Overview");
+    expect(result.fil?.title).toBe("Pangkalahatang-ideya");
+  });
+
+  it("returns fil: null when no translation file exists", () => {
+    const result = getArticleTranslations("government", "sample-office", "overview", FIXTURE_ROOT);
+    expect(result.fil).toBeNull();
+  });
+
+  it("returns en: null for an unknown article", () => {
+    const result = getArticleTranslations(
+      "services",
+      "sample-category",
+      "does-not-exist",
+      FIXTURE_ROOT,
+    );
+    expect(result.en).toBeNull();
+    expect(result.fil).toBeNull();
+  });
+});
+
+describe("getCategoryTranslations", () => {
+  it("returns fil: null when no index.fil.yaml exists", () => {
+    const result = getCategoryTranslations("services", "sample-category", FIXTURE_ROOT);
+    expect(result?.en.title).toBe("Sample Category");
+    expect(result?.fil).toBeNull();
+  });
+
+  it("returns null for an unknown category", () => {
+    expect(getCategoryTranslations("services", "does-not-exist", FIXTURE_ROOT)).toBeNull();
   });
 });
