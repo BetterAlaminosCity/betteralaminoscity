@@ -44,7 +44,7 @@ export function HeroSearch({ popularCategories }: HeroSearchProps) {
   return (
     <div
       ref={containerRef}
-      className="relative rounded-2xl bg-[var(--color-kapwa-bg-surface)] p-6 shadow-xl"
+      className="relative min-w-0 rounded-2xl bg-[var(--color-kapwa-bg-surface)] p-6 shadow-xl"
     >
       <h2 className="flex items-center gap-2 text-lg font-semibold text-[var(--color-kapwa-text-strong)]">
         <SearchIcon className="h-5 w-5 text-[var(--color-kapwa-text-brand)]" aria-hidden="true" />
