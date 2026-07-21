@@ -39,13 +39,13 @@ export function Hero({ popularCategories }: HeroProps) {
     <section className="bg-[var(--color-kapwa-bg-brand-default)]">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:py-24 lg:grid-cols-2 lg:items-center">
         <div className="min-w-0">
-          <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-kapwa-text-inverse-subtle)]">
+          <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-kapwa-text-inverse)]">
             {t("home.hero.eyebrow")}
           </p>
           <h1 className="mt-3 max-w-3xl text-3xl font-extrabold leading-tight break-words text-[var(--color-kapwa-text-inverse)] sm:text-5xl">
             {titleContent}
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-[var(--color-kapwa-text-inverse-subtle)]">
+          <p className="mt-4 max-w-xl text-lg text-[var(--color-kapwa-text-inverse)]">
             {t("home.hero.description")}
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
