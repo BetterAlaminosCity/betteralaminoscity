@@ -34,6 +34,51 @@ describe("validateArticleFrontmatter", () => {
   it("rejects frontmatter missing title", () => {
     expect(validateArticleFrontmatter({ description: "An overview." })).not.toEqual([]);
   });
+
+  it("accepts service frontmatter with requirements and steps", () => {
+    expect(
+      validateArticleFrontmatter({
+        title: "Sample Service",
+        description: "A sample service.",
+        office: "City Agriculture Office",
+        classification: "Simple",
+        transactionType: "G2C",
+        whoMayAvail: "All residents",
+        requirements: [{ item: "Request Slip Form", whereToSecure: "City Agriculture Office" }],
+        steps: [
+          {
+            phase: "Submission",
+            clientStep: "Sign the logbook",
+            agencyAction: "Give the logbook",
+            fee: "None",
+            processingTime: "3 minutes",
+          },
+        ],
+        totalProcessingTime: "3 minutes",
+        totalFees: "None",
+      }),
+    ).toEqual([]);
+  });
+
+  it("rejects a classification outside the enum", () => {
+    expect(
+      validateArticleFrontmatter({
+        title: "Sample Service",
+        description: "A sample service.",
+        classification: "Very Hard",
+      }),
+    ).not.toEqual([]);
+  });
+
+  it("rejects a steps entry missing processingTime", () => {
+    expect(
+      validateArticleFrontmatter({
+        title: "Sample Service",
+        description: "A sample service.",
+        steps: [{ clientStep: "Sign the logbook", agencyAction: "Give the logbook", fee: "None" }],
+      }),
+    ).not.toEqual([]);
+  });
 });
 
 describe("validateOfficial", () => {

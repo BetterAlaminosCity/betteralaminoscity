@@ -13,6 +13,20 @@ export interface CategorySummary {
   branch?: "executive" | "legislative";
 }
 
+export interface ServiceRequirement {
+  item: string;
+  whereToSecure: string;
+}
+
+export interface ServiceStep {
+  phase?: string;
+  clientStep: string;
+  agencyAction: string;
+  fee: string;
+  processingTime: string;
+  personResponsible?: string;
+}
+
 export interface Article {
   slug: string;
   categorySlug: string;
@@ -21,6 +35,14 @@ export interface Article {
   description: string;
   lastUpdated?: string;
   body: string;
+  office?: string;
+  classification?: "Simple" | "Complex" | "Highly Technical";
+  transactionType?: string;
+  whoMayAvail?: string;
+  requirements?: ServiceRequirement[];
+  steps?: ServiceStep[];
+  totalProcessingTime?: string;
+  totalFees?: string;
 }
 
 export interface Official {
