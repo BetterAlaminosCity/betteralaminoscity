@@ -28,7 +28,108 @@
     },
     "history": {
       "heading": "A Brief History of Alaminos City",
-      "body": "Named after Governor-General José Manrique de Lara y Alaminos, Alaminos began as a settlement of Cabaruan and Balayang before its formal founding in 1852. It was chartered as a city in 2001, becoming the province's fourth component city and gateway to the Hundred Islands."
+      "eras": [
+        {
+          "heading": "Early Settlers",
+          "entries": [
+            {
+              "year": "1734",
+              "text": "A Northern Zambal tribe founded the settlement of Suyang (in what is now Zaragoza, Bolinao)."
+            },
+            {
+              "year": "1737",
+              "text": "Suyang's residents moved to Barrio Casborran (now Barangay Baleyadaan, Alaminos City); the community grew quickly and drew more settlers from eastern Pangasinan."
+            }
+          ]
+        },
+        {
+          "heading": "Barrio to Pueblo",
+          "entries": [
+            {
+              "year": "1747",
+              "text": "Casborran broke away from its mother town, Bolinao, and became an independent pueblo."
+            },
+            {
+              "year": "1758",
+              "text": "A dispute between the original settlers and newer migrants over politics and the economy ended in a fire that destroyed the town; survivors slowly returned to rebuild."
+            }
+          ]
+        },
+        {
+          "heading": "Casborran to Sarapsap",
+          "entries": [
+            {
+              "year": "1764",
+              "text": "Rebuilding was cut short when renewed conflict forced residents to abandon the town for Nansangaan (now Barangay Inerangan)."
+            },
+            {
+              "year": "1766",
+              "text": "Residents founded a new settlement on higher ground away from the coast and named it Sarapsap — today's Barangay Poblacion."
+            }
+          ]
+        },
+        {
+          "heading": "Pueblo to Municipality",
+          "entries": [
+            {
+              "year": "1860",
+              "text": "Sarapsap's growth caught the attention of Spanish Governor-General Juan Alaminos y Vivar during an official visit."
+            },
+            {
+              "year": "1872",
+              "text": "In recognition of his popularity, the town was renamed \"Alaminos\" in his honor."
+            },
+            {
+              "year": "1903",
+              "text": "Alaminos and eight other towns of northern Zambales were folded into Pangasinan province; Francisco Reinoso became the town's first Municipal President."
+            },
+            {
+              "year": "Postwar",
+              "text": "Alaminos rebuilt and its economy recovered after World War II."
+            },
+            {
+              "year": "1991",
+              "text": "The municipality was reclassified from fourth class to third class."
+            },
+            {
+              "year": "1997",
+              "text": "A further reclassification to first-class municipality followed a 338.5% rise in gross income."
+            }
+          ]
+        },
+        {
+          "heading": "City of Alaminos",
+          "entries": [
+            {
+              "year": "March 5, 2001",
+              "text": "President Gloria Macapagal Arroyo signed Republic Act 9025, converting Alaminos into a component city."
+            },
+            {
+              "year": "March 28, 2001",
+              "text": "Voters ratified the change in a plebiscite, with 85% voting \"Yes,\" making Alaminos Pangasinan's fourth city."
+            }
+          ]
+        }
+      ],
+      "funFacts": [
+        {
+          "title": "Rebuilt From Disaster",
+          "description": "The town was burned down in 1758 amid a dispute between settlers, then displaced again in 1764 before finally taking root as Sarapsap — today's Poblacion — in 1766."
+        },
+        {
+          "title": "Named Before He Was Governor-General",
+          "description": "Alaminos was named in 1872 to honor Juan Alaminos y Vivar, a year before he actually became Governor-General of the Philippines (1873–74)."
+        },
+        {
+          "title": "A Landslide Vote for Cityhood",
+          "description": "When Alaminos became a city in 2001, 85% of voters said \"Yes\" in the ratifying plebiscite, sealing its status as Pangasinan's fourth city."
+        },
+        {
+          "title": "Home to the Philippines' First National Park",
+          "description": "The Hundred Islands, off the coast of Barangay Lucap, were declared the country's first national park by President Manuel L. Quezon in 1940."
+        }
+      ],
+      "sourceLine": "Sources: City Government of Alaminos; Philippine government records."
     },
     "leadership": {
       "heading": "City Leadership"

@@ -28,7 +28,108 @@
     },
     "history": {
       "heading": "Maikling Kasaysayan ng Lungsod ng Alaminos",
-      "body": "Pinangalanan kay Gobernador-Heneral José Manrique de Lara y Alaminos, nagsimula ang Alaminos bilang isang pamayanan ng Cabaruan at Balayang bago ito pormal na itinatag noong 1852. Naging lungsod ito noong 2001, at naging ika-apat na component city ng lalawigan at tarangkahan patungo sa Hundred Islands."
+      "eras": [
+        {
+          "heading": "Mga Unang Naninirahan",
+          "entries": [
+            {
+              "year": "1734",
+              "text": "Itinatag ng isang tribong Northern Zambal ang pamayanan ng Suyang (ngayo'y bahagi ng Zaragoza, Bolinao)."
+            },
+            {
+              "year": "1737",
+              "text": "Lumipat ang mga residente ng Suyang sa Barrio Casborran (ngayo'y Barangay Baleyadaan, Lungsod ng Alaminos); mabilis lumago ang komunidad at nakaakit ng dagdag na mga mananahan mula silangang Pangasinan."
+            }
+          ]
+        },
+        {
+          "heading": "Mula Baryo Tungo Bayan",
+          "entries": [
+            {
+              "year": "1747",
+              "text": "Humiwalay ang Casborran sa kanyang mother town na Bolinao at naging malayang bayan."
+            },
+            {
+              "year": "1758",
+              "text": "Nagresulta sa sunog na sumira sa bayan ang alitan ng mga orihinal na mananahan at bagong migrante hinggil sa politika at ekonomiya; dahan-dahang bumalik ang mga nakaligtas upang muling itayo ito."
+            }
+          ]
+        },
+        {
+          "heading": "Mula Casborran Tungo Sarapsap",
+          "entries": [
+            {
+              "year": "1764",
+              "text": "Naantala ang muling pagtatayo nang pilitin ng bagong alitan ang mga residente na iwan ang bayan patungong Nansangaan (ngayo'y Barangay Inerangan)."
+            },
+            {
+              "year": "1766",
+              "text": "Nagtatag ang mga residente ng bagong pamayanan sa mas mataas na lupain, malayo sa baybayin, at pinangalanang Sarapsap — ang kasalukuyang Barangay Poblacion."
+            }
+          ]
+        },
+        {
+          "heading": "Mula Bayan Tungo Munisipalidad",
+          "entries": [
+            {
+              "year": "1860",
+              "text": "Napansin ang paglago ng Sarapsap ni Gobernador-Heneral Juan Alaminos y Vivar sa panahon ng kanyang opisyal na pagbisita."
+            },
+            {
+              "year": "1872",
+              "text": "Bilang pagkilala sa kanyang popularidad, pinalitan ang pangalan ng bayan tungong \"Alaminos\" bilang parangal sa kanya."
+            },
+            {
+              "year": "1903",
+              "text": "Isinama ang Alaminos at walong iba pang bayan ng hilagang Zambales sa lalawigan ng Pangasinan; si Francisco Reinoso ang naging unang Municipal President ng bayan."
+            },
+            {
+              "year": "Pagkatapos ng Digmaan",
+              "text": "Muling itinayo at bumangon ang ekonomiya ng Alaminos matapos ang Ikalawang Digmaang Pandaigdig."
+            },
+            {
+              "year": "1991",
+              "text": "Muling inuri ang munisipalidad mula ika-apat na klase tungo ika-tatlong klase."
+            },
+            {
+              "year": "1997",
+              "text": "Sumunod ang muling pag-uuri tungo unang klase na munisipalidad matapos ang 338.5% na pagtaas sa gross income."
+            }
+          ]
+        },
+        {
+          "heading": "Lungsod ng Alaminos",
+          "entries": [
+            {
+              "year": "Marso 5, 2001",
+              "text": "Nilagdaan ni Pangulong Gloria Macapagal Arroyo ang Republic Act 9025, na naging component city ang Alaminos."
+            },
+            {
+              "year": "Marso 28, 2001",
+              "text": "Pinagtibay ng mga botante ang pagbabago sa isang plebisito, kung saan 85% ang bumoto ng \"Oo,\" at naging ikaapat na lungsod ng Pangasinan ang Alaminos."
+            }
+          ]
+        }
+      ],
+      "funFacts": [
+        {
+          "title": "Muling Itinayo Matapos ang Sakuna",
+          "description": "Nasunog ang bayan noong 1758 dahil sa alitan ng mga mananahan, pagkatapos ay muling napalitan ng lokasyon noong 1764 bago tuluyang nanahan bilang Sarapsap — ang kasalukuyang Poblacion — noong 1766."
+        },
+        {
+          "title": "Napangalanan Bago pa Man Siya Naging Gobernador-Heneral",
+          "description": "Napangalanan ang Alaminos noong 1872 bilang parangal kay Juan Alaminos y Vivar, isang taon bago siya naging Gobernador-Heneral ng Pilipinas (1873–74)."
+        },
+        {
+          "title": "Malakihang Panalo para sa Pagiging Lungsod",
+          "description": "Nang maging lungsod ang Alaminos noong 2001, 85% ng mga botante ang bumoto ng \"Oo\" sa nagpapatibay na plebisito, na nagtatakda sa katayuan nito bilang ikaapat na lungsod ng Pangasinan."
+        },
+        {
+          "title": "Tahanan ng Unang Pambansang Parke ng Pilipinas",
+          "description": "Idineklara ni Pangulong Manuel L. Quezon ang Hundred Islands, sa look ng Barangay Lucap, bilang unang pambansang parke ng bansa noong 1940."
+        }
+      ],
+      "sourceLine": "Mga Pinagmulan: Pamahalaang Lungsod ng Alaminos; mga tala ng pamahalaan ng Pilipinas."
     },
     "leadership": {
       "heading": "Pamunuan ng Lungsod"
