@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import ServicesCategory, { loader } from "../../../app/routes/services/category";
 
 describe("ServicesCategory", () => {
-  it("renders the category title and its articles", async () => {
+  it("renders the category title and a card linking to each article", async () => {
     const router = createMemoryRouter(
       [
         {
@@ -19,7 +19,7 @@ describe("ServicesCategory", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByRole("heading", { name: "Health Services" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Overview" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /Overview/ })).toHaveAttribute(
       "href",
       "/services/health-services/overview",
     );
