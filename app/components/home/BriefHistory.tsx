@@ -1,9 +1,30 @@
+import { Award, Flame, Vote, Waves, type LucideIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-// Placeholder narrative copy — replace with sourced/verified history
-// before this project treats this section as factually authoritative.
+interface HistoryTimelineEntry {
+  year: string;
+  text: string;
+}
+
+interface HistoryEra {
+  heading: string;
+  entries: HistoryTimelineEntry[];
+}
+
+interface HistoryFunFact {
+  title: string;
+  description: string;
+}
+
+const FUN_FACT_ICONS: LucideIcon[] = [Flame, Award, Vote, Waves];
+
 export function BriefHistory() {
   const { t } = useTranslation();
+
+  const eras = t("home.history.eras", { returnObjects: true }) as unknown as HistoryEra[];
+  const funFacts = t("home.history.funFacts", {
+    returnObjects: true,
+  }) as unknown as HistoryFunFact[];
 
   return (
     <section className="bg-[var(--color-kapwa-bg-gray-default)] py-16">
@@ -11,8 +32,69 @@ export function BriefHistory() {
         <h2 className="text-2xl font-bold text-[var(--color-kapwa-text-strong)] sm:text-3xl">
           {t("home.history.heading")}
         </h2>
-        <p className="mt-4 max-w-3xl text-base text-[var(--color-kapwa-text-support)]">
-          {t("home.history.body")}
+        <div className="mt-8 grid gap-10 lg:grid-cols-3">
+          <ol className="flex flex-col lg:col-span-2">
+            {eras.map((era, eraIndex) => (
+              <li key={era.heading}>
+                <h3 className="pb-3 pl-9 text-lg font-semibold text-[var(--color-kapwa-text-strong)]">
+                  {era.heading}
+                </h3>
+                <ol className="flex flex-col">
+                  {era.entries.map((entry, entryIndex) => {
+                    const isLastEntry =
+                      eraIndex === eras.length - 1 && entryIndex === era.entries.length - 1;
+                    return (
+                      <li key={`${era.heading}-${entry.year}`} className="flex gap-4">
+                        <div className="flex w-5 shrink-0 flex-col items-center">
+                          <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--color-kapwa-bg-brand-default)]" />
+                          {isLastEntry ? null : (
+                            <span className="w-px flex-1 bg-[var(--color-kapwa-border-weak)]" />
+                          )}
+                        </div>
+                        <div className="flex-1 pb-6">
+                          <div className="rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-4">
+                            <span className="inline-block rounded-full bg-[var(--color-kapwa-bg-brand-default)] px-2.5 py-0.5 text-xs font-semibold text-[var(--color-kapwa-text-inverse)]">
+                              {entry.year}
+                            </span>
+                            <p className="mt-2 text-sm text-[var(--color-kapwa-text-support)]">
+                              {entry.text}
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </li>
+            ))}
+          </ol>
+          <div className="flex flex-col gap-4">
+            {funFacts.map((fact, index) => {
+              const Icon = FUN_FACT_ICONS[index];
+              return (
+                <div
+                  key={fact.title}
+                  className="rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-6"
+                >
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)]">
+                    <Icon
+                      className="h-5 w-5 text-[var(--color-kapwa-text-inverse)]"
+                      aria-hidden="true"
+                    />
+                  </span>
+                  <h3 className="mt-3 text-base font-semibold text-[var(--color-kapwa-text-strong)]">
+                    {fact.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-[var(--color-kapwa-text-support)]">
+                    {fact.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <p className="mt-8 text-sm text-[var(--color-kapwa-text-support)]">
+          {t("home.history.sourceLine")}
         </p>
       </div>
     </section>
