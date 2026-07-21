@@ -1,0 +1,37 @@
+---
+title: "Provision of Vegetable Seed/Seedlings for Backyard Gardening"
+description: "Distribution of vegetable seeds/seedlings to the residents of Alaminos City for backyard gardening."
+lastUpdated: "2026-07-22"
+office: "City Agriculture Office"
+classification: "Simple"
+transactionType: "G2C - Government to the Transacting Public"
+whoMayAvail: "Bona fide residents of Alaminos City"
+requirements:
+  - item: "Request Slip Form"
+    whereToSecure: "City Agriculture Office"
+steps:
+  - phase: "Submission and Accomplishment of Requirements"
+    clientStep: "Sign the Visitor's Logbook in the Office Information desk"
+    agencyAction: "Give the Visitor's Logbook"
+    fee: "None"
+    processingTime: "3 minutes"
+    personResponsible: "Senior Administrative Assistant II, Agriculture Staff (Information Desk Officer)"
+  - clientStep: "Request for vegetable seeds/seedlings"
+    agencyAction: "Advise the Client to fill-out the request slip form"
+    fee: "None"
+    processingTime: "5 minutes"
+  - clientStep: "Fill out and submit the request slip form"
+    agencyAction: "Receive the request slip form"
+    fee: "None"
+    processingTime: "3 minutes"
+  - phase: "Issuance / Releasing of Requested Input / Commodity"
+    clientStep: "Receive requested seeds/seedlings and sign the Post-Masterlist Form"
+    agencyAction: "Advise the client to fill-out the Post-Masterlist Form, then release the requested seeds/seedlings"
+    fee: "None"
+    processingTime: "10 minutes"
+    personResponsible: "Senior Administrative Assistant II, Agriculture Staff (Information Desk Officer)"
+totalProcessingTime: "21 minutes"
+totalFees: "None"
+---
+
+Distribution of vegetable seeds/seedlings to the residents of Alaminos City for backyard gardening.
