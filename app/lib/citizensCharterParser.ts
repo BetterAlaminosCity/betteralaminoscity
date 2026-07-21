@@ -14,8 +14,21 @@ const CLASSIFICATION_PATTERN = /^Classification:\s*(.+)$/i;
 const TRANSACTION_PATTERN = /^Type of Transaction:\s*(.+)$/i;
 const AVAIL_PATTERN = /^Who may avail:\s*(.+)$/i;
 
+// Number of lines to look ahead, past a heading-shaped line, when deciding
+// whether it is really a new service heading (as opposed to a CLIENT
+// STEPS/AGENCY ACTIONS table row like "1.1 Request for farm input..." that
+// happens to match the same "N.N " shape). A real service heading is always
+// followed shortly by an "Office or Division:" line; a table sub-step row
+// never is.
+const HEADING_LOOKAHEAD_WINDOW = 8;
+
 export function parseCitizensCharterText(text: string): CitizensCharterServiceDraft[] {
-  const lines = text.split("\n");
+  // pdftotext inserts form-feed characters (\f) between PDF pages. When a
+  // real heading happens to be the first content on a new page, the raw line
+  // looks like "\f1.7 Requisition of E-Kawayan Products" and the leading \f
+  // stops SERVICE_HEADING_PATTERN from matching at the true start of the
+  // line. Strip form feeds up front so they can never corrupt a heading.
+  const lines = text.replace(/\f/g, "").split("\n");
   const drafts: CitizensCharterServiceDraft[] = [];
   let current: CitizensCharterServiceDraft | null = null;
   let bodyLines: string[] = [];
@@ -27,10 +40,30 @@ export function parseCitizensCharterText(text: string): CitizensCharterServiceDr
     }
   };
 
-  for (const rawLine of lines) {
+  // Distinguishes a genuine service heading from a table sub-step number
+  // that happens to match the same "N.N " regex shape. Looks ahead a bounded
+  // number of lines for an OFFICE_PATTERN match, but gives up early if
+  // another heading-shaped line appears first (which would mean we're still
+  // inside a table of numbered steps, not approaching a real heading's
+  // office line).
+  const isFollowedByOfficeLine = (startIndex: number): boolean => {
+    const end = Math.min(lines.length, startIndex + 1 + HEADING_LOOKAHEAD_WINDOW);
+    for (let i = startIndex + 1; i < end; i++) {
+      // `pdftotext -layout` inconsistently indents the "Office or Division:"
+      // label with a leading space on some pages, so trim both ends before
+      // testing against the (start-anchored) label pattern.
+      const candidate = lines[i].trim();
+      if (OFFICE_PATTERN.test(candidate)) return true;
+      if (SERVICE_HEADING_PATTERN.test(lines[i].trimEnd())) return false;
+    }
+    return false;
+  };
+
+  for (let index = 0; index < lines.length; index++) {
+    const rawLine = lines[index];
     const line = rawLine.trimEnd();
     const heading = line.match(SERVICE_HEADING_PATTERN);
-    if (heading) {
+    if (heading && isFollowedByOfficeLine(index)) {
       flush();
       current = {
         number: heading[1],
@@ -46,10 +79,13 @@ export function parseCitizensCharterText(text: string): CitizensCharterServiceDr
     }
     if (!current) continue;
 
-    const officeMatch = line.match(OFFICE_PATTERN);
-    const classificationMatch = line.match(CLASSIFICATION_PATTERN);
-    const transactionMatch = line.match(TRANSACTION_PATTERN);
-    const availMatch = line.match(AVAIL_PATTERN);
+    // As above: the label lines are sometimes indented with a leading space
+    // depending on the source page, so match against a fully-trimmed line.
+    const trimmedLine = line.trim();
+    const officeMatch = trimmedLine.match(OFFICE_PATTERN);
+    const classificationMatch = trimmedLine.match(CLASSIFICATION_PATTERN);
+    const transactionMatch = trimmedLine.match(TRANSACTION_PATTERN);
+    const availMatch = trimmedLine.match(AVAIL_PATTERN);
 
     if (officeMatch) current.officeOrDivision = officeMatch[1].trim();
     else if (classificationMatch) current.classification = classificationMatch[1].trim();
