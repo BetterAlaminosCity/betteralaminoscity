@@ -60,9 +60,9 @@ describe("Home", () => {
   it("renders the hero search widget with popular category chips", async () => {
     renderHome();
     expect(await screen.findByRole("heading", { name: "Find a Service" })).toBeInTheDocument();
-    const educationLinks = screen.getAllByRole("link", { name: "Education" });
-    expect(educationLinks.length).toBeGreaterThanOrEqual(1);
-    expect(educationLinks[0]).toHaveAttribute("href", "/services/education");
+    const businessLinks = screen.getAllByRole("link", { name: "Business" });
+    expect(businessLinks.length).toBeGreaterThanOrEqual(1);
+    expect(businessLinks[0]).toHaveAttribute("href", "/services/business");
   });
 
   it("renders the City at a Glance stats", async () => {

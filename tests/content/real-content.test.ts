@@ -13,8 +13,15 @@ describe("real content tree", () => {
     expect(validateContentTree("content")).toEqual([]);
   });
 
-  it("has all 10 seeded service categories", () => {
-    expect(listCategories("services")).toHaveLength(10);
+  it("has all 11 seeded service categories", () => {
+    expect(listCategories("services")).toHaveLength(11);
+  });
+
+  it("includes the Civil Registry & Vital Records category", () => {
+    const category = listCategories("services").find(
+      (c) => c.slug === "civil-registry-vital-records",
+    );
+    expect(category?.title).toBe("Civil Registry & Vital Records");
   });
 
   it("has all 6 seeded government categories", () => {
