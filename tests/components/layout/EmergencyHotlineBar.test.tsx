@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { I18nProvider } from "../../../app/i18n/I18nProvider";
 import { EmergencyHotlineBar } from "../../../app/components/layout/EmergencyHotlineBar";
@@ -29,6 +29,15 @@ function renderBar(hotlines: Hotlines | null) {
     </I18nProvider>,
   );
 }
+
+function mockWidths({ scrollWidth, clientWidth }: { scrollWidth: number; clientWidth: number }) {
+  vi.spyOn(HTMLElement.prototype, "scrollWidth", "get").mockReturnValue(scrollWidth);
+  vi.spyOn(HTMLElement.prototype, "clientWidth", "get").mockReturnValue(clientWidth);
+}
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
 
 describe("EmergencyHotlineBar", () => {
   it("renders nothing when hotlines is null", () => {
@@ -67,5 +76,31 @@ describe("EmergencyHotlineBar", () => {
 
     expect(screen.getByRole("link", { name: /CDRRMO/ })).toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /^CHO/ })).not.toBeInTheDocument();
+  });
+
+  it("stays still with a single, centered pill set when the content fits the viewport", () => {
+    mockWidths({ scrollWidth: 500, clientWidth: 1000 });
+    const { container } = renderBar(HOTLINES);
+
+    expect(container.querySelectorAll('a[href="tel:911"]')).toHaveLength(1);
+    const scroller = container.querySelector('[class*="max-w-7xl"]');
+    expect(scroller).toHaveClass("justify-center");
+    expect(scroller).not.toHaveClass("overflow-x-auto");
+  });
+
+  it("duplicates the pills as a hidden, untabbable set and scrolls when the content overflows", () => {
+    mockWidths({ scrollWidth: 1500, clientWidth: 1000 });
+    const { container } = renderBar(HOTLINES);
+
+    const emergencyLinks = container.querySelectorAll('a[href="tel:911"]');
+    expect(emergencyLinks).toHaveLength(2);
+
+    const duplicateGroup = emergencyLinks[1].closest("div[aria-hidden='true']");
+    expect(duplicateGroup).not.toBeNull();
+    expect(emergencyLinks[1]).toHaveAttribute("tabindex", "-1");
+
+    const scroller = container.querySelector('[class*="max-w-7xl"]');
+    expect(scroller).toHaveClass("overflow-x-auto");
+    expect(scroller).not.toHaveClass("justify-center");
   });
 });

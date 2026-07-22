@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -53,14 +53,35 @@ function HotlinePills({
 export function EmergencyHotlineBar({ hotlines }: { hotlines: Hotlines | null }) {
   const { t } = useTranslation();
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const loopStartRef = useRef<HTMLDivElement>(null);
-  const loopRepeatRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const repeatRef = useRef<HTMLDivElement>(null);
   const pausedRef = useRef(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
 
+  // Only a bar whose pills don't fit at the current viewport width needs to
+  // scroll at all — everything else should sit still, centered.
   useEffect(() => {
     const scroller = scrollerRef.current;
-    const loopStart = loopStartRef.current;
-    const loopRepeat = loopRepeatRef.current;
+    const content = contentRef.current;
+    if (!scroller || !content) return;
+
+    const checkOverflow = () => {
+      setIsOverflowing(content.scrollWidth > scroller.clientWidth);
+    };
+    checkOverflow();
+
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, []);
+
+  // Auto-scroll only kicks in once the bar is actually overflowing, once the
+  // duplicate pill set (rendered below) exists to loop against.
+  useEffect(() => {
+    if (!isOverflowing) return;
+
+    const scroller = scrollerRef.current;
+    const loopStart = contentRef.current;
+    const loopRepeat = repeatRef.current;
     if (!scroller || !loopStart || !loopRepeat) return;
 
     const prefersReducedMotion =
@@ -84,7 +105,7 @@ export function EmergencyHotlineBar({ hotlines }: { hotlines: Hotlines | null })
     };
     frameId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frameId);
-  }, []);
+  }, [isOverflowing]);
 
   if (!hotlines) return null;
 
@@ -98,7 +119,11 @@ export function EmergencyHotlineBar({ hotlines }: { hotlines: Hotlines | null })
     <div className="bg-[var(--color-kapwa-bg-danger-default)] py-2 text-white">
       <div
         ref={scrollerRef}
-        className="mx-auto flex max-w-7xl items-center gap-2 overflow-x-auto px-4 text-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className={`mx-auto flex max-w-7xl items-center gap-2 px-4 text-sm ${
+          isOverflowing
+            ? "overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            : "justify-center"
+        }`}
         onMouseEnter={() => {
           pausedRef.current = true;
         }}
@@ -112,7 +137,7 @@ export function EmergencyHotlineBar({ hotlines }: { hotlines: Hotlines | null })
           pausedRef.current = false;
         }}
       >
-        <div ref={loopStartRef} className="flex shrink-0 items-center gap-2">
+        <div ref={contentRef} className="flex shrink-0 items-center gap-2">
           <HotlinePills
             emergencyNumber={hotlines.emergencyNumber}
             emergencyLabel={emergencyLabel}
@@ -120,14 +145,16 @@ export function EmergencyHotlineBar({ hotlines }: { hotlines: Hotlines | null })
             interactive
           />
         </div>
-        <div ref={loopRepeatRef} aria-hidden="true" className="flex shrink-0 items-center gap-2">
-          <HotlinePills
-            emergencyNumber={hotlines.emergencyNumber}
-            emergencyLabel={emergencyLabel}
-            featured={featured}
-            interactive={false}
-          />
-        </div>
+        {isOverflowing && (
+          <div ref={repeatRef} aria-hidden="true" className="flex shrink-0 items-center gap-2">
+            <HotlinePills
+              emergencyNumber={hotlines.emergencyNumber}
+              emergencyLabel={emergencyLabel}
+              featured={featured}
+              interactive={false}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
