@@ -1,39 +1,8 @@
 import { useTranslation } from "react-i18next";
-import {
-  AlertTriangle,
-  Anchor,
-  Building,
-  Droplet,
-  Flame,
-  GraduationCap,
-  HeartPulse,
-  Phone,
-  Radio,
-  Scale,
-  Search,
-  ShieldAlert,
-  Zap,
-  type LucideIcon,
-} from "lucide-react";
 
 import type { Hotlines } from "../../lib/content.server";
+import { getHotlineIcon } from "../../lib/hotlineIcons";
 import { telHref } from "../../lib/phone";
-
-const ICONS: Record<string, LucideIcon> = {
-  "shield-alert": ShieldAlert,
-  flame: Flame,
-  "alert-triangle": AlertTriangle,
-  "heart-pulse": HeartPulse,
-  phone: Phone,
-  radio: Radio,
-  droplet: Droplet,
-  anchor: Anchor,
-  building: Building,
-  "graduation-cap": GraduationCap,
-  scale: Scale,
-  search: Search,
-  zap: Zap,
-};
 
 const SM_COL_SPAN: Record<number, string> = {
   1: "sm:col-span-1",
@@ -68,7 +37,7 @@ export function ContactHotlines({ hotlines }: { hotlines: Hotlines | null }) {
         </h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {hotlines.hotlines.map(({ key, name, description, icon, numbers }) => {
-            const Icon = (icon && ICONS[icon]) || Phone;
+            const Icon = getHotlineIcon(icon);
             return (
               <div
                 key={key}
