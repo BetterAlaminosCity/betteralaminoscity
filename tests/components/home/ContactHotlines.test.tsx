@@ -88,11 +88,9 @@ describe("ContactHotlines", () => {
       </I18nProvider>,
     );
 
-    const emergencyLink = screen.getByRole("link", { name: "911" });
+    const emergencyLink = screen.getByRole("link", { name: /911/ });
     expect(emergencyLink).toHaveAttribute("href", "tel:911");
-
-    const cell = emergencyLink.closest("div");
-    expect(cell).toHaveClass("sm:col-span-1", "lg:col-span-2");
+    expect(emergencyLink).toHaveClass("sm:col-span-1", "lg:col-span-2");
   });
 
   it("uses a gray section background for contrast with adjacent sections", () => {

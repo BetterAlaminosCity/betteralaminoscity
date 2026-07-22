@@ -105,16 +105,15 @@ export function ContactHotlines({ hotlines }: { hotlines: Hotlines | null }) {
               </div>
             );
           })}
-          <div
-            className={`flex flex-col items-center justify-center rounded-lg border border-[var(--color-kapwa-border-danger)] bg-[var(--color-kapwa-bg-danger-weak)] p-4 text-center ${smSpanClass} ${lgSpanClass}`}
+          <a
+            href={telHref(hotlines.emergencyNumber)}
+            className={`group flex flex-col items-center justify-center rounded-lg border border-[var(--color-kapwa-border-danger)] bg-[var(--color-kapwa-bg-danger-weak)] p-4 text-center transition-colors hover:bg-[var(--color-kapwa-bg-danger-default)] ${smSpanClass} ${lgSpanClass}`}
           >
-            <p className="text-sm font-semibold text-[var(--color-kapwa-text-danger)]">
+            <p className="text-lg font-bold text-[var(--color-kapwa-text-danger)] group-hover:text-white sm:text-xl">
               {t("home.contact.emergencyLabel")}{" "}
-              <a href={telHref(hotlines.emergencyNumber)} className="underline">
-                {hotlines.emergencyNumber}
-              </a>
+              <span className="underline">{hotlines.emergencyNumber}</span>
             </p>
-          </div>
+          </a>
         </div>
         <p className="mt-6 text-sm text-[var(--color-kapwa-text-support)]">
           {t("home.contact.cityHall")}
