@@ -221,5 +221,8 @@
     "codeOfConductLink": "Basahin ang Code of Conduct",
     "techStackHeading": "Tech Stack at Transparency",
     "techStackBody": "Ginawa gamit ang React Router, ang Kapwa civic design system, at i18next para sa pagsasalin sa Ingles/Filipino, ang site na ito ay ganap na open source sa ilalim ng MIT license at pinapanatili ng mga boluntaryo — hindi ng pamahalaan ng Lungsod ng Alaminos."
+  },
+  "emergencyBar": {
+    "emergencyLabel": "Emergency"
   }
 }

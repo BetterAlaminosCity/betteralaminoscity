@@ -221,5 +221,8 @@
     "codeOfConductLink": "Read the Code of Conduct",
     "techStackHeading": "Tech Stack & Transparency",
     "techStackBody": "Built with React Router, the Kapwa civic design system, and i18next for English/Filipino translation, this site is fully open source under the MIT license and maintained by volunteers — not the Alaminos City government."
+  },
+  "emergencyBar": {
+    "emergencyLabel": "Emergency"
   }
 }
