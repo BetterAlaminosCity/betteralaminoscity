@@ -25,13 +25,13 @@ describe("ServicesIndex", () => {
     ).toBeInTheDocument();
   });
 
-  it("lists all 14 service categories as links", async () => {
+  it("lists all 15 service categories as links", async () => {
     renderServicesIndex();
 
     expect(await screen.findByRole("link", { name: /Health Services/i })).toHaveAttribute(
       "href",
       "/services/health-services",
     );
-    expect(screen.getAllByRole("listitem")).toHaveLength(14);
+    expect(screen.getAllByRole("listitem")).toHaveLength(15);
   });
 });

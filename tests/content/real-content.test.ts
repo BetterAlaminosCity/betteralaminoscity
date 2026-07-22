@@ -13,8 +13,8 @@ describe("real content tree", () => {
     expect(validateContentTree("content")).toEqual([]);
   });
 
-  it("has all 14 seeded service categories", () => {
-    expect(listCategories("services")).toHaveLength(14);
+  it("has all 15 seeded service categories", () => {
+    expect(listCategories("services")).toHaveLength(15);
   });
 
   it("includes the Civil Registry & Vital Records category", () => {
@@ -27,6 +27,13 @@ describe("real content tree", () => {
   it("includes the Taxes & Payments category", () => {
     const category = listCategories("services").find((c) => c.slug === "taxes-payments");
     expect(category?.title).toBe("Taxes & Payments");
+  });
+
+  it("includes the Community Facilities & Events category", () => {
+    const category = listCategories("services").find(
+      (c) => c.slug === "community-facilities-events",
+    );
+    expect(category?.title).toBe("Community Facilities & Events");
   });
 
   it("includes the Transportation & Public Safety category", () => {
