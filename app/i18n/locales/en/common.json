@@ -189,9 +189,9 @@
       "fee": "Fee",
       "processingTime": "Processing Time",
       "personResponsible": "Person Responsible",
-      "office": "Office",
       "classification": "Classification",
       "totalProcessingTime": "Total Processing Time",
+      "totalFees": "Total Fees",
       "officesConcerned": "Offices Concerned"
     }
   },

@@ -85,4 +85,36 @@ describe("ServicesArticle", () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/City Agriculture Office/)).toBeInTheDocument();
   });
+
+  it("renders totalProcessingTime and totalFees badges when present", async () => {
+    const router = createMemoryRouter(
+      [
+        {
+          path: "/services/:category/:article",
+          Component: ServicesArticle,
+          loader: loader as LoaderFunction,
+        },
+      ],
+      {
+        initialEntries: [
+          "/services/agriculture-fisheries/certificate-to-operate-fishery-structure",
+        ],
+      },
+    );
+    render(<RouterProvider router={router} />);
+
+    expect(
+      await screen.findByRole("heading", {
+        name: "Application and Renewal of Certificate to Operate Fishery Structure",
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/39 minutes \(plus 1 day for on-site inspection of new applications\)/),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        /Corresponding payment per Fishery Structure type applies \(see fee schedule above\)/,
+      ),
+    ).toBeInTheDocument();
+  });
 });

@@ -189,9 +189,9 @@
       "fee": "Bayad",
       "processingTime": "Oras ng Pagproseso",
       "personResponsible": "Responsableng Tauhan",
-      "office": "Opisina",
       "classification": "Klasipikasyon",
       "totalProcessingTime": "Kabuuang Oras ng Pagproseso",
+      "totalFees": "Kabuuang Bayad",
       "officesConcerned": "Mga Kaugnay na Opisina"
     }
   },

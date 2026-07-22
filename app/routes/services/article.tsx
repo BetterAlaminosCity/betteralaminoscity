@@ -71,6 +71,11 @@ export default function ServicesArticle() {
             {t("services.article.totalProcessingTime")}: {articleText.totalProcessingTime}
           </span>
         ) : null}
+        {articleText.totalFees ? (
+          <span className="rounded-full bg-[var(--color-kapwa-bg-gray-default)] px-3 py-1 text-xs font-medium text-[var(--color-kapwa-text-support)]">
+            {t("services.article.totalFees")}: {articleText.totalFees}
+          </span>
+        ) : null}
       </div>
 
       <div className="mt-6 text-base text-[var(--color-kapwa-text-support)]">
