@@ -1,0 +1,37 @@
+---
+title: "Pagkakaloob ng Binhi/Punla ng Gulay para sa Backyard Gardening"
+description: "Pamamahagi ng binhi/punla ng gulay sa mga residente ng Lungsod ng Alaminos para sa backyard gardening."
+lastUpdated: "2026-07-22"
+office: "City Agriculture Office"
+classification: "Simple"
+transactionType: "G2C - Pamahalaan sa Nakikipagtransaksyong Publiko"
+whoMayAvail: "Mga bona fide residente ng Lungsod ng Alaminos"
+requirements:
+  - item: "Request Slip Form"
+    whereToSecure: "City Agriculture Office"
+steps:
+  - phase: "Pagsusumite at Pagkumpleto ng mga Kinakailangan"
+    clientStep: "Pumirma sa Visitor's Logbook sa Information Desk ng Tanggapan"
+    agencyAction: "Ibigay ang Visitor's Logbook"
+    fee: "Wala"
+    processingTime: "3 minuto"
+    personResponsible: "Senior Administrative Assistant II, Agriculture Staff (Information Desk Officer)"
+  - clientStep: "Humiling ng binhi/punla ng gulay"
+    agencyAction: "Payuhan ang Kliyente na punan ang request slip form"
+    fee: "Wala"
+    processingTime: "5 minuto"
+  - clientStep: "Punan at isumite ang request slip form"
+    agencyAction: "Tanggapin ang request slip form"
+    fee: "Wala"
+    processingTime: "3 minuto"
+  - phase: "Pagpapalabas ng Hiniling na Bagay/Kalakal"
+    clientStep: "Tanggapin ang hiniling na binhi/punla at pumirma sa Post-Masterlist Form"
+    agencyAction: "Payuhan ang kliyente na punan ang Post-Masterlist Form, pagkatapos ay ipalabas ang hiniling na binhi/punla"
+    fee: "Wala"
+    processingTime: "10 minuto"
+    personResponsible: "Senior Administrative Assistant II, Agriculture Staff (Information Desk Officer)"
+totalProcessingTime: "21 minuto"
+totalFees: "Wala"
+---
+
+Pamamahagi ng binhi/punla ng gulay sa mga residente ng Lungsod ng Alaminos para sa backyard gardening.
