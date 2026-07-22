@@ -1,0 +1,38 @@
+---
+title: "General Permit - Fishpond"
+description: "Issuance of a general permit to fishpond operators in Alaminos City, for businesses not covered by the electronic Business Permit and Licensing System (eBPLS)."
+lastUpdated: "2026-07-22"
+office: "City Business Permit and Licensing Office"
+classification: "Simple"
+transactionType: "G2B"
+whoMayAvail: "Fishpond operators"
+requirements:
+  - item: "Personal Information System (PIS) enrollment (if not yet enrolled)"
+    whereToSecure: "Management Information Office (MIS)"
+  - item: "Community Tax Certificate (CTC)"
+    whereToSecure: "Barangay Hall or City Treasurer's Office"
+  - item: "Barangay Clearance"
+    whereToSecure: "Where the business is located"
+  - item: "Tax Declaration of the Property (photocopy)"
+    whereToSecure: "City Assessor's Office"
+steps:
+  - clientStep: "Proceed to the City Business Permit and Licensing Office (CBPLO) for submission and verification of documents, and affix a signature on the encoded application form"
+    agencyAction: "Receive the request, verify the documents, encode the data/process the application form, and instruct the client on the required clearances to be accomplished"
+    fee: "None"
+    processingTime: "15 minutes"
+    personResponsible: "License Inspector I, Administrative Aide I, Administrative Aide"
+  - clientStep: "Proceed to the City Treasurer's Office to pay the Mayor's Permit and other regulatory fees, and comply with the required clearances"
+    agencyAction: "City Treasurer's Office staff accept the payment"
+    fee: "Application Fee Php 50.00; Mayor's Permit Php 100.00 per hectare; Inspection Fee Php 1,200.00; Business Plate Php 200.00; Sticker Fee Php 65.00; Account Clearance Php 50.00; RPT Clearance Php 50.00; ICT Fee Php 25.00"
+    processingTime: "25 minutes"
+    personResponsible: "City Treasurer's Office (CTrO) Staff"
+  - clientStep: "Proceed to the CBPLO for release of the Mayor's Permit"
+    agencyAction: "Print the Mayor's Permit, then release it with an orientation"
+    fee: "None"
+    processingTime: "20 minutes"
+    personResponsible: "License Inspector I, Administrative Aide I, Administrative Aide"
+totalProcessingTime: "60 minutes"
+totalFees: "Php 1,640.00 + Mayor's Permit Fee (Php 100.00/hectare)"
+---
+
+Issuance of a general permit to fishpond operators in Alaminos City, for businesses not covered by the electronic Business Permit and Licensing System (eBPLS).
