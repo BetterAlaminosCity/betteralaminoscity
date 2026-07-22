@@ -18,10 +18,10 @@ export function EmergencyHotlineBar({ hotlines }: { hotlines: Hotlines | null })
 
   return (
     <div className="bg-[var(--color-kapwa-bg-danger-default)] py-2 text-white">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-2 px-4 text-sm sm:justify-between">
+      <div className="mx-auto flex max-w-7xl items-center gap-2 overflow-x-auto px-4 text-sm">
         <a
           href={telHref(hotlines.emergencyNumber)}
-          className="flex items-center gap-1.5 rounded-full bg-white px-3 py-1 font-bold text-[var(--color-kapwa-bg-danger-default)]"
+          className="flex shrink-0 items-center gap-1.5 rounded-full bg-white px-3 py-1 font-bold text-[var(--color-kapwa-bg-danger-default)]"
         >
           <Phone className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
           {t("emergencyBar.emergencyLabel")}: {hotlines.emergencyNumber}
@@ -32,7 +32,7 @@ export function EmergencyHotlineBar({ hotlines }: { hotlines: Hotlines | null })
             <a
               key={hotline.key}
               href={telHref(hotline.numbers[0])}
-              className="flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 hover:bg-white/25"
+              className="flex shrink-0 items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 hover:bg-white/25"
             >
               <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
               {hotline.name}: {hotline.numbers[0]}
