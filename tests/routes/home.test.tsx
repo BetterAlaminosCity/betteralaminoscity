@@ -52,9 +52,9 @@ describe("Home", () => {
   it("renders the Popular Services section with category cards from real content", async () => {
     renderHome();
     expect(await screen.findByRole("heading", { name: "Popular Services" })).toBeInTheDocument();
-    const educationLinks = screen.getAllByRole("link", { name: /Education/i });
-    expect(educationLinks.length).toBeGreaterThanOrEqual(1);
-    expect(educationLinks[0]).toHaveAttribute("href", "/services/education");
+    const businessLinks = screen.getAllByRole("link", { name: /Business/i });
+    expect(businessLinks.length).toBeGreaterThanOrEqual(1);
+    expect(businessLinks[0]).toHaveAttribute("href", "/services/business");
   });
 
   it("renders the hero search widget with popular category chips", async () => {
