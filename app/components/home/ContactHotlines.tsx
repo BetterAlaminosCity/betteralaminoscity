@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 
 import type { Hotlines } from "../../lib/content.server";
+import { telHref } from "../../lib/phone";
 
 const ICONS: Record<string, LucideIcon> = {
   "shield-alert": ShieldAlert,
@@ -48,12 +49,6 @@ const LG_COL_SPAN: Record<number, string> = {
 export function spanFor(columns: number, count: number): number {
   const remainder = count % columns;
   return remainder === 0 ? columns : columns - remainder;
-}
-
-function telHref(number: string): string {
-  const trimmed = number.trim();
-  const sign = trimmed.startsWith("+") ? "+" : "";
-  return `tel:${sign}${trimmed.replace(/[^\d]/g, "")}`;
 }
 
 export function ContactHotlines({ hotlines }: { hotlines: Hotlines | null }) {
