@@ -1,0 +1,36 @@
+---
+title: "General Permit - Promotions and Exhibitors"
+description: "Issuance of a general permit for promotions and exhibits conducted in Alaminos City, for activities not covered by the electronic Business Permit and Licensing System (eBPLS)."
+lastUpdated: "2026-07-22"
+office: "City Business Permit and Licensing Office"
+classification: "Simple"
+transactionType: "G2B"
+whoMayAvail: "Parties conducting promotions or exhibits"
+requirements:
+  - item: "Personal Information System (PIS) of the requesting party"
+    whereToSecure: "Management Information Office (MIS)"
+  - item: "Request Letter approved by the City Administrator"
+    whereToSecure: "City Administrator's Office"
+  - item: "Letter of Approval by the City Market and Cemetery Section Head"
+    whereToSecure: "City Market and Cemetery Office"
+steps:
+  - clientStep: "Proceed to the City Business Permit and Licensing Office (CBPLO) for submission and verification of documents"
+    agencyAction: "Receive the request, verify the documents, and encode the data/process the application form"
+    fee: "None"
+    processingTime: "15 minutes"
+    personResponsible: "License Inspector I, Administrative Aide I, Administrative Aide"
+  - clientStep: "Proceed to the City Treasurer's Office to pay the Mayor's Permit and other regulatory fees"
+    agencyAction: "City Treasurer's Office staff accept the payment"
+    fee: "Special Permit Php 1,000.00; Inspection Fee Php 100.00; Electrical Consumption Php 375.00; ICT Fee Php 25.00"
+    processingTime: "25 minutes"
+    personResponsible: "City Treasurer's Office (CTrO) Staff"
+  - clientStep: "Proceed to the CBPLO for release of the Mayor's Permit"
+    agencyAction: "Print the Mayor's Permit, then release it with an orientation"
+    fee: "None"
+    processingTime: "20 minutes"
+    personResponsible: "License Inspector I, Administrative Aide I, Administrative Aide"
+totalProcessingTime: "60 minutes"
+totalFees: "Php 1,500.00"
+---
+
+Issuance of a general permit for promotions and exhibits conducted in Alaminos City, for activities not covered by the electronic Business Permit and Licensing System (eBPLS).
