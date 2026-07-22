@@ -24,14 +24,16 @@ test("nav links navigate to Services and Government", async ({ page }) => {
 
 test("a service page renders its content", async ({ page }) => {
   await page.goto("/services/business");
-  await expect(page.getByRole("heading", { name: "Business" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Overview" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Business", exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /On-site Application for New Business Permit/ }),
+  ).toBeVisible();
 });
 
 test("search returns results for a known term", async ({ page }) => {
   await page.goto("/search");
   await page.getByRole("searchbox").fill("Business");
-  await expect(page.getByRole("link", { name: "Business" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Business", exact: true })).toBeVisible();
 });
 
 test("sitemap.xml and robots.txt are served", async ({ request }) => {
