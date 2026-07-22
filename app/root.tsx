@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from "react-router";
 
 import type { Route } from "./+types/root";
@@ -13,6 +14,7 @@ import "./fonts.css";
 import { ErrorPage } from "./components/ui/ErrorPage";
 import { I18nProvider } from "./i18n/I18nProvider";
 import { SiteLayout } from "./components/layout/SiteLayout";
+import { getHotlines } from "./lib/content.server";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -33,10 +35,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+export function loader() {
+  return { hotlines: getHotlines() };
+}
+
 export default function App() {
+  const { hotlines } = useLoaderData<typeof loader>();
+
   return (
     <I18nProvider>
-      <SiteLayout>
+      <SiteLayout hotlines={hotlines}>
         <Outlet />
       </SiteLayout>
     </I18nProvider>

@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { createRoutesStub } from "react-router";
 import { describe, expect, it } from "vitest";
 
-import { ErrorBoundary } from "../app/root";
+import App, { ErrorBoundary, loader } from "../app/root";
 
 describe("root ErrorBoundary", () => {
   it("renders a 404 ErrorPage for a route-not-found response", async () => {
@@ -37,5 +37,22 @@ describe("root ErrorBoundary", () => {
     expect(
       await screen.findByRole("heading", { name: /500 — Something Went Wrong/ }),
     ).toBeInTheDocument();
+  });
+});
+
+describe("root App", () => {
+  it("renders the EmergencyHotlineBar above the Navbar using the root loader's data", async () => {
+    const Stub = createRoutesStub([
+      {
+        path: "/",
+        Component: App,
+        loader,
+        children: [{ index: true, Component: () => <p>Page content</p> }],
+      },
+    ]);
+    render(<Stub initialEntries={["/"]} />);
+
+    expect(await screen.findByRole("link", { name: /911/ })).toHaveAttribute("href", "tel:911");
+    expect(screen.getByText("Page content")).toBeInTheDocument();
   });
 });
