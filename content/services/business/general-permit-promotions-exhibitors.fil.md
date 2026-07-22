@@ -1,0 +1,36 @@
+---
+title: "Pangkalahatang Permit - Promosyon at Eksibit"
+description: "Pagpapalabas ng pangkalahatang permit para sa mga promosyon at eksibit na isinasagawa sa Lungsod ng Alaminos, para sa mga gawaing hindi saklaw ng electronic Business Permit and Licensing System (eBPLS)."
+lastUpdated: "2026-07-22"
+office: "City Business Permit and Licensing Office"
+classification: "Simple"
+transactionType: "G2B"
+whoMayAvail: "Mga partidong nagsasagawa ng promosyon o eksibit"
+requirements:
+  - item: "Personal Information System (PIS) ng humihiling na partido"
+    whereToSecure: "Management Information Office (MIS)"
+  - item: "Sulat ng Kahilingan na inaprubahan ng City Administrator"
+    whereToSecure: "City Administrator's Office"
+  - item: "Sulat ng Pag-apruba mula sa Pinuno ng City Market and Cemetery Section"
+    whereToSecure: "City Market and Cemetery Office"
+steps:
+  - clientStep: "Pumunta sa City Business Permit and Licensing Office (CBPLO) para sa pagsusumite at pagberipika ng mga dokumento"
+    agencyAction: "Tanggapin ang kahilingan, beripikahin ang mga dokumento, at i-encode ang datos/iproseso ang application form"
+    fee: "Wala"
+    processingTime: "15 minuto"
+    personResponsible: "License Inspector I, Administrative Aide I, Administrative Aide"
+  - clientStep: "Pumunta sa City Treasurer's Office para bayaran ang Mayor's Permit at iba pang regulatory fees"
+    agencyAction: "Tatanggapin ng kawani ng City Treasurer's Office ang bayad"
+    fee: "Special Permit Php 1,000.00; Inspection Fee Php 100.00; Electrical Consumption Php 375.00; ICT Fee Php 25.00"
+    processingTime: "25 minuto"
+    personResponsible: "City Treasurer's Office (CTrO) Staff"
+  - clientStep: "Pumunta sa CBPLO para sa pagpapalabas ng Mayor's Permit"
+    agencyAction: "I-print ang Mayor's Permit, pagkatapos ay ipalabas ito nang may oryentasyon"
+    fee: "Wala"
+    processingTime: "20 minuto"
+    personResponsible: "License Inspector I, Administrative Aide I, Administrative Aide"
+totalProcessingTime: "60 minuto"
+totalFees: "Php 1,500.00"
+---
+
+Pagpapalabas ng pangkalahatang permit para sa mga promosyon at eksibit na isinasagawa sa Lungsod ng Alaminos, para sa mga gawaing hindi saklaw ng electronic Business Permit and Licensing System (eBPLS).

@@ -1,0 +1,38 @@
+---
+title: "Pangkalahatang Permit - Fishpond"
+description: "Pagpapalabas ng pangkalahatang permit sa mga operator ng fishpond sa Lungsod ng Alaminos, para sa mga negosyong hindi saklaw ng electronic Business Permit and Licensing System (eBPLS)."
+lastUpdated: "2026-07-22"
+office: "City Business Permit and Licensing Office"
+classification: "Simple"
+transactionType: "G2B"
+whoMayAvail: "Mga operator ng fishpond"
+requirements:
+  - item: "Pagpaparehistro sa Personal Information System (PIS) (kung hindi pa nakarehistro)"
+    whereToSecure: "Management Information Office (MIS)"
+  - item: "Community Tax Certificate (CTC)"
+    whereToSecure: "Barangay Hall o City Treasurer's Office"
+  - item: "Barangay Clearance"
+    whereToSecure: "Kung saan matatagpuan ang negosyo"
+  - item: "Tax Declaration ng Ari-arian (photocopy)"
+    whereToSecure: "City Assessor's Office"
+steps:
+  - clientStep: "Pumunta sa City Business Permit and Licensing Office (CBPLO) para sa pagsusumite at pagberipika ng mga dokumento, at pumirma sa naka-encode na application form"
+    agencyAction: "Tanggapin ang kahilingan, beripikahin ang mga dokumento, i-encode ang datos/iproseso ang application form, at turuan ang kliyente sa mga kinakailangang clearance na dapat sundin"
+    fee: "Wala"
+    processingTime: "15 minuto"
+    personResponsible: "License Inspector I, Administrative Aide I, Administrative Aide"
+  - clientStep: "Pumunta sa City Treasurer's Office para bayaran ang Mayor's Permit at iba pang regulatory fees, at sundin ang mga kinakailangang clearance"
+    agencyAction: "Tatanggapin ng kawani ng City Treasurer's Office ang bayad"
+    fee: "Application Fee Php 50.00; Mayor's Permit Php 100.00 bawat ektarya; Inspection Fee Php 1,200.00; Business Plate Php 200.00; Sticker Fee Php 65.00; Account Clearance Php 50.00; RPT Clearance Php 50.00; ICT Fee Php 25.00"
+    processingTime: "25 minuto"
+    personResponsible: "City Treasurer's Office (CTrO) Staff"
+  - clientStep: "Pumunta sa CBPLO para sa pagpapalabas ng Mayor's Permit"
+    agencyAction: "I-print ang Mayor's Permit, pagkatapos ay ipalabas ito nang may oryentasyon"
+    fee: "Wala"
+    processingTime: "20 minuto"
+    personResponsible: "License Inspector I, Administrative Aide I, Administrative Aide"
+totalProcessingTime: "60 minuto"
+totalFees: "Php 1,640.00 + Mayor's Permit Fee (Php 100.00/ektarya)"
+---
+
+Pagpapalabas ng pangkalahatang permit sa mga operator ng fishpond sa Lungsod ng Alaminos, para sa mga negosyong hindi saklaw ng electronic Business Permit and Licensing System (eBPLS).
