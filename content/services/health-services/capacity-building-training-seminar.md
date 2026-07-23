@@ -1,0 +1,38 @@
+---
+title: "Capacity Building/Training/Seminar"
+description: "Processing of invitations from the Department of Health and other health agencies for capacity-building activities, training, or seminars, coordinated through the City Health Office's City Epidemiology and Surveillance Unit."
+lastUpdated: "2026-07-23"
+office: "City Health Office - City Epidemiology and Surveillance Unit"
+classification: "Complex"
+transactionType: "G2C, G2G, G2B"
+whoMayAvail: "All Health Care Services Providers"
+requirements:
+  - item: "Invitation from the Department of Health and other Health Agencies"
+    whereToSecure: "From the Requesting Group/Individual"
+steps:
+  - phase: "Submission of invitation to the City Health Officer of a specific capacity building/training with profiles of participant"
+    clientStep: "Submission of invitation to the City Health Officer of a specific capacity building/training with profiles of participant"
+    agencyAction: "Assessment or evaluation of invitation"
+    fee: "None"
+    processingTime: "3 minutes"
+    personResponsible: "City Health Officer and Nurse IV"
+  - clientStep: "Submission of invitation to the City Health Officer of a specific capacity building/training with profiles of participant"
+    agencyAction: "Orientation on the content of training/seminar"
+    fee: "None"
+    processingTime: "30 minutes"
+    personResponsible: "City Health Officer and Nurse IV"
+  - clientStep: "Submission of invitation to the City Health Officer of a specific capacity building/training with profiles of participant"
+    agencyAction: "Issuance of Office Order to attend"
+    fee: "None"
+    processingTime: "Depending on the length of the training"
+    personResponsible: "City Health Officer and Nurse IV"
+  - clientStep: "Submission of invitation to the City Health Officer of a specific capacity building/training with profiles of participant"
+    agencyAction: "Feedback after the attendance"
+    fee: "None"
+    processingTime: "2 days after attending seminar"
+    personResponsible: "City Health Officer and Nurse IV"
+totalProcessingTime: "Depending on the length of the training"
+totalFees: "None"
+---
+
+Processing of invitations from the Department of Health and other health agencies for capacity-building activities, training, or seminars, coordinated through the City Health Office's City Epidemiology and Surveillance Unit.
