@@ -1,0 +1,38 @@
+---
+title: "Sanitary Service: Application for Water Potability Certificate (Water Refilling Stations & ACWD)"
+description: "Safe water for human consumption"
+lastUpdated: "2026-07-23"
+office: "City Health Office"
+classification: "Simple"
+transactionType: "G2C - Government to Citizens"
+whoMayAvail: "All"
+requirements:
+  - item: "Official Receipt"
+    whereToSecure: "City Treasurer's Office"
+  - item: "Bacteriological & Chemical test results"
+    whereToSecure: "DOH accredited laboratories"
+steps:
+  - clientStep: "Clients proceeds to CHO"
+    agencyAction: "Sanitation Inspector assists the client"
+    fee: "Free"
+    processingTime: "5 mins"
+    personResponsible: "Sanitation Inspector II and Sanitation Inspector I"
+  - clientStep: "Payment of Water Potability Certificate at the City Treasurers Office (water refilling stations only)"
+    agencyAction: "Receive payment and issue Official Receipt"
+    fee: "Php 130.00"
+    processingTime: "5 mins"
+    personResponsible: "City Treasurers Office Staff"
+  - clientStep: "Submission of result of Bacteriological examination from duly accredited laboratory by DOH (ACWD & Water Refilling Stations)"
+    agencyAction: "Review of Water potability result"
+    fee: "Free"
+    processingTime: "5 mins"
+    personResponsible: "Sanitation Inspector II and Sanitation Inspector I"
+  - clientStep: "Present required documents and Official Receipt"
+    agencyAction: "Recording and Issuance of Water Potability Certificate if results are normal"
+    fee: "Not specified in the Citizen's Charter"
+    processingTime: "Not specified in the Citizen's Charter"
+totalProcessingTime: "15 mins"
+totalFees: "Php 130.00"
+---
+
+Safe water for human consumption
