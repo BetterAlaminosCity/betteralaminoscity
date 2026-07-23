@@ -1,0 +1,35 @@
+---
+title: "HIV/AIDS Prevention and Control"
+description: "Early detection, counseling & referral."
+lastUpdated: "2026-07-23"
+office: "City Health Office"
+classification: "Simple"
+transactionType: "G2C - Government to Citizens"
+whoMayAvail: "All"
+requirements: []
+steps:
+  - clientStep: "1. Registration"
+    agencyAction: "1.1 Filling-out of patient's data form; 1.2 Taking of vital signs, weight & height, chief complaint"
+    fee: "None"
+    processingTime: "3 minutes"
+    personResponsible: "Administrative Aide I and Admin staff assigned"
+  - clientStep: "2. Consultation"
+    agencyAction: "2.1 History taking and assessment; 2.2 Request for HIV Counselling & Testing (HCT)"
+    fee: "None"
+    processingTime: "5 minutes"
+    personResponsible: "City Health Officer, CGADH 1 (Asst. City Health Officer), Medical Officer III and Medical Specialist II"
+  - clientStep: "3. Present laboratory request for HCT"
+    agencyAction: "3.1 Conduct Pre-test counselling; 3.2 HIV testing; 3.3 Record and Release of result if non-reactive; 3.4 Record and refer for confirmatory testing if reactive result; 3.5 Post-test counselling"
+    fee: "None"
+    processingTime: "1 hour"
+    personResponsible: "Medical Specialist II (pre-test counselling); Medical Technologist IV (testing, recording, and release/referral of results); Medical Specialist II / Midwife (post-test counselling)"
+  - clientStep: "4. Present Laboratory Results"
+    agencyAction: "4.1 Diagnosis & Health Education"
+    fee: "None"
+    processingTime: "5 minutes"
+    personResponsible: "City Health Officer, CGADH 1 (Asst. City Health Officer), Medical Officer III and Medical Specialist II"
+totalProcessingTime: "1 hour and 13 minutes"
+totalFees: "None"
+---
+
+Early detection, counseling & referral.
