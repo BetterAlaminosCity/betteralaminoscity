@@ -1,0 +1,38 @@
+---
+title: "Sanitary Service: Application of Transfer Permit of Cadaver/Remains"
+description: "Health requirement & legal purposes"
+lastUpdated: "2026-07-23"
+office: "City Health Office"
+classification: "Simple"
+transactionType: "G2C - Government to Citizens"
+whoMayAvail: "All"
+requirements:
+  - item: "Official Receipt"
+    whereToSecure: "City Treasurer's Office"
+  - item: "Certification of death"
+    whereToSecure: "Doctor"
+steps:
+  - clientStep: "Clients proceeds to CHO"
+    agencyAction: "Sanitation Inspector assess and provide checklist of requirements"
+    fee: "None"
+    processingTime: "5 mins"
+    personResponsible: "Sanitation Inspector II and Sanitation Inspector I"
+  - clientStep: "Payment of Transfer Permit at the City Treasurers Office"
+    agencyAction: "Receive payment and issue Official Receipt"
+    fee: "Php 100.00"
+    processingTime: "5 mins"
+    personResponsible: "City Treasurers Office Staff"
+  - clientStep: "Present required documents and Official Receipt"
+    agencyAction: "Review of Documents (death certificate)"
+    fee: "None"
+    processingTime: "5 mins"
+    personResponsible: "Sanitation Inspector II and Sanitation Inspector I"
+  - clientStep: "Receive Transfer Permit"
+    agencyAction: "Recording and Issuance of Transfer Permit"
+    fee: "None"
+    processingTime: "Not specified in the Citizen's Charter"
+totalProcessingTime: "15 mins"
+totalFees: "Php 100.00"
+---
+
+Health requirement & legal purposes
