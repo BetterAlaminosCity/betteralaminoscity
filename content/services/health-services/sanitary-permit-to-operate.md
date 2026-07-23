@@ -1,0 +1,38 @@
+---
+title: "Sanitary Service: Application for Sanitary Permit to Operate"
+description: "Ensure standard on the Sanitary Code of the Philippines"
+lastUpdated: "2026-07-23"
+office: "City Health Office"
+classification: "Simple"
+transactionType: "G2C - Government to Citizens"
+whoMayAvail: "All"
+requirements:
+  - item: "Official Receipt"
+    whereToSecure: "City Treasurer's Office"
+  - item: "Health Card"
+    whereToSecure: "BOSS"
+steps:
+  - clientStep: "Clients proceeds to BOSS"
+    agencyAction: "Sanitation Inspector assess and checking of checklist of requirements"
+    fee: "None"
+    processingTime: "5 mins"
+    personResponsible: "Sanitation Inspector II and Sanitation Inspector I"
+  - clientStep: "Payment of sanitary permit at the City Treasurers Office"
+    agencyAction: "Receive payment and issue Official Receipt"
+    fee: "Php 100.00"
+    processingTime: "5 mins"
+    personResponsible: "City Treasurers Office Staff"
+  - clientStep: "Proceed to BOSS and present required documents and Official Receipt"
+    agencyAction: "Evaluation of required documents (health certificate)"
+    fee: "None"
+    processingTime: "5 mins"
+    personResponsible: "Sanitation Inspector II and Sanitation Inspector I"
+  - clientStep: "Receive Sanitary Permit"
+    agencyAction: "Record and release of Sanitary Permit to Operate"
+    fee: "None"
+    processingTime: "Not specified in the Citizen's Charter"
+totalProcessingTime: "15 minutes"
+totalFees: "None"
+---
+
+Ensure standard on the Sanitary Code of the Philippines
