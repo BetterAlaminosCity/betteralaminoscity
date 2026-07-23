@@ -1,0 +1,38 @@
+---
+title: "Request for Ambulance Conduction 24/7"
+description: "This service renders emergency transport of patients from the hospital of origin to hospital of choice following hospital protocols."
+lastUpdated: "2026-07-24"
+office: "City Disaster Risk Reduction and Management Office"
+classification: "Simple"
+transactionType: "G2C - Government to Public"
+whoMayAvail: "General Public"
+requirements:
+  - item: "ID of patient (1 photocopy)"
+    whereToSecure: "Requesting Party"
+  - item: "Coordinated Referral Slip or Laboratory Request Slip (1 original)"
+    whereToSecure: "Hospital of Origin from the Doctor on duty"
+  - item: "Temporary Travel Order (1 original)"
+    whereToSecure: "Alaminos Response Team Office"
+steps:
+  - clientStep: "1. Submit the requirements"
+    agencyAction: "1. Review the requirements and interview the requesting party."
+    fee: "None"
+    processingTime: "5 minutes"
+    personResponsible: "Nurse I or Administrative Aide I / Action Officers"
+  - clientStep: "2. Request for ambulance"
+    agencyAction: "2. Confirm referral slip thru phone call"
+    fee: "None"
+    processingTime: "5 minutes"
+  - clientStep: "No action required from the client at this step."
+    agencyAction: "2.1 Generate temporary travel order."
+    fee: "None"
+    processingTime: "2 minutes"
+  - clientStep: "3. Sign the travel Order"
+    agencyAction: "3. Dispatch conducting team."
+    fee: "None"
+    processingTime: "2 minutes"
+totalProcessingTime: "14 minutes"
+totalFees: "None"
+---
+
+This service renders emergency transport of patients from the hospital of origin to hospital of choice following hospital protocols.
