@@ -49,7 +49,7 @@ steps:
     agencyAction: "Release copy of tax declaration and documents upon presentation of Official Receipt."
     fee: "None"
     processingTime: "15 minutes"
-    personResponsible: "Administrative Aide/ Administrative Aide I/ Administrative Aide VI/ Assessment Clerk I/ SAA II/ Administrative Asst III/ Administrative Asst IV/ LAOO III/ LAOO IV/ Tax Mapper IV/ Draftsman I/ RCC I/ DCW"
+    personResponsible: "Administrative Aide/ Administrative Aide I/ Administrative Aide VI/ Assessment Clerk I/ SAA II/ Administrative Asst III/ Administrative Asst IV/ LAOO III/ LAOO IV/ Tax mapper I/ Tax Mapper IV/ Draftsman I/ RCC I/ DCW"
 totalProcessingTime: "3 days, and 27 minutes"
 totalFees: "Php 80.00/page + Php 25.00 – ICT"
 ---
