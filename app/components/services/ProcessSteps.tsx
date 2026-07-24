@@ -1,3 +1,4 @@
+import { groupProcessSteps } from "../../lib/groupProcessSteps";
 import type { ServiceStep } from "../../lib/content.server";
 
 export interface ProcessStepsLabels {
@@ -14,49 +15,49 @@ export interface ProcessStepsProps {
 }
 
 export function ProcessSteps({ steps, labels }: ProcessStepsProps) {
+  const groups = groupProcessSteps(steps);
+
   return (
     <ol className="flex flex-col gap-6">
-      {steps.map((step, index) => (
-        <li key={index}>
-          {step.phase ? (
+      {groups.map((group, groupIndex) => (
+        <li key={groupIndex}>
+          {group.phase ? (
             <p className="mb-2 text-xs font-bold uppercase tracking-wide text-[var(--color-kapwa-text-brand)]">
-              {step.phase}
+              {group.phase}
             </p>
           ) : null}
           <div className="rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-4">
             <p className="text-sm font-semibold text-[var(--color-kapwa-text-strong)]">
-              {step.clientStep}
+              {group.clientStep}
             </p>
-            <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
-              <div>
-                <dt className="text-xs font-medium uppercase text-[var(--color-kapwa-text-support)]">
-                  {labels.agencyAction}
-                </dt>
-                <dd className="text-[var(--color-kapwa-text-strong)]">{step.agencyAction}</dd>
-              </div>
-              <div>
-                <dt className="text-xs font-medium uppercase text-[var(--color-kapwa-text-support)]">
-                  {labels.fee}
-                </dt>
-                <dd className="text-[var(--color-kapwa-text-strong)]">{step.fee}</dd>
-              </div>
-              <div>
-                <dt className="text-xs font-medium uppercase text-[var(--color-kapwa-text-support)]">
-                  {labels.processingTime}
-                </dt>
-                <dd className="text-[var(--color-kapwa-text-strong)]">{step.processingTime}</dd>
-              </div>
-              {step.personResponsible ? (
-                <div>
-                  <dt className="text-xs font-medium uppercase text-[var(--color-kapwa-text-support)]">
-                    {labels.personResponsible}
-                  </dt>
-                  <dd className="text-[var(--color-kapwa-text-strong)]">
-                    {step.personResponsible}
-                  </dd>
-                </div>
-              ) : null}
-            </dl>
+            <p className="mt-3 text-xs font-medium uppercase text-[var(--color-kapwa-text-support)]">
+              {labels.agencyAction}
+            </p>
+            <ol className="mt-1 flex flex-col">
+              {group.actions.map((action, actionIndex) => (
+                <li
+                  key={actionIndex}
+                  className={
+                    actionIndex > 0
+                      ? "mt-3 border-t border-[var(--color-kapwa-border-weak)] pt-3"
+                      : ""
+                  }
+                >
+                  <p className="text-sm text-[var(--color-kapwa-text-strong)]">
+                    {group.actions.length > 1 ? (
+                      <span className="mr-1 text-[var(--color-kapwa-text-brand)]">
+                        {actionIndex + 1}.
+                      </span>
+                    ) : null}
+                    <span>{action.agencyAction}</span>
+                  </p>
+                  <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+                    {labels.fee}: {action.fee} · {labels.processingTime}: {action.processingTime}
+                    {action.personResponsible ? ` · ${action.personResponsible}` : ""}
+                  </p>
+                </li>
+              ))}
+            </ol>
           </div>
         </li>
       ))}
