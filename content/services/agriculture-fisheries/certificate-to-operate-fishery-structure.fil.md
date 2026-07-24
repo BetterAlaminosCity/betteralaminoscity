@@ -4,7 +4,7 @@ description: "Rehistrasyon at paglilisensya ng pagpapatakbo ng fishtrap at fishp
 lastUpdated: "2026-07-22"
 office: "City Agriculture Office"
 classification: "Simple"
-transactionType: "G2C - Pamahalaan sa Publiko"
+transactionType: "G2C - Pamahalaan sa Mamamayan"
 whoMayAvail: "Mga rehistradong Mangingisda at Samahan ng Mangingisda ng Lungsod ng Alaminos"
 requirements:
   - item: "Barangay Certification"

@@ -4,7 +4,7 @@ description: "Nagbibigay ng Mayor's Permit at Business Permit para sa mga negosy
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Pamahalaan sa Negosyo"
 whoMayAvail: "Lahat"
 requirements:
   - item: "Real Property Tax Clearance"

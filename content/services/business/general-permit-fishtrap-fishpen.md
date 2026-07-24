@@ -4,7 +4,7 @@ description: "Issuance of a general permit to fishtrap and fishpen operators in 
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Government to Business"
 whoMayAvail: "Fishtrap and fishpen operators"
 requirements:
   - item: "Personal Information System (PIS) enrollment (if not yet enrolled)"

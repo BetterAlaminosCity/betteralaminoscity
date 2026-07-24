@@ -4,7 +4,7 @@ description: "Promotion and marketing of E-Kawayan (engineered bamboo) products.
 lastUpdated: "2026-07-22"
 office: "City Agriculture Office"
 classification: "Highly Technical"
-transactionType: "G2C - Government to the Transacting Public"
+transactionType: "G2C - Government to Citizens"
 whoMayAvail: "All interested clients"
 requirements:
   - item: "Request Slip Form"

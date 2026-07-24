@@ -4,7 +4,7 @@ description: "Issuance of a general permit to stallholders operating within the 
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Government to Business"
 whoMayAvail: "Stallholders operating within the public cemetery"
 requirements:
   - item: "Personal Information System (PIS) enrollment (if not yet enrolled)"

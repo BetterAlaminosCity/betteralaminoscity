@@ -4,7 +4,7 @@ description: "Pagpapalabas ng pangkalahatang permit para sa mga promosyon at eks
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Pamahalaan sa Negosyo"
 whoMayAvail: "Mga partidong nagsasagawa ng promosyon o eksibit"
 requirements:
   - item: "Personal Information System (PIS) ng humihiling na partido"

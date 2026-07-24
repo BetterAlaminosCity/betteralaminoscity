@@ -4,7 +4,7 @@ description: "Registration and licensing of fishing gear and fishing boats (thre
 lastUpdated: "2026-07-22"
 office: "City Agriculture Office"
 classification: "Simple"
-transactionType: "G2C - Government to the Transacting Public"
+transactionType: "G2C - Government to Citizens"
 whoMayAvail: "Registered Fisherfolks of Alaminos City"
 requirements:
   - item: "Residence Certificate (current year)"

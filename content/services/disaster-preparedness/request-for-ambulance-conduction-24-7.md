@@ -4,7 +4,7 @@ description: "This service renders emergency transport of patients from the hosp
 lastUpdated: "2026-07-24"
 office: "City Disaster Risk Reduction and Management Office"
 classification: "Simple"
-transactionType: "G2C - Government to Public"
+transactionType: "G2C - Government to Citizens"
 whoMayAvail: "General Public"
 requirements:
   - item: "ID of patient (1 photocopy)"

@@ -4,7 +4,7 @@ description: "Sertipikasyong nagpapatunay na ang isang Magsasaka/Mangingisda ng 
 lastUpdated: "2026-07-22"
 office: "City Agriculture Office"
 classification: "Simple"
-transactionType: "G2C - Pamahalaan sa Nakikipagtransaksyong Publiko"
+transactionType: "G2C - Pamahalaan sa Mamamayan"
 whoMayAvail: "Mga bona fide residente ng Lungsod ng Alaminos"
 requirements:
   - item: "Barangay Certification"

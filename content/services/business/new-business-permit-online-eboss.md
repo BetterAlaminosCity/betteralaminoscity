@@ -4,7 +4,7 @@ description: "Provides the Mayor's Permit and Business Permit for new businesses
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Government to Business"
 whoMayAvail: "All"
 requirements:
   - item: "Community Tax Certificate (CTC), current year"

@@ -4,7 +4,7 @@ description: "Issuance of a general permit for promotions and exhibits conducted
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Government to Business"
 whoMayAvail: "Parties conducting promotions or exhibits"
 requirements:
   - item: "Personal Information System (PIS) of the requesting party"

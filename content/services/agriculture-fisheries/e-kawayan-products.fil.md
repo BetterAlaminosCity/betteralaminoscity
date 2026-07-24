@@ -4,7 +4,7 @@ description: "Promosyon at pagmamarket ng E-Kawayan (engineered bamboo) products
 lastUpdated: "2026-07-22"
 office: "City Agriculture Office"
 classification: "Highly Technical"
-transactionType: "G2C - Pamahalaan sa Nakikipagtransaksyong Publiko"
+transactionType: "G2C - Pamahalaan sa Mamamayan"
 whoMayAvail: "Lahat ng interesadong kliyente"
 requirements:
   - item: "Request Slip Form"

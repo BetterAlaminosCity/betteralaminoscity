@@ -4,7 +4,7 @@ description: "Distribution of vegetable seeds/seedlings to the residents of Alam
 lastUpdated: "2026-07-22"
 office: "City Agriculture Office"
 classification: "Simple"
-transactionType: "G2C - Government to the Transacting Public"
+transactionType: "G2C - Government to Citizens"
 whoMayAvail: "Bona fide residents of Alaminos City"
 requirements:
   - item: "Request Slip Form"

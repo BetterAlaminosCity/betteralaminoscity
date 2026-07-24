@@ -4,7 +4,7 @@ description: "Pamamahagi ng panananim na kawayan sa mga residente ng Lungsod ng 
 lastUpdated: "2026-07-22"
 office: "City Agriculture Office"
 classification: "Simple"
-transactionType: "G2C - Pamahalaan sa Nakikipagtransaksyong Publiko"
+transactionType: "G2C - Pamahalaan sa Mamamayan"
 whoMayAvail: "Mga bona fide residente ng Lungsod ng Alaminos"
 requirements:
   - item: "Request Slip Form"

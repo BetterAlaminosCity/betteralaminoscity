@@ -4,7 +4,7 @@ description: "Pagpapalabas ng pangkalahatang permit sa mga tindero na nagtitinda
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Pamahalaan sa Negosyo"
 whoMayAvail: "Mga tindero na nagtitinda sa Lucap Wharf"
 requirements:
   - item: "Pagpaparehistro sa Personal Information System (PIS) (kung hindi pa nakarehistro)"

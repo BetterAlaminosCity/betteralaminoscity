@@ -4,7 +4,7 @@ description: "Nagbibigay ng Mayor's Permit at Business Permit para sa mga bagong
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Pamahalaan sa Negosyo"
 whoMayAvail: "Lahat"
 requirements:
   - item: "Community Tax Certificate (CTC), kasalukuyang taon"

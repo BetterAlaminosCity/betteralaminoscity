@@ -4,7 +4,7 @@ description: "Pagpapalabas ng pangkalahatang permit sa mga asosasyon at foundati
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Pamahalaan sa Negosyo"
 whoMayAvail: "Mga asosasyon at foundation na nagpapatakbo sa Lungsod ng Alaminos"
 requirements:
   - item: "Pagpaparehistro sa Personal Information System (PIS) (kung hindi pa nakarehistro)"

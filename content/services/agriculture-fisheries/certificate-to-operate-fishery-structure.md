@@ -4,7 +4,7 @@ description: "Registration and licensing of fishtrap and fishpen (Lapu-lapu) ope
 lastUpdated: "2026-07-22"
 office: "City Agriculture Office"
 classification: "Simple"
-transactionType: "G2C - Government to the Public"
+transactionType: "G2C - Government to Citizens"
 whoMayAvail: "Registered Fisherfolks and Fisherfolks Association of Alaminos City"
 requirements:
   - item: "Barangay Certification"

@@ -4,7 +4,7 @@ description: "Processing of invitations from the Department of Health and other 
 lastUpdated: "2026-07-23"
 office: "City Health Office - City Epidemiology and Surveillance Unit"
 classification: "Complex"
-transactionType: "G2C, G2G, G2B"
+transactionType: "G2C - Government to Citizens, G2B - Government to Business, G2G - Government to Government"
 whoMayAvail: "All Health Care Services Providers"
 requirements:
   - item: "Invitation from the Department of Health and other Health Agencies"

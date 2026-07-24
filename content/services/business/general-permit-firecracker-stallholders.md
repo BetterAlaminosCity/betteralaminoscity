@@ -4,7 +4,7 @@ description: "Issuance of a general permit to firecracker stallholders in Alamin
 lastUpdated: "2026-07-22"
 office: "City Business Permit and Licensing Office"
 classification: "Simple"
-transactionType: "G2B"
+transactionType: "G2B - Government to Business"
 whoMayAvail: "Firecracker stallholders/vendors in Alaminos City"
 requirements:
   - item: "Personal Information System (PIS) enrollment (if not yet enrolled)"

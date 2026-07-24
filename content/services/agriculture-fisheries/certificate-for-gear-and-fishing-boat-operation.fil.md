@@ -4,7 +4,7 @@ description: "Rehistrasyon at paglilisensya ng gamit pangisda at bangkang pangis
 lastUpdated: "2026-07-22"
 office: "City Agriculture Office"
 classification: "Simple"
-transactionType: "G2C - Pamahalaan sa Nakikipagtransaksyong Publiko"
+transactionType: "G2C - Pamahalaan sa Mamamayan"
 whoMayAvail: "Mga rehistradong Mangingisda ng Lungsod ng Alaminos"
 requirements:
   - item: "Residence Certificate (kasalukuyang taon)"
