@@ -14,8 +14,13 @@ describe("real content tree", () => {
     expect(validateContentTree("content")).toEqual([]);
   });
 
-  it("has an (initially empty) SB members list", () => {
-    expect(getSbMembers("content")?.members).toEqual([]);
+  it("has the seeded Sangguniang Panlungsod roster of 13 members", () => {
+    const sbMembers = getSbMembers("content");
+    expect(sbMembers?.members).toHaveLength(13);
+    expect(sbMembers?.members.filter((m) => m.role === "sp-member")).toHaveLength(10);
+    expect(sbMembers?.members.filter((m) => m.role === "liga-president")).toHaveLength(1);
+    expect(sbMembers?.members.filter((m) => m.role === "sk-president")).toHaveLength(1);
+    expect(sbMembers?.members.filter((m) => m.role === "secretary")).toHaveLength(1);
   });
 
   it("has all 17 seeded service categories", () => {

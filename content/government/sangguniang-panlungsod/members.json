@@ -1,3 +1,80 @@
 {
-  "members": []
+  "lastUpdated": "2026-07-27",
+  "source": "Alaminos City official website (alaminoscity.gov.ph) — Public Service > Sangguniang Panlungsod > Sangguniang Panlungsod Members; committee assignments per REGULAR_STANDING_COMMITTEES_10TH_SP_2025-2028.pdf",
+  "members": [
+    {
+      "name": "Jan Marionne R. Fontelera",
+      "role": "sp-member",
+      "committees": [
+        "Health and Wellness",
+        "Public Works, Infrastructure, Land Utilization, Housing, Planning and Development, Public Utilities and Facilities"
+      ]
+    },
+    {
+      "name": "Apple Joy Bacay-Tolentino",
+      "role": "sp-member",
+      "committees": ["Tourism, Culture and Arts, and Historical Preservation"]
+    },
+    {
+      "name": "Kelvin Theus O. Humilde",
+      "role": "sp-member",
+      "committees": [
+        "Cooperatives and Livelihood Development",
+        "Peace and Order, Police Matters, Drug Abuse, Anti-Gambling, Public Safety"
+      ]
+    },
+    {
+      "name": "Oscar A. Boling, Sr.",
+      "role": "sp-member",
+      "committees": ["Finance, Appropriations, Ways and Means", "Oversight Committee"]
+    },
+    {
+      "name": "Raul B. Bacay",
+      "role": "sp-member",
+      "committees": ["Transportation"]
+    },
+    {
+      "name": "Walter M. Macaiba",
+      "role": "sp-member",
+      "committees": [
+        "Agriculture, Aquatic and Natural Resources",
+        "Laws, Rules, Procedures and Ordinances, Ethics and Accountability and Legal Affairs"
+      ]
+    },
+    {
+      "name": "Dahlia M. De Leon",
+      "role": "sp-member",
+      "committees": ["Education and Public Information", "Labor, Trade, Industry and Commerce, OFW"]
+    },
+    {
+      "name": "Krystle Nicole D. Sison",
+      "role": "sp-member",
+      "committees": ["Family, Women, Children, Persons with Disabilities and Senior Citizens"]
+    },
+    {
+      "name": "Verna S.D. Rabago",
+      "role": "sp-member",
+      "committees": ["Environmental Protection, Sanitation, and Waste Management"]
+    },
+    {
+      "name": "Cirilo B. Radoc",
+      "role": "sp-member",
+      "committees": []
+    },
+    {
+      "name": "Alex A. Recosana",
+      "role": "liga-president",
+      "committees": ["Disaster Risk Reduction & Management", "Barangay Affairs"]
+    },
+    {
+      "name": "Loverly B. Paredes",
+      "role": "sk-president",
+      "committees": ["Youth, Sports Development and Information, Communication and Technology"]
+    },
+    {
+      "name": "Luz B. Vale",
+      "role": "secretary",
+      "committees": []
+    }
+  ]
 }

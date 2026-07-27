@@ -75,14 +75,18 @@ describe("GovernmentIndex", () => {
     );
   });
 
-  it("shows the Legislative Branch empty state when no SB members are authored yet", async () => {
+  it("renders the seeded Sangguniang Panlungsod roster under Legislative Branch", async () => {
     renderGovernmentIndex();
     expect(await screen.findByRole("heading", { name: "Legislative Branch" })).toBeInTheDocument();
+    expect(screen.getByText("Jan Marionne R. Fontelera")).toBeInTheDocument();
+    expect(screen.getByText("Alex A. Recosana")).toBeInTheDocument();
+    expect(screen.getByText("Loverly B. Paredes")).toBeInTheDocument();
+    expect(screen.getByText("Luz B. Vale")).toBeInTheDocument();
     expect(
-      screen.getByText(
+      screen.queryByText(
         "Sangguniang Panlungsod member profiles will be published here in a future update to this site.",
       ),
-    ).toBeInTheDocument();
+    ).not.toBeInTheDocument();
   });
 
   it("links to the three civic transparency pages", async () => {
