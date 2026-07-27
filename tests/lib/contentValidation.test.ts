@@ -89,6 +89,18 @@ describe("validateOfficial", () => {
   it("rejects an official missing name", () => {
     expect(validateOfficial({ title: "City Mayor" })).not.toEqual([]);
   });
+
+  it("accepts an official with optional contact fields", () => {
+    expect(
+      validateOfficial({
+        name: "{PLACEHOLDER}",
+        title: "City Mayor",
+        phone: "(075) 000-0000",
+        email: "mayor@alaminoscity.gov.ph",
+        socialUrl: "https://facebook.com/example",
+      }),
+    ).toEqual([]);
+  });
 });
 
 describe("validateFiscalTransparency", () => {

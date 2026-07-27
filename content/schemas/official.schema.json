@@ -6,7 +6,10 @@
   "properties": {
     "name": { "type": "string", "minLength": 1 },
     "title": { "type": "string", "minLength": 1 },
-    "termStart": { "type": "string" }
+    "termStart": { "type": "string" },
+    "phone": { "type": "string", "minLength": 1 },
+    "email": { "type": "string", "minLength": 1 },
+    "socialUrl": { "type": "string", "minLength": 1 }
   },
   "additionalProperties": false
 }

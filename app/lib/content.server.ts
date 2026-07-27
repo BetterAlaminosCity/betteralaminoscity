@@ -49,6 +49,9 @@ export interface Official {
   name: string;
   title: string;
   termStart?: string;
+  phone?: string;
+  email?: string;
+  socialUrl?: string;
 }
 
 export interface DataSourceMeta {
