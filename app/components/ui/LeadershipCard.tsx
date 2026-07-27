@@ -28,9 +28,7 @@ export function LeadershipCard({
 
   return (
     <div className="overflow-hidden rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)]">
-      <div
-        className={`${HEADER_CLASS[colorVariant]} px-5 py-5 text-center text-[var(--color-kapwa-text-inverse)]`}
-      >
+      <div className={`${HEADER_CLASS[colorVariant]} px-5 py-5 text-center text-white`}>
         <span className="inline-block rounded-full bg-white/15 px-2.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide">
           {roleLabel}
         </span>
