@@ -102,7 +102,9 @@ export function Navbar() {
                 {t(link.labelKey)}
               </NavLink>
             ))}
-            <LanguageSwitcher />
+            <div className="border-t border-[var(--color-kapwa-border-weak)] pt-4">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       )}
