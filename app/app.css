@@ -11,3 +11,25 @@
 body {
   margin: 0;
 }
+
+:root {
+  --color-role-legislative-bg: var(--color-kapwa-purple-100);
+  --color-role-legislative-text: var(--color-kapwa-purple-700);
+  --color-role-legislative-accent: var(--color-kapwa-purple-600);
+  --color-role-liga-bg: var(--color-kapwa-green-100);
+  --color-role-liga-text: var(--color-kapwa-green-700);
+  --color-role-sk-bg: var(--color-kapwa-orange-100);
+  --color-role-sk-text: var(--color-kapwa-orange-700);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-role-legislative-bg: color-mix(in srgb, var(--color-kapwa-purple-600) 28%, transparent);
+    --color-role-legislative-text: var(--color-kapwa-purple-300);
+    --color-role-legislative-accent: var(--color-kapwa-purple-300);
+    --color-role-liga-bg: color-mix(in srgb, var(--color-kapwa-green-600) 28%, transparent);
+    --color-role-liga-text: var(--color-kapwa-green-300);
+    --color-role-sk-bg: color-mix(in srgb, var(--color-kapwa-orange-600) 28%, transparent);
+    --color-role-sk-text: var(--color-kapwa-orange-300);
+  }
+}
