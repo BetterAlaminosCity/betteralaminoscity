@@ -51,4 +51,12 @@ describe("DepartmentCard", () => {
     renderCard({ branchLabel: undefined });
     expect(screen.queryByText("Executive")).not.toBeInTheDocument();
   });
+
+  it("gives the link an accessible name that includes the office title", () => {
+    renderCard();
+    expect(screen.getByRole("link", { name: /City Treasurer's Office/i })).toHaveAttribute(
+      "href",
+      "/government/city-treasurers-office",
+    );
+  });
 });
