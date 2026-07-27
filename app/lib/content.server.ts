@@ -286,7 +286,7 @@ export function getHotlines(contentRoot: string = DEFAULT_CONTENT_ROOT): Hotline
   return JSON.parse(fs.readFileSync(filePath, "utf-8")) as Hotlines;
 }
 
-export type SbMemberRole = "sp-member" | "liga-president" | "sk-president";
+export type SbMemberRole = "sp-member" | "liga-president" | "sk-president" | "secretary";
 
 export interface SbMember {
   name: string;
@@ -297,7 +297,7 @@ export interface SbMember {
   socialUrl?: string;
 }
 
-export interface SbMembersData {
+export interface SbMembersData extends DataSourceMeta {
   members: SbMember[];
 }
 

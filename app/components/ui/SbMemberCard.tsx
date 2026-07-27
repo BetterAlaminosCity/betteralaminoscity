@@ -17,6 +17,7 @@ const ROLE_PILL_CLASS: Record<SbMemberRole, string> = {
   "sp-member": "bg-[var(--color-role-legislative-bg)] text-[var(--color-role-legislative-text)]",
   "liga-president": "bg-[var(--color-role-liga-bg)] text-[var(--color-role-liga-text)]",
   "sk-president": "bg-[var(--color-role-sk-bg)] text-[var(--color-role-sk-text)]",
+  secretary: "bg-[var(--color-kapwa-bg-gray-default)] text-[var(--color-kapwa-text-strong)]",
 };
 
 export function SbMemberCard({

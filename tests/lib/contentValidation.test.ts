@@ -251,6 +251,8 @@ describe("validateSbMembers", () => {
   it("accepts a valid SB members payload", () => {
     expect(
       validateSbMembers({
+        lastUpdated: "2026-01-15",
+        source: "Sample source",
         members: [
           {
             name: "Hon. Sample Member",
@@ -263,19 +265,39 @@ describe("validateSbMembers", () => {
   });
 
   it("accepts an empty members array", () => {
-    expect(validateSbMembers({ members: [] })).toEqual([]);
+    expect(
+      validateSbMembers({ lastUpdated: "2026-01-15", source: "Sample source", members: [] }),
+    ).toEqual([]);
+  });
+
+  it("accepts the secretary role", () => {
+    expect(
+      validateSbMembers({
+        lastUpdated: "2026-01-15",
+        source: "Sample source",
+        members: [{ name: "Hon. Sample Secretary", role: "secretary", committees: [] }],
+      }),
+    ).toEqual([]);
   });
 
   it("rejects a member with an invalid role", () => {
     expect(
       validateSbMembers({
+        lastUpdated: "2026-01-15",
+        source: "Sample source",
         members: [{ name: "Hon. Sample Member", role: "mayor", committees: [] }],
       }),
     ).not.toEqual([]);
   });
 
   it("rejects a payload missing members", () => {
-    expect(validateSbMembers({})).not.toEqual([]);
+    expect(validateSbMembers({ lastUpdated: "2026-01-15", source: "Sample source" })).not.toEqual(
+      [],
+    );
+  });
+
+  it("rejects a payload missing lastUpdated and source", () => {
+    expect(validateSbMembers({ members: [] })).not.toEqual([]);
   });
 });
 

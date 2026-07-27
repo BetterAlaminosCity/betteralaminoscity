@@ -223,7 +223,8 @@
     "sbRole": {
       "spMember": "SP Member",
       "ligaPresident": "Liga ng mga Barangay President",
-      "skPresident": "SK Federation President"
+      "skPresident": "SK Federation President",
+      "secretary": "Secretary of the Sanggunian"
     },
     "jumpToSection": {
       "eyebrow": "Jump to section",

@@ -51,6 +51,7 @@ export default function GovernmentIndex() {
     "sp-member": t("government.sbRole.spMember"),
     "liga-president": t("government.sbRole.ligaPresident"),
     "sk-president": t("government.sbRole.skPresident"),
+    secretary: t("government.sbRole.secretary"),
   };
 
   const branchLabels: Record<"executive" | "legislative", string> = {
