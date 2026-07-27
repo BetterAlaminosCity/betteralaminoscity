@@ -18,14 +18,14 @@ export function JumpToSectionNav({ eyebrow, links }: JumpToSectionNavProps) {
       <p className="mb-2 ml-1 text-[0.65rem] font-bold uppercase tracking-wide text-[var(--color-kapwa-text-support)]">
         {eyebrow}
       </p>
-      <nav className="flex flex-col gap-0.5">
+      <nav aria-label={eyebrow} className="flex flex-col gap-0.5">
         {links.map((link) => {
           const isActive = link.id === activeId;
           return (
             <a
               key={link.id}
               href={`#${link.id}`}
-              aria-current={isActive ? "true" : undefined}
+              aria-current={isActive ? "location" : undefined}
               onClick={() => setActiveId(link.id)}
               className={
                 isActive

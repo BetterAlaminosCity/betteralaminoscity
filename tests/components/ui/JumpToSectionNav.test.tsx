@@ -25,7 +25,7 @@ describe("JumpToSectionNav", () => {
     render(<JumpToSectionNav eyebrow="Jump to section" links={LINKS} />);
     expect(screen.getByRole("link", { name: "Executive Branch" })).toHaveAttribute(
       "aria-current",
-      "true",
+      "location",
     );
     expect(screen.getByRole("link", { name: "Legislative Branch" })).not.toHaveAttribute(
       "aria-current",
@@ -37,7 +37,7 @@ describe("JumpToSectionNav", () => {
     fireEvent.click(screen.getByRole("link", { name: "Legislative Branch" }));
     expect(screen.getByRole("link", { name: "Legislative Branch" })).toHaveAttribute(
       "aria-current",
-      "true",
+      "location",
     );
     expect(screen.getByRole("link", { name: "Executive Branch" })).not.toHaveAttribute(
       "aria-current",
