@@ -69,7 +69,9 @@ export default function GovernmentIndex() {
 
       <div className="mx-auto max-w-7xl px-4 py-16">
         <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[236px_1fr]">
-          <JumpToSectionNav eyebrow={t("government.jumpToSection.eyebrow")} links={jumpLinks} />
+          <div className="hidden md:block">
+            <JumpToSectionNav eyebrow={t("government.jumpToSection.eyebrow")} links={jumpLinks} />
+          </div>
 
           <div>
             <section id="executive" className="scroll-mt-24 pb-16">
