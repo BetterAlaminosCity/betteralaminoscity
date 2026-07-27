@@ -9,7 +9,7 @@
     "termStart": { "type": "string" },
     "phone": { "type": "string", "minLength": 1 },
     "email": { "type": "string", "minLength": 1 },
-    "socialUrl": { "type": "string", "minLength": 1 }
+    "socialUrl": { "type": "string", "minLength": 1, "pattern": "^https://" }
   },
   "additionalProperties": false
 }
