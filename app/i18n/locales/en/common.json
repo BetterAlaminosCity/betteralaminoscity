@@ -201,11 +201,39 @@
       "title": "Government Directory",
       "subtitle": "Meet the officials and offices serving Alaminos City."
     },
-    "executiveLeadership": "Executive Leadership",
-    "departmentOffices": "Department Offices",
-    "legislative": "Legislative",
+    "executiveLeadership": "Executive Branch",
+    "executiveLeadershipEyebrow": "Leadership",
+    "executiveLeadershipSubtitle": "The executive officials leading Alaminos City's governance.",
+    "departmentOffices": "Departments & Key Offices",
+    "departmentOfficesEyebrow": "Offices",
+    "departmentOfficesSubtitle": "City offices providing frontline services to residents.",
+    "legislative": "Legislative Branch",
+    "legislativeEyebrow": "Lawmakers",
+    "legislativeSubtitle": "Sangguniang Panlungsod members and sectoral representatives, presided by the Vice Mayor.",
+    "legislativeEmptyState": "Sangguniang Panlungsod member profiles will be published here in a future update to this site.",
     "viewOffice": "View office",
+    "viceMayorRoleSuffix": "Presiding Officer, SP",
+    "committeeAssignments": "Committee Assignments",
+    "headedBy": "Headed by {{name}}",
+    "socialLinkLabel": "Facebook Page",
+    "branch": {
+      "executive": "Executive",
+      "legislative": "Legislative"
+    },
+    "sbRole": {
+      "spMember": "SP Member",
+      "ligaPresident": "Liga ng mga Barangay President",
+      "skPresident": "SK Federation President"
+    },
+    "jumpToSection": {
+      "eyebrow": "Jump to section",
+      "executive": "Executive Branch",
+      "legislative": "Legislative Branch",
+      "departments": "Departments & Key Offices",
+      "transparency": "Civic Transparency"
+    },
     "civicTransparency": {
+      "eyebrow": "Open Data",
       "heading": "Civic Transparency",
       "budgetFiscalTransparency": "Budget & Fiscal Transparency",
       "ordinancesResolutions": "Ordinances & Resolutions",

@@ -201,11 +201,39 @@
       "title": "Direktoryo ng Pamahalaan",
       "subtitle": "Kilalanin ang mga opisyal at tanggapan na naglilingkod sa Lungsod ng Alaminos."
     },
-    "executiveLeadership": "Pamunuang Tagapagpaganap",
-    "departmentOffices": "Mga Tanggapan",
-    "legislative": "Lehislatura",
+    "executiveLeadership": "Sangay Tagapagpaganap",
+    "executiveLeadershipEyebrow": "Pamumuno",
+    "executiveLeadershipSubtitle": "Ang mga opisyal na tagapagpaganap na namumuno sa pamahalaan ng Lungsod ng Alaminos.",
+    "departmentOffices": "Mga Tanggapan at Sangay",
+    "departmentOfficesEyebrow": "Mga Tanggapan",
+    "departmentOfficesSubtitle": "Mga tanggapan ng lungsod na naglilingkod nang direkta sa mga residente.",
+    "legislative": "Sangay Lehislatibo",
+    "legislativeEyebrow": "Mga Mambabatas",
+    "legislativeSubtitle": "Mga miyembro ng Sangguniang Panlungsod at mga kinatawang sektoral, na pinamumunuan ng Bise Alkalde.",
+    "legislativeEmptyState": "Ilalathala dito ang mga profile ng miyembro ng Sangguniang Panlungsod sa hinaharap na update ng site na ito.",
     "viewOffice": "Tingnan ang tanggapan",
+    "viceMayorRoleSuffix": "Namumunong Opisyal, SP",
+    "committeeAssignments": "Mga Komiteng Kinabibilangan",
+    "headedBy": "Pinamumunuan ni {{name}}",
+    "socialLinkLabel": "Facebook Page",
+    "branch": {
+      "executive": "Tagapagpaganap",
+      "legislative": "Lehislatibo"
+    },
+    "sbRole": {
+      "spMember": "Miyembro ng SP",
+      "ligaPresident": "Pangulo ng Liga ng mga Barangay",
+      "skPresident": "Pangulo ng SK Federation"
+    },
+    "jumpToSection": {
+      "eyebrow": "Pumunta sa seksyon",
+      "executive": "Sangay Tagapagpaganap",
+      "legislative": "Sangay Lehislatibo",
+      "departments": "Mga Tanggapan at Sangay",
+      "transparency": "Pampublikong Transparency"
+    },
     "civicTransparency": {
+      "eyebrow": "Bukas na Datos",
       "heading": "Pampublikong Transparency",
       "budgetFiscalTransparency": "Badyet at Transparency Piskal",
       "ordinancesResolutions": "Mga Ordinansa at Resolusyon",

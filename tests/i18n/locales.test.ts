@@ -15,3 +15,21 @@ describe("services.article i18n keys", () => {
     expect(fil.services.viewDetails).toBeTruthy();
   });
 });
+
+describe("government i18n keys", () => {
+  it("has matching keys in en and fil", () => {
+    expect(Object.keys(en.government).sort()).toEqual(Object.keys(fil.government).sort());
+    expect(Object.keys(en.government.branch).sort()).toEqual(
+      Object.keys(fil.government.branch).sort(),
+    );
+    expect(Object.keys(en.government.sbRole).sort()).toEqual(
+      Object.keys(fil.government.sbRole).sort(),
+    );
+    expect(Object.keys(en.government.jumpToSection).sort()).toEqual(
+      Object.keys(fil.government.jumpToSection).sort(),
+    );
+    expect(Object.keys(en.government.civicTransparency).sort()).toEqual(
+      Object.keys(fil.government.civicTransparency).sort(),
+    );
+  });
+});
