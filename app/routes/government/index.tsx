@@ -117,7 +117,7 @@ export default function GovernmentIndex() {
               <p className="mt-1.5 text-[var(--color-kapwa-text-support)]">
                 {t("government.legislativeSubtitle")}
               </p>
-              {sbMembers && sbMembers.members.length > 0 ? (
+              {sbMembers && sbMembers.members?.length ? (
                 <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {sbMembers.members.map((member) => (
                     <li key={member.name}>
