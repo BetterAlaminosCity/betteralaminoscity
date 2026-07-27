@@ -15,7 +15,7 @@ body {
 :root {
   --color-role-legislative-bg: var(--color-kapwa-purple-100);
   --color-role-legislative-text: var(--color-kapwa-purple-700);
-  --color-role-legislative-accent: var(--color-kapwa-purple-600);
+  --color-role-legislative-accent: var(--color-kapwa-purple-700);
   --color-role-liga-bg: var(--color-kapwa-green-100);
   --color-role-liga-text: var(--color-kapwa-green-700);
   --color-role-sk-bg: var(--color-kapwa-orange-100);
