@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "sb-members.schema.json",
+  "type": "object",
+  "required": ["members"],
+  "properties": {
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "role", "committees"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "role": { "type": "string", "enum": ["sp-member", "liga-president", "sk-president"] },
+          "committees": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "phone": { "type": "string", "minLength": 1 },
+          "email": { "type": "string", "minLength": 1 },
+          "socialUrl": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -32,6 +32,7 @@ describe("contentPaths", () => {
     expect(contentPaths("government", FIXTURE_ROOT)).toEqual([
       "/government/sample-office",
       "/government/sample-office/overview",
+      "/government/sangguniang-panlungsod",
     ]);
   });
 });
@@ -44,6 +45,7 @@ describe("getAllRoutePaths", () => {
       "/services/sample-category/overview",
       "/government/sample-office",
       "/government/sample-office/overview",
+      "/government/sangguniang-panlungsod",
     ]);
   });
 });

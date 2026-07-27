@@ -285,3 +285,24 @@ export function getHotlines(contentRoot: string = DEFAULT_CONTENT_ROOT): Hotline
   if (!fs.existsSync(filePath)) return null;
   return JSON.parse(fs.readFileSync(filePath, "utf-8")) as Hotlines;
 }
+
+export type SbMemberRole = "sp-member" | "liga-president" | "sk-president";
+
+export interface SbMember {
+  name: string;
+  role: SbMemberRole;
+  committees: string[];
+  phone?: string;
+  email?: string;
+  socialUrl?: string;
+}
+
+export interface SbMembersData {
+  members: SbMember[];
+}
+
+export function getSbMembers(contentRoot: string = DEFAULT_CONTENT_ROOT): SbMembersData | null {
+  const filePath = path.join(contentRoot, "government", "sangguniang-panlungsod", "members.json");
+  if (!fs.existsSync(filePath)) return null;
+  return JSON.parse(fs.readFileSync(filePath, "utf-8")) as SbMembersData;
+}

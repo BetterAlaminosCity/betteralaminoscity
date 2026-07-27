@@ -39,6 +39,13 @@ describe("listCategories", () => {
         description: "A sample government office used for testing.",
         branch: "executive",
       },
+      {
+        slug: "sangguniang-panlungsod",
+        title: "Sangguniang Panlungsod",
+        description:
+          "The city's legislative council, responsible for enacting local ordinances and resolutions.",
+        branch: "legislative",
+      },
     ]);
   });
 });

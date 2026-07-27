@@ -10,6 +10,7 @@ import {
   validateHotlines,
   validateLegislativeDocuments,
   validateOfficial,
+  validateSbMembers,
 } from "../../app/lib/contentValidation.server";
 
 describe("validateCategory", () => {
@@ -246,6 +247,38 @@ describe("validateHotlines", () => {
   });
 });
 
+describe("validateSbMembers", () => {
+  it("accepts a valid SB members payload", () => {
+    expect(
+      validateSbMembers({
+        members: [
+          {
+            name: "Hon. Sample Member",
+            role: "sp-member",
+            committees: ["Sample Committee"],
+          },
+        ],
+      }),
+    ).toEqual([]);
+  });
+
+  it("accepts an empty members array", () => {
+    expect(validateSbMembers({ members: [] })).toEqual([]);
+  });
+
+  it("rejects a member with an invalid role", () => {
+    expect(
+      validateSbMembers({
+        members: [{ name: "Hon. Sample Member", role: "mayor", committees: [] }],
+      }),
+    ).not.toEqual([]);
+  });
+
+  it("rejects a payload missing members", () => {
+    expect(validateSbMembers({})).not.toEqual([]);
+  });
+});
+
 describe("validateContentTree", () => {
   it("reports no issues for a valid content tree", () => {
     const contentRoot = path.join(import.meta.dirname, "../fixtures/content-valid");
@@ -262,8 +295,9 @@ describe("validateContentTree", () => {
   it("reports an issue per missing fixed civic-data JSON file", () => {
     const contentRoot = path.join(import.meta.dirname, "../fixtures/content-invalid-civic-data");
     const issues = validateContentTree(contentRoot);
-    expect(issues).toHaveLength(4);
+    expect(issues).toHaveLength(5);
     expect(issues.map((issue) => issue.errors[0])).toEqual([
+      expect.stringContaining("missing"),
       expect.stringContaining("missing"),
       expect.stringContaining("missing"),
       expect.stringContaining("missing"),

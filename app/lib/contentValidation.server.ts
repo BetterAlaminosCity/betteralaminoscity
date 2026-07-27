@@ -12,6 +12,7 @@ import fiscalTransparencySchema from "../../content/schemas/fiscal-transparency.
 import hotlinesSchema from "../../content/schemas/hotlines.schema.json";
 import legislativeDocumentsSchema from "../../content/schemas/legislative-documents.schema.json";
 import officialSchema from "../../content/schemas/official.schema.json";
+import sbMembersSchema from "../../content/schemas/sb-members.schema.json";
 
 const ajv = new Ajv({ allErrors: true });
 const validateCategorySchema = ajv.compile(categorySchema);
@@ -21,6 +22,7 @@ const validateFiscalTransparencySchema = ajv.compile(fiscalTransparencySchema);
 const validateLegislativeDocumentsSchema = ajv.compile(legislativeDocumentsSchema);
 const validateCityStatisticsSchema = ajv.compile(cityStatisticsSchema);
 const validateHotlinesSchema = ajv.compile(hotlinesSchema);
+const validateSbMembersSchema = ajv.compile(sbMembersSchema);
 
 function formatErrors(errors: ErrorObject[] | null | undefined): string[] {
   return (errors ?? []).map((error) => `${error.instancePath || "/"} ${error.message}`);
@@ -61,6 +63,11 @@ export function validateHotlines(data: unknown): string[] {
   return formatErrors(validateHotlinesSchema.errors);
 }
 
+export function validateSbMembers(data: unknown): string[] {
+  validateSbMembersSchema(data);
+  return formatErrors(validateSbMembersSchema.errors);
+}
+
 export interface ContentValidationIssue {
   file: string;
   errors: string[];
@@ -97,6 +104,10 @@ const FIXED_JSON_DATA_FILES: Array<{
   {
     relativePath: path.join("government", "emergency-hotlines", "hotlines.json"),
     validate: validateHotlines,
+  },
+  {
+    relativePath: path.join("government", "sangguniang-panlungsod", "members.json"),
+    validate: validateSbMembers,
   },
 ];
 

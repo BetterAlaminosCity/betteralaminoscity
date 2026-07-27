@@ -4,6 +4,7 @@ import {
   getCityStatistics,
   getFiscalTransparency,
   getLegislativeDocuments,
+  getSbMembers,
   listCategories,
 } from "../../app/lib/content.server";
 import { validateContentTree } from "../../app/lib/contentValidation.server";
@@ -11,6 +12,10 @@ import { validateContentTree } from "../../app/lib/contentValidation.server";
 describe("real content tree", () => {
   it("has no schema validation issues", () => {
     expect(validateContentTree("content")).toEqual([]);
+  });
+
+  it("has an (initially empty) SB members list", () => {
+    expect(getSbMembers("content")?.members).toEqual([]);
   });
 
   it("has all 17 seeded service categories", () => {
