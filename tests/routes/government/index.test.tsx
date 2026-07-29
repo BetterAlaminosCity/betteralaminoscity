@@ -89,13 +89,9 @@ describe("GovernmentIndex", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("links to the three civic transparency pages", async () => {
+  it("links to the civic transparency pages", async () => {
     renderGovernmentIndex();
     expect(await screen.findByRole("heading", { name: "Civic Transparency" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Budget & Fiscal Transparency" })).toHaveAttribute(
-      "href",
-      "/government/transparency",
-    );
     expect(screen.getByRole("link", { name: "Ordinances & Resolutions" })).toHaveAttribute(
       "href",
       "/government/ordinances-resolutions",

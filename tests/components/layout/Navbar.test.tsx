@@ -23,6 +23,15 @@ describe("Navbar", () => {
     expect(screen.getByRole("link", { name: "About" })).toHaveAttribute("href", "/about");
   });
 
+  it("renders a Transparency nav link pointing to the budget & fiscal transparency page", () => {
+    renderNavbar();
+
+    expect(screen.getByRole("link", { name: "Transparency" })).toHaveAttribute(
+      "href",
+      "/government/transparency",
+    );
+  });
+
   it("does not render a separate Search nav link (search lives in the hero)", () => {
     renderNavbar();
 

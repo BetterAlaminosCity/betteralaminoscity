@@ -149,6 +149,7 @@
     "mainLabel": "Main navigation",
     "services": "Services",
     "government": "Government",
+    "transparency": "Transparency",
     "menuToggle": "Toggle navigation menu"
   },
   "language": {
@@ -236,7 +237,6 @@
     "civicTransparency": {
       "eyebrow": "Open Data",
       "heading": "Civic Transparency",
-      "budgetFiscalTransparency": "Budget & Fiscal Transparency",
       "ordinancesResolutions": "Ordinances & Resolutions",
       "statisticsDemographics": "Statistics & Demographics"
     }
