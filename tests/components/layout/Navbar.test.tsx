@@ -28,7 +28,7 @@ describe("Navbar", () => {
 
     expect(screen.getByRole("link", { name: "Transparency" })).toHaveAttribute(
       "href",
-      "/government/transparency",
+      "/transparency",
     );
   });
 

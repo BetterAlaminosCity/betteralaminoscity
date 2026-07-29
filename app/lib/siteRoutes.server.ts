@@ -5,7 +5,7 @@ export const STATIC_ROUTES: string[] = [
   "/about",
   "/services",
   "/government",
-  "/government/transparency",
+  "/transparency",
   "/government/ordinances-resolutions",
   "/government/statistics",
   "/search",

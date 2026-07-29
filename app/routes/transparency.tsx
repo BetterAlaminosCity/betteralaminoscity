@@ -2,17 +2,17 @@ import { Coins, HardHat, MapPin, Receipt, Scale } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { useLoaderData } from "react-router";
 
-import { DataSourceNote } from "../../components/ui/DataSourceNote";
-import { PageHeader } from "../../components/ui/PageHeader";
-import { getFiscalTransparency } from "../../lib/content.server";
-import { buildMeta } from "../../lib/seo";
+import { DataSourceNote } from "../components/ui/DataSourceNote";
+import { PageHeader } from "../components/ui/PageHeader";
+import { getFiscalTransparency } from "../lib/content.server";
+import { buildMeta } from "../lib/seo";
 import type { Route } from "./+types/transparency";
 
 export function meta(_: Route.MetaArgs) {
   return buildMeta({
     title: "Budget & Fiscal Transparency",
     description: "Income, expenditure, and infrastructure project breakdown for Alaminos City.",
-    path: "/government/transparency",
+    path: "/transparency",
   });
 }
 

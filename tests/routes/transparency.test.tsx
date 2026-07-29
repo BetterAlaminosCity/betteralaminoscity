@@ -2,13 +2,13 @@ import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it } from "vitest";
 
-import Transparency, { loader } from "../../../app/routes/government/transparency";
+import Transparency, { loader } from "../../app/routes/transparency";
 
 describe("Transparency", () => {
   it("renders income, expenditure, and infrastructure project data", async () => {
     const router = createMemoryRouter(
-      [{ path: "/government/transparency", Component: Transparency, loader }],
-      { initialEntries: ["/government/transparency"] },
+      [{ path: "/transparency", Component: Transparency, loader }],
+      { initialEntries: ["/transparency"] },
     );
     render(<RouterProvider router={router} />);
 
