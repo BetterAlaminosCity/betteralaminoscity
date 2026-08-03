@@ -61,11 +61,17 @@ export function CurrentWeather() {
       </p>
 
       <div className="mt-4 flex gap-6 border-t border-[var(--color-kapwa-border-weak)] pt-4 text-sm text-[var(--color-kapwa-text-support)]">
-        <span className="flex items-center gap-1">
+        <span
+          className="flex items-center gap-1"
+          aria-label={`${t("home.weatherAndMap.humidity")}: ${Math.round(data.current.humidity)}%`}
+        >
           <Droplets className="h-4 w-4" aria-hidden="true" />
           {Math.round(data.current.humidity)}%
         </span>
-        <span className="flex items-center gap-1">
+        <span
+          className="flex items-center gap-1"
+          aria-label={`${t("home.weatherAndMap.wind")}: ${Math.round(data.current.windSpeed)} km/h`}
+        >
           <Wind className="h-4 w-4" aria-hidden="true" />
           {Math.round(data.current.windSpeed)} km/h
         </span>
