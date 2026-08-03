@@ -139,8 +139,28 @@
       "emergencyLabel": "For emergencies, dial",
       "cityHall": "City Hall: Quezon Avenue, Poblacion, Alaminos City, Pangasinan · Mon–Fri, 8:00 AM–5:00 PM"
     },
-    "map": {
-      "heading": "Where to Find"
+    "weatherAndMap": {
+      "heading": "Weather and Map of Alaminos City",
+      "mapTitle": "Map of Alaminos City",
+      "location": "Alaminos City, Pangasinan",
+      "humidity": "Humidity",
+      "wind": "Wind",
+      "today": "Today",
+      "loading": "Loading weather…",
+      "error": "Weather unavailable right now.",
+      "attribution": "Weather data by Open-Meteo.com",
+      "conditions": {
+        "clear": "Clear sky",
+        "partlyCloudy": "Partly cloudy",
+        "overcast": "Overcast",
+        "fog": "Fog",
+        "drizzle": "Light drizzle",
+        "rain": "Rain",
+        "snow": "Snow",
+        "rainShowers": "Rain showers",
+        "snowShowers": "Snow showers",
+        "thunderstorm": "Thunderstorm"
+      }
     }
   },
   "nav": {

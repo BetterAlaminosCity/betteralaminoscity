@@ -139,8 +139,28 @@
       "emergencyLabel": "Para sa emergency, tumawag sa",
       "cityHall": "Bulwagan ng Lungsod: Quezon Avenue, Poblacion, Lungsod ng Alaminos, Pangasinan · Lun–Biy, 8:00 AM–5:00 PM"
     },
-    "map": {
-      "heading": "Saan Matatagpuan"
+    "weatherAndMap": {
+      "heading": "Panahon at Mapa ng Lungsod ng Alaminos",
+      "mapTitle": "Mapa ng Lungsod ng Alaminos",
+      "location": "Lungsod ng Alaminos, Pangasinan",
+      "humidity": "Halumigmig",
+      "wind": "Hangin",
+      "today": "Ngayon",
+      "loading": "Nilo-load ang panahon…",
+      "error": "Hindi available ang datos ng panahon sa ngayon.",
+      "attribution": "Datos ng panahon mula sa Open-Meteo.com",
+      "conditions": {
+        "clear": "Maaliwalas",
+        "partlyCloudy": "Bahagyang maulap",
+        "overcast": "Maulap",
+        "fog": "Maambon",
+        "drizzle": "Bahagyang ambon",
+        "rain": "Ulan",
+        "snow": "Niyebe",
+        "rainShowers": "Sabog na ulan",
+        "snowShowers": "Sabog na niyebe",
+        "thunderstorm": "Bagyo na may kulog"
+      }
     }
   },
   "nav": {
