@@ -8,8 +8,13 @@ function formatHour(time: string, locale: string): string {
   return new Intl.DateTimeFormat(locale, { hour: "numeric", hour12: true }).format(new Date(time));
 }
 
-function formatWeekday(date: string, locale: string): string {
-  return new Intl.DateTimeFormat(locale, { weekday: "short" }).format(new Date(date));
+export function formatWeekday(date: string, locale: string): string {
+  // A bare date-only string (e.g. "2026-08-04") parses as UTC midnight per
+  // the ECMAScript spec, but Intl.DateTimeFormat renders it in the viewer's
+  // local timezone — for timezones west of UTC that shifts the weekday back
+  // by one day. Appending a time-of-day makes it parse as local time instead,
+  // matching how formatHour's datetime-without-offset strings behave.
+  return new Intl.DateTimeFormat(locale, { weekday: "short" }).format(new Date(`${date}T00:00`));
 }
 
 export function CurrentWeather() {

@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { I18nProvider } from "../../../app/i18n/I18nProvider";
-import { CurrentWeather } from "../../../app/components/home/CurrentWeather";
+import { CurrentWeather, formatWeekday } from "../../../app/components/home/CurrentWeather";
 
 const SAMPLE_RESPONSE = {
   current: {
@@ -84,5 +84,21 @@ describe("CurrentWeather", () => {
     vi.stubGlobal("fetch", vi.fn().mockReturnValue(new Promise(() => {})));
 
     expect(() => renderWeather()).not.toThrow();
+  });
+});
+
+describe("formatWeekday", () => {
+  it("renders the correct weekday in timezones west of UTC (date-only strings must not shift back a day)", () => {
+    const originalTz = process.env.TZ;
+    process.env.TZ = "America/Los_Angeles";
+    try {
+      // 2026-08-04 is a Tuesday. A date-only string parses as UTC midnight,
+      // which in America/Los_Angeles (UTC-7 in August) is still the evening
+      // of 2026-08-03 (Monday) — so a buggy implementation renders "Mon"
+      // instead of "Tue".
+      expect(formatWeekday("2026-08-04", "en")).toBe("Tue");
+    } finally {
+      process.env.TZ = originalTz;
+    }
   });
 });
