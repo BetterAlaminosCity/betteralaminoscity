@@ -9,7 +9,7 @@ import { DiscoverHundredIslands } from "../components/home/DiscoverHundredIsland
 import { BriefHistory } from "../components/home/BriefHistory";
 import { CityLeadership } from "../components/home/CityLeadership";
 import { ContactHotlines } from "../components/home/ContactHotlines";
-import { LocationMap } from "../components/home/LocationMap";
+import { WeatherAndMap } from "../components/home/WeatherAndMap";
 import type { Route } from "./+types/home";
 
 export function meta(_: Route.MetaArgs) {
@@ -46,7 +46,7 @@ export default function Home() {
       <BriefHistory />
       <CityLeadership mayor={mayor} legislativeHead={legislativeHead} />
       <ContactHotlines hotlines={hotlines} />
-      <LocationMap />
+      <WeatherAndMap />
     </>
   );
 }

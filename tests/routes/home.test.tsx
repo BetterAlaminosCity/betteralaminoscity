@@ -91,6 +91,8 @@ describe("Home", () => {
     ).toBeInTheDocument();
     expect(screen.getByText("CDRRMO")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /911/ })).toHaveAttribute("href", "tel:911");
-    expect(screen.getByRole("heading", { name: "Where to Find" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Weather and Map of Alaminos City" }),
+    ).toBeInTheDocument();
   });
 });
