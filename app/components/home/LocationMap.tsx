@@ -3,8 +3,8 @@ const MAP_EMBED_SRC =
 
 export function LocationMap({ title }: { title: string }) {
   return (
-    <div className="overflow-hidden rounded-lg border border-[var(--color-kapwa-border-weak)]">
-      <iframe title={title} src={MAP_EMBED_SRC} className="h-96 w-full" loading="lazy" />
+    <div className="h-full overflow-hidden rounded-lg border border-[var(--color-kapwa-border-weak)]">
+      <iframe title={title} src={MAP_EMBED_SRC} className="h-full min-h-96 w-full" loading="lazy" />
     </div>
   );
 }
