@@ -24,6 +24,9 @@ export function CurrentWeather() {
   if (status === "loading") {
     return (
       <div className="flex h-full flex-col gap-4 rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-6">
+        <span className="sr-only" role="status">
+          {t("home.weatherAndMap.loading")}
+        </span>
         <div className="h-16 animate-pulse rounded bg-[var(--color-kapwa-bg-gray-default)]" />
         <div className="h-24 animate-pulse rounded bg-[var(--color-kapwa-bg-gray-default)]" />
         <div className="h-20 animate-pulse rounded bg-[var(--color-kapwa-bg-gray-default)]" />

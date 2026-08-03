@@ -85,6 +85,14 @@ describe("CurrentWeather", () => {
 
     expect(() => renderWeather()).not.toThrow();
   });
+
+  it("renders the loading state with accessible status text", () => {
+    vi.stubGlobal("fetch", vi.fn().mockReturnValue(new Promise(() => {})));
+
+    renderWeather();
+
+    expect(screen.getByRole("status")).toHaveTextContent("Loading weather…");
+  });
 });
 
 describe("formatWeekday", () => {
