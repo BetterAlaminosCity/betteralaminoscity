@@ -122,7 +122,12 @@ export function parseForecastResponse(raw: unknown): ForecastData {
   if (!Array.isArray(hourlyTimes) || !Array.isArray(hourlyTemps) || !Array.isArray(hourlyCodes)) {
     throw new Error("Invalid forecast response: malformed hourly block");
   }
-  const currentIndex = hourlyTimes.indexOf(currentTime);
+  // Open-Meteo's `current` block updates every 15 minutes, but `hourly.time`
+  // entries are only ever on the hour. Truncate `currentTime` down to its
+  // hour before searching so the lookup succeeds regardless of which
+  // quarter-hour `current.time` landed on.
+  const currentHour = `${currentTime.slice(0, 13)}:00`;
+  const currentIndex = hourlyTimes.indexOf(currentHour);
   if (currentIndex === -1) {
     throw new Error("Invalid forecast response: current time not found in hourly series");
   }

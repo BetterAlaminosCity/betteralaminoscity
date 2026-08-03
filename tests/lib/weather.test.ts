@@ -121,6 +121,25 @@ describe("parseForecastResponse", () => {
     expect(() => parseForecastResponse(response)).toThrow();
   });
 
+  it("does not throw when current.time is a quarter-hour not present in hourly.time, and returns the 4 hours after the current hour", () => {
+    const response = buildSampleResponse();
+    // Open-Meteo's `current` block updates every 15 minutes, so `current.time`
+    // can be e.g. "...T14:15" while `hourly.time` only ever has on-the-hour
+    // entries. The lookup must truncate down to the hour ("...T14:00") rather
+    // than requiring an exact match.
+    response.current.time = "2026-08-03T14:15";
+
+    let result: ReturnType<typeof parseForecastResponse> | undefined;
+    expect(() => {
+      result = parseForecastResponse(response);
+    }).not.toThrow();
+
+    expect(result!.hourly).toHaveLength(4);
+    // Should be the 4 hours after 14:00 (the current HOUR), not after 14:15.
+    expect(result!.hourly[0]).toEqual({ time: "2026-08-03T15:00", temperature: 26.1, code: 61 });
+    expect(result!.hourly[3]).toEqual({ time: "2026-08-03T18:00", temperature: 25.5, code: 3 });
+  });
+
   it("throws when there are fewer than 5 daily entries", () => {
     const response = buildSampleResponse();
     response.daily.time = response.daily.time.slice(0, 3);
