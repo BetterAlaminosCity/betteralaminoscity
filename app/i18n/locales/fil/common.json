@@ -262,6 +262,33 @@
       "statisticsDemographics": "Estadistika at Demograpiya"
     }
   },
+  "legislative": {
+    "pageHeader": {
+      "badge": "Sangguniang Panlungsod",
+      "title": "Mga Dokumentong Lehislatibo",
+      "subtitle": "Mga ordinansa at resolusyon ng Sangguniang Panlungsod ng Alaminos"
+    },
+    "cards": {
+      "ordinanceTitle": "Balangkas ng Ordinansa",
+      "ordinanceDescription": "Mga ordinansang ipinatutupad ng Sangguniang Panlungsod — mga lokal na batas na namamahala sa lungsod at sa mga residente nito.",
+      "ordinanceCta": "Tingnan ang mga Ordinansa",
+      "resolutionTitle": "Balangkas ng Resolusyon",
+      "resolutionDescription": "Mga resolusyong ipinasa ng Sangguniang Panlungsod na nagpapahayag ng kalooban o opinyon ng lehislatibong katawan sa iba't ibang usapin.",
+      "resolutionCta": "Tingnan ang mga Resolusyon"
+    },
+    "browse": {
+      "ordinancesTitle": "Mga Ordinansa",
+      "ordinancesSubtitle": "Mga ordinansang ipinatutupad ng Sangguniang Panlungsod ng Alaminos",
+      "resolutionsTitle": "Mga Resolusyon",
+      "resolutionsSubtitle": "Mga resolusyong ipinasa ng Sangguniang Panlungsod ng Alaminos",
+      "keywordLabel": "Susing Salita",
+      "keywordPlaceholder": "Maghanap ayon sa pamagat o numero",
+      "yearLabel": "Taon",
+      "allYears": "Lahat ng taon",
+      "emptyOrdinances": "Walang nahanap na tumutugmang ordinansa.",
+      "emptyResolutions": "Walang nahanap na tumutugmang resolusyon."
+    }
+  },
   "about": {
     "missionHeading": "Ang Aming Misyon",
     "missionBody": "Ang BetterAlaminosCity.org ay isang boluntaryong proyektong sibiko. Hindi ito opisyal na website ng pamahalaan ng Lungsod ng Alaminos — pinagsasama-sama nito ang mga pampublikong impormasyon tungkol sa mga serbisyo, tanggapan, at ordinansa ng lungsod upang mas madaling mahanap ang mga ito. Ang nilalaman ay hango sa opisyal na pinagmumulan ng pamahalaan kung available, at malinaw na minarkahan bilang placeholder kung hindi pa ito naberipika.",

@@ -262,6 +262,33 @@
       "statisticsDemographics": "Statistics & Demographics"
     }
   },
+  "legislative": {
+    "pageHeader": {
+      "badge": "Sangguniang Panlungsod",
+      "title": "Legislative Documents",
+      "subtitle": "Ordinances and resolutions of the Sangguniang Panlungsod ng Alaminos"
+    },
+    "cards": {
+      "ordinanceTitle": "Ordinance Framework",
+      "ordinanceDescription": "City ordinances enacted by the Sangguniang Panlungsod — local laws that govern the city and its residents.",
+      "ordinanceCta": "Browse Ordinances",
+      "resolutionTitle": "Resolution Framework",
+      "resolutionDescription": "Resolutions passed by the Sangguniang Panlungsod expressing the will or opinion of the legislative body on various matters.",
+      "resolutionCta": "Browse Resolutions"
+    },
+    "browse": {
+      "ordinancesTitle": "Ordinances",
+      "ordinancesSubtitle": "Ordinances enacted by the Sangguniang Panlungsod ng Alaminos",
+      "resolutionsTitle": "Resolutions",
+      "resolutionsSubtitle": "Resolutions passed by the Sangguniang Panlungsod ng Alaminos",
+      "keywordLabel": "Keyword",
+      "keywordPlaceholder": "Search by title or number",
+      "yearLabel": "Year",
+      "allYears": "All years",
+      "emptyOrdinances": "No matching ordinances found.",
+      "emptyResolutions": "No matching resolutions found."
+    }
+  },
   "about": {
     "missionHeading": "Our Mission",
     "missionBody": "BetterAlaminosCity.org is a volunteer-run civic project. It is not an official website of the Alaminos City government — it aggregates publicly available information about city services, offices, and ordinances to make them easier to find. Content is drawn from official government sources where available and clearly marked as a placeholder where it isn't yet verified.",

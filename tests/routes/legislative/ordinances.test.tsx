@@ -3,37 +3,40 @@ import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it } from "vitest";
 
-import OrdinancesResolutions, { loader } from "../../app/routes/legislative";
+import { I18nProvider } from "../../../app/i18n/I18nProvider";
+import LegislativeOrdinances, { loader } from "../../../app/routes/legislative/ordinances";
 
 function renderPage() {
   const router = createMemoryRouter(
     [
       {
-        path: "/legislative",
-        Component: OrdinancesResolutions,
+        path: "/legislative/ordinances",
+        Component: LegislativeOrdinances,
         loader,
       },
     ],
-    { initialEntries: ["/legislative"] },
+    { initialEntries: ["/legislative/ordinances"] },
   );
-  render(<RouterProvider router={router} />);
-  return router;
+  render(
+    <I18nProvider>
+      <RouterProvider router={router} />
+    </I18nProvider>,
+  );
 }
 
-describe("OrdinancesResolutions", () => {
-  it("lists all seeded ordinances and resolutions by default", async () => {
+describe("LegislativeOrdinances", () => {
+  it("lists only the seeded ordinances by default", async () => {
     renderPage();
 
-    expect(
-      await screen.findByRole("heading", { name: "Ordinances & Resolutions" }),
-    ).toBeInTheDocument();
-    expect(screen.getAllByRole("listitem")).toHaveLength(6);
+    expect(await screen.findByRole("heading", { name: "Ordinances" })).toBeInTheDocument();
+    expect(screen.getAllByRole("listitem")).toHaveLength(3);
+    expect(screen.queryByText(/Coastal Road Rehabilitation/)).not.toBeInTheDocument();
   });
 
   it("filters by year", async () => {
     const user = userEvent.setup();
     renderPage();
-    await screen.findByRole("heading", { name: "Ordinances & Resolutions" });
+    await screen.findByRole("heading", { name: "Ordinances" });
 
     await user.selectOptions(screen.getByLabelText("Year"), "2023");
 
@@ -44,7 +47,7 @@ describe("OrdinancesResolutions", () => {
   it("filters by keyword", async () => {
     const user = userEvent.setup();
     renderPage();
-    await screen.findByRole("heading", { name: "Ordinances & Resolutions" });
+    await screen.findByRole("heading", { name: "Ordinances" });
 
     await user.type(screen.getByPlaceholderText("Search by title or number"), "Plastics");
 
