@@ -13,6 +13,8 @@ body {
 }
 
 :root {
+  --color-kapwa-bg-brand-default: var(--color-kapwa-brand-900);
+  --color-kapwa-text-brand: var(--color-kapwa-brand-900);
   --color-role-legislative-bg: var(--color-kapwa-purple-100);
   --color-role-legislative-text: var(--color-kapwa-purple-700);
   --color-role-legislative-accent: var(--color-kapwa-purple-700);
