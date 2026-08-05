@@ -28,6 +28,22 @@ describe("Footer", () => {
     expect(screen.getByRole("link", { name: "Government" })).toHaveAttribute("href", "/government");
   });
 
+  it("renders a Legislative link in the Explore list pointing at Ordinances & Resolutions", () => {
+    renderFooter();
+
+    expect(screen.getByRole("link", { name: "Legislative" })).toHaveAttribute(
+      "href",
+      "/government/ordinances-resolutions",
+    );
+  });
+
+  it("renders a separate About block outside the Explore list", () => {
+    renderFooter();
+
+    expect(screen.getByText("About This Project")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "About" })).toHaveAttribute("href", "/about");
+  });
+
   it("renders a GitHub source link", () => {
     renderFooter();
 

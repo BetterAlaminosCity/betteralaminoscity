@@ -24,6 +24,16 @@ export function Footer() {
           >
             {t("footer.githubLink")}
           </a>
+
+          <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-[var(--color-kapwa-text-inverse-subtle)]">
+            {t("footer.aboutHeading")}
+          </p>
+          <Link
+            to="/about"
+            className="mt-2 inline-block text-sm font-medium underline underline-offset-2 hover:text-[var(--color-kapwa-text-inverse-subtle)]"
+          >
+            {t("nav.about")}
+          </Link>
         </div>
 
         <div>
@@ -31,16 +41,19 @@ export function Footer() {
             {t("footer.exploreHeading")}
           </p>
           <ul className="mt-3 flex flex-col gap-2">
-            {SITE_NAV_LINKS.map((link) => (
-              <li key={link.to}>
-                <Link
-                  to={link.to}
-                  className="text-sm hover:text-[var(--color-kapwa-text-inverse-subtle)]"
-                >
-                  {t(link.labelKey)}
-                </Link>
-              </li>
-            ))}
+            {SITE_NAV_LINKS.map((item) => {
+              const href = item.type === "dropdown" ? item.items[0]!.to : item.to;
+              return (
+                <li key={href}>
+                  <Link
+                    to={href}
+                    className="text-sm hover:text-[var(--color-kapwa-text-inverse-subtle)]"
+                  >
+                    {t(item.labelKey)}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
