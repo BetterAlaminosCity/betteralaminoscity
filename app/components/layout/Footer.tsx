@@ -12,7 +12,7 @@ export function Footer() {
 
   return (
     <footer className="bg-[var(--color-kapwa-bg-surface-bold)] text-[var(--color-kapwa-text-inverse)]">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:grid-cols-3">
         <div>
           <p className="text-lg font-semibold">BetterAlaminosCity.org</p>
           <p className="mt-2 max-w-sm text-sm text-[var(--color-kapwa-text-inverse-subtle)]">
@@ -24,16 +24,6 @@ export function Footer() {
           >
             {t("footer.githubLink")}
           </a>
-
-          <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-[var(--color-kapwa-text-inverse-subtle)]">
-            {t("footer.aboutHeading")}
-          </p>
-          <Link
-            to="/about"
-            className="mt-2 inline-block text-sm font-medium underline underline-offset-2 hover:text-[var(--color-kapwa-text-inverse-subtle)]"
-          >
-            {t("nav.about")}
-          </Link>
         </div>
 
         <div>
@@ -55,6 +45,18 @@ export function Footer() {
               );
             })}
           </ul>
+        </div>
+
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-wide text-[var(--color-kapwa-text-inverse-subtle)]">
+            {t("footer.aboutHeading")}
+          </p>
+          <Link
+            to="/about"
+            className="mt-3 inline-block text-sm font-medium underline underline-offset-2 hover:text-[var(--color-kapwa-text-inverse-subtle)]"
+          >
+            {t("nav.about")}
+          </Link>
         </div>
       </div>
 

@@ -37,10 +37,10 @@ describe("Footer", () => {
     );
   });
 
-  it("renders a separate About block outside the Explore list", () => {
+  it("renders a separate Resources column with the About link", () => {
     renderFooter();
 
-    expect(screen.getByText("About This Project")).toBeInTheDocument();
+    expect(screen.getByText("Resources")).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "About" })).toHaveAttribute("href", "/about");
   });
 
