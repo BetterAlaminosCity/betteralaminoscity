@@ -7,7 +7,10 @@ import { I18nProvider } from "../../../app/i18n/I18nProvider";
 import { Navbar } from "../../../app/components/layout/Navbar";
 
 function renderNavbar() {
-  const router = createMemoryRouter([{ path: "/", Component: Navbar }]);
+  const router = createMemoryRouter([
+    { path: "/", Component: Navbar },
+    { path: "*", Component: Navbar },
+  ]);
   return render(
     <I18nProvider>
       <RouterProvider router={router} />
@@ -105,6 +108,38 @@ describe("Navbar", () => {
 
       await user.keyboard("{Escape}");
 
+      expect(
+        screen.queryByRole("link", { name: "Ordinances & Resolutions" }),
+      ).not.toBeInTheDocument();
+    });
+
+    it("returns focus to the Legislative toggle when Escape closes the panel", async () => {
+      const user = userEvent.setup();
+      renderNavbar();
+
+      await user.click(screen.getByRole("button", { name: "Legislative" }));
+
+      const link = screen.getByRole("link", { name: "Ordinances & Resolutions" });
+      link.focus();
+      expect(link).toHaveFocus();
+
+      await user.keyboard("{Escape}");
+
+      expect(screen.getByRole("button", { name: "Legislative" })).toHaveFocus();
+    });
+
+    it("closes the dropdown when a link inside it is clicked", async () => {
+      const user = userEvent.setup();
+      renderNavbar();
+
+      await user.click(screen.getByRole("button", { name: "Legislative" }));
+
+      await user.click(screen.getByRole("link", { name: "Ordinances & Resolutions" }));
+
+      expect(screen.getByRole("button", { name: "Legislative" })).toHaveAttribute(
+        "aria-expanded",
+        "false",
+      );
       expect(
         screen.queryByRole("link", { name: "Ordinances & Resolutions" }),
       ).not.toBeInTheDocument();

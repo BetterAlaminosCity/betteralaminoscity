@@ -28,6 +28,7 @@ function NavDropdown({
   const { t } = useTranslation();
   const location = useLocation();
   const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const isActive = item.items.some((link) => location.pathname === link.to);
 
   useEffect(() => {
@@ -40,7 +41,10 @@ function NavDropdown({
     }
 
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") {
+        onClose();
+        buttonRef.current?.focus();
+      }
     }
 
     document.addEventListener("mousedown", handlePointerDown);
@@ -54,6 +58,7 @@ function NavDropdown({
   return (
     <div ref={containerRef} className="relative">
       <button
+        ref={buttonRef}
         type="button"
         aria-haspopup="true"
         aria-expanded={isOpen}
