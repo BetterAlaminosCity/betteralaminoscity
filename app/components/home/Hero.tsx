@@ -36,7 +36,7 @@ export function Hero({ popularCategories }: HeroProps) {
     );
 
   return (
-    <section className="bg-[var(--color-kapwa-bg-brand-default)]">
+    <section className="bg-[var(--color-kapwa-brand-900)]">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:py-24 lg:grid-cols-2 lg:items-center">
         <div className="min-w-0">
           <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-kapwa-text-inverse)]">

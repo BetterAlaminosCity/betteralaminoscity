@@ -69,7 +69,7 @@ describe("Hero", () => {
     renderHero();
 
     const heading = screen.getByRole("heading", { name: "BetterAlaminosCity.org" });
-    expect(heading.closest("section")).toHaveClass("bg-[var(--color-kapwa-bg-brand-default)]");
+    expect(heading.closest("section")).toHaveClass("bg-[var(--color-kapwa-brand-900)]");
   });
 
   it("renders the HeroSearch widget", () => {
