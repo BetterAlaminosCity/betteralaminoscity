@@ -169,6 +169,8 @@
     "mainLabel": "Pangunahing Nabigasyon",
     "services": "Mga Serbisyo",
     "government": "Pamahalaan",
+    "legislative": "Lehislatibo",
+    "legislativeOrdinancesResolutions": "Mga Ordinansa at Resolusyon",
     "transparency": "Transparency",
     "menuToggle": "I-toggle ang menu ng nabigasyon"
   },
@@ -188,6 +190,7 @@
   },
   "footer": {
     "aboutBlurb": "Ang BetterAlaminosCity.org ay isang gabay na pinapatakbo ng komunidad para sa mga serbisyo ng pamahalaan ng Lungsod ng Alaminos, tahanan ng Hundred Islands National Park.",
+    "aboutHeading": "Tungkol sa Proyektong Ito",
     "exploreHeading": "Galugarin",
     "githubLink": "Tingnan ang source code sa GitHub",
     "copyright": "© {{year}} BetterAlaminosCity.org · Lisensyadong MIT"

@@ -169,6 +169,8 @@
     "mainLabel": "Main navigation",
     "services": "Services",
     "government": "Government",
+    "legislative": "Legislative",
+    "legislativeOrdinancesResolutions": "Ordinances & Resolutions",
     "transparency": "Transparency",
     "menuToggle": "Toggle navigation menu"
   },
@@ -188,6 +190,7 @@
   },
   "footer": {
     "aboutBlurb": "BetterAlaminosCity.org is a community-run guide to Alaminos City government services, home of the Hundred Islands National Park.",
+    "aboutHeading": "About This Project",
     "exploreHeading": "Explore",
     "githubLink": "View source on GitHub",
     "copyright": "© {{year}} BetterAlaminosCity.org · MIT Licensed"
