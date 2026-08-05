@@ -367,6 +367,27 @@
           "description": "Ipinapaskil nang publiko ang resolusyon at ipinapadala sa mga kinauukulan."
         }
       }
+    },
+    "explainer": {
+      "eyebrow": "Tungkol Dito",
+      "heading": "Pag-unawa sa Lokal na Lehislasyon",
+      "subtitle": "Alamin ang proseso ng paggawa ng batas ng Sangguniang Panlungsod",
+      "ordinances": {
+        "title": "Mga Ordinansa",
+        "description": "Mga lokal na batas na permanente at pangkalahatan ang aplikasyon na kinakailangang sundin ng mga residente at negosyo sa loob ng lungsod."
+      },
+      "resolutions": {
+        "title": "Mga Resolusyon",
+        "description": "Pagpapahayag ng kalooban o opinyon ng lehislatibong katawan sa mga tiyak na usapin, kadalasang ginagamit para sa papuri, kahilingan, o posisyon sa patakaran."
+      },
+      "publicParticipation": {
+        "title": "Pakikilahok ng Publiko",
+        "description": "Maaaring dumalo ang mga mamamayan sa mga sesyon ng Sangguniang Panlungsod at sumali sa mga pampublikong pagdinig para sa mga panukalang ordinansa."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Ang lahat ng naipasang ordinansa at resolusyon ay ginagawang available sa publiko bilang bahagi ng aming pangako sa bukas na pamamahala."
+      }
     }
   },
   "about": {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
-import { BookOpen, FileText, Workflow } from "lucide-react";
+import { BookOpen, FileText, Info, ShieldCheck, Users, Workflow } from "lucide-react";
 
 import { PageHeader } from "../../components/ui/PageHeader";
 import { buildMeta } from "../../lib/seo";
@@ -162,6 +162,69 @@ export default function Legislative() {
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        <div className="mt-16 text-center">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-kapwa-bg-info-weak)] px-3 py-1 text-xs font-bold text-[var(--color-kapwa-text-info)]">
+            <Info className="h-3.5 w-3.5" aria-hidden="true" />
+            {t("legislative.explainer.eyebrow")}
+          </span>
+          <h2 className="mt-3 text-2xl font-extrabold text-[var(--color-kapwa-text-strong)]">
+            {t("legislative.explainer.heading")}
+          </h2>
+          <p className="mt-1.5 text-[var(--color-kapwa-text-support)]">
+            {t("legislative.explainer.subtitle")}
+          </p>
+
+          <div className="mt-8 grid gap-4 text-left sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-xl border border-[var(--color-kapwa-border-weak)] p-5">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)] text-[var(--color-kapwa-text-inverse)]">
+                <BookOpen className="h-4 w-4" aria-hidden="true" />
+              </div>
+              <h3 className="mt-3 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+                {t("legislative.explainer.ordinances.title")}
+              </h3>
+              <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+                {t("legislative.explainer.ordinances.description")}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-[var(--color-kapwa-border-weak)] p-5">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)] text-[var(--color-kapwa-text-inverse)]">
+                <FileText className="h-4 w-4" aria-hidden="true" />
+              </div>
+              <h3 className="mt-3 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+                {t("legislative.explainer.resolutions.title")}
+              </h3>
+              <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+                {t("legislative.explainer.resolutions.description")}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-[var(--color-kapwa-border-weak)] p-5">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)] text-[var(--color-kapwa-text-inverse)]">
+                <Users className="h-4 w-4" aria-hidden="true" />
+              </div>
+              <h3 className="mt-3 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+                {t("legislative.explainer.publicParticipation.title")}
+              </h3>
+              <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+                {t("legislative.explainer.publicParticipation.description")}
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-[var(--color-kapwa-border-weak)] p-5">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)] text-[var(--color-kapwa-text-inverse)]">
+                <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+              </div>
+              <h3 className="mt-3 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+                {t("legislative.explainer.transparency.title")}
+              </h3>
+              <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+                {t("legislative.explainer.transparency.description")}
+              </p>
+            </div>
           </div>
         </div>
       </div>

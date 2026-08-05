@@ -61,3 +61,17 @@ describe("Legislative landing page flowchart", () => {
     expect(screen.queryByText("File Proposed Ordinance")).not.toBeInTheDocument();
   });
 });
+
+describe("Legislative landing page explainer", () => {
+  it("renders all four explainer cards", () => {
+    renderPage();
+
+    expect(
+      screen.getByRole("heading", { name: "Understanding Local Legislation" }),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Ordinances")).toBeInTheDocument();
+    expect(screen.getByText("Resolutions")).toBeInTheDocument();
+    expect(screen.getByText("Public Participation")).toBeInTheDocument();
+    expect(screen.getByText("Transparency")).toBeInTheDocument();
+  });
+});

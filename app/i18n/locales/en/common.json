@@ -367,6 +367,27 @@
           "description": "The resolution is posted publicly and transmitted to concerned parties."
         }
       }
+    },
+    "explainer": {
+      "eyebrow": "About",
+      "heading": "Understanding Local Legislation",
+      "subtitle": "Learn about the legislative process of the Sangguniang Panlungsod",
+      "ordinances": {
+        "title": "Ordinances",
+        "description": "Local laws with permanent and general application that require compliance from residents and businesses within the city."
+      },
+      "resolutions": {
+        "title": "Resolutions",
+        "description": "Expressions of the legislative body's will or opinion on specific matters, often used for commendations, requests, or policy positions."
+      },
+      "publicParticipation": {
+        "title": "Public Participation",
+        "description": "Citizens can attend Sangguniang Panlungsod sessions and participate in public hearings for proposed ordinances."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "All enacted ordinances and resolutions are made available to the public as part of our commitment to open governance."
+      }
     }
   },
   "about": {
