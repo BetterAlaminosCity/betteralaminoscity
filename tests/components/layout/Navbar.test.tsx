@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it } from "vitest";
@@ -16,11 +16,16 @@ function renderNavbar() {
 }
 
 describe("Navbar", () => {
-  it("renders Home and About nav links", () => {
+  it("renders a Home nav link", () => {
     renderNavbar();
 
     expect(screen.getByRole("link", { name: "Home" })).toHaveAttribute("href", "/");
-    expect(screen.getByRole("link", { name: "About" })).toHaveAttribute("href", "/about");
+  });
+
+  it("does not render an About link (About lives in the footer only)", () => {
+    renderNavbar();
+
+    expect(screen.queryByRole("link", { name: "About" })).not.toBeInTheDocument();
   });
 
   it("renders a Transparency nav link pointing to the budget & fiscal transparency page", () => {
@@ -64,5 +69,73 @@ describe("Navbar", () => {
     const homeLink = screen.getAllByRole("link", { name: "Home" })[0];
     const linksContainer = homeLink.parentElement;
     expect(linksContainer).toHaveClass("flex-1", "justify-center");
+  });
+
+  describe("Legislative dropdown", () => {
+    it("renders a Legislative toggle button, collapsed by default", () => {
+      renderNavbar();
+
+      const toggle = screen.getByRole("button", { name: "Legislative" });
+      expect(toggle).toHaveAttribute("aria-expanded", "false");
+      expect(
+        screen.queryByRole("link", { name: "Ordinances & Resolutions" }),
+      ).not.toBeInTheDocument();
+    });
+
+    it("opens on click and reveals the Ordinances & Resolutions link", async () => {
+      const user = userEvent.setup();
+      renderNavbar();
+
+      await user.click(screen.getByRole("button", { name: "Legislative" }));
+
+      const toggle = screen.getByRole("button", { name: "Legislative" });
+      expect(toggle).toHaveAttribute("aria-expanded", "true");
+      expect(screen.getByRole("link", { name: "Ordinances & Resolutions" })).toHaveAttribute(
+        "href",
+        "/government/ordinances-resolutions",
+      );
+    });
+
+    it("closes when Escape is pressed", async () => {
+      const user = userEvent.setup();
+      renderNavbar();
+
+      await user.click(screen.getByRole("button", { name: "Legislative" }));
+      expect(screen.getByRole("link", { name: "Ordinances & Resolutions" })).toBeInTheDocument();
+
+      await user.keyboard("{Escape}");
+
+      expect(
+        screen.queryByRole("link", { name: "Ordinances & Resolutions" }),
+      ).not.toBeInTheDocument();
+    });
+
+    it("closes when clicking outside the dropdown", async () => {
+      const user = userEvent.setup();
+      renderNavbar();
+
+      await user.click(screen.getByRole("button", { name: "Legislative" }));
+      expect(screen.getByRole("link", { name: "Ordinances & Resolutions" })).toBeInTheDocument();
+
+      await user.click(document.body);
+
+      expect(
+        screen.queryByRole("link", { name: "Ordinances & Resolutions" }),
+      ).not.toBeInTheDocument();
+    });
+
+    it("shows Legislative and its item in the mobile menu when open", async () => {
+      const user = userEvent.setup();
+      renderNavbar();
+
+      await user.click(screen.getByRole("button", { name: "Toggle navigation menu" }));
+
+      const mobileNav = document.getElementById("mobile-nav-menu")!;
+      expect(within(mobileNav).getByText("Legislative")).toBeInTheDocument();
+      expect(screen.getByRole("link", { name: "Ordinances & Resolutions" })).toHaveAttribute(
+        "href",
+        "/government/ordinances-resolutions",
+      );
+    });
   });
 });
