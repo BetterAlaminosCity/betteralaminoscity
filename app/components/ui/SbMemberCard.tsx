@@ -43,21 +43,23 @@ export function SbMemberCard({
         <p className="text-base font-bold text-[var(--color-kapwa-text-strong)]">{name}</p>
       </div>
 
-      <div className="border-t border-[var(--color-kapwa-border-weak)] pt-3">
-        <p className="mb-2 text-[0.65rem] font-bold uppercase tracking-wide text-[var(--color-kapwa-text-support)]">
-          {committeesLabel}
-        </p>
-        <div className="flex flex-wrap gap-1.5">
-          {committees.map((committee) => (
-            <span
-              key={committee}
-              className="rounded-md border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-gray-default)] px-2 py-1 text-xs text-[var(--color-kapwa-text-strong)]"
-            >
-              {committee}
-            </span>
-          ))}
+      {committees.length > 0 && (
+        <div className="border-t border-[var(--color-kapwa-border-weak)] pt-3">
+          <p className="mb-2 text-[0.65rem] font-bold uppercase tracking-wide text-[var(--color-kapwa-text-support)]">
+            {committeesLabel}
+          </p>
+          <div className="flex flex-wrap gap-1.5">
+            {committees.map((committee) => (
+              <span
+                key={committee}
+                className="rounded-md border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-gray-default)] px-2 py-1 text-xs text-[var(--color-kapwa-text-strong)]"
+              >
+                {committee}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {hasContact && (
         <div className="flex gap-1.5 border-t border-[var(--color-kapwa-border-weak)] pt-3">

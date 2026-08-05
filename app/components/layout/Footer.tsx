@@ -53,7 +53,7 @@ export function Footer() {
           </p>
           <Link
             to="/about"
-            className="mt-3 inline-block text-sm font-medium underline underline-offset-2 hover:text-[var(--color-kapwa-text-inverse-subtle)]"
+            className="mt-3 inline-block text-sm hover:text-[var(--color-kapwa-text-inverse-subtle)]"
           >
             {t("nav.about")}
           </Link>

@@ -21,6 +21,21 @@ describe("SbMemberCard", () => {
     expect(screen.getByText("Ways & Means")).toBeInTheDocument();
   });
 
+  it("omits the committee assignments heading when there are no committees", () => {
+    render(
+      <SbMemberCard
+        name="Hon. Sample Member"
+        role="sp-member"
+        roleLabel="SP Member"
+        committeesLabel="Committee Assignments"
+        committees={[]}
+      />,
+    );
+
+    expect(screen.getByText("Hon. Sample Member")).toBeInTheDocument();
+    expect(screen.queryByText("Committee Assignments")).not.toBeInTheDocument();
+  });
+
   it("omits the contact row when no contact fields are provided", () => {
     render(
       <SbMemberCard
