@@ -2,16 +2,16 @@ import { useMemo, useState } from "react";
 import Fuse from "fuse.js";
 import { useLoaderData } from "react-router";
 
-import { DataSourceNote } from "../../components/ui/DataSourceNote";
-import { getLegislativeDocuments, type LegislativeDocument } from "../../lib/content.server";
-import { buildMeta } from "../../lib/seo";
-import type { Route } from "./+types/ordinances-resolutions";
+import { DataSourceNote } from "../components/ui/DataSourceNote";
+import { getLegislativeDocuments, type LegislativeDocument } from "../lib/content.server";
+import { buildMeta } from "../lib/seo";
+import type { Route } from "./+types/legislative";
 
 export function meta(_: Route.MetaArgs) {
   return buildMeta({
     title: "Ordinances & Resolutions",
     description: "Searchable list of Alaminos City ordinances and resolutions.",
-    path: "/government/ordinances-resolutions",
+    path: "/legislative",
   });
 }
 

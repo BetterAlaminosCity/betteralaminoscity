@@ -10,7 +10,7 @@ export default [
   route("government/:office", "routes/government/office.tsx"),
   route("government/:office/:article", "routes/government/article.tsx"),
   route("transparency", "routes/transparency.tsx"),
-  route("government/ordinances-resolutions", "routes/government/ordinances-resolutions.tsx"),
+  route("legislative", "routes/legislative.tsx"),
   route("government/statistics", "routes/government/statistics.tsx"),
   route("search", "routes/search.tsx"),
   route("403", "routes/errors/forbidden.tsx"),

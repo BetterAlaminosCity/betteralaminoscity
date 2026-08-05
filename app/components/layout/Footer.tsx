@@ -31,19 +31,16 @@ export function Footer() {
             {t("footer.exploreHeading")}
           </p>
           <ul className="mt-3 flex flex-col gap-2">
-            {SITE_NAV_LINKS.map((item) => {
-              const href = item.type === "dropdown" ? item.items[0]!.to : item.to;
-              return (
-                <li key={href}>
-                  <Link
-                    to={href}
-                    className="text-sm hover:text-[var(--color-kapwa-text-inverse-subtle)]"
-                  >
-                    {t(item.labelKey)}
-                  </Link>
-                </li>
-              );
-            })}
+            {SITE_NAV_LINKS.map((item) => (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  className="text-sm hover:text-[var(--color-kapwa-text-inverse-subtle)]"
+                >
+                  {t(item.labelKey)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 

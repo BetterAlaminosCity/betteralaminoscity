@@ -3,20 +3,18 @@ import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it } from "vitest";
 
-import OrdinancesResolutions, {
-  loader,
-} from "../../../app/routes/government/ordinances-resolutions";
+import OrdinancesResolutions, { loader } from "../../app/routes/legislative";
 
 function renderPage() {
   const router = createMemoryRouter(
     [
       {
-        path: "/government/ordinances-resolutions",
+        path: "/legislative",
         Component: OrdinancesResolutions,
         loader,
       },
     ],
-    { initialEntries: ["/government/ordinances-resolutions"] },
+    { initialEntries: ["/legislative"] },
   );
   render(<RouterProvider router={router} />);
   return router;

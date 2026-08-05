@@ -13,7 +13,7 @@ describe("STATIC_ROUTES", () => {
       "/services",
       "/government",
       "/transparency",
-      "/government/ordinances-resolutions",
+      "/legislative",
       "/government/statistics",
       "/search",
     ]);

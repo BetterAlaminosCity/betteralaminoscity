@@ -28,12 +28,12 @@ describe("Footer", () => {
     expect(screen.getByRole("link", { name: "Government" })).toHaveAttribute("href", "/government");
   });
 
-  it("renders a Legislative link in the Explore list pointing at Ordinances & Resolutions", () => {
+  it("renders a Legislative link in the Explore list pointing at the legislative page", () => {
     renderFooter();
 
     expect(screen.getByRole("link", { name: "Legislative" })).toHaveAttribute(
       "href",
-      "/government/ordinances-resolutions",
+      "/legislative",
     );
   });
 

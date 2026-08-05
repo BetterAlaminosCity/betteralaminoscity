@@ -170,7 +170,6 @@
     "services": "Mga Serbisyo",
     "government": "Pamahalaan",
     "legislative": "Lehislatibo",
-    "legislativeOrdinancesResolutions": "Mga Ordinansa at Resolusyon",
     "transparency": "Transparency",
     "menuToggle": "I-toggle ang menu ng nabigasyon"
   },
@@ -260,7 +259,6 @@
     "civicTransparency": {
       "eyebrow": "Bukas na Datos",
       "heading": "Pampublikong Transparency",
-      "ordinancesResolutions": "Mga Ordinansa at Resolusyon",
       "statisticsDemographics": "Estadistika at Demograpiya"
     }
   },
