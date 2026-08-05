@@ -185,14 +185,6 @@ export default function GovernmentIndex() {
               <ul className="mt-6 flex flex-col gap-2">
                 <li>
                   <Link
-                    to="/government/ordinances-resolutions"
-                    className="block rounded-lg border border-[var(--color-kapwa-border-weak)] px-4 py-3 font-medium text-[var(--color-kapwa-text-strong)] hover:bg-[var(--color-kapwa-bg-gray-default)]"
-                  >
-                    {t("government.civicTransparency.ordinancesResolutions")}
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/government/statistics"
                     className="block rounded-lg border border-[var(--color-kapwa-border-weak)] px-4 py-3 font-medium text-[var(--color-kapwa-text-strong)] hover:bg-[var(--color-kapwa-bg-gray-default)]"
                   >

@@ -89,16 +89,15 @@ describe("GovernmentIndex", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("links to the civic transparency pages", async () => {
+  it("links to the statistics page but not Ordinances & Resolutions (moved to the Legislative nav)", async () => {
     renderGovernmentIndex();
     expect(await screen.findByRole("heading", { name: "Civic Transparency" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Ordinances & Resolutions" })).toHaveAttribute(
-      "href",
-      "/government/ordinances-resolutions",
-    );
     expect(screen.getByRole("link", { name: "Statistics & Demographics" })).toHaveAttribute(
       "href",
       "/government/statistics",
     );
+    expect(
+      screen.queryByRole("link", { name: "Ordinances & Resolutions" }),
+    ).not.toBeInTheDocument();
   });
 });
