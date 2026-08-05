@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { describe, expect, it } from "vitest";
 
@@ -36,5 +37,27 @@ describe("Legislative landing page", () => {
       "href",
       "/legislative/resolutions",
     );
+  });
+});
+
+describe("Legislative landing page flowchart", () => {
+  it("shows the ordinance flow by default", () => {
+    renderPage();
+
+    expect(
+      screen.getByRole("heading", { name: "Flowchart for Legislative Proposal" }),
+    ).toBeInTheDocument();
+    expect(screen.getByText("File Proposed Ordinance")).toBeInTheDocument();
+    expect(screen.queryByText("File Proposed Resolution")).not.toBeInTheDocument();
+  });
+
+  it("switches to the resolution flow when its tab is clicked", async () => {
+    const user = userEvent.setup();
+    renderPage();
+
+    await user.click(screen.getByRole("button", { name: /For Resolutions/ }));
+
+    expect(screen.getByText("File Proposed Resolution")).toBeInTheDocument();
+    expect(screen.queryByText("File Proposed Ordinance")).not.toBeInTheDocument();
   });
 });

@@ -287,6 +287,86 @@
       "allYears": "All years",
       "emptyOrdinances": "No matching ordinances found.",
       "emptyResolutions": "No matching resolutions found."
+    },
+    "flowchart": {
+      "eyebrow": "Process Flow",
+      "heading": "Flowchart for Legislative Proposal",
+      "subtitle": "Step-by-step process for enacting ordinances and resolutions",
+      "ordinanceTab": "For Ordinances",
+      "resolutionTab": "For Resolutions",
+      "stepsCount": "{{count}} Steps",
+      "ordinanceSteps": {
+        "fileProposal": {
+          "title": "File Proposed Ordinance",
+          "description": "Submit the proposed ordinance to the Sangguniang Panlungsod for consideration."
+        },
+        "firstReading": {
+          "title": "First Reading / Referral to Committee",
+          "description": "Initial reading and assignment to the relevant committee for review."
+        },
+        "publicHearing": {
+          "title": "Public Hearing / Committee Action",
+          "description": "Committee conducts a public hearing and deliberates on the proposed ordinance."
+        },
+        "committeeReport": {
+          "title": "Committee Report",
+          "description": "Committee submits its findings and recommendations to the Sangguniang Panlungsod."
+        },
+        "secondReading": {
+          "title": "Second Reading",
+          "description": "Detailed discussion and debate on the proposed ordinance."
+        },
+        "thirdReading": {
+          "title": "Third and Final Reading",
+          "description": "Final voting on the proposed ordinance by the Sangguniang Panlungsod."
+        },
+        "mayorApproval": {
+          "title": "10-Day Mayor's Approval",
+          "description": "The City Mayor reviews and approves the enacted ordinance within 10 days."
+        },
+        "spSubmission": {
+          "title": "3-Day Submission to SP",
+          "description": "The approved ordinance is submitted to the Sangguniang Panlalawigan for review within 3 days."
+        },
+        "spReview": {
+          "title": "SP Review Period",
+          "description": "60-day review period for appropriation ordinances; 30-day review for others."
+        },
+        "posting": {
+          "title": "Posting / Publication",
+          "description": "Public posting and publication of the approved ordinance."
+        },
+        "implementation": {
+          "title": "Implementation",
+          "description": "The ordinance takes effect and is enforced within the city."
+        }
+      },
+      "resolutionSteps": {
+        "fileProposal": {
+          "title": "File Proposed Resolution",
+          "description": "Submit the proposed resolution to the Sangguniang Panlungsod."
+        },
+        "sessionAgenda": {
+          "title": "Inclusion in Session Agenda",
+          "description": "The resolution is scheduled for inclusion in a Sangguniang Panlungsod session."
+        },
+        "committeeApproval": {
+          "title": "Committee Meeting / Approval",
+          "description": "Committee reviews and approves the proposed resolution."
+        },
+        "finalDraft": {
+          "title": "Final Draft Printing",
+          "description": "Legislative staff prepares and prints the final draft of the resolution."
+        },
+        "officialSigning": {
+          "title": "Official Signing",
+          "description": "The Secretary to the Sanggunian and the Presiding Officer sign the resolution."
+        },
+        "postingTransmittal": {
+          "title": "Posting / Transmittal",
+          "description": "The resolution is posted publicly and transmitted to concerned parties."
+        }
+      }
     }
   },
   "about": {

@@ -287,6 +287,86 @@
       "allYears": "Lahat ng taon",
       "emptyOrdinances": "Walang nahanap na tumutugmang ordinansa.",
       "emptyResolutions": "Walang nahanap na tumutugmang resolusyon."
+    },
+    "flowchart": {
+      "eyebrow": "Daloy ng Proseso",
+      "heading": "Flowchart para sa Panukalang Batas",
+      "subtitle": "Hakbang-hakbang na proseso sa pagpapatupad ng mga ordinansa at resolusyon",
+      "ordinanceTab": "Para sa mga Ordinansa",
+      "resolutionTab": "Para sa mga Resolusyon",
+      "stepsCount": "{{count}} Hakbang",
+      "ordinanceSteps": {
+        "fileProposal": {
+          "title": "Paghahain ng Panukalang Ordinansa",
+          "description": "Isumite ang panukalang ordinansa sa Sangguniang Panlungsod para sa pagsasaalang-alang."
+        },
+        "firstReading": {
+          "title": "Unang Pagbasa / Pagpasa sa Komite",
+          "description": "Paunang pagbasa at pagtalaga sa kaukulang komite para sa pagsusuri."
+        },
+        "publicHearing": {
+          "title": "Pampublikong Pagdinig / Aksyon ng Komite",
+          "description": "Nagsasagawa ang komite ng pampublikong pagdinig at pinag-uusapan ang panukalang ordinansa."
+        },
+        "committeeReport": {
+          "title": "Ulat ng Komite",
+          "description": "Isinusumite ng komite ang mga natuklasan at rekomendasyon sa Sangguniang Panlungsod."
+        },
+        "secondReading": {
+          "title": "Ikalawang Pagbasa",
+          "description": "Detalyadong talakayan at debate sa panukalang ordinansa."
+        },
+        "thirdReading": {
+          "title": "Ikatlo at Huling Pagbasa",
+          "description": "Panghuling pagboto sa panukalang ordinansa ng Sangguniang Panlungsod."
+        },
+        "mayorApproval": {
+          "title": "10 Araw na Pag-apruba ng Alkalde",
+          "description": "Sinusuri at inaaprubahan ng Punong Lungsod ang naipasang ordinansa sa loob ng 10 araw."
+        },
+        "spSubmission": {
+          "title": "3 Araw na Pagsumite sa Sangguniang Panlalawigan",
+          "description": "Isinusumite ang naaprubahang ordinansa sa Sangguniang Panlalawigan para sa pagsusuri sa loob ng 3 araw."
+        },
+        "spReview": {
+          "title": "Panahon ng Pagsusuri ng Sangguniang Panlalawigan",
+          "description": "60 araw na pagsusuri para sa mga ordinansang pang-apropriyasyon; 30 araw para sa iba."
+        },
+        "posting": {
+          "title": "Pagpaskil / Paglathala",
+          "description": "Pampublikong pagpaskil at paglathala ng naaprubahang ordinansa."
+        },
+        "implementation": {
+          "title": "Pagpapatupad",
+          "description": "Nagkakabisa ang ordinansa at ipinatutupad sa loob ng lungsod."
+        }
+      },
+      "resolutionSteps": {
+        "fileProposal": {
+          "title": "Paghahain ng Panukalang Resolusyon",
+          "description": "Isumite ang panukalang resolusyon sa Sangguniang Panlungsod."
+        },
+        "sessionAgenda": {
+          "title": "Pagsasama sa Agenda ng Sesyon",
+          "description": "Isinasama ang resolusyon sa agenda ng isang sesyon ng Sangguniang Panlungsod."
+        },
+        "committeeApproval": {
+          "title": "Pulong ng Komite / Pag-apruba",
+          "description": "Sinusuri at inaaprubahan ng komite ang panukalang resolusyon."
+        },
+        "finalDraft": {
+          "title": "Panghuling Draft",
+          "description": "Inihahanda at ipinipirinta ng kawani ang panghuling draft ng resolusyon."
+        },
+        "officialSigning": {
+          "title": "Opisyal na Paglagda",
+          "description": "Pinipirmahan ng Kalihim ng Sanggunian at ng Tagapangulo ang resolusyon."
+        },
+        "postingTransmittal": {
+          "title": "Pagpaskil / Paghahatid",
+          "description": "Ipinapaskil nang publiko ang resolusyon at ipinapadala sa mga kinauukulan."
+        }
+      }
     }
   },
   "about": {

@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
-import { BookOpen, FileText } from "lucide-react";
+import { BookOpen, FileText, Workflow } from "lucide-react";
 
 import { PageHeader } from "../../components/ui/PageHeader";
 import { buildMeta } from "../../lib/seo";
@@ -14,8 +15,34 @@ export function meta(_: Route.MetaArgs) {
   });
 }
 
+const ORDINANCE_STEP_KEYS = [
+  "fileProposal",
+  "firstReading",
+  "publicHearing",
+  "committeeReport",
+  "secondReading",
+  "thirdReading",
+  "mayorApproval",
+  "spSubmission",
+  "spReview",
+  "posting",
+  "implementation",
+] as const;
+
+const RESOLUTION_STEP_KEYS = [
+  "fileProposal",
+  "sessionAgenda",
+  "committeeApproval",
+  "finalDraft",
+  "officialSigning",
+  "postingTransmittal",
+] as const;
+
 export default function Legislative() {
   const { t } = useTranslation();
+  const [flow, setFlow] = useState<"ordinance" | "resolution">("ordinance");
+  const stepKeys = flow === "ordinance" ? ORDINANCE_STEP_KEYS : RESOLUTION_STEP_KEYS;
+  const stepNamespace = flow === "ordinance" ? "ordinanceSteps" : "resolutionSteps";
 
   return (
     <>
@@ -61,6 +88,80 @@ export default function Legislative() {
             >
               → {t("legislative.cards.resolutionCta")}
             </Link>
+          </div>
+        </div>
+
+        <div className="mt-14 text-center">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-role-legislative-bg)] px-3 py-1 text-xs font-bold text-[var(--color-role-legislative-text)]">
+            <Workflow className="h-3.5 w-3.5" aria-hidden="true" />
+            {t("legislative.flowchart.eyebrow")}
+          </span>
+          <h2 className="mt-3 text-2xl font-extrabold text-[var(--color-kapwa-text-strong)]">
+            {t("legislative.flowchart.heading")}
+          </h2>
+          <p className="mt-1.5 text-[var(--color-kapwa-text-support)]">
+            {t("legislative.flowchart.subtitle")}
+          </p>
+
+          <div className="mt-6 inline-flex gap-1 rounded-xl border border-[var(--color-kapwa-border-weak)] p-1">
+            <button
+              type="button"
+              onClick={() => setFlow("ordinance")}
+              aria-pressed={flow === "ordinance"}
+              className={
+                flow === "ordinance"
+                  ? "rounded-lg bg-[var(--color-kapwa-bg-brand-default)] px-4 py-2 text-sm font-bold text-[var(--color-kapwa-text-inverse)]"
+                  : "rounded-lg px-4 py-2 text-sm font-bold text-[var(--color-kapwa-text-support)]"
+              }
+            >
+              {t("legislative.flowchart.ordinanceTab")}{" "}
+              <span className="opacity-70">
+                {t("legislative.flowchart.stepsCount", { count: ORDINANCE_STEP_KEYS.length })}
+              </span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setFlow("resolution")}
+              aria-pressed={flow === "resolution"}
+              className={
+                flow === "resolution"
+                  ? "rounded-lg bg-[var(--color-kapwa-bg-brand-default)] px-4 py-2 text-sm font-bold text-[var(--color-kapwa-text-inverse)]"
+                  : "rounded-lg px-4 py-2 text-sm font-bold text-[var(--color-kapwa-text-support)]"
+              }
+            >
+              {t("legislative.flowchart.resolutionTab")}{" "}
+              <span className="opacity-70">
+                {t("legislative.flowchart.stepsCount", { count: RESOLUTION_STEP_KEYS.length })}
+              </span>
+            </button>
+          </div>
+
+          <div className="mt-8 grid gap-3.5 text-left sm:grid-cols-2 lg:grid-cols-4">
+            {stepKeys.map((key, index) => {
+              const isLast = index === stepKeys.length - 1;
+              return (
+                <div
+                  key={key}
+                  className="rounded-xl border border-[var(--color-kapwa-border-weak)] p-4"
+                >
+                  <span
+                    className={
+                      isLast
+                        ? "inline-flex h-6 w-6 items-center justify-center rounded-md bg-[var(--color-kapwa-bg-success-default)] text-xs font-extrabold text-[var(--color-kapwa-text-inverse)]"
+                        : "inline-flex h-6 w-6 items-center justify-center rounded-md bg-[var(--color-kapwa-bg-brand-default)] text-xs font-extrabold text-[var(--color-kapwa-text-inverse)]"
+                    }
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-2.5 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+                    {t(`legislative.flowchart.${stepNamespace}.${key}.title`)}
+                  </h3>
+                  <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+                    {t(`legislative.flowchart.${stepNamespace}.${key}.description`)}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
