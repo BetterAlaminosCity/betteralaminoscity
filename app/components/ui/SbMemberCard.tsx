@@ -33,7 +33,7 @@ export function SbMemberCard({
   const hasContact = Boolean(phone || email || socialUrl);
 
   return (
-    <div className="flex flex-col gap-3 rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-5">
+    <div className="flex h-full flex-col gap-3 rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-5">
       <div className="flex flex-col gap-1.5">
         <span
           className={`inline-flex w-fit items-center rounded-full px-2.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide ${ROLE_PILL_CLASS[role]}`}

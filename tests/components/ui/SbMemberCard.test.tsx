@@ -4,6 +4,20 @@ import { describe, expect, it } from "vitest";
 import { SbMemberCard } from "../../../app/components/ui/SbMemberCard";
 
 describe("SbMemberCard", () => {
+  it("stretches to fill its grid cell height, so cards in a row match", () => {
+    render(
+      <SbMemberCard
+        name="Hon. Sample Member"
+        role="sp-member"
+        roleLabel="SP Member"
+        committeesLabel="Committee Chairperson"
+        committees={[]}
+      />,
+    );
+
+    expect(screen.getByText("Hon. Sample Member").closest("div.h-full")).toBeInTheDocument();
+  });
+
   it("renders the name, role pill, and committee tags", () => {
     render(
       <SbMemberCard
