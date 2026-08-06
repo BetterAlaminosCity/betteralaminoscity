@@ -487,6 +487,52 @@
     "techHeading": "Technical Specifications",
     "techBody": "This site is built with React Router, TypeScript, Tailwind CSS, and i18next, and is fully open source under the MIT License."
   },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "general": {
+      "heading": "General",
+      "hoursQuestion": "What are City Hall's office hours?",
+      "hoursAnswer": "City Hall (Quezon Avenue, Poblacion, Alaminos City) is open Monday to Friday, 8:00 AM to 5:00 PM.",
+      "directoryQuestion": "Is there a directory of office contact numbers?",
+      "directoryAnswer": "Not yet a general one — most office listings on this site don't have public contact numbers verified. For emergencies, see the Emergency Hotlines section on the homepage. For office locations and what each one handles, browse the:",
+      "directoryLinkLabel": "Government directory",
+      "onlineQuestion": "Can I complete transactions online, or do I need to go in person?",
+      "onlineAnswer": "It depends on the service. Some, like business permit applications and renewals, can be started online through the city's eLGU/eBOSS portal or the eGOV PH mobile app, in addition to the in-person option. Others, like most civil registry document requests, are handled in person at the relevant office. Check the specific:",
+      "onlineLinkLabel": "service directory"
+    },
+    "documents": {
+      "heading": "Certificates & Documents",
+      "birthCertQuestion": "How long does it take to get a birth certificate?",
+      "birthCertAnswer": "It depends on what you're requesting. A certified photocopy of an existing birth record on file with the Local Civil Registrar typically takes about 35 minutes to process; the same request made online through eLGU takes about 45 minutes. Registering a new birth on time (not a copy request) takes about 45 minutes to process. See the:",
+      "birthCertLinkLabel": "Civil Registry & Vital Records services",
+      "representativeQuestion": "Can someone else request a document on my behalf?",
+      "representativeAnswer": "Yes. Your representative will need a valid government-issued ID for both of you, plus a notarized Special Power of Attorney or Authorization Letter. If the authorization was sent by email or messenger, a printed copy with a photo of you holding the original authorization and your ID is also required.",
+      "psaQuestion": "What's the difference between a PSA copy and a local civil registrar copy?",
+      "psaAnswer": "The Local Civil Registrar's Office can issue certified photocopies of records it holds directly. Separately, the Philippine Statistics Authority (PSA) offers copies of records already on file nationally through its online Serbilis Outlets, which this office can also help you request. Which one you need depends on the purpose of the document — check with the:",
+      "psaLinkLabel": "Civil Registrar's Office"
+    },
+    "business": {
+      "heading": "Business & Permits",
+      "newBusinessQuestion": "What do I need to register a new business?",
+      "newBusinessAnswer": "Generally: a Barangay Clearance, a Community Tax Certificate, and proof of business registration — a DTI Certificate of Registration for a sole proprietorship, or an SEC registration with Articles of Incorporation for a corporation or partnership. The full requirement list (and the online eBOSS alternative) is on the:",
+      "newBusinessLinkLabel": "Business services"
+    },
+    "payments": {
+      "heading": "Payments & Fees",
+      "paymentMethodsQuestion": "How do I pay city fees?",
+      "paymentMethodsAnswer": "If you're using the online eBOSS business permit process, payment is made through QR Ph. For in-person transactions, fees are paid at the City Treasurer's Office; this site doesn't yet have verified information on which payment methods (cash, card, e-wallet) are accepted onsite — confirm with the:",
+      "paymentMethodsLinkLabel": "Treasurer's Office",
+      "propertyTaxQuestion": "When is real property tax due?",
+      "propertyTaxAnswer": "Real property tax is generally due quarterly, and a discount is typically available if you pay the full year in one go. Exact deadlines and rates are published annually by the:",
+      "propertyTaxLinkLabel": "City Treasurer's Office"
+    },
+    "social": {
+      "heading": "Social Services",
+      "seniorIdQuestion": "What do I need to apply for a Senior Citizen ID?",
+      "seniorIdAnswer": "A photocopy of your birth certificate, a valid ID, and an accomplished Personal Information Sheet from the Senior Citizen's Office. There's no fee. See the:",
+      "seniorIdLinkLabel": "Social Welfare services"
+    }
+  },
   "emergencyBar": {
     "emergencyLabel": "Emergency"
   }
