@@ -13,7 +13,7 @@ Thank you for your interest in contributing to BetterAlaminosCity.org! This civi
 ### Setup
 
 ```bash
-git clone https://github.com/ljsalcedo-dev/betteralaminoscity.git
+git clone https://github.com/BetterAlaminosCity/betteralaminoscity.git
 cd betteralaminoscity
 npm install
 npm run dev        # start the dev server
@@ -25,7 +25,7 @@ This project's `.npmrc` sets `legacy-peer-deps=true` — required because `types
 
 ### Reporting Bugs
 
-1. Check existing [issues](https://github.com/ljsalcedo-dev/betteralaminoscity/issues) to avoid duplicates
+1. Check existing [issues](https://github.com/BetterAlaminosCity/betteralaminoscity/issues) to avoid duplicates
 2. Create a new issue with:
    - Clear, descriptive title
    - Steps to reproduce

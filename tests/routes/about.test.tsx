@@ -23,11 +23,11 @@ describe("About", () => {
     renderAbout();
     expect(screen.getByRole("link", { name: "Read the Contributing Guide" })).toHaveAttribute(
       "href",
-      "https://github.com/ljsalcedo-dev/betteralaminoscity/blob/main/CONTRIBUTING.md",
+      "https://github.com/BetterAlaminosCity/betteralaminoscity/blob/main/CONTRIBUTING.md",
     );
     expect(screen.getByRole("link", { name: "Read the Code of Conduct" })).toHaveAttribute(
       "href",
-      "https://github.com/ljsalcedo-dev/betteralaminoscity/blob/main/CODE_OF_CONDUCT.md",
+      "https://github.com/BetterAlaminosCity/betteralaminoscity/blob/main/CODE_OF_CONDUCT.md",
     );
   });
 

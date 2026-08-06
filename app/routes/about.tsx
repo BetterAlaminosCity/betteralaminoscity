@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { buildMeta } from "../lib/seo";
 import type { Route } from "./+types/about";
 
-const GITHUB_URL = "https://github.com/ljsalcedo-dev/betteralaminoscity";
+const GITHUB_URL = "https://github.com/BetterAlaminosCity/betteralaminoscity";
 
 export function meta(_: Route.MetaArgs) {
   return buildMeta({
