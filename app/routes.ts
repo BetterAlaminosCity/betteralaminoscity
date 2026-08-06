@@ -19,6 +19,7 @@ export default [
   route("privacy", "routes/privacy.tsx"),
   route("accessibility", "routes/accessibility.tsx"),
   route("faq", "routes/faq.tsx"),
+  route("sitemap", "routes/sitemap.tsx"),
   route("403", "routes/errors/forbidden.tsx"),
   route("404", "routes/errors/not-found.tsx"),
   route("500", "routes/errors/server-error.tsx"),

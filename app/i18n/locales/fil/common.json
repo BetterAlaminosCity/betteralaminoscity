@@ -533,6 +533,31 @@
       "seniorIdLinkLabel": "mga serbisyo sa Social Welfare"
     }
   },
+  "sitemap": {
+    "pageHeader": {
+      "badge": "Sitemap",
+      "title": "Sitemap",
+      "subtitle": "Isang kumpletong direktoryo ng bawat pahina sa site na ito."
+    },
+    "mainPagesHeading": "Mga Pangunahing Pahina",
+    "serviceCategoriesHeading": "Mga Kategorya ng Serbisyo",
+    "governmentOfficesHeading": "Mga Tanggapan ng Pamahalaan",
+    "legislativeHeading": "Lehislatibo",
+    "legalHeading": "Legal at Suporta",
+    "home": "Pambungad",
+    "services": "Mga Serbisyo",
+    "government": "Pamahalaan",
+    "legislative": "Lehislatibo",
+    "transparency": "Transparency",
+    "about": "Patungkol",
+    "search": "Maghanap",
+    "ordinances": "Mga Ordinansa",
+    "resolutions": "Mga Resolusyon",
+    "terms": "Mga Tuntunin sa Paggamit",
+    "privacy": "Patakaran sa Privacy",
+    "accessibility": "Accessibility",
+    "faq": "Mga Madalas Itanong"
+  },
   "emergencyBar": {
     "emergencyLabel": "Emergency"
   }

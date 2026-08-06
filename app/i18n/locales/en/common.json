@@ -533,6 +533,31 @@
       "seniorIdLinkLabel": "Social Welfare services"
     }
   },
+  "sitemap": {
+    "pageHeader": {
+      "badge": "Sitemap",
+      "title": "Sitemap",
+      "subtitle": "A full directory of every page on this site."
+    },
+    "mainPagesHeading": "Main Pages",
+    "serviceCategoriesHeading": "Service Categories",
+    "governmentOfficesHeading": "Government Offices",
+    "legislativeHeading": "Legislative",
+    "legalHeading": "Legal & Support",
+    "home": "Home",
+    "services": "Services",
+    "government": "Government",
+    "legislative": "Legislative",
+    "transparency": "Transparency",
+    "about": "About",
+    "search": "Search",
+    "ordinances": "Ordinances",
+    "resolutions": "Resolutions",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "accessibility": "Accessibility",
+    "faq": "FAQ"
+  },
   "emergencyBar": {
     "emergencyLabel": "Emergency"
   }
