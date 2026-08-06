@@ -503,7 +503,7 @@
     "documents": {
       "heading": "Mga Sertipiko at Dokumento",
       "birthCertQuestion": "Gaano katagal ang pagkuha ng birth certificate?",
-      "birthCertAnswer": "Depende ito sa hinihiling mo. Ang certified photocopy ng umiiral nang birth record sa Local Civil Registrar ay karaniwang tumatagal ng humigit-kumulang 35 minuto; ang parehong hiling online sa pamamagay ng eLGU ay humigit-kumulang 45 minuto. Ang on-time na pagpaparehistro ng bagong panganganak (hindi hiling ng kopya) ay tumatagal ng humigit-kumulang 45 minuto. Tingnan ang:",
+      "birthCertAnswer": "Depende ito sa hinihiling mo. Ang certified photocopy ng umiiral nang birth record sa Local Civil Registrar ay karaniwang tumatagal ng humigit-kumulang 35 minuto; ang parehong hiling online sa pamamagitan ng eLGU ay humigit-kumulang 45 minuto. Ang on-time na pagpaparehistro ng bagong panganganak (hindi hiling ng kopya) ay tumatagal ng humigit-kumulang 45 minuto. Tingnan ang:",
       "birthCertLinkLabel": "mga serbisyo ng Civil Registry & Vital Records",
       "representativeQuestion": "Maaari bang manghiling ng dokumento ang ibang tao para sa akin?",
       "representativeAnswer": "Oo. Kakailanganin ng iyong kinatawan ang valid na government-issued ID ninyong dalawa, kasama ang notarized na Special Power of Attorney o Authorization Letter. Kung ipinadala ang awtorisasyon sa email o messenger, kailangan din ng naka-print na kopya na may larawan mo na hawak ang orihinal na awtorisasyon at ID mo.",
@@ -520,7 +520,7 @@
     "payments": {
       "heading": "Bayad at Kabayaran",
       "paymentMethodsQuestion": "Paano ako magbabayad ng bayad sa lungsod?",
-      "paymentMethodsAnswer": "Kung ginagamit mo ang online na proseso ng eBOSS para sa business permit, ang bayad ay sa pamamagay ng QR Ph. Para sa mga transaksyong personal, ang bayad ay sa City Treasurer's Office; wala pang na-verify na impormasyon ang site na ito kung anong mga paraan ng bayad (cash, card, e-wallet) ang tinatanggap sa lugar — kumpirmahin sa:",
+      "paymentMethodsAnswer": "Kung ginagamit mo ang online na proseso ng eBOSS para sa business permit, ang bayad ay sa pamamagitan ng QR Ph. Para sa mga transaksyong personal, ang bayad ay sa City Treasurer's Office; wala pang na-verify na impormasyon ang site na ito kung anong mga paraan ng bayad (cash, card, e-wallet) ang tinatanggap sa lugar — kumpirmahin sa:",
       "paymentMethodsLinkLabel": "Treasurer's Office",
       "propertyTaxQuestion": "Kailan dapat bayaran ang real property tax?",
       "propertyTaxAnswer": "Ang real property tax ay karaniwang bayaran kada quarter, at may discount na kadalasang available kung babayaran mo nang buo ang buong taon. Ang eksaktong deadline at rate ay inilalathala taun-taon ng:",
