@@ -1,4 +1,4 @@
-import { Award, Flame, Vote, Waves, type LucideIcon } from "lucide-react";
+import { Award, Flame, Waves, type LucideIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface HistoryTimelineEntry {
@@ -16,7 +16,7 @@ interface HistoryFunFact {
   description: string;
 }
 
-const FUN_FACT_ICONS: LucideIcon[] = [Flame, Award, Vote, Waves];
+const FUN_FACT_ICONS: LucideIcon[] = [Flame, Award, Waves];
 
 export function BriefHistory() {
   const { t } = useTranslation();
@@ -76,29 +76,31 @@ export function BriefHistory() {
               );
             })}
           </ol>
-          <div className="flex flex-col gap-4">
-            {funFacts.map((fact, index) => {
-              const Icon = FUN_FACT_ICONS[index];
-              return (
-                <div
-                  key={fact.title}
-                  className="rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-6"
-                >
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)]">
-                    <Icon
-                      className="h-5 w-5 text-[var(--color-kapwa-text-inverse)]"
-                      aria-hidden="true"
-                    />
-                  </span>
-                  <h3 className="mt-3 text-base font-semibold text-[var(--color-kapwa-text-strong)]">
-                    {fact.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-[var(--color-kapwa-text-support)]">
-                    {fact.description}
-                  </p>
-                </div>
-              );
-            })}
+          <div>
+            <div className="flex flex-col gap-4 lg:sticky lg:top-20">
+              {funFacts.map((fact, index) => {
+                const Icon = FUN_FACT_ICONS[index];
+                return (
+                  <div
+                    key={fact.title}
+                    className="rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-6"
+                  >
+                    <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)]">
+                      <Icon
+                        className="h-5 w-5 text-[var(--color-kapwa-text-inverse)]"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <h3 className="mt-3 text-base font-semibold text-[var(--color-kapwa-text-strong)]">
+                      {fact.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-[var(--color-kapwa-text-support)]">
+                      {fact.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <p className="mt-8 text-sm text-[var(--color-kapwa-text-support)]">
