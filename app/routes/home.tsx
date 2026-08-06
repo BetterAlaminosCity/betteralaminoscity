@@ -41,12 +41,12 @@ export default function Home() {
     <>
       <Hero popularCategories={heroPopularCategories} />
       <PopularServices categories={popularCategories} />
-      <CityAtAGlance statistics={statistics} />
-      <DiscoverHundredIslands />
-      <BriefHistory />
+      <WeatherAndMap />
       <CityLeadership mayor={mayor} legislativeHead={legislativeHead} />
       <ContactHotlines hotlines={hotlines} />
-      <WeatherAndMap />
+      <DiscoverHundredIslands />
+      <CityAtAGlance statistics={statistics} />
+      <BriefHistory />
     </>
   );
 }
