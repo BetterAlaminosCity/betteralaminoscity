@@ -447,6 +447,30 @@
     "reportingBody": "If you find inaccurate or outdated content, please open an issue describing the page and what's wrong — this helps volunteers verify and correct it:",
     "reportingLinkLabel": "our GitHub repository"
   },
+  "privacy": {
+    "heading": "Privacy Policy",
+    "intro": "BetterAlaminosCity.org respects your privacy. This policy explains what little information this site handles, in line with the Philippines' Data Privacy Act of 2012 (Republic Act No. 10173).",
+    "noAccountsHeading": "We Don't Ask You to Create an Account",
+    "noAccountsBody": "This site has no logins, accounts, or forms that collect personal information. You can browse every page, service listing, and document without providing any personal data.",
+    "serverLogsHeading": "Standard Web Server Logs",
+    "serverLogsBody": "Like virtually all websites, this site is served through a hosting provider (Vercel) that automatically logs standard technical data for every visit — such as IP address, browser type, and pages requested — for security and reliability purposes. BetterAlaminosCity.org does not separately collect, analyze, or sell this data, and this site does not run its own analytics or advertising trackers.",
+    "noSensitiveDataHeading": "No Sensitive Information Is Collected",
+    "noSensitiveDataBody": "We do not collect government IDs, health records, financial information, or any other sensitive personal information through this site.",
+    "contactHeading": "If You Contact Us",
+    "contactBody": "This project doesn't operate a monitored email inbox. If you reach out — for example, to report an error or suggest a correction — you'll do so by opening an issue on:",
+    "contactLinkLabel": "GitHub Issues",
+    "contactFollowUp": "Anything you post there is public and governed by GitHub's own Privacy Statement, not this policy.",
+    "cookiesHeading": "Cookies",
+    "cookiesBody": "This site does not set tracking or advertising cookies.",
+    "rightsHeading": "Your Rights Under the Data Privacy Act",
+    "rightsBody": "Because this site collects no personal information directly, there is no personal data for us to hold, correct, or delete on your behalf. If you have concerns about data handled by our hosting provider, you may also contact:",
+    "rightsLinkLabel": "the National Privacy Commission",
+    "changesHeading": "Changes to This Policy",
+    "changesBody": "This policy may be updated as the site evolves — for example, if a future feature introduces forms or accounts, this page will be updated to describe exactly what's collected and why.",
+    "contactFooterHeading": "Contact",
+    "contactFooterBody": "Questions about this policy can be raised via:",
+    "contactFooterLinkLabel": "GitHub Issues"
+  },
   "emergencyBar": {
     "emergencyLabel": "Emergency"
   }

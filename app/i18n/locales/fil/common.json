@@ -447,6 +447,30 @@
     "reportingBody": "Kung may nakita kang hindi tumpak o lipas na nilalaman, mangyaring magbukas ng isyu na naglalarawan sa pahina at kung ano ang mali — makakatulong ito sa mga boluntaryo na i-verify at itama ito:",
     "reportingLinkLabel": "aming GitHub repository"
   },
+  "privacy": {
+    "heading": "Patakaran sa Privacy",
+    "intro": "Iginagalang ng BetterAlaminosCity.org ang iyong privacy. Ipinapaliwanag ng patakarang ito ang kakaunting impormasyong hinahawakan ng site na ito, alinsunod sa Data Privacy Act of 2012 ng Pilipinas (Republic Act No. 10173).",
+    "noAccountsHeading": "Hindi Ka Namin Hinihiling na Gumawa ng Account",
+    "noAccountsBody": "Ang site na ito ay walang login, account, o form na kumokolekta ng personal na impormasyon. Maaari mong tingnan ang bawat pahina, listahan ng serbisyo, at dokumento nang hindi nagbibigay ng anumang personal na datos.",
+    "serverLogsHeading": "Karaniwang Log ng Web Server",
+    "serverLogsBody": "Tulad ng halos lahat ng website, ang site na ito ay pinapaservisyuhan sa pamamagitan ng isang hosting provider (Vercel) na awtomatikong nagla-log ng karaniwang teknikal na datos para sa bawat pagbisita — tulad ng IP address, uri ng browser, at mga pahinang hiniling — para sa seguridad at reliability. Hindi hiwalay na kinokolekta, sinusuri, o ibinebenta ng BetterAlaminosCity.org ang datos na ito, at hindi nagpapatakbo ang site na ito ng sarili nitong analytics o advertising tracker.",
+    "noSensitiveDataHeading": "Walang Nakokolektang Sensitibong Impormasyon",
+    "noSensitiveDataBody": "Hindi kami kumokolekta ng government ID, tala ng kalusugan, impormasyong pinansyal, o anumang iba pang sensitibong personal na impormasyon sa pamamagitan ng site na ito.",
+    "contactHeading": "Kung Makikipag-ugnayan Ka sa Amin",
+    "contactBody": "Ang proyektong ito ay walang pinamamahalaang email inbox. Kung makikipag-ugnayan ka — halimbawa, para mag-ulat ng pagkakamali o magmungkahi ng pagwawasto — gagawin mo ito sa pamamagitan ng pagbubukas ng isyu sa:",
+    "contactLinkLabel": "GitHub Issues",
+    "contactFollowUp": "Anumang ipopost mo doon ay pampubliko at sakop ng sariling Privacy Statement ng GitHub, hindi ng patakarang ito.",
+    "cookiesHeading": "Cookies",
+    "cookiesBody": "Hindi naglalagay ang site na ito ng tracking o advertising cookies.",
+    "rightsHeading": "Ang mga Karapatan Mo sa ilalim ng Data Privacy Act",
+    "rightsBody": "Dahil walang direktang personal na impormasyong kinokolekta ang site na ito, walang personal na datos na hahawakan, itatama, o buburahin namin para sa iyo. Kung may alalahanin ka tungkol sa datos na hinahawakan ng aming hosting provider, maaari ka ring makipag-ugnayan sa:",
+    "rightsLinkLabel": "National Privacy Commission",
+    "changesHeading": "Mga Pagbabago sa Patakarang Ito",
+    "changesBody": "Maaaring i-update ang patakarang ito habang umuunlad ang site — halimbawa, kung ang isang hinaharap na feature ay magpapakilala ng mga form o account, iu-update ang pahinang ito upang ilarawan nang eksakto kung ano ang kinokolekta at bakit.",
+    "contactFooterHeading": "Contact",
+    "contactFooterBody": "Ang mga tanong tungkol sa patakarang ito ay maaaring itaas sa pamamagitan ng:",
+    "contactFooterLinkLabel": "GitHub Issues"
+  },
   "emergencyBar": {
     "emergencyLabel": "Emergency"
   }
