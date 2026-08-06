@@ -472,7 +472,7 @@
     "contactFooterLinkLabel": "GitHub Issues"
   },
   "accessibility": {
-    "heading": "Accessibility",
+    "heading": "Pagiging Accessible",
     "intro": "Layunin ng BetterAlaminosCity.org na magamit ng lahat, kabilang ang mga residenteng gumagamit ng assistive technology. Itinuturing naming accessibility bilang patuloy na responsibilidad, hindi isang beses-lamang na checklist.",
     "targetHeading": "Ang Aming Target",
     "targetBody": "Dinisenyo namin ang site na ito upang matugunan ang Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. Ito ay isang target na aming pinaglalayunan, hindi isang sertipikado o independiyenteng na-audit na conformance claim — wala pang pormal na accessibility audit ang naisagawa sa site na ito.",
@@ -481,7 +481,7 @@
     "featuresBody": "Semantic HTML heading at landmark sa buong site · ARIA label sa mga interactive control tulad ng navigation menu at language switcher · responsive na layout na gumagana mula sa mobile screen hanggang desktop · ganap na bilingual na suporta sa Ingles at Filipino, para mabasa ng mga residente ang nilalaman sa wikang mas komportable sila.",
     "limitationsHeading": "Mga Kilalang Limitasyon",
     "limitationsBody": "Ang ilang naka-link na source document — tulad ng Citizen's Charter PDF at mga na-scan na ordinansa/resolusyon — ay inilathala ng pamahalaan ng lungsod sa mga format na maaaring hindi ganap na accessible sa mga screen reader; hindi namin mababago ang mga dokumentong hindi galing sa amin. Ang ilang pahina ay isinasailalim pa rin sa pag-verify laban sa opisyal na pinagmulan at maaaring may hindi kumpletong nilalaman.",
-    "feedbackHeading": "Feedback",
+    "feedbackHeading": "Puna",
     "feedbackBody": "Kung nakaranas ka ng accessibility barrier kahit saan sa site na ito, ipaalam sa amin sa pamamagitan ng pagbubukas ng isyu na naglalarawan sa pahina at ang problemang naranasan mo:",
     "feedbackLinkLabel": "aming GitHub repository",
     "techHeading": "Teknikal na Detalye",
