@@ -420,6 +420,33 @@
     "techStackHeading": "Tech Stack & Transparency",
     "techStackBody": "Built with React Router, the Kapwa civic design system, and i18next for English/Filipino translation, this site is fully open source under the MIT license and maintained by volunteers — not the Alaminos City government."
   },
+  "terms": {
+    "heading": "Terms of Use",
+    "intro": "BetterAlaminosCity.org is a volunteer-run civic project that provides free, public access to information about Alaminos City government services, offices, and legislation. By using this site, you agree to the terms below. No online system is perfectly secure or error-free, and these terms explain what you can expect from us and what we ask of you in return.",
+    "acceptanceHeading": "Acceptance of These Terms",
+    "acceptanceBody": "Using this website means you accept these Terms of Use. If you continue to use the site after changes are posted, that continued use means you accept the updated terms.",
+    "openContentHeading": "Open Content",
+    "openContentBody": "This project is open source under the MIT License. Original content created by this project — page text, layout, and code — may be freely used, shared, and adapted; crediting BetterAlaminosCity.org is appreciated as a civic courtesy but not required. Content that is reproduced or summarized from official Alaminos City government sources (such as the Citizen's Charter, ordinances, and resolutions) remains subject to whatever terms the originating government office applies to that material.",
+    "noWarrantyHeading": "No Warranty",
+    "noWarrantyBody": "Information on this site is provided \"as is,\" without warranties of any kind, express or implied, including accuracy, completeness, or fitness for a particular purpose. Government processes, fees, and requirements change; always confirm time-sensitive details with the relevant Alaminos City office before relying on them.",
+    "liabilityHeading": "Limitation of Liability",
+    "liabilityBody": "To the fullest extent permitted by law, the volunteers and contributors behind BetterAlaminosCity.org are not liable for any damages arising from your use of this site, reliance on its content, errors or omissions, or temporary unavailability of the site.",
+    "responsibilitiesHeading": "Your Responsibilities",
+    "responsibilitiesBody": "You agree to independently verify any information before acting on it, cross-check time-sensitive details (fees, requirements, deadlines) against official sources, and use this site in compliance with applicable Philippine law.",
+    "notAdviceHeading": "Not Professional Advice",
+    "notAdviceBody": "Content on this site is provided for general informational purposes only and is not legal, financial, or professional advice. Consult a qualified professional or the relevant government office for guidance specific to your situation.",
+    "externalLinksHeading": "External Links",
+    "externalLinksBody": "This site links to official government websites and other external resources to support transparency. We don't control those sites and can't guarantee they'll always be available or accurate.",
+    "availabilityHeading": "Availability",
+    "availabilityBody": "We aim to keep this site available and error-free, but we don't guarantee uninterrupted access, and functionality may vary across devices and browsers.",
+    "changesHeading": "Changes to These Terms",
+    "changesBody": "These terms may be updated from time to time without prior notice. Check this page periodically for updates.",
+    "governingLawHeading": "Governing Law",
+    "governingLawBody": "These terms are governed by the laws of the Republic of the Philippines.",
+    "reportingHeading": "Reporting an Issue",
+    "reportingBody": "If you find inaccurate or outdated content, please open an issue describing the page and what's wrong — this helps volunteers verify and correct it:",
+    "reportingLinkLabel": "our GitHub repository"
+  },
   "emergencyBar": {
     "emergencyLabel": "Emergency"
   }
