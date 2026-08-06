@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 
 import type { Official } from "../../lib/content.server";
-import { OfficialCard } from "../ui/OfficialCard";
+import { OfficialCard, type OfficialCardAccent } from "../ui/OfficialCard";
 
 interface LeadershipEntry {
   official: Official;
   href: string;
+  accent: OfficialCardAccent;
 }
 
 export function CityLeadership({
@@ -18,9 +19,9 @@ export function CityLeadership({
   const { t } = useTranslation();
 
   const entries: LeadershipEntry[] = [
-    mayor ? { official: mayor, href: "/government/office-of-the-mayor" } : null,
+    mayor ? { official: mayor, href: "/government/office-of-the-mayor", accent: "brand" } : null,
     legislativeHead
-      ? { official: legislativeHead, href: "/government/sangguniang-panlungsod" }
+      ? { official: legislativeHead, href: "/government/sangguniang-panlungsod", accent: "purple" }
       : null,
   ].filter((entry): entry is LeadershipEntry => entry !== null);
 
@@ -34,7 +35,12 @@ export function CityLeadership({
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           {entries.map((entry) => (
-            <OfficialCard key={entry.href} official={entry.official} href={entry.href} />
+            <OfficialCard
+              key={entry.href}
+              official={entry.official}
+              href={entry.href}
+              accent={entry.accent}
+            />
           ))}
         </div>
       </div>
