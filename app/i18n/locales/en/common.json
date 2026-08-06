@@ -444,8 +444,8 @@
     "governingLawHeading": "Governing Law",
     "governingLawBody": "These terms are governed by the laws of the Republic of the Philippines.",
     "reportingHeading": "Reporting an Issue",
-    "reportingBody": "If you find inaccurate or outdated content, please open an issue describing the page and what's wrong — this helps volunteers verify and correct it:",
-    "reportingLinkLabel": "our GitHub repository"
+    "reportingBody": "If you find inaccurate or outdated content, please open an issue describing the page and what's wrong — this helps volunteers verify and correct it.",
+    "reportingLinkLabel": "Report an issue on GitHub"
   },
   "privacy": {
     "heading": "Privacy Policy",
@@ -457,19 +457,19 @@
     "noSensitiveDataHeading": "No Sensitive Information Is Collected",
     "noSensitiveDataBody": "We do not collect government IDs, health records, financial information, or any other sensitive personal information through this site.",
     "contactHeading": "If You Contact Us",
-    "contactBody": "This project doesn't operate a monitored email inbox. If you reach out — for example, to report an error or suggest a correction — you'll do so by opening an issue on:",
-    "contactLinkLabel": "GitHub Issues",
+    "contactBody": "This project doesn't operate a monitored email inbox. If you reach out — for example, to report an error or suggest a correction — you'll do so by opening an issue on GitHub.",
+    "contactLinkLabel": "Open a GitHub issue",
     "contactFollowUp": "Anything you post there is public and governed by GitHub's own Privacy Statement, not this policy.",
     "cookiesHeading": "Cookies",
     "cookiesBody": "This site does not set tracking or advertising cookies.",
     "rightsHeading": "Your Rights Under the Data Privacy Act",
-    "rightsBody": "Because this site collects no personal information directly, there is no personal data for us to hold, correct, or delete on your behalf. If you have concerns about data handled by our hosting provider, you may also contact:",
-    "rightsLinkLabel": "the National Privacy Commission",
+    "rightsBody": "Because this site collects no personal information directly, there is no personal data for us to hold, correct, or delete on your behalf. If you have concerns about data handled by our hosting provider, you may also contact the National Privacy Commission.",
+    "rightsLinkLabel": "Visit the National Privacy Commission",
     "changesHeading": "Changes to This Policy",
     "changesBody": "This policy may be updated as the site evolves — for example, if a future feature introduces forms or accounts, this page will be updated to describe exactly what's collected and why.",
     "contactFooterHeading": "Contact",
-    "contactFooterBody": "Questions about this policy can be raised via:",
-    "contactFooterLinkLabel": "GitHub Issues"
+    "contactFooterBody": "Questions about this policy can be raised on GitHub.",
+    "contactFooterLinkLabel": "Open a GitHub issue"
   },
   "accessibility": {
     "heading": "Accessibility",
@@ -482,8 +482,8 @@
     "limitationsHeading": "Known Limitations",
     "limitationsBody": "Some linked source documents — such as the Citizen's Charter PDF and scanned ordinances/resolutions — are published by the city government in formats that may not be fully accessible to screen readers; we can't modify documents we don't originate. Some pages are still being verified against official sources and may contain incomplete content.",
     "feedbackHeading": "Feedback",
-    "feedbackBody": "If you run into an accessibility barrier anywhere on this site, please let us know by opening an issue describing the page and the problem you encountered:",
-    "feedbackLinkLabel": "our GitHub repository",
+    "feedbackBody": "If you run into an accessibility barrier anywhere on this site, please let us know by opening an issue describing the page and the problem you encountered.",
+    "feedbackLinkLabel": "Report an issue on GitHub",
     "techHeading": "Technical Specifications",
     "techBody": "This site is built with React Router, TypeScript, Tailwind CSS, and i18next, and is fully open source under the MIT License."
   },
@@ -494,43 +494,43 @@
       "hoursQuestion": "What are City Hall's office hours?",
       "hoursAnswer": "City Hall (Quezon Avenue, Poblacion, Alaminos City) is open Monday to Friday, 8:00 AM to 5:00 PM.",
       "directoryQuestion": "Is there a directory of office contact numbers?",
-      "directoryAnswer": "Not yet a general one — most office listings on this site don't have public contact numbers verified. For emergencies, see the Emergency Hotlines section on the homepage. For office locations and what each one handles, browse the:",
-      "directoryLinkLabel": "Government directory",
+      "directoryAnswer": "Not yet a general one — most office listings on this site don't have public contact numbers verified. For emergencies, see the Emergency Hotlines section on the homepage. For office locations and what each one handles, see the Government directory.",
+      "directoryLinkLabel": "Browse the Government directory",
       "onlineQuestion": "Can I complete transactions online, or do I need to go in person?",
-      "onlineAnswer": "It depends on the service. Some, like business permit applications and renewals, can be started online through the city's eLGU/eBOSS portal or the eGOV PH mobile app, in addition to the in-person option. Others, like most civil registry document requests, are handled in person at the relevant office. Check the specific:",
-      "onlineLinkLabel": "service directory"
+      "onlineAnswer": "It depends on the service. Some, like business permit applications and renewals, can be started online through the city's eLGU/eBOSS portal or the eGOV PH mobile app, in addition to the in-person option. Others, like most civil registry document requests, are handled in person at the relevant office. Check the specific service directory for each transaction's requirements.",
+      "onlineLinkLabel": "Browse the service directory"
     },
     "documents": {
       "heading": "Certificates & Documents",
       "birthCertQuestion": "How long does it take to get a birth certificate?",
-      "birthCertAnswer": "It depends on what you're requesting. A certified photocopy of an existing birth record on file with the Local Civil Registrar typically takes about 35 minutes to process; the same request made online through eLGU takes about 45 minutes. Registering a new birth on time (not a copy request) takes about 45 minutes to process. See the:",
-      "birthCertLinkLabel": "Civil Registry & Vital Records services",
+      "birthCertAnswer": "It depends on what you're requesting. A certified photocopy of an existing birth record on file with the Local Civil Registrar typically takes about 35 minutes to process; the same request made online through eLGU takes about 45 minutes. Registering a new birth on time (not a copy request) takes about 45 minutes to process. See the Civil Registry & Vital Records services category for full details.",
+      "birthCertLinkLabel": "Browse Civil Registry & Vital Records services",
       "representativeQuestion": "Can someone else request a document on my behalf?",
       "representativeAnswer": "Yes. Your representative will need a valid government-issued ID for both of you, plus a notarized Special Power of Attorney or Authorization Letter. If the authorization was sent by email or messenger, a printed copy with a photo of you holding the original authorization and your ID is also required.",
       "psaQuestion": "What's the difference between a PSA copy and a local civil registrar copy?",
-      "psaAnswer": "The Local Civil Registrar's Office can issue certified photocopies of records it holds directly. Separately, the Philippine Statistics Authority (PSA) offers copies of records already on file nationally through its online Serbilis Outlets, which this office can also help you request. Which one you need depends on the purpose of the document — check with the:",
-      "psaLinkLabel": "Civil Registrar's Office"
+      "psaAnswer": "The Local Civil Registrar's Office can issue certified photocopies of records it holds directly. Separately, the Philippine Statistics Authority (PSA) offers copies of records already on file nationally through its online Serbilis Outlets, which this office can also help you request. Which one you need depends on the purpose of the document — check with the Civil Registrar's Office if you're unsure.",
+      "psaLinkLabel": "Contact the Civil Registrar's Office"
     },
     "business": {
       "heading": "Business & Permits",
       "newBusinessQuestion": "What do I need to register a new business?",
-      "newBusinessAnswer": "Generally: a Barangay Clearance, a Community Tax Certificate, and proof of business registration — a DTI Certificate of Registration for a sole proprietorship, or an SEC registration with Articles of Incorporation for a corporation or partnership. The full requirement list (and the online eBOSS alternative) is on the:",
-      "newBusinessLinkLabel": "Business services"
+      "newBusinessAnswer": "Generally: a Barangay Clearance, a Community Tax Certificate, and proof of business registration — a DTI Certificate of Registration for a sole proprietorship, or an SEC registration with Articles of Incorporation for a corporation or partnership. The full requirement list (and the online eBOSS alternative) is on the Business services page.",
+      "newBusinessLinkLabel": "Browse Business services"
     },
     "payments": {
       "heading": "Payments & Fees",
       "paymentMethodsQuestion": "How do I pay city fees?",
-      "paymentMethodsAnswer": "If you're using the online eBOSS business permit process, payment is made through QR Ph. For in-person transactions, fees are paid at the City Treasurer's Office; this site doesn't yet have verified information on which payment methods (cash, card, e-wallet) are accepted onsite — confirm with the:",
-      "paymentMethodsLinkLabel": "Treasurer's Office",
+      "paymentMethodsAnswer": "If you're using the online eBOSS business permit process, payment is made through QR Ph. For in-person transactions, fees are paid at the City Treasurer's Office; this site doesn't yet have verified information on which payment methods (cash, card, e-wallet) are accepted onsite — confirm with the Treasurer's Office directly.",
+      "paymentMethodsLinkLabel": "Contact the Treasurer's Office",
       "propertyTaxQuestion": "When is real property tax due?",
-      "propertyTaxAnswer": "Real property tax is generally due quarterly, and a discount is typically available if you pay the full year in one go. Exact deadlines and rates are published annually by the:",
-      "propertyTaxLinkLabel": "City Treasurer's Office"
+      "propertyTaxAnswer": "Real property tax is generally due quarterly, and a discount is typically available if you pay the full year in one go. Exact deadlines and rates are published annually by the City Treasurer's Office.",
+      "propertyTaxLinkLabel": "Visit the City Treasurer's Office"
     },
     "social": {
       "heading": "Social Services",
       "seniorIdQuestion": "What do I need to apply for a Senior Citizen ID?",
-      "seniorIdAnswer": "A photocopy of your birth certificate, a valid ID, and an accomplished Personal Information Sheet from the Senior Citizen's Office. There's no fee. See the:",
-      "seniorIdLinkLabel": "Social Welfare services"
+      "seniorIdAnswer": "A photocopy of your birth certificate, a valid ID, and an accomplished Personal Information Sheet from the Senior Citizen's Office. There's no fee. See the Social Welfare services category for the full process.",
+      "seniorIdLinkLabel": "Browse Social Welfare services"
     }
   },
   "sitemap": {
@@ -550,6 +550,7 @@
     "legislative": "Legislative",
     "transparency": "Transparency",
     "about": "About",
+    "statistics": "Statistics",
     "search": "Search",
     "ordinances": "Ordinances",
     "resolutions": "Resolutions",

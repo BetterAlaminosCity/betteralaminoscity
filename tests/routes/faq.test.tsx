@@ -43,7 +43,7 @@ describe("Faq", () => {
 
   it("links to the Business services category from the new-business question", () => {
     renderFaq();
-    expect(screen.getByRole("link", { name: "Business services" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Browse Business services" })).toHaveAttribute(
       "href",
       "/services/business",
     );

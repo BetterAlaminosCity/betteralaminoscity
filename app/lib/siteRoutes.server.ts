@@ -11,6 +11,11 @@ export const STATIC_ROUTES: string[] = [
   "/legislative/resolutions",
   "/government/statistics",
   "/search",
+  "/terms",
+  "/privacy",
+  "/accessibility",
+  "/faq",
+  "/sitemap",
 ];
 
 export function contentPaths(domain: ContentDomain, contentRoot?: string): string[] {

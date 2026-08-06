@@ -18,6 +18,11 @@ describe("STATIC_ROUTES", () => {
       "/legislative/resolutions",
       "/government/statistics",
       "/search",
+      "/terms",
+      "/privacy",
+      "/accessibility",
+      "/faq",
+      "/sitemap",
     ]);
   });
 });

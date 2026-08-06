@@ -187,11 +187,11 @@
     "aboutBlurb": "Ang BetterAlaminosCity.org ay isang gabay na pinapatakbo ng komunidad para sa mga serbisyo ng pamahalaan ng Lungsod ng Alaminos, tahanan ng Hundred Islands National Park.",
     "quickLinksHeading": "Mabilisang Link",
     "quickLinks": {
-      "sitemap": "Sitemap",
+      "sitemap": "Direktoryo ng Site",
       "citizensCharter": "Citizen's Charter",
       "terms": "Mga Tuntunin sa Paggamit",
       "privacy": "Patakaran sa Privacy",
-      "accessibility": "Accessibility",
+      "accessibility": "Pagiging Accessible",
       "faq": "Mga Madalas Itanong"
     },
     "resourcesHeading": "Mga Rekurso",
@@ -437,15 +437,15 @@
     "notAdviceBody": "Ang nilalaman sa site na ito ay ibinibigay para sa pangkalahatang layuning pang-impormasyon lamang at hindi ito legal, pinansyal, o propesyonal na payo. Kumonsulta sa isang kwalipikadong propesyonal o sa kaukulang tanggapan ng pamahalaan para sa gabay na partikular sa iyong sitwasyon.",
     "externalLinksHeading": "Mga External na Link",
     "externalLinksBody": "Ang site na ito ay nag-uugnay sa mga opisyal na website ng pamahalaan at iba pang external na resource upang suportahan ang transparency. Hindi namin kontrolado ang mga site na iyon at hindi namin magagarantiya na palagi silang available o tumpak.",
-    "availabilityHeading": "Availability",
+    "availabilityHeading": "Pagiging Available",
     "availabilityBody": "Layunin naming panatilihing available at walang pagkakamali ang site na ito, ngunit hindi namin ginagarantiya ang tuloy-tuloy na access, at maaaring mag-iba ang functionality sa iba't ibang device at browser.",
     "changesHeading": "Mga Pagbabago sa mga Tuntuning Ito",
     "changesBody": "Maaaring i-update ang mga tuntuning ito paminsan-minsan nang walang paunang abiso. Suriin ang pahinang ito paminsan-minsan para sa mga update.",
     "governingLawHeading": "Namamahalang Batas",
     "governingLawBody": "Ang mga tuntuning ito ay pinamamahalaan ng mga batas ng Republika ng Pilipinas.",
     "reportingHeading": "Pag-uulat ng Isyu",
-    "reportingBody": "Kung may nakita kang hindi tumpak o lipas na nilalaman, mangyaring magbukas ng isyu na naglalarawan sa pahina at kung ano ang mali — makakatulong ito sa mga boluntaryo na i-verify at itama ito:",
-    "reportingLinkLabel": "aming GitHub repository"
+    "reportingBody": "Kung may nakita kang hindi tumpak o lipas na nilalaman, mangyaring magbukas ng isyu na naglalarawan sa pahina at kung ano ang mali — makakatulong ito sa mga boluntaryo na i-verify at itama ito.",
+    "reportingLinkLabel": "Mag-ulat ng isyu sa GitHub"
   },
   "privacy": {
     "heading": "Patakaran sa Privacy",
@@ -457,19 +457,19 @@
     "noSensitiveDataHeading": "Walang Nakokolektang Sensitibong Impormasyon",
     "noSensitiveDataBody": "Hindi kami kumokolekta ng government ID, tala ng kalusugan, impormasyong pinansyal, o anumang iba pang sensitibong personal na impormasyon sa pamamagitan ng site na ito.",
     "contactHeading": "Kung Makikipag-ugnayan Ka sa Amin",
-    "contactBody": "Ang proyektong ito ay walang pinamamahalaang email inbox. Kung makikipag-ugnayan ka — halimbawa, para mag-ulat ng pagkakamali o magmungkahi ng pagwawasto — gagawin mo ito sa pamamagitan ng pagbubukas ng isyu sa:",
-    "contactLinkLabel": "GitHub Issues",
+    "contactBody": "Ang proyektong ito ay walang pinamamahalaang email inbox. Kung makikipag-ugnayan ka — halimbawa, para mag-ulat ng pagkakamali o magmungkahi ng pagwawasto — gagawin mo ito sa pamamagitan ng pagbubukas ng isyu sa GitHub.",
+    "contactLinkLabel": "Magbukas ng isyu sa GitHub",
     "contactFollowUp": "Anumang ipopost mo doon ay pampubliko at sakop ng sariling Privacy Statement ng GitHub, hindi ng patakarang ito.",
     "cookiesHeading": "Cookies",
     "cookiesBody": "Hindi naglalagay ang site na ito ng tracking o advertising cookies.",
     "rightsHeading": "Ang mga Karapatan Mo sa ilalim ng Data Privacy Act",
-    "rightsBody": "Dahil walang direktang personal na impormasyong kinokolekta ang site na ito, walang personal na datos na hahawakan, itatama, o buburahin namin para sa iyo. Kung may alalahanin ka tungkol sa datos na hinahawakan ng aming hosting provider, maaari ka ring makipag-ugnayan sa:",
-    "rightsLinkLabel": "National Privacy Commission",
+    "rightsBody": "Dahil walang direktang personal na impormasyong kinokolekta ang site na ito, walang personal na datos na hahawakan, itatama, o buburahin namin para sa iyo. Kung may alalahanin ka tungkol sa datos na hinahawakan ng aming hosting provider, maaari ka ring makipag-ugnayan sa National Privacy Commission.",
+    "rightsLinkLabel": "Bisitahin ang National Privacy Commission",
     "changesHeading": "Mga Pagbabago sa Patakarang Ito",
     "changesBody": "Maaaring i-update ang patakarang ito habang umuunlad ang site — halimbawa, kung ang isang hinaharap na feature ay magpapakilala ng mga form o account, iu-update ang pahinang ito upang ilarawan nang eksakto kung ano ang kinokolekta at bakit.",
-    "contactFooterHeading": "Contact",
-    "contactFooterBody": "Ang mga tanong tungkol sa patakarang ito ay maaaring itaas sa pamamagitan ng:",
-    "contactFooterLinkLabel": "GitHub Issues"
+    "contactFooterHeading": "Makipag-ugnayan",
+    "contactFooterBody": "Ang mga tanong tungkol sa patakarang ito ay maaaring itaas sa GitHub.",
+    "contactFooterLinkLabel": "Magbukas ng isyu sa GitHub"
   },
   "accessibility": {
     "heading": "Pagiging Accessible",
@@ -482,8 +482,8 @@
     "limitationsHeading": "Mga Kilalang Limitasyon",
     "limitationsBody": "Ang ilang naka-link na source document — tulad ng Citizen's Charter PDF at mga na-scan na ordinansa/resolusyon — ay inilathala ng pamahalaan ng lungsod sa mga format na maaaring hindi ganap na accessible sa mga screen reader; hindi namin mababago ang mga dokumentong hindi galing sa amin. Ang ilang pahina ay isinasailalim pa rin sa pag-verify laban sa opisyal na pinagmulan at maaaring may hindi kumpletong nilalaman.",
     "feedbackHeading": "Puna",
-    "feedbackBody": "Kung nakaranas ka ng accessibility barrier kahit saan sa site na ito, ipaalam sa amin sa pamamagitan ng pagbubukas ng isyu na naglalarawan sa pahina at ang problemang naranasan mo:",
-    "feedbackLinkLabel": "aming GitHub repository",
+    "feedbackBody": "Kung nakaranas ka ng accessibility barrier kahit saan sa site na ito, ipaalam sa amin sa pamamagitan ng pagbubukas ng isyu na naglalarawan sa pahina at ang problemang naranasan mo.",
+    "feedbackLinkLabel": "Mag-ulat ng isyu sa GitHub",
     "techHeading": "Teknikal na Detalye",
     "techBody": "Ang site na ito ay ginawa gamit ang React Router, TypeScript, Tailwind CSS, at i18next, at ganap na open source sa ilalim ng MIT License."
   },
@@ -494,43 +494,43 @@
       "hoursQuestion": "Ano ang oras ng opisina ng City Hall?",
       "hoursAnswer": "Bukas ang City Hall (Quezon Avenue, Poblacion, Lungsod ng Alaminos) tuwing Lunes hanggang Biyernes, 8:00 AM hanggang 5:00 PM.",
       "directoryQuestion": "May direktoryo ba ng contact number ng mga tanggapan?",
-      "directoryAnswer": "Wala pang pangkalahatang direktoryo — karamihan sa mga listahan ng tanggapan sa site na ito ay wala pang na-verify na pampublikong contact number. Para sa emergency, tingnan ang seksyong Emergency Hotlines sa homepage. Para sa lokasyon ng tanggapan at kung ano ang hinahawakan ng bawat isa, tingnan ang:",
-      "directoryLinkLabel": "Direktoryo ng Pamahalaan",
+      "directoryAnswer": "Wala pang pangkalahatang direktoryo — karamihan sa mga listahan ng tanggapan sa site na ito ay wala pang na-verify na pampublikong contact number. Para sa emergency, tingnan ang seksyong Emergency Hotlines sa homepage. Para sa lokasyon ng tanggapan at kung ano ang hinahawakan ng bawat isa, tingnan ang Direktoryo ng Pamahalaan.",
+      "directoryLinkLabel": "Buksan ang Direktoryo ng Pamahalaan",
       "onlineQuestion": "Maaari ko bang gawin online ang transaksyon, o kailangan ko bang pumunta nang personal?",
-      "onlineAnswer": "Depende ito sa serbisyo. Ang ilan, tulad ng aplikasyon at renewal ng business permit, ay maaaring simulan online sa pamamagitan ng eLGU/eBOSS portal ng lungsod o ng eGOV PH mobile app, bukod sa opsyong personal. Ang iba, tulad ng karamihan sa mga hiling na dokumento ng civil registry, ay hinahawakan nang personal sa kaukulang tanggapan. Tingnan ang:",
-      "onlineLinkLabel": "direktoryo ng serbisyo"
+      "onlineAnswer": "Depende ito sa serbisyo. Ang ilan, tulad ng aplikasyon at renewal ng business permit, ay maaaring simulan online sa pamamagitan ng eLGU/eBOSS portal ng lungsod o ng eGOV PH mobile app, bukod sa opsyong personal. Ang iba, tulad ng karamihan sa mga hiling na dokumento ng civil registry, ay hinahawakan nang personal sa kaukulang tanggapan. Tingnan ang direktoryo ng serbisyo para sa mga kinakailangan ng bawat transaksyon.",
+      "onlineLinkLabel": "Buksan ang direktoryo ng serbisyo"
     },
     "documents": {
       "heading": "Mga Sertipiko at Dokumento",
       "birthCertQuestion": "Gaano katagal ang pagkuha ng birth certificate?",
-      "birthCertAnswer": "Depende ito sa hinihiling mo. Ang certified photocopy ng umiiral nang birth record sa Local Civil Registrar ay karaniwang tumatagal ng humigit-kumulang 35 minuto; ang parehong hiling online sa pamamagitan ng eLGU ay humigit-kumulang 45 minuto. Ang on-time na pagpaparehistro ng bagong panganganak (hindi hiling ng kopya) ay tumatagal ng humigit-kumulang 45 minuto. Tingnan ang:",
-      "birthCertLinkLabel": "mga serbisyo ng Civil Registry & Vital Records",
+      "birthCertAnswer": "Depende ito sa hinihiling mo. Ang certified photocopy ng umiiral nang birth record sa Local Civil Registrar ay karaniwang tumatagal ng humigit-kumulang 35 minuto; ang parehong hiling online sa pamamagitan ng eLGU ay humigit-kumulang 45 minuto. Ang on-time na pagpaparehistro ng bagong panganganak (hindi hiling ng kopya) ay tumatagal ng humigit-kumulang 45 minuto. Tingnan ang mga serbisyo ng Civil Registry & Vital Records para sa buong detalye.",
+      "birthCertLinkLabel": "Buksan ang mga serbisyo ng Civil Registry & Vital Records",
       "representativeQuestion": "Maaari bang manghiling ng dokumento ang ibang tao para sa akin?",
       "representativeAnswer": "Oo. Kakailanganin ng iyong kinatawan ang valid na government-issued ID ninyong dalawa, kasama ang notarized na Special Power of Attorney o Authorization Letter. Kung ipinadala ang awtorisasyon sa email o messenger, kailangan din ng naka-print na kopya na may larawan mo na hawak ang orihinal na awtorisasyon at ID mo.",
       "psaQuestion": "Ano ang pagkakaiba ng kopya mula sa PSA at kopya mula sa local civil registrar?",
-      "psaAnswer": "Ang Tanggapan ng Local Civil Registrar ay maaaring maglabas ng certified photocopy ng mga talang direktang hawak nito. Hiwalay dito, ang Philippine Statistics Authority (PSA) ay nag-aalok ng kopya ng mga talang nasa file na sa buong bansa sa pamamagitan ng kanilang online Serbilis Outlets, na matutulungan ka ring hilingin ng tanggapang ito. Depende sa layunin ng dokumento kung alin ang kailangan mo — tanungin ang:",
-      "psaLinkLabel": "Tanggapan ng Civil Registrar"
+      "psaAnswer": "Ang Tanggapan ng Local Civil Registrar ay maaaring maglabas ng certified photocopy ng mga talang direktang hawak nito. Hiwalay dito, ang Philippine Statistics Authority (PSA) ay nag-aalok ng kopya ng mga talang nasa file na sa buong bansa sa pamamagitan ng kanilang online Serbilis Outlets, na matutulungan ka ring hilingin ng tanggapang ito. Depende sa layunin ng dokumento kung alin ang kailangan mo — magtanong sa Tanggapan ng Civil Registrar kung hindi ka sigurado.",
+      "psaLinkLabel": "Makipag-ugnayan sa Tanggapan ng Civil Registrar"
     },
     "business": {
       "heading": "Negosyo at Permit",
       "newBusinessQuestion": "Ano ang kailangan ko para magrehistro ng bagong negosyo?",
-      "newBusinessAnswer": "Sa pangkalahatan: Barangay Clearance, Community Tax Certificate, at patunay ng rehistrasyon ng negosyo — DTI Certificate of Registration para sa sole proprietorship, o SEC registration na may Articles of Incorporation para sa korporasyon o partnership. Ang kumpletong listahan ng kinakailangan (at ang online eBOSS na alternatibo) ay nasa:",
-      "newBusinessLinkLabel": "mga serbisyo sa Negosyo"
+      "newBusinessAnswer": "Sa pangkalahatan: Barangay Clearance, Community Tax Certificate, at patunay ng rehistrasyon ng negosyo — DTI Certificate of Registration para sa sole proprietorship, o SEC registration na may Articles of Incorporation para sa korporasyon o partnership. Ang kumpletong listahan ng kinakailangan (at ang online eBOSS na alternatibo) ay nasa mga serbisyo sa Negosyo.",
+      "newBusinessLinkLabel": "Buksan ang mga serbisyo sa Negosyo"
     },
     "payments": {
       "heading": "Bayad at Kabayaran",
       "paymentMethodsQuestion": "Paano ako magbabayad ng bayad sa lungsod?",
-      "paymentMethodsAnswer": "Kung ginagamit mo ang online na proseso ng eBOSS para sa business permit, ang bayad ay sa pamamagitan ng QR Ph. Para sa mga transaksyong personal, ang bayad ay sa City Treasurer's Office; wala pang na-verify na impormasyon ang site na ito kung anong mga paraan ng bayad (cash, card, e-wallet) ang tinatanggap sa lugar — kumpirmahin sa:",
-      "paymentMethodsLinkLabel": "Treasurer's Office",
+      "paymentMethodsAnswer": "Kung ginagamit mo ang online na proseso ng eBOSS para sa business permit, ang bayad ay sa pamamagitan ng QR Ph. Para sa mga transaksyong personal, ang bayad ay sa City Treasurer's Office; wala pang na-verify na impormasyon ang site na ito kung anong mga paraan ng bayad (cash, card, e-wallet) ang tinatanggap sa lugar — kumpirmahin nang direkta sa Treasurer's Office.",
+      "paymentMethodsLinkLabel": "Makipag-ugnayan sa Treasurer's Office",
       "propertyTaxQuestion": "Kailan dapat bayaran ang real property tax?",
-      "propertyTaxAnswer": "Ang real property tax ay karaniwang bayaran kada quarter, at may discount na kadalasang available kung babayaran mo nang buo ang buong taon. Ang eksaktong deadline at rate ay inilalathala taun-taon ng:",
-      "propertyTaxLinkLabel": "City Treasurer's Office"
+      "propertyTaxAnswer": "Ang real property tax ay karaniwang bayaran kada quarter, at may discount na kadalasang available kung babayaran mo nang buo ang buong taon. Ang eksaktong deadline at rate ay inilalathala taun-taon ng City Treasurer's Office.",
+      "propertyTaxLinkLabel": "Bisitahin ang City Treasurer's Office"
     },
     "social": {
       "heading": "Serbisyong Panlipunan",
       "seniorIdQuestion": "Ano ang kailangan ko para mag-apply ng Senior Citizen ID?",
-      "seniorIdAnswer": "Photocopy ng birth certificate mo, valid ID, at nasagutang Personal Information Sheet mula sa Senior Citizen's Office. Walang bayad. Tingnan ang:",
-      "seniorIdLinkLabel": "mga serbisyo sa Social Welfare"
+      "seniorIdAnswer": "Photocopy ng birth certificate mo, valid ID, at nasagutang Personal Information Sheet mula sa Senior Citizen's Office. Walang bayad. Tingnan ang mga serbisyo sa Social Welfare para sa buong proseso.",
+      "seniorIdLinkLabel": "Buksan ang mga serbisyo sa Social Welfare"
     }
   },
   "sitemap": {
@@ -550,12 +550,13 @@
     "legislative": "Lehislatibo",
     "transparency": "Transparency",
     "about": "Patungkol",
+    "statistics": "Estadistika",
     "search": "Maghanap",
     "ordinances": "Mga Ordinansa",
     "resolutions": "Mga Resolusyon",
     "terms": "Mga Tuntunin sa Paggamit",
     "privacy": "Patakaran sa Privacy",
-    "accessibility": "Accessibility",
+    "accessibility": "Pagiging Accessible",
     "faq": "Mga Madalas Itanong"
   },
   "emergencyBar": {

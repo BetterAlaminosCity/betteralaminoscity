@@ -28,7 +28,7 @@ describe("Privacy", () => {
 
   it("links to GitHub Issues as the contact channel", () => {
     renderPrivacy();
-    const links = screen.getAllByRole("link", { name: "GitHub Issues" });
+    const links = screen.getAllByRole("link", { name: "Open a GitHub issue" });
     expect(links.length).toBeGreaterThan(0);
     for (const link of links) {
       expect(link).toHaveAttribute(

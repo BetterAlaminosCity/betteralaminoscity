@@ -70,6 +70,7 @@ export default function Sitemap() {
               { to: "/government", label: t("sitemap.government") },
               { to: "/legislative", label: t("sitemap.legislative") },
               { to: "/transparency", label: t("sitemap.transparency") },
+              { to: "/government/statistics", label: t("sitemap.statistics") },
               { to: "/about", label: t("sitemap.about") },
               { to: "/search", label: t("sitemap.search") },
             ]}

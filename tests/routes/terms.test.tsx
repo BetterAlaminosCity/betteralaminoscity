@@ -25,7 +25,7 @@ describe("Terms", () => {
 
   it("links to GitHub Issues for reporting content problems", () => {
     renderTerms();
-    expect(screen.getByRole("link", { name: "our GitHub repository" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Report an issue on GitHub" })).toHaveAttribute(
       "href",
       "https://github.com/BetterAlaminosCity/betteralaminoscity/issues",
     );
