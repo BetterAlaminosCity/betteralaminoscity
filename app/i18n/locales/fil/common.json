@@ -286,7 +286,11 @@
       "yearLabel": "Taon",
       "allYears": "Lahat ng taon",
       "emptyOrdinances": "Walang nahanap na tumutugmang ordinansa.",
-      "emptyResolutions": "Walang nahanap na tumutugmang resolusyon."
+      "emptyResolutions": "Walang nahanap na tumutugmang resolusyon.",
+      "numberHeader": "Blg.",
+      "titleHeader": "Pamagat",
+      "dateHeader": "Petsa",
+      "statusHeader": "Katayuan"
     },
     "flowchart": {
       "eyebrow": "Daloy ng Proseso",

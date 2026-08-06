@@ -286,7 +286,11 @@
       "yearLabel": "Year",
       "allYears": "All years",
       "emptyOrdinances": "No matching ordinances found.",
-      "emptyResolutions": "No matching resolutions found."
+      "emptyResolutions": "No matching resolutions found.",
+      "numberHeader": "No.",
+      "titleHeader": "Title",
+      "dateHeader": "Date",
+      "statusHeader": "Status"
     },
     "flowchart": {
       "eyebrow": "Process Flow",

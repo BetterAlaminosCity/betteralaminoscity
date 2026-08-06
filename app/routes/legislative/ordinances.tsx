@@ -35,7 +35,7 @@ export default function LegislativeOrdinances() {
         title={t("legislative.browse.ordinancesTitle")}
         subtitle={t("legislative.browse.ordinancesSubtitle")}
       />
-      <div className="mx-auto max-w-3xl px-4 py-16">
+      <div className="mx-auto max-w-4xl px-4 py-16">
         <LegislativeDocumentList
           documents={documents}
           lastUpdated={lastUpdated}
@@ -45,6 +45,10 @@ export default function LegislativeOrdinances() {
           yearLabel={t("legislative.browse.yearLabel")}
           allYearsLabel={t("legislative.browse.allYears")}
           emptyMessage={t("legislative.browse.emptyOrdinances")}
+          numberHeader={t("legislative.browse.numberHeader")}
+          titleHeader={t("legislative.browse.titleHeader")}
+          dateHeader={t("legislative.browse.dateHeader")}
+          statusHeader={t("legislative.browse.statusHeader")}
         />
       </div>
     </>

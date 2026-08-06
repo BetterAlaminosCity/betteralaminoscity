@@ -35,7 +35,7 @@ export default function LegislativeResolutions() {
         title={t("legislative.browse.resolutionsTitle")}
         subtitle={t("legislative.browse.resolutionsSubtitle")}
       />
-      <div className="mx-auto max-w-3xl px-4 py-16">
+      <div className="mx-auto max-w-4xl px-4 py-16">
         <LegislativeDocumentList
           documents={documents}
           lastUpdated={lastUpdated}
@@ -45,6 +45,10 @@ export default function LegislativeResolutions() {
           yearLabel={t("legislative.browse.yearLabel")}
           allYearsLabel={t("legislative.browse.allYears")}
           emptyMessage={t("legislative.browse.emptyResolutions")}
+          numberHeader={t("legislative.browse.numberHeader")}
+          titleHeader={t("legislative.browse.titleHeader")}
+          dateHeader={t("legislative.browse.dateHeader")}
+          statusHeader={t("legislative.browse.statusHeader")}
         />
       </div>
     </>

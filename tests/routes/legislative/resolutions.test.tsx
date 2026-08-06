@@ -24,12 +24,17 @@ function renderPage() {
   );
 }
 
+function dataRows() {
+  // getAllByRole("row") includes the header row, so data rows are one fewer.
+  return screen.getAllByRole("row").slice(1);
+}
+
 describe("LegislativeResolutions", () => {
   it("lists only the seeded resolutions by default", async () => {
     renderPage();
 
     expect(await screen.findByRole("heading", { name: "Resolutions" })).toBeInTheDocument();
-    expect(screen.getAllByRole("listitem")).toHaveLength(3);
+    expect(dataRows()).toHaveLength(3);
     expect(screen.queryByText(/Single-Use Plastics/)).not.toBeInTheDocument();
   });
 
@@ -40,7 +45,7 @@ describe("LegislativeResolutions", () => {
 
     await user.selectOptions(screen.getByLabelText("Year"), "2024");
 
-    expect(screen.getAllByRole("listitem")).toHaveLength(1);
+    expect(dataRows()).toHaveLength(1);
     expect(screen.getByText(/Annual Investment Program/)).toBeInTheDocument();
   });
 
@@ -51,7 +56,7 @@ describe("LegislativeResolutions", () => {
 
     await user.type(screen.getByPlaceholderText("Search by title or number"), "Coastal");
 
-    expect(screen.getAllByRole("listitem")).toHaveLength(1);
+    expect(dataRows()).toHaveLength(1);
     expect(screen.getByText(/Coastal Road Rehabilitation/)).toBeInTheDocument();
   });
 });

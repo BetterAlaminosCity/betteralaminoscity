@@ -37,14 +37,23 @@ function renderList(documents = DOCUMENTS) {
       yearLabel="Year"
       allYearsLabel="All years"
       emptyMessage="No matching ordinances found."
+      numberHeader="No."
+      titleHeader="Title"
+      dateHeader="Date"
+      statusHeader="Status"
     />,
   );
+}
+
+function dataRows() {
+  // getAllByRole("row") includes the header row, so data rows are one fewer.
+  return screen.getAllByRole("row").slice(1);
 }
 
 describe("LegislativeDocumentList", () => {
   it("lists all documents by default", () => {
     renderList();
-    expect(screen.getAllByRole("listitem")).toHaveLength(2);
+    expect(dataRows()).toHaveLength(2);
   });
 
   it("filters by keyword", async () => {
@@ -53,7 +62,7 @@ describe("LegislativeDocumentList", () => {
 
     await user.type(screen.getByPlaceholderText("Search by title or number"), "Plastics");
 
-    expect(screen.getAllByRole("listitem")).toHaveLength(1);
+    expect(dataRows()).toHaveLength(1);
     expect(screen.getByText(/Single-Use Plastics/)).toBeInTheDocument();
   });
 
@@ -63,7 +72,7 @@ describe("LegislativeDocumentList", () => {
 
     await user.selectOptions(screen.getByLabelText("Year"), "2024");
 
-    expect(screen.getAllByRole("listitem")).toHaveLength(1);
+    expect(dataRows()).toHaveLength(1);
     expect(screen.getByText(/Single-Use Plastics/)).toBeInTheDocument();
   });
 
@@ -74,6 +83,22 @@ describe("LegislativeDocumentList", () => {
     await user.type(screen.getByPlaceholderText("Search by title or number"), "zzz-no-match");
 
     expect(screen.getByText("No matching ordinances found.")).toBeInTheDocument();
-    expect(screen.queryAllByRole("listitem")).toHaveLength(0);
+    expect(screen.queryByRole("table")).not.toBeInTheDocument();
+  });
+
+  it("opens document links in a new tab", () => {
+    renderList();
+
+    expect(
+      screen.getByRole("link", {
+        name: "Ordinance Establishing a City Environmental Protection Code",
+      }),
+    ).toHaveAttribute("target", "_blank");
+  });
+
+  it("shows a status badge for each document", () => {
+    renderList();
+
+    expect(screen.getAllByText("Enacted")).toHaveLength(2);
   });
 });
