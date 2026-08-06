@@ -185,9 +185,29 @@
   },
   "footer": {
     "aboutBlurb": "BetterAlaminosCity.org is a community-run guide to Alaminos City government services, home of the Hundred Islands National Park.",
-    "aboutHeading": "Resources",
-    "exploreHeading": "Explore",
-    "githubLink": "View source on GitHub",
+    "quickLinksHeading": "Quick Links",
+    "quickLinks": {
+      "sitemap": "Sitemap",
+      "citizensCharter": "Citizen's Charter",
+      "terms": "Terms of Use",
+      "privacy": "Privacy Policy",
+      "accessibility": "Accessibility",
+      "faq": "FAQ"
+    },
+    "resourcesHeading": "Resources",
+    "resourcesLinks": {
+      "openData": "Open Data Philippines",
+      "foi": "Freedom of Information",
+      "officialWebsite": "Official Alaminos City Website",
+      "facebook": "LGU Alaminos City Facebook",
+      "blgf": "BLGF Portal",
+      "cmciDti": "CMCI DTI Portal"
+    },
+    "supportHeading": "Get Involved",
+    "costLabel": "Cost to the People of Alaminos City",
+    "costValue": "₱0.00",
+    "githubLink": "Contribute Code With Us",
+    "bettergovAlt": "BetterGov.ph",
     "copyright": "© {{year}} BetterAlaminosCity.org · MIT Licensed"
   },
   "services": {
