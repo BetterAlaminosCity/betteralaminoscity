@@ -471,6 +471,22 @@
     "contactFooterBody": "Questions about this policy can be raised via:",
     "contactFooterLinkLabel": "GitHub Issues"
   },
+  "accessibility": {
+    "heading": "Accessibility",
+    "intro": "BetterAlaminosCity.org aims to be usable by everyone, including residents using assistive technology. We treat accessibility as an ongoing responsibility, not a one-time checklist.",
+    "targetHeading": "Our Target",
+    "targetBody": "We design this site to meet the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. This is a target we build toward, not a certified or independently audited conformance claim — no formal accessibility audit of this site has been conducted yet.",
+    "targetLinkLabel": "Web Content Accessibility Guidelines (WCAG) 2.1 Level AA",
+    "featuresHeading": "What We Build For",
+    "featuresBody": "Semantic HTML headings and landmarks throughout the site · ARIA labels on interactive controls like the navigation menu and language switcher · a responsive layout that works from mobile screens up to desktop · full bilingual support in English and Filipino, so residents can read content in whichever language they're more comfortable with.",
+    "limitationsHeading": "Known Limitations",
+    "limitationsBody": "Some linked source documents — such as the Citizen's Charter PDF and scanned ordinances/resolutions — are published by the city government in formats that may not be fully accessible to screen readers; we can't modify documents we don't originate. Some pages are still being verified against official sources and may contain incomplete content.",
+    "feedbackHeading": "Feedback",
+    "feedbackBody": "If you run into an accessibility barrier anywhere on this site, please let us know by opening an issue describing the page and the problem you encountered:",
+    "feedbackLinkLabel": "our GitHub repository",
+    "techHeading": "Technical Specifications",
+    "techBody": "This site is built with React Router, TypeScript, Tailwind CSS, and i18next, and is fully open source under the MIT License."
+  },
   "emergencyBar": {
     "emergencyLabel": "Emergency"
   }
