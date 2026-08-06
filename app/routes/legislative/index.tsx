@@ -153,10 +153,10 @@ export default function Legislative() {
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-2.5 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+                  <h3 className="mt-2.5 text-base font-semibold text-[var(--color-kapwa-text-strong)]">
                     {t(`legislative.flowchart.${stepNamespace}.${key}.title`)}
                   </h3>
-                  <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+                  <p className="mt-1 text-sm text-[var(--color-kapwa-text-support)]">
                     {t(`legislative.flowchart.${stepNamespace}.${key}.description`)}
                   </p>
                 </div>
@@ -182,10 +182,10 @@ export default function Legislative() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)] text-[var(--color-kapwa-text-inverse)]">
                 <BookOpen className="h-4 w-4" aria-hidden="true" />
               </div>
-              <h3 className="mt-3 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+              <h3 className="mt-3 text-base font-semibold text-[var(--color-kapwa-text-strong)]">
                 {t("legislative.explainer.ordinances.title")}
               </h3>
-              <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+              <p className="mt-1 text-sm text-[var(--color-kapwa-text-support)]">
                 {t("legislative.explainer.ordinances.description")}
               </p>
             </div>
@@ -194,10 +194,10 @@ export default function Legislative() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)] text-[var(--color-kapwa-text-inverse)]">
                 <FileText className="h-4 w-4" aria-hidden="true" />
               </div>
-              <h3 className="mt-3 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+              <h3 className="mt-3 text-base font-semibold text-[var(--color-kapwa-text-strong)]">
                 {t("legislative.explainer.resolutions.title")}
               </h3>
-              <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+              <p className="mt-1 text-sm text-[var(--color-kapwa-text-support)]">
                 {t("legislative.explainer.resolutions.description")}
               </p>
             </div>
@@ -206,10 +206,10 @@ export default function Legislative() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)] text-[var(--color-kapwa-text-inverse)]">
                 <Users className="h-4 w-4" aria-hidden="true" />
               </div>
-              <h3 className="mt-3 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+              <h3 className="mt-3 text-base font-semibold text-[var(--color-kapwa-text-strong)]">
                 {t("legislative.explainer.publicParticipation.title")}
               </h3>
-              <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+              <p className="mt-1 text-sm text-[var(--color-kapwa-text-support)]">
                 {t("legislative.explainer.publicParticipation.description")}
               </p>
             </div>
@@ -218,10 +218,10 @@ export default function Legislative() {
               <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-kapwa-bg-brand-default)] text-[var(--color-kapwa-text-inverse)]">
                 <ShieldCheck className="h-4 w-4" aria-hidden="true" />
               </div>
-              <h3 className="mt-3 text-sm font-bold text-[var(--color-kapwa-text-strong)]">
+              <h3 className="mt-3 text-base font-semibold text-[var(--color-kapwa-text-strong)]">
                 {t("legislative.explainer.transparency.title")}
               </h3>
-              <p className="mt-1 text-xs text-[var(--color-kapwa-text-support)]">
+              <p className="mt-1 text-sm text-[var(--color-kapwa-text-support)]">
                 {t("legislative.explainer.transparency.description")}
               </p>
             </div>
