@@ -180,9 +180,9 @@ export function Footer() {
           </a>
           <a href={BETTERGOV_URL} target="_blank" rel="noreferrer" className="mt-4 inline-block">
             <img
-              src="/logos/bettergov-horizontal-white.svg"
+              src="/logos/bettergov-icon-white.svg"
               alt={t("footer.bettergovAlt")}
-              className="h-6 w-auto opacity-90 hover:opacity-100"
+              className="h-8 w-8 opacity-90 hover:opacity-100"
             />
           </a>
         </div>
