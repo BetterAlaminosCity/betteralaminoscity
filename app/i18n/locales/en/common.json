@@ -125,7 +125,8 @@
           "description": "The Hundred Islands, off the coast of Barangay Lucap, were declared the country's first national park by President Manuel L. Quezon in 1940."
         }
       ],
-      "sourceLine": "Sources: City Government of Alaminos; Philippine government records."
+      "sourceLabel": "Sources:",
+      "sourceCityLink": "City Government of Alaminos"
     },
     "leadership": {
       "heading": "City Leadership"

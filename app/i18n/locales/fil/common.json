@@ -125,7 +125,8 @@
           "description": "Idineklara ni Pangulong Manuel L. Quezon ang Hundred Islands, sa look ng Barangay Lucap, bilang unang pambansang parke ng bansa noong 1940."
         }
       ],
-      "sourceLine": "Mga Pinagmulan: Pamahalaang Lungsod ng Alaminos; mga tala ng pamahalaan ng Pilipinas."
+      "sourceLabel": "Mga Pinagmulan:",
+      "sourceCityLink": "Pamahalaang Lungsod ng Alaminos"
     },
     "leadership": {
       "heading": "Pamunuan ng Lungsod"

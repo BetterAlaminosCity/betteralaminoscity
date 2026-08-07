@@ -43,16 +43,19 @@ describe("BriefHistory", () => {
     expect(screen.getByText(/burned down in 1758/)).toBeInTheDocument();
   });
 
-  it("renders the source attribution line", () => {
+  it("renders the source attribution line with a link to the city government's history page", () => {
     render(
       <I18nProvider>
         <BriefHistory />
       </I18nProvider>,
     );
 
-    expect(
-      screen.getByText("Sources: City Government of Alaminos; Philippine government records."),
-    ).toBeInTheDocument();
+    const link = screen.getByRole("link", { name: "City Government of Alaminos" });
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute(
+      "href",
+      "https://www.alaminoscity.gov.ph/discover-alaminos/local-history.html",
+    );
   });
 
   it("uses a gray section background for contrast with adjacent sections", () => {

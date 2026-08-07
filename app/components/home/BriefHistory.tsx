@@ -1,6 +1,9 @@
 import { Award, Flame, Waves, type LucideIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+const ALAMINOS_LOCAL_HISTORY_URL =
+  "https://www.alaminoscity.gov.ph/discover-alaminos/local-history.html";
+
 interface HistoryTimelineEntry {
   year: string;
   text: string;
@@ -104,7 +107,16 @@ export function BriefHistory() {
           </div>
         </div>
         <p className="mt-8 text-sm text-[var(--color-kapwa-text-support)]">
-          {t("home.history.sourceLine")}
+          {t("home.history.sourceLabel")}{" "}
+          <a
+            href={ALAMINOS_LOCAL_HISTORY_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="underline hover:text-[var(--color-kapwa-text-strong)]"
+          >
+            {t("home.history.sourceCityLink")}
+          </a>
+          .
         </p>
       </div>
     </section>
