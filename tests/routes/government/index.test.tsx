@@ -86,6 +86,7 @@ describe("GovernmentIndex", () => {
     expect(screen.getByText(/Punong Barangay · Nardenio D\. Castro Jr\./)).toBeInTheDocument();
     expect(screen.getByText("Poblacion")).toBeInTheDocument();
     expect(screen.getByText(/Punong Barangay · German U\. Rabago/)).toBeInTheDocument();
+    expect(screen.getByText(/DILG Barangay Officials Directory/)).toBeInTheDocument();
   });
 
   it("renders the seeded Sangguniang Panlungsod roster under Legislative Branch", async () => {

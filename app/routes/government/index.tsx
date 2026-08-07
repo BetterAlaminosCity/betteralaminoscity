@@ -15,6 +15,7 @@ import { LeadershipCard } from "../../components/ui/LeadershipCard";
 import { SbMemberCard } from "../../components/ui/SbMemberCard";
 import { DepartmentCard } from "../../components/ui/DepartmentCard";
 import { JumpToSectionNav } from "../../components/ui/JumpToSectionNav";
+import { DataSourceNote } from "../../components/ui/DataSourceNote";
 import type { Route } from "./+types/index";
 
 export function meta(_: Route.MetaArgs) {
@@ -189,6 +190,14 @@ export default function GovernmentIndex() {
               <p className="mt-1.5 text-[var(--color-kapwa-text-support)]">
                 {t("government.barangayOfficialsSubtitle")}
               </p>
+              {barangayOfficials && (
+                <div className="mt-4">
+                  <DataSourceNote
+                    lastUpdated={barangayOfficials.lastUpdated}
+                    source={barangayOfficials.source}
+                  />
+                </div>
+              )}
               <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {barangayOfficials?.officials.map((official) => (
                   <li
