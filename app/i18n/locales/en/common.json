@@ -251,6 +251,9 @@
     "legislativeEyebrow": "Lawmakers",
     "legislativeSubtitle": "Sangguniang Panlungsod members and sectoral representatives, presided by the Vice Mayor.",
     "legislativeEmptyState": "Sangguniang Panlungsod member profiles will be published here in a future update to this site.",
+    "barangayOfficialsEyebrow": "Local Leaders",
+    "barangayOfficials": "Barangay Officials",
+    "barangayOfficialsSubtitle": "Punong Barangay for each of Alaminos City's 39 barangays.",
     "viewOffice": "View office",
     "viceMayorRoleSuffix": "Presiding Officer, SP",
     "committeeAssignments": "Committee Chairperson",
@@ -271,6 +274,7 @@
       "executive": "Executive Branch",
       "legislative": "Legislative Branch",
       "departments": "Departments & Key Offices",
+      "barangayOfficials": "Barangay Officials",
       "transparency": "Civic Transparency"
     },
     "civicTransparency": {

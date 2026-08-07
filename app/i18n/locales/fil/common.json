@@ -251,6 +251,9 @@
     "legislativeEyebrow": "Mga Mambabatas",
     "legislativeSubtitle": "Mga miyembro ng Sangguniang Panlungsod at mga kinatawang sektoral, na pinamumunuan ng Bise Alkalde.",
     "legislativeEmptyState": "Ilalathala dito ang mga profile ng miyembro ng Sangguniang Panlungsod sa hinaharap na update ng site na ito.",
+    "barangayOfficialsEyebrow": "Mga Lokal na Lider",
+    "barangayOfficials": "Mga Opisyal ng Barangay",
+    "barangayOfficialsSubtitle": "Punong Barangay ng bawat isa sa 39 barangay ng Lungsod ng Alaminos.",
     "viewOffice": "Tingnan ang tanggapan",
     "viceMayorRoleSuffix": "Namumunong Opisyal, SP",
     "committeeAssignments": "Chairperson ng Komite",
@@ -271,6 +274,7 @@
       "executive": "Sangay Tagapagpaganap",
       "legislative": "Sangay Lehislatibo",
       "departments": "Mga Tanggapan at Sangay",
+      "barangayOfficials": "Mga Opisyal ng Barangay",
       "transparency": "Pampublikong Transparency"
     },
     "civicTransparency": {
