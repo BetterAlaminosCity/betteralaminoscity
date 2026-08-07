@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router";
 import { useTranslation } from "react-i18next";
 
 import {
+  getBarangayOfficials,
   getOfficial,
   getSbMembers,
   listCategories,
@@ -32,18 +33,21 @@ export function loader() {
     .filter((office) => office.branch === "executive" && office.slug !== "office-of-the-mayor")
     .map((office) => ({ ...office, official: getOfficial(office.slug) }));
   const sbMembers = getSbMembers();
+  const barangayOfficials = getBarangayOfficials();
 
-  return { mayor, viceMayor, departments, sbMembers };
+  return { mayor, viceMayor, departments, sbMembers, barangayOfficials };
 }
 
 export default function GovernmentIndex() {
-  const { mayor, viceMayor, departments, sbMembers } = useLoaderData<typeof loader>();
+  const { mayor, viceMayor, departments, sbMembers, barangayOfficials } =
+    useLoaderData<typeof loader>();
   const { t } = useTranslation();
 
   const jumpLinks = [
     { id: "executive", label: t("government.jumpToSection.executive") },
     { id: "legislative", label: t("government.jumpToSection.legislative") },
     { id: "departments", label: t("government.jumpToSection.departments") },
+    { id: "barangay-officials", label: t("government.jumpToSection.barangayOfficials") },
     { id: "transparency", label: t("government.jumpToSection.transparency") },
   ];
 
@@ -170,6 +174,33 @@ export default function GovernmentIndex() {
                       href={`/government/${office.slug}`}
                       linkLabel={t("government.viewOffice")}
                     />
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section id="barangay-officials" className="scroll-mt-24 pb-16">
+              <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-[var(--color-kapwa-text-brand)]">
+                {t("government.barangayOfficialsEyebrow")}
+              </p>
+              <h2 className="text-2xl font-bold text-[var(--color-kapwa-text-strong)]">
+                {t("government.barangayOfficials")}
+              </h2>
+              <p className="mt-1.5 text-[var(--color-kapwa-text-support)]">
+                {t("government.barangayOfficialsSubtitle")}
+              </p>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {barangayOfficials?.officials.map((official) => (
+                  <li
+                    key={official.barangay}
+                    className="rounded-lg border border-[var(--color-kapwa-border-weak)] px-4 py-3"
+                  >
+                    <p className="font-bold text-[var(--color-kapwa-text-strong)]">
+                      {official.barangay}
+                    </p>
+                    <p className="text-sm text-[var(--color-kapwa-text-support)]">
+                      Punong Barangay · {official.name}
+                    </p>
                   </li>
                 ))}
               </ul>

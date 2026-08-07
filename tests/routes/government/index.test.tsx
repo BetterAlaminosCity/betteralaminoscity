@@ -39,6 +39,10 @@ describe("GovernmentIndex", () => {
       "href",
       "#departments",
     );
+    expect(screen.getByRole("link", { name: "Barangay Officials" })).toHaveAttribute(
+      "href",
+      "#barangay-officials",
+    );
     expect(screen.getByRole("link", { name: "Civic Transparency" })).toHaveAttribute(
       "href",
       "#transparency",
@@ -73,6 +77,15 @@ describe("GovernmentIndex", () => {
       "href",
       "/government/civil-registrars-office",
     );
+  });
+
+  it("renders the Barangay Officials roster under Barangay Officials", async () => {
+    renderGovernmentIndex();
+    expect(await screen.findByRole("heading", { name: "Barangay Officials" })).toBeInTheDocument();
+    expect(screen.getByText("Alos")).toBeInTheDocument();
+    expect(screen.getByText(/Punong Barangay · Nardenio D\. Castro Jr\./)).toBeInTheDocument();
+    expect(screen.getByText("Poblacion")).toBeInTheDocument();
+    expect(screen.getByText(/Punong Barangay · German U\. Rabago/)).toBeInTheDocument();
   });
 
   it("renders the seeded Sangguniang Panlungsod roster under Legislative Branch", async () => {
