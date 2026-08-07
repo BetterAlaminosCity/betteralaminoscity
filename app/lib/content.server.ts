@@ -129,6 +129,7 @@ export const CIVIC_DATA_SLUGS = new Set([
   "ordinances-resolutions",
   "statistics",
   "emergency-hotlines",
+  "barangay-officials",
 ]);
 
 const DEFAULT_CONTENT_ROOT = path.join(process.cwd(), "content");
@@ -305,4 +306,21 @@ export function getSbMembers(contentRoot: string = DEFAULT_CONTENT_ROOT): SbMemb
   const filePath = path.join(contentRoot, "government", "sangguniang-panlungsod", "members.json");
   if (!fs.existsSync(filePath)) return null;
   return JSON.parse(fs.readFileSync(filePath, "utf-8")) as SbMembersData;
+}
+
+export interface BarangayOfficial {
+  barangay: string;
+  name: string;
+}
+
+export interface BarangayOfficials extends DataSourceMeta {
+  officials: BarangayOfficial[];
+}
+
+export function getBarangayOfficials(
+  contentRoot: string = DEFAULT_CONTENT_ROOT,
+): BarangayOfficials | null {
+  const filePath = path.join(contentRoot, "government", "barangay-officials", "officials.json");
+  if (!fs.existsSync(filePath)) return null;
+  return JSON.parse(fs.readFileSync(filePath, "utf-8")) as BarangayOfficials;
 }

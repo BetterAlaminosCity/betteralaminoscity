@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   getCityStatistics,
   getFiscalTransparency,
+  getBarangayOfficials,
   getLegislativeDocuments,
   getSbMembers,
   listCategories,
@@ -21,6 +22,14 @@ describe("real content tree", () => {
     expect(sbMembers?.members.filter((m) => m.role === "liga-president")).toHaveLength(1);
     expect(sbMembers?.members.filter((m) => m.role === "sk-president")).toHaveLength(1);
     expect(sbMembers?.members.filter((m) => m.role === "secretary")).toHaveLength(1);
+  });
+
+  it("has the seeded Barangay Officials roster of 39 officials", () => {
+    const barangayOfficials = getBarangayOfficials("content");
+    expect(barangayOfficials?.officials).toHaveLength(39);
+    expect(barangayOfficials?.officials.find((o) => o.barangay === "Poblacion")?.name).toBe(
+      "German U. Rabago",
+    );
   });
 
   it("has all 17 seeded service categories", () => {

@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import {
   getArticle,
   getArticleTranslations,
+  getBarangayOfficials,
   getCategory,
   getCategoryTranslations,
   getCityStatistics,
@@ -144,13 +145,27 @@ describe("getHotlines", () => {
   });
 });
 
+describe("getBarangayOfficials", () => {
+  it("returns the barangay officials data", () => {
+    const data = getBarangayOfficials(FIXTURE_ROOT);
+    expect(data?.officials.find((o) => o.barangay === "Sample Barangay")?.name).toBe(
+      "Sample Official",
+    );
+  });
+
+  it("returns null when no officials.json exists", () => {
+    expect(getBarangayOfficials(EMPTY_FIXTURE_ROOT)).toBeNull();
+  });
+});
+
 describe("listCategories excludes civic data folders", () => {
-  it("does not include transparency-documents, ordinances-resolutions, statistics, or emergency-hotlines as government categories", () => {
+  it("does not include transparency-documents, ordinances-resolutions, statistics, emergency-hotlines, or barangay-officials as government categories", () => {
     const slugs = listCategories("government", FIXTURE_ROOT).map((category) => category.slug);
     expect(slugs).not.toContain("transparency-documents");
     expect(slugs).not.toContain("ordinances-resolutions");
     expect(slugs).not.toContain("statistics");
     expect(slugs).not.toContain("emergency-hotlines");
+    expect(slugs).not.toContain("barangay-officials");
   });
 });
 
