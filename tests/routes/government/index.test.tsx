@@ -83,9 +83,9 @@ describe("GovernmentIndex", () => {
     renderGovernmentIndex();
     expect(await screen.findByRole("heading", { name: "Barangay Officials" })).toBeInTheDocument();
     expect(screen.getByText("Alos")).toBeInTheDocument();
-    expect(screen.getByText(/Punong Barangay · Nardenio D\. Castro Jr\./)).toBeInTheDocument();
+    expect(screen.getByText(/Kap\. Nardenio D\. Castro Jr\./)).toBeInTheDocument();
     expect(screen.getByText("Poblacion")).toBeInTheDocument();
-    expect(screen.getByText(/Punong Barangay · German U\. Rabago/)).toBeInTheDocument();
+    expect(screen.getByText(/Kap\. German U\. Rabago/)).toBeInTheDocument();
     expect(screen.getByText(/DILG Barangay Officials Directory/)).toBeInTheDocument();
   });
 

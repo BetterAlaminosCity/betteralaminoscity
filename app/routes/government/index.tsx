@@ -208,7 +208,7 @@ export default function GovernmentIndex() {
                       {official.barangay}
                     </p>
                     <p className="text-sm text-[var(--color-kapwa-text-support)]">
-                      Punong Barangay · {official.name}
+                      Kap. {official.name}
                     </p>
                   </li>
                 ))}
