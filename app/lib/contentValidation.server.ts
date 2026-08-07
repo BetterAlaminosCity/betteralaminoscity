@@ -6,6 +6,7 @@ import matter from "gray-matter";
 import { load } from "js-yaml";
 
 import articleFrontmatterSchema from "../../content/schemas/article-frontmatter.schema.json";
+import barangayOfficialsSchema from "../../content/schemas/barangay-officials.schema.json";
 import categorySchema from "../../content/schemas/category.schema.json";
 import cityStatisticsSchema from "../../content/schemas/city-statistics.schema.json";
 import fiscalTransparencySchema from "../../content/schemas/fiscal-transparency.schema.json";
@@ -23,6 +24,7 @@ const validateLegislativeDocumentsSchema = ajv.compile(legislativeDocumentsSchem
 const validateCityStatisticsSchema = ajv.compile(cityStatisticsSchema);
 const validateHotlinesSchema = ajv.compile(hotlinesSchema);
 const validateSbMembersSchema = ajv.compile(sbMembersSchema);
+const validateBarangayOfficialsSchema = ajv.compile(barangayOfficialsSchema);
 
 function formatErrors(errors: ErrorObject[] | null | undefined): string[] {
   return (errors ?? []).map((error) => `${error.instancePath || "/"} ${error.message}`);
@@ -68,6 +70,11 @@ export function validateSbMembers(data: unknown): string[] {
   return formatErrors(validateSbMembersSchema.errors);
 }
 
+export function validateBarangayOfficials(data: unknown): string[] {
+  validateBarangayOfficialsSchema(data);
+  return formatErrors(validateBarangayOfficialsSchema.errors);
+}
+
 export interface ContentValidationIssue {
   file: string;
   errors: string[];
@@ -83,6 +90,7 @@ const CIVIC_DATA_SLUGS = new Set([
   "ordinances-resolutions",
   "statistics",
   "emergency-hotlines",
+  "barangay-officials",
 ]);
 
 const FIXED_JSON_DATA_FILES: Array<{
@@ -108,6 +116,10 @@ const FIXED_JSON_DATA_FILES: Array<{
   {
     relativePath: path.join("government", "sangguniang-panlungsod", "members.json"),
     validate: validateSbMembers,
+  },
+  {
+    relativePath: path.join("government", "barangay-officials", "officials.json"),
+    validate: validateBarangayOfficials,
   },
 ];
 

@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   validateArticleFrontmatter,
+  validateBarangayOfficials,
   validateCategory,
   validateCityStatistics,
   validateContentTree,
@@ -301,6 +302,48 @@ describe("validateSbMembers", () => {
   });
 });
 
+describe("validateBarangayOfficials", () => {
+  it("accepts a valid barangay officials payload", () => {
+    expect(
+      validateBarangayOfficials({
+        lastUpdated: "2026-01-15",
+        source: "Sample source",
+        officials: [{ barangay: "Sample Barangay", name: "Sample Official" }],
+      }),
+    ).toEqual([]);
+  });
+
+  it("accepts an empty officials array", () => {
+    expect(
+      validateBarangayOfficials({
+        lastUpdated: "2026-01-15",
+        source: "Sample source",
+        officials: [],
+      }),
+    ).toEqual([]);
+  });
+
+  it("rejects an official missing a name", () => {
+    expect(
+      validateBarangayOfficials({
+        lastUpdated: "2026-01-15",
+        source: "Sample source",
+        officials: [{ barangay: "Sample Barangay" }],
+      }),
+    ).not.toEqual([]);
+  });
+
+  it("rejects a payload missing officials", () => {
+    expect(
+      validateBarangayOfficials({ lastUpdated: "2026-01-15", source: "Sample source" }),
+    ).not.toEqual([]);
+  });
+
+  it("rejects a payload missing lastUpdated and source", () => {
+    expect(validateBarangayOfficials({ officials: [] })).not.toEqual([]);
+  });
+});
+
 describe("validateContentTree", () => {
   it("reports no issues for a valid content tree", () => {
     const contentRoot = path.join(import.meta.dirname, "../fixtures/content-valid");
@@ -317,8 +360,9 @@ describe("validateContentTree", () => {
   it("reports an issue per missing fixed civic-data JSON file", () => {
     const contentRoot = path.join(import.meta.dirname, "../fixtures/content-invalid-civic-data");
     const issues = validateContentTree(contentRoot);
-    expect(issues).toHaveLength(5);
+    expect(issues).toHaveLength(6);
     expect(issues.map((issue) => issue.errors[0])).toEqual([
+      expect.stringContaining("missing"),
       expect.stringContaining("missing"),
       expect.stringContaining("missing"),
       expect.stringContaining("missing"),
@@ -334,5 +378,6 @@ describe("validateContentTree", () => {
     expect(issues.some((issue) => issue.file.includes("ordinances-resolutions"))).toBe(false);
     expect(issues.some((issue) => issue.file.includes("statistics"))).toBe(false);
     expect(issues.some((issue) => issue.file.includes("emergency-hotlines"))).toBe(false);
+    expect(issues.some((issue) => issue.file.includes("barangay-officials"))).toBe(false);
   });
 });
