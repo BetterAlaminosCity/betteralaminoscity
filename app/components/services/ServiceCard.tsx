@@ -22,8 +22,10 @@ export function ServiceCard({
       to={href}
       className="flex h-full flex-col gap-3 rounded-lg border border-[var(--color-kapwa-border-weak)] bg-[var(--color-kapwa-bg-surface)] p-6 transition-colors hover:border-[var(--color-kapwa-border-brand)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-kapwa-border-focus)]"
     >
-      <h3 className="text-lg font-semibold text-[var(--color-kapwa-text-strong)]">{title}</h3>
-      <p className="text-sm text-[var(--color-kapwa-text-support)]">{description}</p>
+      <h3 className="text-lg font-semibold break-words text-[var(--color-kapwa-text-strong)]">
+        {title}
+      </h3>
+      <p className="text-sm break-words text-[var(--color-kapwa-text-support)]">{description}</p>
       {classification || totalProcessingTime ? (
         <div className="flex flex-wrap items-center gap-2">
           {classification ? (
