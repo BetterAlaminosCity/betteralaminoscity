@@ -1,0 +1,36 @@
+---
+title: "Request for Free Legal Advice"
+description: "Provision of free legal advice, opinion, and inquiry assistance to constituents on legal matters referred to the City Legal Office."
+lastUpdated: "2026-08-11"
+office: "City Legal Office"
+classification: "Highly Technical"
+transactionType: "G2C - Government to Citizens, G2B - Government to Business, G2G - Government to Government"
+whoMayAvail: "Client"
+requirements:
+  - item: "Affidavits"
+    whereToSecure: "Client"
+  - item: "Court Decisions and Resolutions"
+    whereToSecure: "Court"
+  - item: "Contracts"
+    whereToSecure: "Client"
+steps:
+  - clientStep: "Fill-out the Legal Request and Action Slip"
+    agencyAction: "Give the Legal Request and Action Slip to the client, check whether all the information is given by the client, then endorse the Legal Request and Action Slip to the City Legal Officer or Legal Assistant II"
+    fee: "None"
+    processingTime: "5 minutes"
+    personResponsible: "Executive Assistant II, Administrative Aide"
+  - clientStep: "Present the problem"
+    agencyAction: "The City Legal Officer or Legal Assistant II shall give legal advice"
+    fee: "None"
+    processingTime: "30 minutes to 1 hour (depending on the complexity of the problem)"
+    personResponsible: "City Legal Officer, Legal Assistant II"
+  - clientStep: "Fill-out Customer Satisfaction Survey Form"
+    agencyAction: "Give and explain the Customer Satisfaction Survey Form, then complete the details in the Request for Free Legal Advice Logbook"
+    fee: "None"
+    processingTime: "5 minutes"
+    personResponsible: "Executive Assistant II, Administrative Aide"
+totalProcessingTime: "1 hour and 10 minutes (depending on the complexity of the problem)"
+totalFees: "None"
+---
+
+Provision of free legal advice, opinion, and inquiry assistance to constituents on legal matters referred to the City Legal Office.
