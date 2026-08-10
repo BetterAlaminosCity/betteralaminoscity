@@ -1,0 +1,36 @@
+---
+title: "Handling of Clients for Courtesy Call"
+description: "Handling of clients who wish to pay a courtesy visit to the City Administrator for official business."
+lastUpdated: "2026-08-11"
+office: "City Administrator's Office"
+classification: "Simple"
+transactionType: "G2C - Government to Citizens, G2B - Government to Business, G2G - Government to Government"
+whoMayAvail: "Client"
+requirements:
+  - item: "Courtesy Call Logbook"
+    whereToSecure: "City Administrator's Office"
+  - item: "Communications Logbook"
+    whereToSecure: "City Administrator's Office"
+  - item: "Appointment Slip"
+    whereToSecure: "City Administrator's Office"
+steps:
+  - clientStep: "Fill-out the Courtesy Call Logbook/Appointment Slip"
+    agencyAction: "Administrative Staff shall give the Appointment Slip to the client"
+    fee: "None"
+    processingTime: "2 minutes"
+    personResponsible: "Administrative Staff"
+  - clientStep: "Present the Appointment Slip to the Administrative Staff"
+    agencyAction: "Check whether the Appointment Slip is properly filled out by the client. For benchmarking, check the communication letter received by the Records Office. For walk-in clients, review and validate the purpose of visit, endorse the client/s to the City Administrator, and, if requested after the courtesy call has concluded, the City Administrator shall instruct the Administrative Staff to issue a Certificate of Appearance to the visitors"
+    fee: "None"
+    processingTime: "3 minutes"
+    personResponsible: "Administrative Staff"
+  - clientStep: "Fill-out Customer Satisfaction Survey Form"
+    agencyAction: "Administrative Staff shall give and explain the Customer Satisfaction Survey Form"
+    fee: "None"
+    processingTime: "3 minutes"
+    personResponsible: "Administrative Staff"
+totalProcessingTime: "8 minutes"
+totalFees: "None"
+---
+
+Handling of clients who wish to pay a courtesy visit to the City Administrator for official business.
