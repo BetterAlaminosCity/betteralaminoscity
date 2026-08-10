@@ -1,0 +1,35 @@
+---
+title: "Review and Endorsement of Applicants of Special Permit"
+description: "This service involves review of application for special permit of ambulant vendors, particularly at Tourism Area, Barangay Lucap, as well as computation of fees and endorsement to the City Business Permit and Licensing Office for issuance of the permit."
+lastUpdated: "2026-08-10"
+office: "City Market and Cemetery Section"
+classification: "Simple"
+transactionType: "G2C - Government to Citizens"
+whoMayAvail: "Ambulant vendors at Tourism Area, Lucap"
+requirements:
+  - item: "Cedula (1 photocopy)"
+    whereToSecure: "City Treasurer's Office or Barangay Hall"
+  - item: "Brgy. Clearance (1 photocopy)"
+    whereToSecure: "Barangay in w/c the applicant resides"
+  - item: "Brgy. Clearance - Business to Operate (1 photocopy)"
+    whereToSecure: "Barangay in w/c the applicant shall conduct his/her business or the Business One Stop Shop (BOSS)"
+  - item: "Health ID (updated)"
+    whereToSecure: "Business One Stop Shop (BOSS)"
+  - item: "Certification"
+    whereToSecure: "Alaminos City Tourism and Cultural Affairs Office (ACTCAO)"
+steps:
+  - clientStep: "Sign in the CMCS Service Request Log book. Present requirements."
+    agencyAction: "Receive and review request. Review requirements. If complete: Issue computation of applicable fees signed by Head of Office and advise client to acknowledge receipt of computation by signing the Special Permit Logbook. Endorse client to pay fees at City Treasurer's Office, and proceed to CBPLO for issuance of permit. Advise client to provide copy of issued Special Permit to the Office. If incomplete, advise client to comply before proceeding to next step."
+    fee: "Mayor's Permit – 100; Inspection fee – 100; Garbage fee – 200; ICT fee – 25"
+    processingTime: "10 minutes"
+    personResponsible: "Supervising Administrative Officer, Administrative Aide VI, Admininistrative Aide IV, Administrative Officer III, Administrative Aide I"
+  - clientStep: "Submit photocopy of issued Special Permit to CMCS"
+    agencyAction: "Receive photocopy of issued Special Permit and file accordingly."
+    fee: "None"
+    processingTime: "5 minutes"
+    personResponsible: "Administrative Aide VI, Admininistrative Aide IV, Administrative Officer III, Administrative Aide I"
+totalProcessingTime: "15 minutes"
+totalFees: "Php 425.00"
+---
+
+This service involves review of application for special permit of ambulant vendors, particularly at Tourism Area, Barangay Lucap, as well as computation of fees and endorsement to the City Business Permit and Licensing Office for issuance of the permit.
