@@ -1,6 +1,6 @@
 ---
 title: "Issuance of Mayor's Clearance"
-description: "This covers the issuance of Mayor's Clearance for the following purposes: for Local Employment, OJT/Work Immersion Requirement, PNP/AFP/BFP/PCG Application, Marriage Requirement, Graduation, Board Examination."
+description: "This covers the issuance of Mayor's Clearance for the following purposes: for Local Employment, OJT/Work Immersion Requirement, PNP/AFP/BFP/PCG Application, Marriage Requirement, Graduation, Board Examination. Note: Processing of the issuance commence upon completion of the needed requirements."
 lastUpdated: "2026-08-10"
 office: "City Archives Office"
 classification: "Simple"
@@ -52,4 +52,4 @@ totalProcessingTime: "18 minutes"
 totalFees: "Php 105.00"
 ---
 
-This covers the issuance of Mayor's Clearance for the following purposes: for Local Employment, OJT/Work Immersion Requirement, PNP/AFP/BFP/PCG Application, Marriage Requirement, Graduation, Board Examination.
+This covers the issuance of Mayor's Clearance for the following purposes: for Local Employment, OJT/Work Immersion Requirement, PNP/AFP/BFP/PCG Application, Marriage Requirement, Graduation, Board Examination. Note: Processing of the issuance commence upon completion of the needed requirements.

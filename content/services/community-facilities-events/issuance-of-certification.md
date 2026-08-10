@@ -1,6 +1,6 @@
 ---
 title: "Issuance of Certification"
-description: "This covers the issuance of Certification for various purposes but not limited to certificate of posting, residency, Apostille requirement, renewal of license to officiate marriage, etc. Issuance of certificate of posting must first meet the required number of days the document should be posted at the bulletin board."
+description: "This covers the issuance of Certification for various purposes but not limited to certificate of posting, residency, Apostille requirement, renewal of license to officiate marriage, etc. Issuance of certificate of posting must first meet the required number of days the document should be posted at the bulletin board. Note: Processing of the issuance commence upon completion of the needed requirements."
 lastUpdated: "2026-08-10"
 office: "City Archives Office"
 classification: "Simple"
@@ -59,4 +59,4 @@ totalProcessingTime: "24 minutes"
 totalFees: "Php 105.00"
 ---
 
-This covers the issuance of Certification for various purposes but not limited to certificate of posting, residency, Apostille requirement, renewal of license to officiate marriage, etc. Issuance of certificate of posting must first meet the required number of days the document should be posted at the bulletin board.
+This covers the issuance of Certification for various purposes but not limited to certificate of posting, residency, Apostille requirement, renewal of license to officiate marriage, etc. Issuance of certificate of posting must first meet the required number of days the document should be posted at the bulletin board. Note: Processing of the issuance commence upon completion of the needed requirements.

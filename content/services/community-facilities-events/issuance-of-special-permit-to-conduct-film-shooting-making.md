@@ -1,6 +1,6 @@
 ---
 title: "Issuance of Special Permit to Conduct Film Shooting / Making"
-description: "This covers the issuance of Special Permit to conduct film shooting / making in any parts of the City of Alaminos."
+description: "This covers the issuance of Special Permit to conduct film shooting / making in any parts of the City of Alaminos. Note: Processing of the issuance commence upon completion of the needed requirements."
 lastUpdated: "2026-08-10"
 office: "City Archives Office"
 classification: "Simple"
@@ -53,4 +53,4 @@ totalProcessingTime: "24 minutes"
 totalFees: "Not specified in the Citizen's Charter"
 ---
 
-This covers the issuance of Special Permit to conduct film shooting / making in any parts of the City of Alaminos.
+This covers the issuance of Special Permit to conduct film shooting / making in any parts of the City of Alaminos. Note: Processing of the issuance commence upon completion of the needed requirements.

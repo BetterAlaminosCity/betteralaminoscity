@@ -1,6 +1,6 @@
 ---
 title: "Issuance of Special Permit to Conduct Motorcade / Parade"
-description: "This covers the issuance of Special Permit to conduct motorcade / parade within the City."
+description: "This covers the issuance of Special Permit to conduct motorcade / parade within the City. Note: Processing of the issuance commence upon completion of the needed requirements."
 lastUpdated: "2026-08-10"
 office: "City Archives Office"
 classification: "Simple"
@@ -55,4 +55,4 @@ totalProcessingTime: "24 minutes"
 totalFees: "Php 525.00"
 ---
 
-This covers the issuance of Special Permit to conduct motorcade / parade within the City.
+This covers the issuance of Special Permit to conduct motorcade / parade within the City. Note: Processing of the issuance commence upon completion of the needed requirements.

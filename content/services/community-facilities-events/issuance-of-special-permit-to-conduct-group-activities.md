@@ -1,6 +1,6 @@
 ---
 title: "Issuance of Special Permit to Conduct Group Activities"
-description: "This covers the issuance of Special Permit to conduct group activities (conference meetings, rallies, demonstration in outdoor (parks, plazas, roads and streets) business promotions (promotional sales), dances, coronations/balls, and other group activities)."
+description: "This covers the issuance of Special Permit to conduct group activities (conference meetings, rallies, demonstration in outdoor (parks, plazas, roads and streets) business promotions (promotional sales), dances, coronations/balls, and other group activities). Note: Processing of the issuance commence upon completion of the needed requirements."
 lastUpdated: "2026-08-10"
 office: "City Archives Office"
 classification: "Simple"
@@ -57,4 +57,4 @@ totalProcessingTime: "24 minutes"
 totalFees: "Not specified in the Citizen's Charter"
 ---
 
-This covers the issuance of Special Permit to conduct group activities (conference meetings, rallies, demonstration in outdoor (parks, plazas, roads and streets) business promotions (promotional sales), dances, coronations/balls, and other group activities).
+This covers the issuance of Special Permit to conduct group activities (conference meetings, rallies, demonstration in outdoor (parks, plazas, roads and streets) business promotions (promotional sales), dances, coronations/balls, and other group activities). Note: Processing of the issuance commence upon completion of the needed requirements.
