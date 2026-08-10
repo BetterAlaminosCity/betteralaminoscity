@@ -48,7 +48,7 @@ steps:
     fee: "None"
     processingTime: "10 minutes"
     personResponsible: "City Treasurer, LRCO II, Sr. Adm. Asst. II"
-totalProcessingTime: "For Walk-in Clients: 10 minutes; For Grants: 2 days and 10 minutes (as printed in the source — note the four listed Grants row processing times literally sum to 3 days and 10 minutes, not 2 days 10 minutes; see Global Constraints inconsistency #4)"
+totalProcessingTime: "For Walk-in Clients: 10 minutes; For Grants: 2 days and 10 minutes"
 totalFees: "For Walk-in Clients: Refer to the Schedule of Fees excerpt from Tax Ordinance No. 2022-01 (Revenue Code of the Municipality of Alaminos, Pangasinan, dated November 15, 2022); For Grants: None"
 ---
 
