@@ -1,0 +1,37 @@
+---
+title: "Processing Application for Lease of Cemetery Lot at Public Cemetery"
+description: "This service covers all applications for new lease and renewal of lease of cemetery lots in the old public cemetery of the City of Alaminos, Pangasinan."
+lastUpdated: "2026-08-10"
+office: "City Market and Cemetery Section"
+classification: "Simple"
+transactionType: "G2C - Government to Citizens"
+whoMayAvail: "All"
+requirements:
+  - item: "For New Application: Death Certificate (1 photocopy)"
+    whereToSecure: "City Civil Registrar or Civil Registry Office"
+steps:
+  - clientStep: "Sign in the CMCS Service Request Log book."
+    agencyAction: "Receive and review request then endorse client to staff in charge."
+    fee: "None"
+    processingTime: "2 minutes"
+    personResponsible: "Administrative Aide VI, Admininistrative Aide IV, Administrative Aide III, Administrative Officer III"
+  - clientStep: "Proceed to staff-in-charge."
+    agencyAction: "Interview client. For new application, check Masterlist of Old Public Cemetery Burials for any vacant lots to lease. If None, recommend other available burial spaces for lease. For renewal, check Masterlist of Old Public Cemetery Burials for confirmation of expiration of lease and orient client on requirements and fees for renewal."
+    fee: "None"
+    processingTime: "15 minutes"
+    personResponsible: "Administrative Aide VI, Administrative Officer III"
+  - clientStep: "Submit requirements."
+    agencyAction: "Review requirements for completeness. If complete, register/record the application or renewal in the Cemetery Lot Rental Logbook, then advise client to pay required fees at the City Treasurer's Office. If incomplete, advise client to complete the requirements."
+    fee: "Lot rental (for lease period of 6 years) – PHP 1,000.00. ICT Fee – Php 25.00."
+    processingTime: "10 minutes"
+    personResponsible: "Administrative Aide VI, Administrative Officer III"
+  - clientStep: "Submit photocopy of proof of payment. Sign the Cemetery Lot Rental Certificate (CLRC). Acknowledge receipt of Certificate by signing CLRC Issuance Logbook."
+    agencyAction: "Prepare Cemetery Lot Rental Certificate (CLRC) and advise client to sign the Certificate. Sign the CLRC and issue the Certificate to client. Advise client to sign the CLRC Issuance Logbook."
+    fee: "None"
+    processingTime: "8 minutes"
+    personResponsible: "Administrative Aide VI, Administrative Officer III, Supervising Administrative Officer"
+totalProcessingTime: "35 minutes"
+totalFees: "Php 1,025.00"
+---
+
+This service covers all applications for new lease and renewal of lease of cemetery lots in the old public cemetery of the City of Alaminos, Pangasinan.
