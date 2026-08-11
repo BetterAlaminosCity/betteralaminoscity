@@ -23,7 +23,7 @@ requirements:
     whereToSecure: "City Agricultural and Biosystems Engineering Office / City Agriculture Office"
   - item: "Project Utilization Proposal - 1 Original Copy"
     whereToSecure: "Requesting client"
-  - item: "Utilization Report of all project acquired from DA/LGU/PhilMech and other Government Agencies - 1 Original Copy"
+  - item: "Utilization Report of all project acquired from DA/LGU/PhilMEch and other Government Agencies - 1 Original Copy"
     whereToSecure: "Requesting client"
   - item: "Latest audited financial statement - 1 Photocopy"
     whereToSecure: "Requesting client"
