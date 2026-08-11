@@ -1,0 +1,38 @@
+---
+title: "Pet Registration"
+description: "To register all pet animals as database for planning, budgeting and regulation in accordance with provision of IRR of the Alaminos City Veterinary Code."
+lastUpdated: "2026-08-11"
+office: "City Veterinary Office"
+classification: "Simple"
+transactionType: "G2C - Government to Citizens"
+whoMayAvail: "Pet owners of Alaminos City and other towns nearby"
+requirements: []
+steps:
+  - clientStep: "Pet Owners shall bring their pets in our office"
+    agencyAction: "Assist and Interview the Client"
+    fee: "None"
+    processingTime: "2 minutes"
+    personResponsible: "Administrative Assistant I"
+  - clientStep: "Pet Owners shall inquire for requirements"
+    agencyAction: "Assist and Interview the Client"
+    fee: "None"
+    processingTime: "3 minutes"
+  - clientStep: "Client shall fill up Pre-Registration Form"
+    agencyAction: "Encode the information into the PetRis System (database) and print Pet Registration Form"
+    fee: "None"
+    processingTime: "5 minutes"
+  - clientStep: "Applicants shall pay the following fees"
+    agencyAction: "Issue Official Receipt"
+    fee: "Registration Fee - Php 75.00; ICT Fee - Php 25.00"
+    processingTime: "3 minutes"
+    personResponsible: "Ticket Checker"
+  - clientStep: "Sign the logbook and receive Pet Registration Form"
+    agencyAction: "Release the animal."
+    fee: "None"
+    processingTime: "1 minute"
+    personResponsible: "Administrative Assistant I"
+totalProcessingTime: "12 minutes"
+totalFees: "Php 100.00 (Registration Fee Php 75.00 + ICT Fee Php 25.00)"
+---
+
+To register all pet animals as database for planning, budgeting and regulation in accordance with provision of IRR of the Alaminos City Veterinary Code.
