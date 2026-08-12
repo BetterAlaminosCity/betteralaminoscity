@@ -28,9 +28,9 @@ export function Navbar() {
           <img
             src="/wordmark.svg"
             alt="BetterAlaminosCity.org"
-            width={250}
-            height={32}
-            className="h-6 w-auto sm:h-8"
+            width={1706}
+            height={590}
+            className="h-10 w-auto sm:h-12"
           />
         </Link>
 

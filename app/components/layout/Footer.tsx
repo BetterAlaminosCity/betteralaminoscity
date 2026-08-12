@@ -25,9 +25,9 @@ export function Footer() {
           <img
             src="/wordmark-white.svg"
             alt="BetterAlaminosCity.org"
-            width={250}
-            height={32}
-            className="h-7 w-auto"
+            width={1706}
+            height={590}
+            className="h-12 w-auto"
           />
           <p className="mt-3 max-w-xs text-sm text-[var(--color-kapwa-text-inverse-subtle)]">
             {t("footer.aboutBlurb")}
