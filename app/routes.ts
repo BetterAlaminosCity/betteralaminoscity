@@ -7,8 +7,6 @@ export default [
   route("services/:category", "routes/services/category.tsx"),
   route("services/:category/:article", "routes/services/article.tsx"),
   route("government", "routes/government/index.tsx"),
-  route("government/:office", "routes/government/office.tsx"),
-  route("government/:office/:article", "routes/government/article.tsx"),
   route("transparency", "routes/transparency.tsx"),
   route("legislative", "routes/legislative/index.tsx"),
   route("legislative/ordinances", "routes/legislative/ordinances.tsx"),

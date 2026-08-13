@@ -56,9 +56,5 @@ function buildLegislativeEntries(contentRoot: string): SearchIndexEntry[] {
 }
 
 export function buildSearchIndex(contentRoot: string = DEFAULT_CONTENT_ROOT): SearchIndexEntry[] {
-  return [
-    ...buildDomainEntries("services", contentRoot),
-    ...buildDomainEntries("government", contentRoot),
-    ...buildLegislativeEntries(contentRoot),
-  ];
+  return [...buildDomainEntries("services", contentRoot), ...buildLegislativeEntries(contentRoot)];
 }

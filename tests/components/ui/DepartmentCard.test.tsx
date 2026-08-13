@@ -37,6 +37,12 @@ describe("DepartmentCard", () => {
     expect(screen.getByRole("link")).toHaveAttribute("href", "/government/city-treasurers-office");
   });
 
+  it("omits the link when href and linkLabel are not provided", () => {
+    renderCard({ href: undefined, linkLabel: undefined });
+    expect(screen.getByRole("heading", { name: "City Treasurer's Office" })).toBeInTheDocument();
+    expect(screen.queryByRole("link")).not.toBeInTheDocument();
+  });
+
   it("omits the head line when not provided", () => {
     renderCard();
     expect(screen.queryByText(/headed by/i)).not.toBeInTheDocument();

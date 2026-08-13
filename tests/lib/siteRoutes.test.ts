@@ -45,14 +45,11 @@ describe("contentPaths", () => {
 });
 
 describe("getAllRoutePaths", () => {
-  it("combines static routes with services and government content paths", () => {
+  it("combines static routes with services content paths, but not government (individual office pages are removed for now)", () => {
     expect(getAllRoutePaths(FIXTURE_ROOT)).toEqual([
       ...STATIC_ROUTES,
       "/services/sample-category",
       "/services/sample-category/overview",
-      "/government/sample-office",
-      "/government/sample-office/overview",
-      "/government/sangguniang-panlungsod",
     ]);
   });
 });

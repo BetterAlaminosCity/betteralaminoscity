@@ -43,12 +43,10 @@ describe("Sitemap", () => {
     );
   });
 
-  it("lists government offices but not fixed-data slugs like emergency hotlines", async () => {
+  it("does not list individual government offices (detail pages are removed for now)", async () => {
     await renderSitemap();
-    expect(await screen.findByRole("link", { name: "Office of the Mayor" })).toHaveAttribute(
-      "href",
-      "/government/office-of-the-mayor",
-    );
+    await screen.findByRole("heading", { name: "Sitemap", level: 1 });
+    expect(screen.queryByRole("link", { name: "Office of the Mayor" })).not.toBeInTheDocument();
     expect(screen.queryByRole("link", { name: /emergency hotlines/i })).not.toBeInTheDocument();
   });
 });

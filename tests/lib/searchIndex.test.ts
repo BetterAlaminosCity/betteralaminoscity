@@ -6,14 +6,14 @@ import { buildSearchIndex } from "../../app/lib/searchIndex.server";
 const FIXTURE_ROOT = path.join(import.meta.dirname, "../fixtures/content-valid");
 
 describe("buildSearchIndex", () => {
-  it("includes an entry for each category and article in both domains", () => {
+  it("includes an entry for each service category and article, but not government offices", () => {
     const index = buildSearchIndex(FIXTURE_ROOT);
     const urls = index.map((entry) => entry.url);
 
     expect(urls).toContain("/services/sample-category");
     expect(urls).toContain("/services/sample-category/overview");
-    expect(urls).toContain("/government/sample-office");
-    expect(urls).toContain("/government/sample-office/overview");
+    expect(urls).not.toContain("/government/sample-office");
+    expect(urls).not.toContain("/government/sample-office/overview");
   });
 
   it("includes an entry for each legislative document", () => {

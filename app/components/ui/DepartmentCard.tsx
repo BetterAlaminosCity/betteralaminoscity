@@ -7,8 +7,8 @@ export interface DepartmentCardProps {
   description: string;
   branchLabel?: string;
   headLine?: string;
-  href: string;
-  linkLabel: string;
+  href?: string;
+  linkLabel?: string;
 }
 
 export function DepartmentCard({
@@ -35,13 +35,15 @@ export function DepartmentCard({
       <h3 className="text-base font-semibold text-[var(--color-kapwa-text-strong)]">{title}</h3>
       <p className="grow text-sm text-[var(--color-kapwa-text-support)]">{description}</p>
       {headLine && <p className="text-sm text-[var(--color-kapwa-text-support)]">{headLine}</p>}
-      <Link
-        to={href}
-        aria-label={`${title} – ${linkLabel}`}
-        className="mt-auto text-sm font-medium text-[var(--color-kapwa-text-brand)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-kapwa-border-focus)]"
-      >
-        {linkLabel} →
-      </Link>
+      {href && linkLabel && (
+        <Link
+          to={href}
+          aria-label={`${title} – ${linkLabel}`}
+          className="mt-auto text-sm font-medium text-[var(--color-kapwa-text-brand)] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--color-kapwa-border-focus)]"
+        >
+          {linkLabel} →
+        </Link>
+      )}
     </div>
   );
 }

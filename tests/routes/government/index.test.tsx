@@ -56,27 +56,16 @@ describe("GovernmentIndex", () => {
     expect(screen.getByText(/City Vice Mayor · Presiding Officer, SP/)).toBeInTheDocument();
   });
 
-  it("lists the four non-mayor executive offices under Departments & Key Offices", async () => {
+  it("lists the four non-mayor executive offices under Departments & Key Offices, with no link to a detail page", async () => {
     renderGovernmentIndex();
     expect(
       await screen.findByRole("heading", { name: "Departments & Key Offices" }),
     ).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /City Engineer's Office/i })).toHaveAttribute(
-      "href",
-      "/government/city-engineers-office",
-    );
-    expect(screen.getByRole("link", { name: /City Health Office/i })).toHaveAttribute(
-      "href",
-      "/government/city-health-office",
-    );
-    expect(screen.getByRole("link", { name: /City Treasurer's Office/i })).toHaveAttribute(
-      "href",
-      "/government/city-treasurers-office",
-    );
-    expect(screen.getByRole("link", { name: /Civil Registrar's Office/i })).toHaveAttribute(
-      "href",
-      "/government/civil-registrars-office",
-    );
+    expect(screen.getByRole("heading", { name: "City Engineer's Office" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "City Health Office" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "City Treasurer's Office" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Civil Registrar's Office" })).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /view office/i })).not.toBeInTheDocument();
   });
 
   it("renders the Barangay Officials roster under Barangay Officials", async () => {

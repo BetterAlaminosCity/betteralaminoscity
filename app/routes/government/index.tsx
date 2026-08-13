@@ -172,8 +172,6 @@ export default function GovernmentIndex() {
                           ? t("government.headedBy", { name: office.official.name })
                           : undefined
                       }
-                      href={`/government/${office.slug}`}
-                      linkLabel={t("government.viewOffice")}
                     />
                   </li>
                 ))}

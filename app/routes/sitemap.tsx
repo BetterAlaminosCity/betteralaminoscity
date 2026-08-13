@@ -17,7 +17,6 @@ export function meta(_: Route.MetaArgs) {
 export function loader() {
   return {
     serviceCategories: listCategories("services"),
-    governmentOffices: listCategories("government"),
   };
 }
 
@@ -50,7 +49,7 @@ function LinkGroup({
 }
 
 export default function Sitemap() {
-  const { serviceCategories, governmentOffices } = useLoaderData<typeof loader>();
+  const { serviceCategories } = useLoaderData<typeof loader>();
   const { t } = useTranslation();
 
   return (
@@ -80,13 +79,6 @@ export default function Sitemap() {
             links={serviceCategories.map((category) => ({
               to: `/services/${category.slug}`,
               label: category.title,
-            }))}
-          />
-          <LinkGroup
-            heading={t("sitemap.governmentOfficesHeading")}
-            links={governmentOffices.map((office) => ({
-              to: `/government/${office.slug}`,
-              label: office.title,
             }))}
           />
           <LinkGroup

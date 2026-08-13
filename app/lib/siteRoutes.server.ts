@@ -28,9 +28,5 @@ export function contentPaths(domain: ContentDomain, contentRoot?: string): strin
 }
 
 export function getAllRoutePaths(contentRoot?: string): string[] {
-  return [
-    ...STATIC_ROUTES,
-    ...contentPaths("services", contentRoot),
-    ...contentPaths("government", contentRoot),
-  ];
+  return [...STATIC_ROUTES, ...contentPaths("services", contentRoot)];
 }

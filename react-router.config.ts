@@ -5,6 +5,6 @@ import { contentPaths } from "./app/lib/siteRoutes.server";
 export default {
   ssr: false,
   async prerender({ getStaticPaths }) {
-    return [...getStaticPaths(), ...contentPaths("services"), ...contentPaths("government")];
+    return [...getStaticPaths(), ...contentPaths("services")];
   },
 } satisfies Config;
