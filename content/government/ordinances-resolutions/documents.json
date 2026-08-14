@@ -1,15 +1,141 @@
 {
-  "lastUpdated": "2026-01-15",
-  "source": "Sample data for demonstration purposes. Replace with the Sangguniang Panlungsod Secretariat's official legislative records.",
+  "lastUpdated": "2026-08-14",
+  "source": "Added ordinances from January 2025. Retrieved from the Official Website of Alaminos City, Pangasinan.",
   "documents": [
     {
-      "id": "ord-2025-01",
+      "id": "ord-2024-09",
       "type": "ordinance",
-      "number": "2025-01",
-      "title": "Sample Ordinance Establishing a City Environmental Protection Code",
-      "date": "2025-02-10",
+      "number": "2024-09",
+      "title": "AN ORDINANCE REVISING/AMENDING THE INVESTMENTS AND INCENTIVES CODE OF THE CITY OF ALAMINOS, PANGASINAN",
+      "date": "2025-01",
       "status": "Enacted",
-      "link": "https://example.com/legislative/ord-2025-01.pdf"
+      "link": null
+    },
+    {
+      "id": "ord-2024-12",
+      "type": "ordinance",
+      "number": "2024-12",
+      "title": "ORDINANCE TEMPORARILY SUSPENDING THE IMPLEMENTATION OF ARTICLE IV, SECTION 21 PARAGRAPH (b) OF CITY ORDINANCE NO. 2009-04, OTHERWISE KNOWN AS THE 'COMPREHENSIVE FISHERIES CODE OF THE CITY OF ALAMINOS 2009', FROM MAY 01, 2024 TO MAY 31, 2024",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-16",
+      "type": "ordinance",
+      "number": "2024-16",
+      "title": "AN ORDINANCE INSTITUTIONALIZING THE CONDUCT OF ALAMINOS BARANGAY CARAVAN AND APPROPRIATING FUNDS THEREFOR",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-20",
+      "type": "ordinance",
+      "number": "2024-20",
+      "title": "ORDINANCE PROVIDING FOR THE TEMPORARY FULL CLOSURE OF PORTION OF QUEZON AVENUE (FROM THE CORNER OF VERECIANO ST. TO THE CORNER OF F. REINOSO ST.) FROM 1:00 O'CLOCK ON THE AFTERNOON TO 7:00 O'CLOCK IN THE EVENING ON JULY 6, 2024 TO SERVER AS VENUE FOR THE KAPUSO MALL SHOW AS PART OF THE CELEBRATION OF THE 20TH ANNIVERSARY OF NEPO MART ALAMINOS",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-22",
+      "type": "ordinance",
+      "number": "2024-22",
+      "title": "AN ORDINANCE PROVIDING FOR THE TEMPORARY FULL CLOSURE OF PORTION OF QUEZON AVENUE (FROM THE CORNER OF VERECIANO ST. TO THE CORNER OF F. REINOSO ST.) FROM 1:00 O'CLOCK ON THE AFTERNOON TO 7:00 O'CLOCK IN THE EVENING ON JULY 6, 2024 TO SERVER AS VENUE FOR THE KAPUSO MALL SHOW AS PART OF THE CELEBRATION OF THE 20TH ANNIVERSARY OF NEPO MART ALAMINOS",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-23",
+      "type": "ordinance",
+      "number": "2024-23",
+      "title": "AN ORDINANCE INSTITUTIONALIZING THE ASSISTANCE OF INDIVIDUALS IN CRISIS SITUATION PROGRAM IN THE CITY OF ALAMINOS, PANGASINAN, AND PROVIDING FUNDS THEREOF",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-24",
+      "type": "ordinance",
+      "number": "2024-24",
+      "title": "AN ORDINANCE PROVIDING FOR THE TEMPORARY FULL CLOSURE OF PORTION OF TAY-AC ROAD (FROM BRGY. Q UIBUAR BRIDGE TO BRGY. LINMANSANGAN) ON AUGUST 9, 2024, FROM 5:30 IN THE MORNING (5:30 AM) TO TWELVE O'CLOCK NOON (12:00 NOON) TO SERVE AS VENUE FOR THE LAUNCHING AND RIBBON-CUTTING OF THE ILOCOS REGION RICE TECHNOLOGY DEMONSTRATION AND FIELD WALK ALONG THE SHOWCASE AREAS INCLUDING BIOFERTILIZER TECHNO DEMO",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-27",
+      "type": "ordinance",
+      "number": "2024-27",
+      "title": "AN ORDINANCE RECLASSIFYING TWO PARCELS OF AGRICULTURAL LAND CONTAINING AN AGGREGATE AREA OF SIXTY-TWO THOUSAND SIX HUNDRED EIGHTY-NINE SQUARE METERS (62,689 SQ.M.) REGISTERED IN THE NAMES OF RENATO R. MONTEMAYOR, MARRIED TO CONSOlacacion G. MONTEMAYOR, AND JESUS R. MONTEMAYOR, MARRIED TO SYLVA S. MONTEMAYOR, SITUATED AT BRGY. ALOS, THIS CITY FROM AGRICULTURAL USE TO COMMERCIAL USE FOR THE ESTABLISHMENT OF A MEMORIAL PARK",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-28",
+      "type": "ordinance",
+      "number": "2024-28",
+      "title": "AN ORDINANCE CREATING THE POSITION OF MEDICAL TECHNOLOGIST I (SG 11/1) UNDER THE CITY HEALTH OFFICE OF THE LOCAL GOVERNMENT UNIT OF THE CITY OF ALAMINOS, PANGASINAN",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-30",
+      "type": "ordinance",
+      "number": "2024-30",
+      "title": "AN ORDINANCE AMENDING CITY ORDINANCE NO. 2019-09, OTHERWISE KNOWN AS THE ALAMINOS CITY SOLO PARENTS WELFARE ORDINANCE, CREATING A SOLO PARENTS' OFFICE, DEFINING ITS FUNCTIONS, PROVIDING FOR ITS PERSONNEL COMPLEMENT AND PROGRAM GUIDELINES, ALLOCATING FUNDS FOR ITS OPERATION AND FOR OTHER PURPOSES",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-31",
+      "type": "ordinance",
+      "number": "2024-31",
+      "title": "AN ORDINANCE PROVIDING FOR THE TEMPORARY FULL CLOSURE OF PORTION OF ROAD (FROM BRGY. QUIBUAR BRIDGE GOING TO BRGY. LINMANSANGAN) AND PORTION OF TAY-AC ROAD ON SEPTEMBER 25, 2024, FROM 5:00 O'CLOCK IN THE MORNING (5:00 AM) TO ONE O'CLOCK NOON (1:00 PM) TO SERVE AS VENUE OF FIELD DAY AND SHOWCASE DEMO SITE OF THE ILOCOS REGION TECHNOLOGY FORUM",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-33",
+      "type": "ordinance",
+      "number": "2024-33",
+      "title": "AN ORDINANCE AMENDING SECTION 21 PARAGRAPH B OF CITY ORDINANCE NO. 2009-04 OTHERWISE KNOWN AS THE 'COMPREHENSIVE FISHERIES CODE OF THE CITY OF ALAMINOS 2009'",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-35",
+      "type": "ordinance",
+      "number": "2024-35",
+      "title": "AN ORDINANCE PROVIDING FOR THE TEMPORARY FULL CLOSURE OF C.P. GARCIA STREET (FROM THE INTERSECTION OF QUEZON AVENUE AND C.P. GARCIA STREET TO THE FRONT OF RABAGO BUILDING) AND PORTION OF QUINTOS STREET TO THE INTERSECTION OF C.P. GARCIA STREET AND QUINTOS STREET) FROM NOVEMBER 27, 2024 (5:00 PM) TO JANUARY 13, 2025 (12MIDNIGHT) FOR THE ESTABLISHMENT OF CHRISTMAS BAZAAR 2024",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-36",
+      "type": "ordinance",
+      "number": "2024-36",
+      "title": "AN ORDINANCE ABOLISHING THE PLANTILLA POSITION OF COMPUTER PROGRAMMER I, SG-11/1 WHICH IS CURRENTLY VACANT AND CREATING THE POSITION OF ADMINISTRATIVE ASSISTANT IV (PHOTOGRAPHER III), SG-10/1 UNDER THE OFFICE OF THE SECRETARY TO THE SANGGUNIAN OF THE LOCAL GOVERNMENT UNIT OF THE CITY OF ALAMINOS, PANGASINAN",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
+    },
+    {
+      "id": "ord-2024-37",
+      "type": "ordinance",
+      "number": "2024-37",
+      "title": "AN ORDINANCE AUTHORIZING THE BORROWING OF THE CITY GOVERNMENT OF ALAMINOS, PANGASINAN IN THE AGGREGATE AMOUNT OF TWO HUNDRED NINETY-TWO MILLION PESOS (PHP292,000,000.00) WITH THE DEVELOPMENT BANK OF THE PHILIPPINES (DBP) TO FINANCE THE FOLLOWING PROJECTS OF THE CITY FOR THE ALAMINOS CITY COLLEGE: A. LOT ACQUISITION (PROJECT SITE) 193,447,000.00 B. CONSTRUCTION OF SCHOOL BUILDING 98,553,000.00",
+      "date": "2025-01",
+      "status": "Enacted",
+      "link": null
     },
     {
       "id": "res-2025-04",
@@ -21,15 +147,6 @@
       "link": "https://example.com/legislative/res-2025-04.pdf"
     },
     {
-      "id": "ord-2024-12",
-      "type": "ordinance",
-      "number": "2024-12",
-      "title": "Sample Ordinance Regulating Single-Use Plastics",
-      "date": "2024-11-05",
-      "status": "Enacted",
-      "link": "https://example.com/legislative/ord-2024-12.pdf"
-    },
-    {
       "id": "res-2024-09",
       "type": "resolution",
       "number": "2024-09",
@@ -37,15 +154,6 @@
       "date": "2024-08-22",
       "status": "Adopted",
       "link": "https://example.com/legislative/res-2024-09.pdf"
-    },
-    {
-      "id": "ord-2023-07",
-      "type": "ordinance",
-      "number": "2023-07",
-      "title": "Sample Ordinance Creating a City Disaster Risk Reduction Fund",
-      "date": "2023-06-14",
-      "status": "Enacted",
-      "link": "https://example.com/legislative/ord-2023-07.pdf"
     },
     {
       "id": "res-2025-11",
