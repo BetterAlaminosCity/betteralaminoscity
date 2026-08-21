@@ -23,11 +23,11 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <img
-            src="/wordmark-white.svg"
+            src="/logo-white.svg"
             alt="BetterAlaminosCity.org"
             width={1706}
             height={590}
-            className="h-12 w-auto"
+            className="h-14 w-auto"
           />
           <p className="mt-3 max-w-xs text-sm text-[var(--color-kapwa-text-inverse-subtle)]">
             {t("footer.aboutBlurb")}

@@ -26,11 +26,11 @@ export function Navbar() {
       >
         <Link to="/" className="shrink-0">
           <img
-            src="/wordmark.svg"
+            src="/logo.svg"
             alt="BetterAlaminosCity.org"
             width={1706}
             height={590}
-            className="h-10 w-auto sm:h-12"
+            className="h-12 w-auto sm:h-14"
           />
         </Link>
 
